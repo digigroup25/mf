@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FloatingWindow xmlns="components.*" xmlns:mx="http://www.adobe.com/2006/mxml">
+	<mx:Script>
+		<![CDATA[
+			override protected function createChildren():void {
+				super.createChildren();
+				window.removeChild(dataContainer);
+				dataContainer = new WindowShadeStack();
+				window.addChild(dataContainer);
+			}
+		]]>
+	</mx:Script>
+</FloatingWindow>

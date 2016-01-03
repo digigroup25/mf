@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <swf size="4135" compressedSize="2153">
+
+    <!-- Header data (SWF attributes, product info, markers, etc.) -->
+    <headerData totalSize="405">
+      <data type="metaData" size="286"/>
+      <data type="enableDebugger" size="33"/>
+      <data type="productInfo" size="28"/>
+      <data type="swfHeader" size="21"/>
+      <data type="debugID" size="18"/>
+      <data type="fileAttributes" size="6"/>
+      <data type="scriptLimits" size="6"/>
+      <data type="backgroundColor" size="5"/>
+      <data type="endMarker" size="2"/>
+    </headerData>
+
+    <!-- Cumulative frame size summary. -->
+    <frames totalSize="3730">
+      <frame size="3730" frame="1"/>
+    </frames>
+
+    <!-- Actionscript code and constant data. -->
+    <actionScript totalSize="3631">
+      <abc name="Prolog" size="2387" frame="1"/>
+      <abc name="_32871743adf028e9c0035ade884f016bcd5f66131ab5638171fbce647d287cd9_flash_display_Sprite" size="1244" frame="1"/>
+    </actionScript>
+
+    <!-- Additional frame tags (symbolClass, exportAssets, showFrame, etc). -->
+    <frameData totalSize="99">
+      <tag type="symbolClass" size="97" frame="1"/>
+      <tag type="showFrame" size="2" frame="1"/>
+    </frameData>
+  </swf>
+</report>

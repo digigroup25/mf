@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <swf size="3019056" compressedSize="1339065">
+
+    <!-- Header data (SWF attributes, product info, markers, etc.) -->
+    <headerData totalSize="410">
+      <data type="metaData" size="342"/>
+      <data type="productInfo" size="28"/>
+      <data type="swfHeader" size="21"/>
+      <data type="fileAttributes" size="6"/>
+      <data type="scriptLimits" size="6"/>
+      <data type="backgroundColor" size="5"/>
+      <data type="endMarker" size="2"/>
+    </headerData>
+
+    <!-- Cumulative frame size summary. -->
+    <frames totalSize="3018646">
+      <frame name="_TestHarness_mx_managers_SystemManager" size="51551" frame="1"/>
+      <frame name="TestHarness" size="2967095" frame="2"/>
+    </frames>
+
+    <!-- Actionscript code and constant data. -->
+    <actionScript totalSize="2960797">
+      <abc name="frame2" size="2909334" frame="2"/>
+      <abc name="frame1" size="51463" frame="1"/>
+    </actionScript>
+
+    <!-- defineSprite. -->
+    <sprites totalSize="948">
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_mx_skins_cursor_DragReject_89978642" size="40" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_CloseButtonUp_886827111" size="35" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_mx_skins_cursor_DragLink_494265521" size="31" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_mx_skins_cursor_DragCopy_494527528" size="31" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_CloseButtonDown_1855976434" size="29" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_CloseButtonOver_1961264368" size="29" frame="2"/>
+      <sprite name="com.flextoolbox.skins.halo.TreeMapZoomOutIcon" size="28" frame="2"/>
+      <sprite name="com.flextoolbox.skins.halo.TreeMapZoomInIcon" size="28" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_mx_skins_cursor_DragMove_494238044" size="22" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_TreeNodeIcon_1971975171" size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_mx_skins_cursor_HBoxDivider_1082851491" size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_MenuSeparator_1712360152" size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_cursorStretch_1520838755" size="19" frame="2"/>
+      <sprite size="19" frame="2"/>
+      <sprite size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_mx_skins_cursor_BusyCursor_812838034" size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_MenuBranchDisabled_406027409" size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_MenuRadioEnabled_1589414631" size="19" frame="2"/>
+      <sprite size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_mx_containers_FormItem_Required_1144760881" size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_mx_skins_BoxDividerSkin_1985795336" size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_MenuCheckEnabled_591507002" size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_TreeDisclosureClosed_1754427563" size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_mx_skins_cursor_VBoxDivider_218455909" size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_TreeFolderOpen_1769556168" size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_openDateOver_2010213330" size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_TreeDisclosureOpen_1397532105" size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_MenuRadioDisabled_1012144422" size="19" frame="2"/>
+      <sprite size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_MenuCheckDisabled_2124645735" size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf___brokenImage_171806808" size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_MenuBranchEnabled_1837030878" size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_TreeFolderClosed_2028939046" size="19" frame="2"/>
+      <sprite name="flexlib.controls.ScrollableArrowMenu_DEFAULT_UP_BUTTON" size="19" frame="2"/>
+      <sprite name="flexlib.controls.ScrollableArrowMenu_DEFAULT_DOWN_BUTTON" size="19" frame="2"/>
+      <sprite name="flexlib.containers.WindowShade_DEFAULT_CLOSE_ICON" size="19" frame="2"/>
+      <sprite name="flexlib.containers.SuperTabNavigator_DEFAULT_LEFT_BUTTON" size="19" frame="2"/>
+      <sprite name="flexlib.controls.SuperTabBar_DEFAULT_CLOSE_DISABLED" size="19" frame="2"/>
+      <sprite name="flexlib.containers.SuperTabNavigator_DEFAULT_CLOSE_DOWN" size="19" frame="2"/>
+      <sprite name="flexlib.controls.SuperTabBar_DEFAULT_INDICATOR" size="19" frame="2"/>
+      <sprite name="flexlib.containers.SuperTabNavigator_DEFAULT_CLOSE_OVER" size="19" frame="2"/>
+      <sprite name="flexlib.containers.SuperTabNavigator_DEFAULT_CLOSE_UP" size="19" frame="2"/>
+      <sprite size="19" frame="2"/>
+      <sprite name="com.flextoolbox.skins.halo.TreeMapResizeIcon" size="19" frame="2"/>
+      <sprite name="_TestHarness_Styles__embed_css_Assets_swf_CloseButtonDisabled_2076910456" size="10" frame="2"/>
+    </sprites>
+
+    <!-- defineShape/2/3/4. -->
+    <shapes totalSize="5406">
+      <shape size="581" frame="2"/>
+      <shape size="453" frame="2"/>
+      <shape size="419" frame="2"/>
+      <shape size="306" frame="2"/>
+      <shape size="261" frame="2"/>
+      <shape size="230" frame="2"/>
+      <shape size="230" frame="2"/>
+      <shape size="217" frame="2"/>
+      <shape size="192" frame="2"/>
+      <shape size="178" frame="2"/>
+      <shape size="177" frame="2"/>
+      <shape size="173" frame="2"/>
+      <shape size="172" frame="2"/>
+      <shape size="165" frame="2"/>
+      <shape size="152" frame="2"/>
+      <shape size="152" frame="2"/>
+      <shape size="136" frame="2"/>
+      <shape size="116" frame="2"/>
+      <shape size="109" frame="2"/>
+      <shape size="109" frame="2"/>
+      <shape size="105" frame="2"/>
+      <shape size="56" frame="2"/>
+      <shape size="55" frame="2"/>
+      <shape size="55" frame="2"/>
+      <shape size="53" frame="2"/>
+      <shape size="51" frame="2"/>
+      <shape size="51" frame="2"/>
+      <shape size="45" frame="2"/>
+      <shape size="44" frame="2"/>
+      <shape size="37" frame="2"/>
+      <shape size="37" frame="2"/>
+      <shape size="35" frame="2"/>
+      <shape size="33" frame="2"/>
+      <shape size="33" frame="2"/>
+      <shape size="33" frame="2"/>
+      <shape size="32" frame="2"/>
+      <shape size="31" frame="2"/>
+      <shape size="31" frame="2"/>
+      <shape size="31" frame="2"/>
+      <shape size="30" frame="2"/>
+    </shapes>
+
+    <!-- defineBits, definebitsJPEG2/3/4, or defineBitsLossless/2 -->
+    <bitmaps totalSize="24404">
+      <bitmap name="components.FloatingWindowTextExport_iconImage" size="1085" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_RichTextEditor" size="709" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_AreaChart" size="658" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_PieChart" size="636" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_BubbleChart" size="582" frame="2"/>
+      <bitmap name="components.FloatingWindow__embed_mxml__assets_refreshIcon_gif_2007265436" size="523" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_SWFLoader" size="519" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_CandlestickChart" size="516" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_RadioButton" size="504" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_LineChart" size="498" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_Tile" size="494" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_Canvas" size="485" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_HorizontalList" size="485" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_BarChart" size="479" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_Grid" size="475" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_CheckBox" size="440" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_TileList" size="436" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_VideoDisplay" size="433" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_Form" size="424" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_Image" size="423" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_ColumnChart" size="412" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_RadioButtonGroup" size="396" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_Legend" size="393" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_FormHeading" size="372" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_ColorPicker" size="370" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_FormItem" size="369" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_Panel" size="365" frame="2"/>
+      <bitmap name="com.flexspy.imp.ResizableTitleWindow_rdCursorSymbol" size="355" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_Default" size="349" frame="2"/>
+      <bitmap name="com.flexspy.imp.ResizableTitleWindow_vCursorSymbol" size="330" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_PlotChart" size="321" frame="2"/>
+      <bitmap name="com.flexspy.imp.ResizableTitleWindow_dCursorSymbol" size="315" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_Text" size="313" frame="2"/>
+      <bitmap name="com.flexspy.imp.ResizableTitleWindow_hCursorSymbol" size="304" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_HLOCChart" size="304" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_TitleWindow" size="303" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_HDividedBox" size="302" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_MenuBar" size="295" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_ControlBar" size="288" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_VBox" size="284" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_VDividedBox" size="260" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_Button" size="257" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_HBox" size="243" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_TabNavigator" size="241" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_Spacer" size="234" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_VSlider" size="231" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_Menu" size="221" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_HSlider" size="216" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_LinkBar" size="215" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_LinkButton" size="215" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_Chrome" size="210" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_ViewStack" size="210" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_TextArea" size="191" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_TabBar" size="182" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_NumericStepper" size="179" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_DateField" size="170" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_DataGrid" size="158" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_Label" size="158" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_ApplicationControlBar" size="148" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_List" size="146" frame="2"/>
+      <bitmap name="com.flexspy.imp.PropertyDataGridValueRenderer__embed_mxml____assets_Edit_png_241804535" size="145" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_Tree" size="144" frame="2"/>
+      <bitmap size="143" frame="2"/>
+      <bitmap name="com.roguedevelopment.objecthandles.ObjectHandlesMouseCursors2_sizeWE" size="140" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_VScrollBar" size="138" frame="2"/>
+      <bitmap name="com.roguedevelopment.objecthandles.ObjectHandlesMouseCursors2_sizeAll" size="137" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_ComboBox" size="136" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_DateChooser" size="136" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_TextInput" size="129" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_HScrollBar" size="125" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_VRule" size="107" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_Accordion" size="103" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_HRule" size="101" frame="2"/>
+      <bitmap name="com.flexspy.imp.FindWnd_TARGET_ICON" size="100" frame="2"/>
+      <bitmap name="com.flexspy.imp.ComponentIcons_ProgressBar" size="100" frame="2"/>
+      <bitmap name="com.roguedevelopment.objecthandles.ObjectHandlesMouseCursors2_sizeNS" size="79" frame="2"/>
+      <bitmap name="com.roguedevelopment.objecthandles.ObjectHandlesMouseCursors2_sizeNESW" size="77" frame="2"/>
+      <bitmap name="com.roguedevelopment.objecthandles.ObjectHandlesMouseCursors2_sizeNWSE" size="74" frame="2"/>
+      <bitmap name="com.roguedevelopment.objecthandles.ObjectHandles_rotateHandleImage" size="73" frame="2"/>
+      <bitmap name="com.flexspy.imp.ResizableTitleWindow_RESTORE_BUTTON" size="69" frame="2"/>
+      <bitmap name="com.flexspy.imp.ResizableTitleWindow_MAXIMIZE_BUTTON" size="53" frame="2"/>
+      <bitmap name="mx.controls.RichTextEditor__embed_mxml_assets_icon_align_left_png_76259554" size="47" frame="2"/>
+      <bitmap name="mx.controls.RichTextEditor__embed_mxml_assets_icon_align_right_png_1064395134" size="47" frame="2"/>
+      <bitmap name="mx.controls.RichTextEditor__embed_mxml_assets_icon_style_underline_png_1633770822" size="46" frame="2"/>
+      <bitmap name="mx.controls.RichTextEditor__embed_mxml_assets_icon_align_center_png_844514782" size="45" frame="2"/>
+      <bitmap name="mx.controls.RichTextEditor__embed_mxml_assets_icon_bullet_png_1317158808" size="44" frame="2"/>
+      <bitmap name="mx.controls.RichTextEditor__embed_mxml_assets_icon_style_italic_png_1823633960" size="43" frame="2"/>
+      <bitmap name="components.ExpandingMenu__embed_mxml__assets_expandIcon_gif_437111772" size="42" frame="2"/>
+      <bitmap name="com.roguedevelopment.objecthandles.ObjectHandles_resizeHandleImage" size="41" frame="2"/>
+      <bitmap name="mx.controls.RichTextEditor__embed_mxml_assets_icon_style_bold_png_449610006" size="40" frame="2"/>
+      <bitmap name="com.flexspy.imp.ResizableTitleWindow_MINIMIZE_BUTTON" size="37" frame="2"/>
+      <bitmap name="mx.controls.RichTextEditor__embed_mxml_assets_icon_align_justify_png_1787986550" size="34" frame="2"/>
+    </bitmaps>
+
+    <!-- SWF, Pixel Bender, or other miscellaneous embed data. -->
+    <binaryData totalSize="12506">
+      <data name="mx.graphics.shaderClasses.SaturationShader_ShaderClass" size="2298" frame="2"/>
+      <data name="mx.graphics.shaderClasses.HueShader_ShaderClass" size="2268" frame="2"/>
+      <data name="mx.graphics.shaderClasses.SoftLightShader_ShaderClass" size="1920" frame="2"/>
+      <data name="mx.graphics.shaderClasses.LuminosityShader_ShaderClass" size="1282" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ColorShader_ShaderClass" size="1272" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ColorBurnShader_ShaderClass" size="1144" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ColorDodgeShader_ShaderClass" size="1074" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ExclusionShader_ShaderClass" size="624" frame="2"/>
+      <data name="mx.graphics.shaderClasses.LuminosityMaskShader_ShaderClass" size="624" frame="2"/>
+    </binaryData>
+
+    <!-- Additional frame tags (symbolClass, exportAssets, showFrame, etc). -->
+    <frameData totalSize="14585">
+      <tag type="symbolClass" size="8589" frame="2"/>
+      <tag type="exportAssets" size="5892" frame="2"/>
+      <tag type="symbolClass" size="45" frame="1"/>
+      <tag type="frameLabel" size="41" frame="1"/>
+      <tag type="frameLabel" size="14" frame="2"/>
+      <tag type="showFrame" size="2" frame="1"/>
+      <tag type="showFrame" size="2" frame="2"/>
+    </frameData>
+  </swf>
+</report>

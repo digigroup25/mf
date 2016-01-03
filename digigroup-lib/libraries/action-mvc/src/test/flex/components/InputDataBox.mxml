@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Form xmlns:mx="http://www.adobe.com/2006/mxml" width="400" height="300">
+	<mx:Label text="{inputFieldName}"/>
+	<mx:TextInput id="input"/>
+	<mx:Button label="Cancel" click="onCancel()"/>
+	<mx:Button label="Submit" click="onSubmit()"/>
+	<mx:Label id="status"/>
+	<mx:Script>
+		<![CDATA[
+			import events.SubmitEvent;
+			
+			[Bindable]
+			public var inputFieldName:String;
+			
+			private function onCancel():void {
+				this.dispatchEvent(new SubmitEvent(SubmitEvent.CANCEL));
+			}
+			
+			private function onSubmit():void {
+				this.dispatchEvent(new SubmitEvent(SubmitEvent.SUBMIT, input.text));
+			}
+		]]>
+	</mx:Script>
+</mx:Form>

@@ -1,0 +1,37 @@
+<report>
+  <scripts>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/prolog/src/main/flex/Prolog.mxml" mod="1306118091000" size="2370" optimizedsize="1674">
+      <def id="Prolog" />
+      <pre id="flash.events:IEventDispatcher" />
+      <pre id="mx.core:Application" />
+      <dep id="mx.core:IFlexModuleFactory" />
+      <dep id="AS3" />
+      <dep id="mx.core:UIComponentDescriptor" />
+      <dep id="mx.binding.utils:BindingUtils" />
+      <dep id="mx.events:FlexEvent" />
+      <dep id="mx.core:mx_internal" />
+      <dep id="mx.events:PropertyChangeEvent" />
+      <dep id="wprolog:WPrologEditor" />
+    </script>
+    <script name="_32871743adf028e9c0035ade884f016bcd5f66131ab5638171fbce647d287cd9_flash_display_Sprite.as" mod="1315796953744" size="1147" optimizedsize="511">
+      <def id="_32871743adf028e9c0035ade884f016bcd5f66131ab5638171fbce647d287cd9_flash_display_Sprite" />
+      <pre id="flash.display:Sprite" />
+      <dep id="flash.system:Security" />
+      <dep id="AS3" />
+    </script>
+  </scripts>
+  <external-defs>
+    <ext id="AS3" />
+    <ext id="mx.core:UIComponentDescriptor" />
+    <ext id="mx.binding.utils:BindingUtils" />
+    <ext id="flash.events:IEventDispatcher" />
+    <ext id="mx.core:Application" />
+    <ext id="mx.core:mx_internal" />
+    <ext id="wprolog:WPrologEditor" />
+    <ext id="mx.events:FlexEvent" />
+    <ext id="flash.system:Security" />
+    <ext id="mx.events:PropertyChangeEvent" />
+    <ext id="mx.core:IFlexModuleFactory" />
+    <ext id="flash.display:Sprite" />
+  </external-defs>
+</report>

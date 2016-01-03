@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--can't use velocity, got:
+java.io.InvalidClassException: org.apache.velocity.runtime.parser.node.ASTprocess; class invalid for deserialization-->
+<unitestingsupport:TestApplication 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	xmlns:unitestingsupport="org.sonatype.flexmojos.unitestingsupport.*"
+	layout="absolute"
+	initialize="init()" 
+	port="53320" 
+	controlPort="53319" 
+	>
+
+
+
+	<mx:Script>
+		<![CDATA[
+
+import factories.TreeFactoryTest; TreeFactoryTest;
+
+
+			private function init():void {
+addTest( TreeFactoryTest);
+
+			}
+		]]>
+	</mx:Script>
+
+</unitestingsupport:TestApplication>

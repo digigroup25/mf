@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" styleName="plain">
+	<mx:ApplicationControlBar x="192" y="132" dock="true" id="toolbar" initialize="init()">
+	</mx:ApplicationControlBar>
+	
+	<mx:Script>
+		<![CDATA[
+			
+			import uiengine.*;
+			
+			private function init():void
+			{
+			// TODO: 2011/05/19 KTD: Commented this out because MenuBuilder not found.
+//				new MenuBuilder().buildTree(null, toolbar);
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

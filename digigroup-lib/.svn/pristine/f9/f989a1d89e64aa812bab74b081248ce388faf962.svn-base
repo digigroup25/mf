@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" 
+	preinitialize="onPreInit()" initialize="onInit()" 
+	width="400" height="300" close="onClose()" showCloseButton="true">
+	<mx:TextArea id="textBox" width="100%" height="100%" />
+	<!--<mx:Button id="defaultBtn" width="100%" label="" click="onClose()" includeInLayout="false"/>-->
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.Button;
+			import mx.collections.ArrayCollection;
+			import mx.managers.*;
+			import flash.events.MouseEvent;
+			
+			public var buttons:ArrayCollection = new ArrayCollection();
+			public var defaultBtn:Button;
+			private function onPreInit():void
+			{
+				defaultBtn = new Button();
+				defaultBtn.percentWidth = 100;
+				defaultBtn.label = "";
+				defaultBtn.addEventListener(MouseEvent.CLICK, onDefaultButtonClick, false, 0, true);
+				buttons.addItem(defaultBtn);
+			}
+			
+			private function onDefaultButtonClick(event:MouseEvent):void {
+				//defaultBtn.removeEventListener(MouseEvent.CLICK, onDefaultButtonClick);
+				
+				var newEvent:TextImportExportEvent = new TextImportExportEvent(text);
+				this.dispatchEvent(newEvent);
+			}
+			
+			private function onInit():void
+			{
+				for each (var btn:Button in buttons)
+				{
+					this.addChild(btn);
+				}
+				//textBox.setFocus();
+			}
+			
+			protected function onClose(event:MouseEvent=null):void
+			{
+				PopUpManager.removePopUp(this);
+			}
+			
+			public function get text():String {
+				return textBox.text;
+			}
+			
+			public function set text(val:String):void {
+				textBox.text = val;
+			}
+			
+			public function get defaultButtonLabel():String {
+				return defaultBtn.label;
+			}
+			
+			public function set defaultButtonLabel(val:String):void {
+				defaultBtn.label = val;
+			}
+		]]>
+	</mx:Script>
+</mx:TitleWindow>

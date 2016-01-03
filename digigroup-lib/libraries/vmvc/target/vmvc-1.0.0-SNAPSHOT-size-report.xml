@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <swf size="55068" compressedSize="19288">
+
+    <!-- Header data (SWF attributes, product info, markers, etc.) -->
+    <headerData totalSize="403">
+      <data type="metaData" size="284"/>
+      <data type="enableDebugger" size="33"/>
+      <data type="productInfo" size="28"/>
+      <data type="swfHeader" size="21"/>
+      <data type="debugID" size="18"/>
+      <data type="fileAttributes" size="6"/>
+      <data type="scriptLimits" size="6"/>
+      <data type="backgroundColor" size="5"/>
+      <data type="endMarker" size="2"/>
+    </headerData>
+
+    <!-- Cumulative frame size summary. -->
+    <frames totalSize="54665">
+      <frame size="54665" frame="1"/>
+    </frames>
+
+    <!-- Actionscript code and constant data. -->
+    <actionScript totalSize="54566">
+      <abc name="mf/framework/Container2" size="5253" frame="1"/>
+      <abc name="mf/framework/ContainerDecorator" size="3703" frame="1"/>
+      <abc name="mf/framework/MessageBroker" size="2809" frame="1"/>
+      <abc name="mf/framework/AbstractController" size="2549" frame="1"/>
+      <abc name="mf/framework/messaging/Connector" size="2284" frame="1"/>
+      <abc name="mf/framework/messaging/ExternalMessageAdapter" size="2250" frame="1"/>
+      <abc name="mf/framework/messaging/InternalMessageAdapter" size="2082" frame="1"/>
+      <abc name="mf/framework/ViewContainerDecorator" size="1953" frame="1"/>
+      <abc name="mf/framework/AbstractCommandController" size="1916" frame="1"/>
+      <abc name="mf/framework/ViewContainer" size="1835" frame="1"/>
+      <abc name="mf/utils/ClassUtil" size="1528" frame="1"/>
+      <abc name="mf/framework/IMessageBroker" size="1397" frame="1"/>
+      <abc name="mf/framework/Message" size="1352" frame="1"/>
+      <abc name="mf/framework/FrameworkFactory" size="1321" frame="1"/>
+      <abc name="_38db56db56dad0cc2d40b1de3971abd64f326029014f6a1bdecbd1c78bc28ceb_flash_display_Sprite" size="1244" frame="1"/>
+      <abc name="mf/framework/MessageLogBroker" size="1207" frame="1"/>
+      <abc name="mf/framework/messaging/MessageFilterFactory" size="1186" frame="1"/>
+      <abc name="mf/framework/messaging/ExcludeMessageFilter" size="1068" frame="1"/>
+      <abc name="mf/framework/messaging/IncludeMessageFilter" size="1064" frame="1"/>
+      <abc name="mf/framework/LoggingReceiver" size="1047" frame="1"/>
+      <abc name="mf/framework/Command" size="920" frame="1"/>
+      <abc name="mf/framework/MessageMacroCommand" size="898" frame="1"/>
+      <abc name="mf/framework/ModelProvider" size="831" frame="1"/>
+      <abc name="mf/framework/IObserver" size="797" frame="1"/>
+      <abc name="mf/framework/MessageTraceBroker" size="763" frame="1"/>
+      <abc name="mf/framework/AsyncCommandContext" size="763" frame="1"/>
+      <abc name="mf/framework/messaging/AbstractMessageFactory" size="745" frame="1"/>
+      <abc name="mf/framework/Receiver" size="744" frame="1"/>
+      <abc name="mf/framework/messaging/IMessageFilter" size="721" frame="1"/>
+      <abc name="mf/framework/IModelProvider" size="711" frame="1"/>
+      <abc name="mf/framework/CommandContext" size="686" frame="1"/>
+      <abc name="mf/framework/IResultResponder" size="658" frame="1"/>
+      <abc name="mf/framework/SystemMessage" size="651" frame="1"/>
+      <abc name="mf/framework/UserMessage" size="637" frame="1"/>
+      <abc name="mf/framework/IUninitialize" size="608" frame="1"/>
+      <abc name="mf/framework/AsyncCommand" size="595" frame="1"/>
+      <abc name="mf/framework/IInitialize" size="586" frame="1"/>
+      <abc name="mf/framework/IReceiver" size="583" frame="1"/>
+      <abc name="mf/framework/ISender" size="582" frame="1"/>
+      <abc name="mf/framework/ICommand" size="553" frame="1"/>
+      <abc name="mf/framework/IManagedLifecycle" size="525" frame="1"/>
+      <abc name="mf/framework/IContainer" size="486" frame="1"/>
+      <abc name="mf/framework/IMessenger" size="475" frame="1"/>
+    </actionScript>
+
+    <!-- Additional frame tags (symbolClass, exportAssets, showFrame, etc). -->
+    <frameData totalSize="99">
+      <tag type="symbolClass" size="97" frame="1"/>
+      <tag type="showFrame" size="2" frame="1"/>
+    </frameData>
+  </swf>
+</report>

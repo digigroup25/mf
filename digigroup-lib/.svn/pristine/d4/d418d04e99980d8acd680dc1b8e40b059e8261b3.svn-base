@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<groupId>com.digigroup.root</groupId>
+		<artifactId>root-pom</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../root-pom/pom.xml</relativePath>
+	</parent>
+
+	<groupId>com.digigroup.digigrouplib</groupId>
+	<artifactId>dglib-pom</artifactId>
+
+	<packaging>pom</packaging>
+	<name>DigiGroup Lib POM</name>
+	<modelVersion>4.0.0</modelVersion>
+
+	<build>
+		<sourceDirectory>src/main/flex</sourceDirectory>
+		<testSourceDirectory>src/test/flex</testSourceDirectory>
+
+		<plugins>
+			<plugin>
+				<groupId>org.sonatype.flexmojos</groupId>
+				<artifactId>flexmojos-maven-plugin</artifactId>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.adobe.flex.framework</groupId>
+			<artifactId>flex-framework</artifactId>
+			<type>pom</type>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.adobe.flexunit</groupId>
+			<artifactId>flexunit</artifactId>
+			<type>swc</type>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-as3-flex</artifactId>
+			<type>swc</type>
+		</dependency>
+	</dependencies>
+
+	<modules>
+		<module>testing</module>
+		<module>vmvc</module>
+		<module>common-utils</module>
+		<module>action-mvc</module>
+        <!-- do not build prolog 
+		<module>prolog-engine</module>
+		<module>prolog</module>
+        -->
+		<module>pluggable-objects</module>
+	<!--
+		<module>ui-engine</module>
+	-->
+		<module>control-objects</module>
+	</modules>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.sonatype.flexmojos</groupId>
+				<artifactId>flexmojos-maven-plugin</artifactId>
+				<version>${com.adobe.flex.framework.version}</version>
+			</plugin>
+		</plugins>
+	</reporting>
+</project>

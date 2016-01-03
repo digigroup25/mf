@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!-- Simple example to demonstrate the Menu control. -->
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" creationComplete="onCreationComplete(event)">
+
+    <mx:Script>
+        <![CDATA[
+        	import mx.managers.ICursorManager;
+        	import mx.managers.CursorManager;
+       
+            import mx.controls.Menu;
+            import mx.events.MenuEvent;
+            import mx.controls.Alert;           
+            import flash.geom.Point;
+
+            private var myMenu:Menu;
+            private var timer:Timer = new Timer(3000, 1);
+			
+			private var lastCursorPosition:Point;
+			
+			private function onCreationComplete(event:Event):void {
+				startTimer();
+				this.addEventListener(MouseEvent.MOUSE_MOVE, onMouseMove);
+				this.addEventListener(MouseEvent.CLICK, onMouseClick);
+			}
+			
+			private function onMouseClick(event:MouseEvent):void {
+				restart();
+			}
+			
+			private function restart():void {
+				if (timer.hasEventListener(TimerEvent.TIMER_COMPLETE)) 
+					timer.removeEventListener(TimerEvent.TIMER_COMPLETE, onTimerComplete);
+				if (timer.running) {
+					timer.stop();
+					timer.reset();
+				}
+				startTimer();
+			}
+			
+			private function onMouseMove(event:MouseEvent):void {
+				trace(event.localX, event.localY, event.stageX, event.stageY);
+				lastCursorPosition = new Point(event.stageX, event.stageY);
+			}
+			
+			private function startTimer():void {
+				timer.addEventListener(TimerEvent.TIMER_COMPLETE, onTimerComplete);
+				timer.start();
+			}
+			
+			private function onTimerComplete(event:TimerEvent):void {
+				showMenu();
+			}
+			
+            // Create and display the Menu control.
+            private function showMenu():void {
+                myMenu= Menu.createMenu(panel, myMenuData, false);
+                myMenu.labelField="@label"
+                myMenu.addEventListener(MenuEvent.ITEM_CLICK, menuHandler);
+                myMenu.show(lastCursorPosition.x, lastCursorPosition.y);
+            }
+       
+            // Event handler for the Menu control's change event.
+            private function menuHandler(event:MenuEvent):void  {
+                //Alert.show("Label: " + event.item.@label, "Clicked menu item");
+               restart();
+            }    
+        ]]>
+    </mx:Script>
+
+    <mx:XML id="myMenuData">
+        <root>
+            <menuitem label="MenuItem 1" eventName="copy"/>
+            <menuitem label="MenuItem 2" eventName="paste"/>
+        </root>
+    </mx:XML>
+
+    <mx:Panel id="panel" title="Menu Control Example" height="75%" width="75%" 
+        paddingTop="10" paddingLeft="10">
+
+        <mx:Label width="100%" color="blue"
+           text="Click the button to open the Menu control."/>
+
+        <mx:Button id="mybutton" label="Open Menu" click="showMenu();"/>
+
+    </mx:Panel>
+</mx:Application>          

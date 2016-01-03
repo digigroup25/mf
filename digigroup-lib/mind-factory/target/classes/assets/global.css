@@ -1,0 +1,30 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+
+WindowShade, CloseableWindowShade, BasicWindowShade {
+	headerClass:ClassReference('mx.controls.LinkButton');
+}
+
+.windowShade {
+	headerClass:ClassReference('mx.controls.LinkButton');
+}
+
+/*WindowShade, CloseableWindowShade, BasicWindowShade, .windowShade, .linkButtonWindowShade {
+	headerClass:ClassReference('mx.controls.LinkButton');
+	header-style-name: linkButtonStyle;
+
+	drop-shadow-enabled:true;
+
+	corner-radius:10;
+	border-style:solid;
+
+	background-color:#efefef;
+	background-alpha:.7;
+}
+
+.linkButtonStyle {
+	corner-radius:10;
+	fill-alphas:1,1;
+	padding-left:10;
+}*/

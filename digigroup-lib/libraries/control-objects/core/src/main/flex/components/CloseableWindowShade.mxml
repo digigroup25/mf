@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:HBox width="100%" height="100%" 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	xmlns:code="http://code.google.com/p/flexlib/"
+	horizontalGap="4" verticalGap="4"
+	implements="components.IWindowShade" xmlns:components="components.*">
+	<components:BasicWindowShade id="content" width="100%" height="100%" styleName="windowShade"/>
+	<mx:Button label="x" click="closeButton_clickHandler(event)" width="22" height="22" paddingLeft="2" paddingRight="2"/>
+	<mx:Script>
+		<![CDATA[
+			import mx.events.CloseEvent;
+			private function closeButton_clickHandler(event:MouseEvent):void {
+				this.dispatchEvent(new CloseEvent(CloseEvent.CLOSE, true, true));
+			}
+			
+			public override function get label():String {
+				return super.label;
+			}
+			
+			public override function set label(value:String):void {
+				super.label = value;
+				content.label = value;
+			}
+			
+			public function addContent(child:DisplayObject):void {
+				content.addChild(child);
+			}
+			
+			public function get opened():Boolean {
+				return content.opened;
+			}
+		]]>
+	</mx:Script>
+</mx:HBox>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:components="components.*" creationComplete="onCreationComplete(event)" styleName="plain">
+	<mx:VBox>
+		<mx:HBox>
+			<mx:Button label="add" click="add()"/>
+			<mx:Button label="remove" click="remove()"/>
+			<mx:CheckBox id="closeable" label="closeable"/>
+		</mx:HBox>
+		
+		<components:ResizableWindowShadeStack id="window"/>	
+	</mx:VBox>
+	
+	<mx:Script>
+		<![CDATA[
+			import components.IWindowShade;
+			import mx.events.CloseEvent;
+			import components.CloseableWindowShade;
+			import components.BasicWindowShade;
+			import mindmaps2.elements.ui.TaskEditor;
+			import mx.events.FlexEvent;
+			private var editor:TaskEditor;
+			private var editors:Array = [];
+			
+			private function onCreationComplete(event:FlexEvent):void {
+				add();
+			}
+			
+			private function onClose(event:CloseEvent):void {
+				window.removeWindowShade(editor);
+			}
+			
+			private function add():void {
+				editor = new TaskEditor();
+				// TODO: 2011/05/21: KTD: Check this.  I added the resizeable parameter value of 'false' to fix parameter count mismatch error.  50% chance of getting it right.
+				window.addWindowShade(editor, closeable.selected, false);
+				window.addEventListener(CloseEvent.CLOSE, onClose);
+				editors.push(editor);
+			}
+			
+			private function remove():void {
+				if (editors.length==0) return;
+				var editor:DisplayObject = DisplayObject(editors.pop());
+				window.removeWindowShade(editor);	
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

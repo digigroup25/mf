@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--can't use velocity, got:
+java.io.InvalidClassException: org.apache.velocity.runtime.parser.node.ASTprocess; class invalid for deserialization-->
+<unitestingsupport:TestApplication 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	xmlns:unitestingsupport="org.sonatype.flexmojos.unitestingsupport.*"
+	layout="absolute"
+	initialize="init()" 
+	port="53316" 
+	controlPort="53315" 
+	>
+
+
+
+	<mx:Script>
+		<![CDATA[
+
+import collections.AliasHashMapTest; AliasHashMapTest;
+import collections.ArrayCollectionIteratorTest; ArrayCollectionIteratorTest;
+import collections.ArrayCollectionViewerTest; ArrayCollectionViewerTest;
+import collections.Base64Test; Base64Test;
+import collections.CollectionConverterTest; CollectionConverterTest;
+import collections.HashMapTest; HashMapTest;
+import collections.SetTest; SetTest;
+import collections.SingletonTest; SingletonTest;
+import collections.tree.BreadthFirstTreeIteratorTest; BreadthFirstTreeIteratorTest;
+import collections.tree.DoubleLinkedTreeTest; DoubleLinkedTreeTest;
+import collections.tree.InOrderTreeIteratorTest; InOrderTreeIteratorTest;
+import collections.tree.SubtreeIteratorTest; SubtreeIteratorTest;
+import collections.tree.TreeCollectionExClonerTest; TreeCollectionExClonerTest;
+import collections.tree.TreeCompositeTest; TreeCompositeTest;
+import collections.tree.TreeIteratorTest; TreeIteratorTest;
+import collections.tree.TreeLeafIteratorTest; TreeLeafIteratorTest;
+import collections.tree.TreeTypeIteratorTest; TreeTypeIteratorTest;
+import collections.tree.TreeWeightRankerTest; TreeWeightRankerTest;
+import collections.tree.TreeWeightSorterTest; TreeWeightSorterTest;
+import collections.TreeCollectionExTest; TreeCollectionExTest;
+import commonutils.ClassInspectorTest; ClassInspectorTest;
+import commonutils.DeepCopyTest; DeepCopyTest;
+import commonutils.HasherTest; HasherTest;
+import converters.XmlCollectionConverter_1_1_Test; XmlCollectionConverter_1_1_Test;
+import persistence.ObjectPersistorTest; ObjectPersistorTest;
+
+
+			private function init():void {
+addTest( AliasHashMapTest);
+addTest( ArrayCollectionIteratorTest);
+addTest( ArrayCollectionViewerTest);
+addTest( Base64Test);
+addTest( CollectionConverterTest);
+addTest( HashMapTest);
+addTest( SetTest);
+addTest( SingletonTest);
+addTest( BreadthFirstTreeIteratorTest);
+addTest( DoubleLinkedTreeTest);
+addTest( InOrderTreeIteratorTest);
+addTest( SubtreeIteratorTest);
+addTest( TreeCollectionExClonerTest);
+addTest( TreeCompositeTest);
+addTest( TreeIteratorTest);
+addTest( TreeLeafIteratorTest);
+addTest( TreeTypeIteratorTest);
+addTest( TreeWeightRankerTest);
+addTest( TreeWeightSorterTest);
+addTest( TreeCollectionExTest);
+addTest( ClassInspectorTest);
+addTest( DeepCopyTest);
+addTest( HasherTest);
+addTest( XmlCollectionConverter_1_1_Test);
+addTest( ObjectPersistorTest);
+
+			}
+		]]>
+	</mx:Script>
+
+</unitestingsupport:TestApplication>

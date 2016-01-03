@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.digigroup.digigrouplib.control-objects</groupId>
+		<artifactId>control-objects-pom</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>control-objects-test-harnesses</artifactId>
+	<packaging>swf</packaging>
+
+	<name>Control Objects Test Harnesses</name>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.sonatype.flexmojos</groupId>
+				<artifactId>flexmojos-maven-plugin</artifactId>
+				<extensions>true</extensions>
+
+				<configuration>
+					<sourceFile>TestHarness.mxml</sourceFile>
+
+					<!-- Replace modules below with .mxml files added to test harnesses Maven module. -->
+					<!--<moduleFiles>-->
+					<!--<module>TestBox.mxml</module>-->
+					<!--<module>OpenBrowserWindow.mxml</module>-->
+					<!--<module>TestDataRendererCollections.mxml</module>-->
+					<!--<module>TestDataRendererCollections2.mxml</module>-->
+					<!--<module>TestDataRendererMemoryLeak.mxml</module>-->
+					<!--<module>TestDataRendererObject.mxml</module>-->
+					<!--<module>TestPopUpMenuButton.mxml</module>-->
+					<!--</moduleFiles>-->
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>control-objects</artifactId>
+			<version>${project.version}</version>
+			<type>swc</type>
+		</dependency>
+
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>control-objects</artifactId>
+			<version>${project.version}</version>
+			<classifier>tests</classifier>
+			<type>swc</type>
+		</dependency>
+
+		<dependency>
+			<groupId>com.digigroup.external</groupId>
+			<artifactId>flexspy</artifactId>
+			<type>swc</type>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+
+</project>

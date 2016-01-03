@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" initialize="init()">
+<mx:VBox>
+	<mx:HBox>
+	<mx:NumericStepper id="times" value="10" maximum="1000"/>
+	<mx:Button label="Render" click="renderTimes(model, times.value);"/>
+	<mx:Button label="Render/Dispose" click="renderDisposeTimes(model, times.value);"/>
+</mx:HBox>
+	<mx:VBox id="dataContainer"/>
+</mx:VBox>
+
+	<mx:Script>
+		<![CDATA[
+			import uiengine.datarenderer.Render;
+			import testclasses.TaskNoDate;
+			import testclasses.OneFieldClass;
+			import mx.core.UIComponent;
+			import vos.Task;
+			import factories.TreeFactory;
+			import uiengine.datarenderer.DataRendererContext;
+			import uiengine.datarenderer.DataRenderer;
+			
+			private var view:DisplayObject;
+			private var model:*;
+			private var renderContainer:Render;
+			
+			private function init():void {
+				//model = new Task();
+				//model = new OneFieldClass("abc");
+				model = new TaskNoDate();
+			}
+			private function renderTimes(model:*, times:int):void {
+				for (var i:int=0; i<times; i++) {
+					render(model);
+				}
+			}
+			
+			private function renderDisposeTimes(model:*, times:int):void {
+				for (var i:int=0; i<times; i++)	{
+					/* if (view!=null)
+						DataRenderer.dispose(UIComponent(view));
+					render(model); */
+					if (renderContainer!=null)
+						renderContainer.uninitialize();
+					var context:DataRendererContext = new DataRendererContext(model);
+					renderContainer = DataRenderer.renderContainer(context);
+					renderContainer.parent = this.dataContainer;
+					dataContainer.addChild(DisplayObject(renderContainer.view));
+				}
+			}
+			
+			private function render(model:*):void {
+				if (view!=null)
+					dataContainer.removeChild(view);
+				var context:DataRendererContext = new DataRendererContext(model, null);
+				view = DataRenderer.render(context);
+				dataContainer.addChild(view);
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

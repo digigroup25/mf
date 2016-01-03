@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:VGroup xmlns:commonui="mindmaps2.ui.*"
+		  xmlns:fx="http://ns.adobe.com/mxml/2009"
+		  xmlns:mx="library://ns.adobe.com/flex/mx"
+		  xmlns:s="library://ns.adobe.com/flex/spark"
+		  xmlns:ui="mindmaps2.map.ui.*"
+		  width="100%"
+		  height="100%"
+		  >
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+		]]>
+	</fx:Script>
+	<s:HGroup id="topPane">
+		<s:DropDownList id="addItemSelector"
+						width="80"
+						dataProvider="{new ArrayCollection(elementsToAdd)}"
+						change="addTreeElement(event)"
+						prompt="+"
+						/>
+		<!--<commonui:PopUpMenuButtonEx label="+" cornerRadius="0" width="40" itemClick="addTreeElement(event)" dataProvider="{elementsToAdd}" openAlways="true" />-->
+		<mx:Button width="24"
+				   cornerRadius="0"
+				   paddingLeft="4"
+				   paddingRight="4"
+				   label="-"
+				   click="deleteElement()"
+				   />
+	</s:HGroup>
+
+	<ui:EditableTree id="editor"
+					 width="100%"
+					 height="100%"
+					 labelField="name"
+					 minHeight="300"
+					 minWidth="200"
+					 initialize="init()"
+					 itemRenderer="components.TaskItemRenderer"
+					 />
+	<!--itemRenderer="components.TreeCheckBoxItemRenderer"-->
+
+	<fx:Script>
+		<![CDATA[
+			import collections.TreeCollectionEx;
+
+			import mindmaps.map.MapModel2;
+
+			import mx.binding.utils.BindingUtils;
+			import mx.controls.TextInput;
+			import mx.core.EventPriority;
+			import mx.events.ListEvent;
+			import mx.events.ListEventReason;
+			import mx.events.MenuEvent;
+			import mx.events.PropertyChangeEvent;
+
+			import spark.events.IndexChangeEvent;
+
+			[Bindable]
+			public var elementsToAdd:Array;
+
+			private var _dataProvider:Object;
+
+			private var dataProviderChanged:Boolean = false;
+
+			private var previousSelectedItem:Object = null;
+
+			private var _selectedItem:Object;
+
+			private var selectedItemChanged:Boolean = false;
+
+			public function get dataProvider():Object {
+				return _dataProvider;
+			}
+
+			public function set dataProvider(value:Object):void {
+				if (!(value is MapModel2))
+					throw new Error("dataProvider can only be set to MapModel2 type");
+				_dataProvider = value;
+				dataProviderChanged = true;
+				this.invalidateProperties();
+			}
+
+			[Bindable(event = "selectedElementChanged")]
+			public function get selectedItem():Object {
+				return _selectedItem;
+			}
+
+			public function set selectedItem(value:Object):void {
+				/* if (value===this.editor.selectedItem)
+					return; */
+
+				setSelectedItem(value);
+				this.selectedItemChanged = true;
+			}
+
+			public function selectItemToEdit(item:Object):void {
+				editor.selectedItem = item;
+				editor.editedItemPosition = { rowIndex: editor.selectedIndex, columnIndex: 0 };
+				selectedItem = item;
+
+				//editor.callLater(setFocus); //focus on editor to make item editable
+			}
+
+			/* override public function setFocus():void {
+				editor.setFocus();
+			} */
+
+			public function expandDescendantsOf(node:TreeCollectionEx):void {
+				editor.expandChildrenOf(node, true);
+			}
+
+			override protected function commitProperties():void {
+				super.commitProperties();
+
+				if (dataProviderChanged) {
+					dataProviderChanged = false;
+					editor.dataProvider = map.nodes;
+				}
+				if (selectedItemChanged) {
+					selectedItemChanged = false;
+					this.editor.selectedItem = _selectedItem;
+				}
+			}
+
+			private function get map():MapModel2 {
+				return MapModel2(_dataProvider);
+			}
+
+			private function setSelectedItem(value:Object):void {
+				_selectedItem = value;
+
+				this.invalidateProperties();
+
+				dispatchSelectedElementChanged();
+			}
+
+
+			private function init():void {
+				editor.addEventListener(MouseEvent.MOUSE_DOWN, onEditorMouseDown);
+				editor.addEventListener(ListEvent.CHANGE, onListChange);
+
+				editor.addEventListener(ListEvent.ITEM_EDIT_BEGIN, onItemEditBegin);
+				editor.addEventListener(ListEvent.ITEM_EDIT_END, onItemEditEnd);
+			}
+
+			private function onItemEditBegin(event:ListEvent):void {
+				this.dispatchEvent(new MindMapTreeEditorEvent(MindMapTreeEditorEvent.ELEMENT_EDIT_BEGIN));
+			}
+
+			private function onItemEditEnd(event:ListEvent):void {
+				this.dispatchEvent(new MindMapTreeEditorEvent(MindMapTreeEditorEvent.ELEMENT_EDIT_END));
+			}
+
+			private function onListChange(event:ListEvent):void {
+				//_selectedItem = this.editor.selectedItem;
+				if (this.selectedItem === this.editor.selectedItem)
+					return;
+				setSelectedItem(this.editor.selectedItem);
+				//dispatchSelectedElementChanged();
+			}
+
+			private function dispatchSelectedElementChanged():void {
+				this.dispatchEvent(new MindMapTreeEditorEvent(MindMapTreeEditorEvent.SELECTED_ELEMENT_CHANGED));
+			}
+
+			private function onEditorMouseDown(event:MouseEvent):void {
+				//trace("MindMapTreeEditor.onEditorMouseDown");
+				var newEvent:MindMapTreeEditorEvent = new MindMapTreeEditorEvent(MindMapTreeEditorEvent.FOCUS_IN);
+				this.dispatchEvent(newEvent);
+			}
+
+			private function addTreeElement(event:IndexChangeEvent /*MenuEvent*/):void {
+				var elementType:Class = (event.newIndex != -1) ? elementsToAdd[event.newIndex].value : null;
+				if (elementType == null)
+					return;
+				var newEvent:MindMapTreeEditorEvent = MindMapTreeEditorEvent.createAddElement(elementType);
+				this.dispatchEvent(newEvent);
+
+				this.addItemSelector.selectedIndex = -1;
+			}
+
+			private function deleteElement():void {
+				var event:MindMapTreeEditorEvent = new MindMapTreeEditorEvent(MindMapTreeEditorEvent.DELETE_ELEMENT,
+					TreeCollectionEx(this.selectedItem));
+				this.dispatchEvent(event);
+			}
+		]]>
+	</fx:Script>
+</s:VGroup>

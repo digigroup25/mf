@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TreeMap xmlns="com.flextoolbox.controls.*" xmlns:mx="http://www.adobe.com/2006/mxml" 
+	colorFunction="elementToColorPriority" labelField="name">
+	<mx:Script>
+		<![CDATA[
+			
+			private static const red:uint = 0x990000;
+			private static const green:uint = 0x009900;
+			private static const black:uint = 0x000000;
+			
+			//private var _weightField:String = "rank";
+			private var _maxWeight:int;
+			public function get maxWeight():int {
+				return _maxWeight;
+			}
+			
+			public function set maxWeight(value:int):void {
+				(value==0) ? _maxWeight=1 : _maxWeight=value;
+			}
+			/**
+			 * @private
+			 * Determines the color of a leaf in the TreeMap.
+			 */
+			private function elementToColorPriority(item:Object):uint
+			{
+				var changeValue:Number = parseFloat(item.vo[weightField]);
+				var percent:Number = Math.abs(changeValue)/maxWeight;
+				//trace("elementToColorPriority", changeValue);
+				if(percent >= 0.5)
+				{
+					return this.blendColors(red, black, percent);
+				}
+				return this.blendColors(green, black, percent);
+			}
+				
+			/**
+			 * @private
+			 * Determines the blended color between two separate colors using a
+			 * range from 0 to 1 where a value of 0 returns 100% of the first color
+			 * and a value of 1 return 100% of the second color.
+			 */
+			private function blendColors(color1:uint, color2:uint, percent:Number = 0.5):uint
+			{
+				var remaining:Number = 1 - percent;
+				
+				var red1:uint = (color1 >> 16) & 0xff;
+				var green1:uint = (color1 >> 8) & 0xff;
+				var blue1:uint = color1 & 0xff;
+				
+				var red2:uint = (color2 >> 16) & 0xff;
+				var green2:uint = (color2 >> 8) & 0xff;
+				var blue2:uint = color2 & 0xff;
+				 
+				color1 = ((red1 * percent) << 16) + ((green1 * percent) << 8) + blue1 * percent;
+				color2 = ((red2 * remaining) << 16) + ((green2 * remaining) << 8) + blue2 * remaining;
+	
+				return color1 + color2;
+			}
+			
+			
+		]]>
+	</mx:Script>
+</TreeMap>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:components="mapstorage.components.*"
+	implements="mf.framework.IReceiver">
+	<!--<components:MapStorage id="mapStorage"/>-->
+	<mx:VBox width="100%" height="100%" id="box">
+		<mx:HBox>
+			<mx:Button label="init" click="init()"/>
+			<mx:Button label="uninit" click="uninit()"/>
+		</mx:HBox>
+	</mx:VBox>
+	
+	<mx:Script>
+		<![CDATA[
+			import mapstorage.MapStorageContainer;
+			import mapstorage.ui.MapStorage;
+			
+			import mf.framework.IContainer;
+			import mf.framework.IMessageBroker;
+			import mf.framework.Message;
+			import mf.framework.MessageBroker;
+			
+			import mindmaps2.storage.MapStorageContainer2;
+			import mindmaps2.storage.services.*;
+			
+			import mx.controls.Alert;
+			
+			import services.MapPersistorMock;
+			
+			private var container:IContainer;
+			private var mb:IMessageBroker;
+			
+			private function init():void {
+				mb = new MessageBroker();
+				//mb.subscribe(this);
+				ServiceLocator.getInstance().mapPersistorClass = MapPersistorMock;
+				var offlineRepo:IMapRepository = LocalMapRepository(null); 
+				var onlineRepo:IMapRepository = new WebMapRepository();
+				container = new MapStorageContainer(this, mb, "test", new MapStorage(), onlineRepo, offlineRepo, null, null);
+				container.initialize();
+			}
+			
+			private function uninit():void {
+				container.uninitialize();
+				container = null;
+				mb = null;
+			}
+			public function receive(m:Message):void {
+				Alert.show(m.toString()+" "+((m.body==null) ? "" : m.body));
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

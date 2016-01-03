@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Copyright (c) 2006 Narciso Jaramillo <nj_flex@rictus.com>
+    
+    Permission is hereby granted, free of charge, to any person obtaining
+    a copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation 
+    the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+    and/or sell copies of the Software, and to permit persons to whom the 
+    Software is furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included 
+    in all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS 
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
+    IN THE SOFTWARE.
+-->
+
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:controls="components.*" xmlns:cocontrols="mindmaps.search.ui.components.*"
+    viewSourceURL="http://www.rictus.com/flex/SelfLabelingTextInputDemo/srcview/index.html">
+    <mx:Script>
+        <![CDATA[
+            import mx.controls.Alert;
+        ]]>
+    </mx:Script>
+    <mx:Panel x="10" y="10" width="278" height="206" layout="absolute" title="Contact Info">
+        <controls:SelfLabelingTextInput x="10" y="10" width="238" label="Name"/>
+        <controls:SelfLabelingTextInput x="10" y="40" label="Street Address 1" width="238"/>
+        <controls:SelfLabelingTextInput x="10" y="70" label="Street Address 2" width="238"/>
+        <controls:SelfLabelingTextInput x="10" y="100" width="113" label="City"/>
+        <mx:ComboBox x="131" y="100" width="55" selectedIndex="4">
+            <mx:Object label="AK"/>
+            <mx:Object label="AL"/>
+            <mx:Object label="AR"/>
+            <mx:Object label="AZ"/>
+            <mx:Object label="CA"/>
+            <mx:Object label="CO"/>
+            <mx:Object label="CT"/>
+            <mx:Object label="DC"/>
+            <mx:Object label="DE"/>
+            <mx:Object label="FL"/>
+            <mx:Object label="GA"/>
+            <mx:Object label="HI"/>
+            <mx:Object label="ID"/>
+            <mx:Object label="IL"/>
+            <mx:Object label="IN"/>
+            <mx:Object label="IA"/>
+            <mx:Object label="KS"/>
+            <mx:Object label="KY"/>
+            <mx:Object label="LA"/>
+            <mx:Object label="MA"/>
+            <mx:Object label="MD"/>
+            <mx:Object label="ME"/>
+            <mx:Object label="MI"/>
+            <mx:Object label="MN"/>
+            <mx:Object label="MO"/>
+            <mx:Object label="MS"/>
+            <mx:Object label="MT"/>
+            <mx:Object label="NC"/>
+            <mx:Object label="ND"/>
+            <mx:Object label="NE"/>
+            <mx:Object label="NH"/>
+            <mx:Object label="NJ"/>
+            <mx:Object label="NM"/>
+            <mx:Object label="NV"/>
+            <mx:Object label="NY"/>
+            <mx:Object label="OH"/>
+            <mx:Object label="OK"/>
+            <mx:Object label="OR"/>
+            <mx:Object label="PA"/>
+            <mx:Object label="RI"/>
+            <mx:Object label="SC"/>
+            <mx:Object label="SD"/>
+            <mx:Object label="TN"/>
+            <mx:Object label="TX"/>
+            <mx:Object label="UT"/>
+            <mx:Object label="VT"/>
+            <mx:Object label="VA"/>
+            <mx:Object label="WA"/>
+            <mx:Object label="WV"/>
+            <mx:Object label="WI"/>
+            <mx:Object label="WY"/>
+        </mx:ComboBox>
+        <controls:SelfLabelingTextInput x="194" y="100" width="54" label="ZIP"/>
+        <mx:ControlBar>
+            <cocontrols:SearchBox width="150" label="Search"/>
+            <mx:Spacer width="100%"/>
+            <mx:Button label="Save" click="Alert.show('What, you expected this dinky demo to actually do something?')"/>
+        </mx:ControlBar>
+    </mx:Panel>
+</mx:Application>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" width="400"
+			   title="@{title}" 
+			   >
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		<fx:String id="title"/>
+		<fx:String id="action">Add</fx:String>
+		<fx:String id="error"/>
+	</fx:Declarations>
+	<s:VGroup width="100%">
+		
+		<s:HGroup width="100%">
+			<s:TextInput id="mapName" width="100%" keyUp="mapName_keyUpHandler(event)"/>
+			<s:Button label="@{action}" click="dispatchActionClick()"/>
+		</s:HGroup>
+		<s:Label text="{error}" color="red" width="100%"/>
+	</s:VGroup>
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.managers.PopUpManager;
+			
+			public function clear():void {
+				error = "";
+			}
+			
+			override public function setFocus():void {
+				mapName.textDisplay.setFocus();
+			}
+			
+			
+			/* public function close():void {
+				PopUpManager.removePopUp(this);
+			} */
+
+			private function dispatchActionClick():void {
+				dispatchEvent(new Event('actionClick', true, true));
+			}
+			
+			protected function mapName_keyUpHandler(event:KeyboardEvent):void
+			{
+				if (event.keyCode!=Keyboard.ENTER) return;
+				dispatchActionClick();
+			}
+
+		]]>
+	</fx:Script>
+</s:TitleWindow>

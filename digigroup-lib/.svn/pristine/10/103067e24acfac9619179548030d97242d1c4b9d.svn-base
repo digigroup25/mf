@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical">
+	<mx:HBox width="100" maxHeight="200" height="100" >
+		<mx:Button label="Button" click="onClick()"/>
+		<mx:Button label="Button2"/>
+		<mx:Button label="Button3"/>
+	</mx:HBox>
+	
+	<mx:Script>
+		
+		<![CDATA[
+			import mx.controls.Alert;
+
+			import testclasses.ClassA;
+
+
+			private function onClick():void {
+				new ClassA("Hello", "world");
+				Alert.show("Hello world!");
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

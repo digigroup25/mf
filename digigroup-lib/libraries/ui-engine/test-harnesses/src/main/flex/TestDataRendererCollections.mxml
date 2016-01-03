@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical" 
+	 initialize="init()"	styleName="plain">
+	 <mx:HBox width="100%"  >
+	 	<mx:VBox width="50%" >
+		 	<mx:Label text="ArrayCollection"/>
+			<mx:VBox id="arrayCollectionBox" height="100%" width="100%"/>
+		</mx:VBox>
+		<mx:VBox width="50%" >
+		 	<mx:Label text="TreeCollection"/>
+			<mx:VBox id="treeCollectionBox" height="100%" width="100%"/>
+		</mx:VBox>
+	 </mx:HBox>
+	 <mx:HBox width="100%"  >
+	 	<mx:VBox width="50%" >
+		 	<mx:Label text="ArrayCollection with TreeCollectionEx"/>
+			<mx:VBox id="arrayCollectionExBox" height="100%"/>
+		</mx:VBox>
+	</mx:HBox>
+	<mx:HBox>
+		<mx:VBox width="50%" >
+		 	<mx:Label text="Empty ArrayCollection (null)"/>
+			<mx:VBox id="nullArrayCollectionExBox" height="100%"/>
+		</mx:VBox>
+		<mx:VBox width="50%" >
+		 	<mx:Label text="Empty ArrayCollection (numElements=0)"/>
+			<mx:VBox id="zeroArrayCollectionExBox" height="100%"/>
+		</mx:VBox>
+	</mx:HBox>
+	
+	<mx:Script>
+		<![CDATA[
+		import collections.tree.TreeComposite;
+
+		import mx.collections.ArrayCollection;
+			
+			import uiengine.datarenderer.*;
+			import collections.*;
+			import factories.*;
+			
+			private function init():void
+			{
+				var a:Array = POFactory.createTasks1();
+				var context:DataRendererContext = new DataRendererContext(new ArrayCollection(a)/*, arrayCollectionBox*/);
+				arrayCollectionBox.addChild(DataRenderer.render(context));
+				
+				var b:TreeComposite = new TreeFactory().createPriorityTaskTree();
+				context = new DataRendererContext(b, treeCollectionBox);
+				/*treeCollectionBox.addChild(*/DataRenderer.render(context);
+				
+				var tree:TreeCollectionEx = new TreeFactory().createPriorityTaskTree();
+				var res:ArrayCollection = CollectionConverter.toArray(new CollectionConverterContext(tree, null, true));
+				context = new DataRendererContext(res);
+				arrayCollectionExBox.addChild(DataRenderer.render(context));
+				
+				res = null;//new ArrayCollection();
+				context = new DataRendererContext(res);
+				nullArrayCollectionExBox.addChild(DataRenderer.render(context));
+				
+				res = new ArrayCollection();
+				context = new DataRendererContext(res);
+				zeroArrayCollectionExBox.addChild(DataRenderer.render(context));
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

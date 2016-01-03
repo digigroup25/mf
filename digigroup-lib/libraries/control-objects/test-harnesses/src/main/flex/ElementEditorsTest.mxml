@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+				xmlns:ui="mindmaps2.elements.ui.*"
+				layout="absolute"
+				styleName="plain"
+				creationComplete="init()"
+				>
+	<mx:HBox>
+
+		<mx:VBox>
+			<mx:HBox>
+				<mx:Button label="important task"
+						   click="task = elements.importantTask()"
+						   />
+				<mx:Button label="done task"
+						   click="task = elements.taskDoneBeforeDeadline()"
+						   />
+				<mx:Button label="remove editor"
+						   click="taskEditor.parent.removeChild(taskEditor)"
+						   />
+				<mx:Button label="Debug"
+						   click="debug()"
+						   />
+			</mx:HBox>
+
+			<ui:TaskEditor id="taskEditor"
+						   dataProvider="{task}"
+						   />
+			<mx:Label text="Model" />
+			<mx:Label text="priority: {task.priority}" />
+			<mx:Label text="done: {task.done}" />
+		</mx:VBox>
+
+		<mx:VBox>
+			<ui:NoteEditor id="noteEditor"
+						   dataProvider="{note}"
+						   />
+		</mx:VBox>
+
+		<mx:VBox>
+			<ui:ContactEditor id="contactEditor"
+							  dataProvider="{contact}"
+							  />
+		</mx:VBox>
+
+		<mx:VBox>
+			<ui:AppointmentEditor id="appointmentEditor"
+								  dataProvider="{appointment}"
+								  />
+		</mx:VBox>
+
+		<!--<mx:VBox>
+			<ui:ProgramEditor id="programEditor" dataProvider="{program}"/>
+		</mx:VBox>
+		-->
+	</mx:HBox>
+
+
+	<mx:Script>
+		<![CDATA[
+			import mindmaps2.elements.ElementsTestFactory;
+			import vos.*;
+
+			private var elements:ElementsTestFactory = new ElementsTestFactory();
+
+			[Bindable]
+			private var task:Task;
+
+			[Bindable]
+			private var note:Note;
+
+			[Bindable]
+			private var contact:Contact;
+
+			[Bindable]
+			private var appointment:Appointment;
+
+			[Bindable]
+			private var program:Program;
+
+			private function init():void {
+				task = elements.importantTask();
+				note = elements.shortNote();
+				contact = elements.contact();
+				appointment = elements.appointment();
+				//program = elements.program();
+			}
+
+			private function debug():void {
+
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml"
+		   width="100%"
+		   height="100%"
+		   creationPolicy="all"
+		   creationComplete="init()"
+		   >
+	<mx:TabNavigator id="tabControl"
+					 width="100%"
+					 height="100%"
+					 >
+		<mx:Canvas id="myComputer"
+				   width="100%"
+				   height="100%"
+				   label="My Computer"
+				   >
+			<mx:VBox height="100%">
+				<mx:VBox>
+					<mx:HBox>
+						<mx:Button label="New"
+								   click="d(MapStorageEventFactory.createNewMap())"
+								   />
+						<mx:Button enabled="{localMapsList.selectedItem!=null}"
+								   label="Open"
+								   click="d(MapStorageEventFactory.createOpenMap(false))"
+								   />
+						<mx:Button enabled="{localMapsList.selectedItem!=null}"
+								   label="Rename"
+								   click="d(MapStorageEventFactory.createRenameMap(false))"
+								   />
+						<mx:Button enabled="{localMapsList.selectedItem!=null}"
+								   label="Delete"
+								   click="d(MapStorageEventFactory.createDeleteMap(false))"
+								   />
+						<!--<mx:Button label="Delete All"
+								   click="d(MapStorageEventFactory.createDeleteAllMaps(false))"
+								   />-->
+						<mx:Button enabled="false"
+								   label="Publish on Web"
+								   click="d(MapStorageEventFactory.createPublishMap())"
+								   />
+
+					</mx:HBox>
+					<!--<mx:Button id="localRefresh"
+							   x="0"
+							   y="10"
+							   label="Refresh"
+							   click="d(MapStorageEventFactory.createRefreshMaps(false))"
+							   />-->
+				</mx:VBox>
+				<mx:DataGrid id="localMapsList"
+							 width="100%"
+							 height="100%"
+							 dataProvider="{localMaps}"
+							 doubleClickEnabled="true"
+							 itemClick="localMapsList_clickHandler(event)"
+							 itemDoubleClick="d(MapStorageEventFactory.createOpenMap(false))"
+							 >
+					<mx:columns>
+						<mx:DataGridColumn dataField="name"
+										   headerText="Map Name"
+										   />
+						<mx:DataGridColumn width="130"
+										   labelFunction="labelLastModified"
+										   dataField="lastModified"
+										   headerText="Last Modified"
+										   />
+					</mx:columns>
+				</mx:DataGrid>
+			</mx:VBox>
+
+		</mx:Canvas>
+
+		<mx:Canvas id="web"
+				   width="100%"
+				   height="100%"
+				   label="Web"
+				   >
+			<mx:VBox>
+				<mx:HBox id="webMapsPanel"
+						 y="350"
+						 >
+					<mx:HBox>
+						<mx:Label text="user name" />
+						<mx:TextInput id="userNameTextInput"
+									  text="tester1"
+									  />
+					</mx:HBox>
+
+					<mx:Button id="login"
+							   label="{(!loggedIn) ? 'Login' : 'Logout'}"
+							   click="onLoginClick(event)"
+							   />
+
+
+				</mx:HBox>
+
+				<mx:VBox includeInLayout="{loggedIn}"
+						 visible="{loggedIn}"
+						 >
+
+					<mx:HBox>
+						<mx:Button label="Get Maps"
+								   click="d(MapStorageEventFactory.createGetMaps(true))"
+								   />
+						<mx:Button label="Open"
+								   click="d(MapStorageEventFactory.createOpenMap(true))"
+								   />
+						<mx:Button label="Put Map"
+								   click="d(MapStorageEventFactory.createSaveMap(true))"
+								   />
+						<mx:Button label="Rename" />
+						<mx:Button label="Delete"
+								   click="d(MapStorageEventFactory.createDeleteMap(true))"
+								   />
+						<mx:Label id="status" />
+					</mx:HBox>
+
+					<mx:DataGrid id="webMapsList"
+								 width="100%"
+								 dataProvider="{webMaps}"
+								 itemClick="webMapsList_clickHandler(event)"
+								 >
+						<mx:columns>
+							<mx:DataGridColumn dataField="name"
+											   headerText="Map Name"
+											   />
+							<mx:DataGridColumn width="130"
+											   labelFunction="labelLastModified"
+											   dataField="lastModified"
+											   headerText="Last Modified"
+											   />
+							<mx:DataGridColumn width="50"
+											   dataField="owner"
+											   headerText="Owner"
+											   />
+						</mx:columns>
+					</mx:DataGrid>
+				</mx:VBox>
+			</mx:VBox>
+		</mx:Canvas>
+	</mx:TabNavigator>
+
+	<mx:DateFormatter id="dateFormatter"
+					  formatString="M/D/YY L:NN:SS A"
+					  />
+	<mx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.core.FlexGlobals;
+			import mx.events.ListEvent;
+
+			[Bindable]
+			public var loggedIn:Boolean = false;
+
+			[Bindable]
+			public var localMaps:ArrayCollection = new ArrayCollection();
+
+			[Bindable]
+			public var webMaps:ArrayCollection = new ArrayCollection();
+
+			private function localMapsList_clickHandler(event:ListEvent):void {
+				var selectedMapEvent:MapStorageEvent = new MapStorageEvent(MapStorageEvent.SELECTED_MAP);
+				selectedMapEvent.isWeb = false;
+				this.dispatchEvent(selectedMapEvent);
+			}
+
+			private function webMapsList_clickHandler(event:ListEvent):void {
+				var selectedMapEvent:MapStorageEvent = new MapStorageEvent(MapStorageEvent.SELECTED_MAP);
+				selectedMapEvent.isWeb = true;
+				this.dispatchEvent(selectedMapEvent);
+			}
+
+			private function d(e:Event):void {
+				//trace(e.type);
+				this.dispatchEvent(e);
+			}
+
+			private function init():void {
+				tabControl.selectedChild = myComputer; //*/web;
+
+			}
+
+			private function onLoginClick(event:MouseEvent):void {
+				if (!loggedIn)
+					dispatchEvent(MapStorageEventFactory.createLogin(userNameTextInput.text, ''));
+				else
+					dispatchEvent(MapStorageEventFactory.createLogout(userNameTextInput.text, ''))
+			}
+
+			private function labelLastModified(item:Object, column:DataGridColumn):String {
+				return item.lastModified == null ? "Unknown" : dateFormatter.format(item.lastModified);
+			}
+		]]>
+	</mx:Script>
+</mx:Canvas>

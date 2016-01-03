@@ -1,0 +1,290 @@
+package commonutils {
+	import classes.*;
+
+	import collections.TreeCollectionEx;
+
+	import com.adobe.utils.ArrayUtil;
+
+	import flash.utils.*;
+
+	import myns.secondns.ClassA;
+
+	import org.flexunit.asserts.assertEquals;
+	import org.flexunit.asserts.assertTrue;
+
+	//import collections.UniqueArray;
+	public class ClassInspectorTest {
+		private var ci:ClassInspector = new ClassInspector();
+
+		/*
+		 public function ClassInspectorTest( methodName:String )
+		 {
+		 super( methodName );
+		 }
+
+		 public static function suite():TestSuite {
+		 var ts:TestSuite = new TestSuite();
+
+		 ts.addTest( new ClassInspectorTest( "getClassName_WithNs" ) );
+		 ts.addTest( new ClassInspectorTest( "getClassName_WithoutNs" ) );
+		 ts.addTest( new ClassInspectorTest( "getClassName_ClassWithoutNs" ) );
+		 ts.addTest( new ClassInspectorTest( "getClassName_TreeCollectionNull" ) );
+		 ts.addTest( new ClassInspectorTest( "getClassName_Class" ) );
+		 ts.addTest( new ClassInspectorTest( "getClassVariables_Instance" ) );
+		 ts.addTest( new ClassInspectorTest( "getClassVariables_Class" ) );
+		 ts.addTest( new ClassInspectorTest( "hasConstructorArgs" ) );
+		 ts.addTest( new ClassInspectorTest( "arrayDescribeType" ) );
+		 ts.addTest( new ClassInspectorTest( "getName" ) );
+		 ts.addTest( new ClassInspectorTest( "getClassNames_ObjectObject" ) );
+		 //ts.addTest( new ClassInspectorTest( "getClassNames_ArrayCollection" ) );
+		 ts.addTest( new ClassInspectorTest( "getClassNames_TreeCollectionObject" ) );
+		 ts.addTest( new ClassInspectorTest( "getClassNames_ObjectTreeCollection" ) );
+		 ts.addTest( new ClassInspectorTest( "getClassNames_ObjectTreeCollection2" ) );
+		 ts.addTest( new ClassInspectorTest( "getClassNames_TreeCollectionNullVO" ) );
+		 ts.addTest( new ClassInspectorTest( "getClassNames_ClassComplex" ) );
+		 ts.addTest( new ClassInspectorTest( "getBaseClass_hasBaseClass" ) );
+		 ts.addTest( new ClassInspectorTest( "getBaseClass_noBaseClass" ) );
+		 //ts.addTest( new ClassInspectorTest( "push_UniqueArray" ) );
+		 return ts;
+		 }
+		 */
+
+		[Test]
+		public function testGetClassName_WithNs():void {
+			var o:ClassA = new ClassA();
+			var res:String = ci.getClassName(o);
+
+			assertEquals("myns.secondns::ClassA", res);
+		}
+
+
+		[Test]
+		public function testGetClassName_WithoutNs():void {
+			var o:ClassA = new ClassA();
+			var res:String = ci.getClassName(o, true);
+
+			assertEquals("ClassA", res);
+		}
+
+
+		[Test]
+		public function testGetClassName_ClassWithoutNs():void {
+			var res:String = ci.getClassName(ClassA, true);
+
+			assertEquals("ClassA", res);
+		}
+
+
+		[Test]
+		public function testGetClassVariables_Instance():void {
+			var o:* = new MyNode("1");
+			var res:Array = ci.getClassVariables(o);
+
+			assertEquals(3, res.length);
+		}
+
+
+		[Test]
+		public function testGetClassVariables_Class():void {
+			var res:Array = ci.getClassVariables(MyNode);
+
+			assertEquals(3, res.length);
+		}
+
+
+		[Test]
+		public function testGetDataAttributes_Instance():void {
+			var o:ClassVarProp = new ClassVarProp();
+
+			var res:Array = ci.getDataAttributes(o);
+
+			assertEquals(2, res.length);
+			assertEquals("a", res[0].name);
+			assertEquals("b", res[1].name);
+		}
+
+
+		[Test]
+		public function testGetDataAttributes_Instance_DynamicProperty():void {
+			var o:ClassVarDynProp = new ClassVarDynProp();
+			o.b = 1;
+
+			var res:Array = ci.getDataAttributes(o);
+
+			assertEquals(2, res.length);
+			assertEquals("a", res[0].name);
+			assertEquals("b", res[1].name);
+			assertEquals("int", res[1].type);
+		}
+
+
+		[Test]
+		public function testHasConstructorArgs():void {
+			var o:* = new MyNode("1");
+			var res:Boolean = ci.hasConstructorArgs(o);
+
+			assertEquals(true, res);
+
+			o = new ClassB();
+			res = ci.hasConstructorArgs(o);
+
+			assertEquals(false, res);
+		}
+
+
+		[Test]
+		public function testArrayDescribeType():void {
+			var a:Array = new Array();
+			var o:MyNode = new MyNode("Node1");
+			var o2:MyNode = new MyNode("Node2");
+
+			a.push(o, o2);
+
+			var aType:XML = describeType(a);
+			var elemType:XML = describeType(a[0]);
+
+			var b:* = a;
+			assertTrue(b is Array);
+		}
+
+
+		[Test]
+		public function testGetName():void {
+			var name:String = new MyNodeDerived().getName();
+			assertEquals("MyNodeDerived", name);
+		}
+
+
+		[Test]
+		public function testNullObject():void {
+			var result:Array = ci.getClassNames(null);
+			assertEquals(0, result.length);
+		}
+
+		[Test]
+		public function testGetClassNames_ObjectObject():void {
+			var o:TreeCollectionEx = new TreeCollectionEx();
+			var vo:MyNode = new MyNode();
+			o.vo = vo;
+			var result:Array = ci.getClassNames(o);
+			assertTrue(com.adobe.utils.ArrayUtil.arrayContainsValue(result, ci.getClassName(TreeCollectionEx)));
+			assertTrue(com.adobe.utils.ArrayUtil.arrayContainsValue(result, ci.getClassName(MyNode)));
+			//assertEquals(2, result.length);
+		}
+
+
+		/*
+		 public function testGetClassNames_ArrayCollection():void
+		 {
+		 var o:ArrayCollection = new ArrayCollection();
+		 o.addItem(new MyNode());
+		 o.addItem(new MyNodeDerived());
+
+		 var result:Array = ci.getClassNames(o);
+
+		 assertTrue(com.adobe.utils.ArrayUtil.arrayContainsValue(result, ci.getClassName(ArrayCollection)));
+		 assertTrue("MyNode class is missing", com.adobe.utils.ArrayUtil.arrayContainsValue(result, ci.getClassName(MyNode)));
+		 assertTrue("MyNodeDerived class is missing", com.adobe.utils.ArrayUtil.arrayContainsValue(result, ci.getClassName(MyNodeDerived)));
+		 }
+		 */
+		[Test]
+		public function testGetClassNames_TreeCollectionObject():void {
+			var o:TreeCollectionEx = createComplexObject();
+			var result:Array = ci.getClassNames(o);
+			assertTrue(com.adobe.utils.ArrayUtil.arrayContainsValue(result, ci.getClassName(TreeCollectionEx)));
+			assertTrue(com.adobe.utils.ArrayUtil.arrayContainsValue(result, ci.getClassName(MyNode)));
+			assertTrue(com.adobe.utils.ArrayUtil.arrayContainsValue(result, ci.getClassName(MyNodeDerived)));
+		}
+
+
+		[Test]
+		public function testGetClassNames_ObjectTreeCollection():void {
+			var o:TreeCollectionEx = createComplexObject();
+			var obj:ClassWithMemberAnyType = new ClassWithMemberAnyType();
+			obj.vo = o;
+
+			var result:Array = ci.getClassNames(obj);
+			assertTrue(com.adobe.utils.ArrayUtil.arrayContainsValue(result, ci.getClassName(TreeCollectionEx)));
+			assertTrue(com.adobe.utils.ArrayUtil.arrayContainsValue(result, ci.getClassName(MyNode)));
+			assertTrue(com.adobe.utils.ArrayUtil.arrayContainsValue(result, ci.getClassName(MyNodeDerived)));
+			assertTrue(com.adobe.utils.ArrayUtil.arrayContainsValue(result, ci.getClassName(ClassWithMemberAnyType)));
+		}
+
+
+		[Test]
+		public function testGetClassNames_ObjectTreeCollection2():void {
+			var o:TreeCollectionEx = createComplexObject();
+			var child2:TreeCollectionEx = new TreeCollectionEx();
+			child2.vo = new ClassB();
+			o.addChild(child2);
+			var obj:ClassWithMemberAnyType = new ClassWithMemberAnyType();
+			obj.vo = o;
+
+			var result:Array = ci.getClassNames(obj);
+			assertTrue(com.adobe.utils.ArrayUtil.arrayContainsValue(result, ci.getClassName(TreeCollectionEx)));
+			assertTrue(com.adobe.utils.ArrayUtil.arrayContainsValue(result, ci.getClassName(MyNode)));
+			assertTrue(com.adobe.utils.ArrayUtil.arrayContainsValue(result, ci.getClassName(MyNodeDerived)));
+			assertTrue(com.adobe.utils.ArrayUtil.arrayContainsValue(result, ci.getClassName(ClassWithMemberAnyType)));
+			assertTrue(com.adobe.utils.ArrayUtil.arrayContainsValue(result, ci.getClassName(ClassB)));
+		}
+
+
+		[Test]
+		public function testGetClassNames_TreeCollectionNullVO():void {
+			var o:TreeCollectionEx = new TreeCollectionEx();
+			var result:Array = ci.getClassNames(o);
+			assertTrue(com.adobe.utils.ArrayUtil.arrayContainsValue(result, ci.getClassName(TreeCollectionEx)));
+		}
+
+
+		[Test]
+		public function testGetClassName_TreeCollectionNull():void {
+			var o:TreeCollectionEx;
+			var res:String = ci.getClassName(o);
+			assertEquals(null, res);
+		}
+
+
+		[Test]
+		public function testGetClassName_Class():void {
+			var res:String = ci.getClassName(TreeCollectionEx);
+			assertEquals("collections::TreeCollectionEx", res);
+		}
+
+
+		[Test]
+		public function testGetClassNames_ClassComplex():void {
+			var res:Array = ci.getClassNames(ClassWithMemberTreeCollectionEx);
+			var exp:Array = [ "classes::ClassWithMemberTreeCollectionEx",
+				"collections::TreeCollectionEx" ];
+			assertTrue(com.adobe.utils.ArrayUtil.arraysAreEqual(exp, res));
+			//assertEquals("collections::TreeCollectionEx", res);
+		}
+
+
+		[Test]
+		public function testGetBaseClass_hasBaseClass():void {
+			var result:Class = ci.getBaseClass(ClassC);
+			assertEquals(ClassB, result);
+		}
+
+
+		[Test]
+		public function testGetBaseClass_noBaseClass():void {
+			var result:Class = ci.getBaseClass(ClassB);
+			assertEquals(null, result);
+		}
+
+
+		private function createComplexObject():TreeCollectionEx {
+			var o:TreeCollectionEx = new TreeCollectionEx();
+			var vo:MyNode = new MyNode();
+			o.vo = vo;
+			var o2:TreeCollectionEx = new TreeCollectionEx();
+			var vo2:MyNodeDerived = new MyNodeDerived();
+			o2.vo = vo2;
+			o.addChild(o2);
+			return o;
+		}
+	}
+}

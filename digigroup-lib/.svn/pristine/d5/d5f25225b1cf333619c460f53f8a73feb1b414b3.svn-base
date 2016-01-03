@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:components="components.*"
+				xmlns:flexlib="http://code.google.com/p/flexlib/"
+				xmlns:mx="http://www.adobe.com/2006/mxml"
+				layout="absolute"
+				implements="mf.framework.IResultResponder"
+				>
+	<mx:VBox width="100%"
+			 height="100%"
+			 >
+		<mx:HBox>
+			<mx:Button label="init"
+					   click="init()"
+					   />
+			<mx:Button label="uninit"
+					   click="uninit()"
+					   />
+			<mx:Button label="Close first tab"
+					   click="closeTab()"
+					   />
+			<mx:Button label="Open map in tab"
+					   click="createMap()"
+					   />
+			<mx:Button label="Load map"
+					   click="loadMap()"
+					   />
+		</mx:HBox>
+
+		<!--<components:TreeTab id="nav" tabClose="onCloseTab(event)"/>-->
+		<mx:VBox id="tabContainer"
+				 width="100%"
+				 height="100%"
+				 />
+
+	</mx:VBox>
+	<mx:Script>
+		<![CDATA[
+			import actions.AbstractAction;
+
+			import factories.TreeFactory;
+
+			import mf.framework.*;
+
+			import mindmaps.map.MapModel2;
+			import mindmaps.map.ui.actions.messages.MapMessages;
+			import mindmaps.map.ui.tree.TreeTabContainer;
+			import mindmaps.map.ui.tree.messages.TreeTabMessages;
+
+			import mindmaps2.map.ui.MindMapMessages;
+			import mindmaps2.storage.services.XmlMapLoader;
+
+			//private var containers:Array = new Array();
+			private var loader:XmlMapLoader;
+
+			private var container:IContainer;
+
+			private var mb:IMessageBroker;
+
+			private var lastMap:MapModel2;
+
+			public function onResult(name:String, result:Object):void {
+				//trace("onResult", result);
+				var map:MapModel2 = MapModel2(result);
+				mb.send(new Message(TreeTabMessages.OPEN_MAP_IN_TAB, this, map));
+			}
+
+
+			private function init():void {
+				/* var maps:Array = new Array();
+				for (var i:int = 0; i < 3; i++) {
+					var map:MapModel2 = new MapModel2(new TreeFactory().createTaskAppointment(),
+						"Map " + i);
+					maps.push(map);
+				}*/
+				mb = new MessageBroker();
+				// TODO: 2011/06/19 KTD: Added null root action value to make this compile.  Looks like it's meant to work on the old control objects code.
+				container = new TreeTabContainer(tabContainer, mb, new AbstractAction());
+				container.initialize();
+			}
+
+
+			private function closeTab():void {
+				/* var c:IContainer = containers.splice(0, 1)[0];
+				 c.uninitialize(); */
+				mb.send(new Message(MindMapMessages.CLOSE_MAP, this, { map: lastMap }));
+			}
+
+			private function createMap():void {
+				var map:MapModel2 = new MapModel2(new TreeFactory().createTaskAppointment(),
+					"Map");
+				lastMap = map;
+				mb.send(new Message(TreeTabMessages.OPEN_MAP_IN_TAB, this, { map: map }));
+			}
+
+			private function loadMap():void {
+				var path:String = "assets/TaskList1.txt";
+				loader = new XmlMapLoader(this);
+				loader.load(path);
+			}
+
+
+			private function uninit():void {
+				container.uninitialize();
+				container = null;
+				mb = null;
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

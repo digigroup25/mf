@@ -1,0 +1,349 @@
+<report>
+  <scripts>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/AsyncCommandContext.as" mod="1306118093000" size="720" optimizedsize="269">
+      <def id="mf.framework:AsyncCommandContext" />
+      <pre id="mf.framework:CommandContext" />
+      <dep id="mx.rpc:AsyncResponder" />
+      <dep id="AS3" />
+      <dep id="mf.framework:Message" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/Receiver.as" mod="1306118093000" size="712" optimizedsize="271">
+      <def id="mf.framework:Receiver" />
+      <pre id="mf.framework:IReceiver" />
+      <pre id="Object" />
+      <dep id="AS3" />
+      <dep id="mf.framework:Message" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/messaging/IncludeMessageFilter.as" mod="1306118093000" size="1010" optimizedsize="440">
+      <def id="mf.framework.messaging:IncludeMessageFilter" />
+      <pre id="mf.framework.messaging:IMessageFilter" />
+      <pre id="Object" />
+      <dep id="AS3" />
+      <dep id="mf.framework:Message" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/Message.as" mod="1308283461000" size="1321" optimizedsize="578">
+      <def id="mf.framework:Message" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IMessageBroker.as" mod="1306118093000" size="1359" optimizedsize="413">
+      <def id="mf.framework:IMessageBroker" />
+      <pre id="mf.framework:IObserver" />
+      <pre id="mf.framework:ISender" />
+      <pre id="Object" />
+      <dep id="AS3" />
+      <dep id="mf.framework.messaging:Connector" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/ISender.as" mod="1306118093000" size="551" optimizedsize="177">
+      <def id="mf.framework:ISender" />
+      <pre id="Object" />
+      <dep id="AS3" />
+      <dep id="mf.framework:Message" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/messaging/IMessageFilter.as" mod="1306118093000" size="673" optimizedsize="217">
+      <def id="mf.framework.messaging:IMessageFilter" />
+      <pre id="Object" />
+      <dep id="AS3" />
+      <dep id="mf.framework:Message" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/messaging/Connector.as" mod="1306118093000" size="2241" optimizedsize="1210">
+      <def id="mf.framework.messaging:Connector" />
+      <pre id="mf.framework:IManagedLifecycle" />
+      <pre id="Object" />
+      <dep id="mx.logging.errors:InvalidFilterError" />
+      <dep id="mf.framework:Receiver" />
+      <dep id="mf.framework.messaging:IMessageFilter" />
+      <dep id="mf.framework:IReceiver" />
+      <dep id="AS3" />
+      <dep id="mf.framework:IMessageBroker" />
+      <dep id="mf.framework:Message" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/utils/ClassUtil.as" mod="1306118093000" size="1499" optimizedsize="697">
+      <def id="mf.utils:ClassUtil" />
+      <pre id="Object" />
+      <dep id="flash.utils:describeType" />
+      <dep id="AS3" />
+      <dep id="flash.utils:getDefinitionByName" />
+      <dep id="XML" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/MessageBroker.as" mod="1307311077000" size="2772" optimizedsize="1339">
+      <def id="mf.framework:MessageBroker" />
+      <pre id="mf.framework:IMessageBroker" />
+      <pre id="Object" />
+      <dep id="mf.framework:IReceiver" />
+      <dep id="AS3" />
+      <dep id="mf.framework:Message" />
+      <dep id="mf.framework.messaging:Connector" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/ModelProvider.as" mod="1306118093000" size="794" optimizedsize="274">
+      <def id="mf.framework:ModelProvider" />
+      <pre id="mf.framework:IModelProvider" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/Container2.as" mod="1306118093000" size="5219" optimizedsize="2601">
+      <def id="mf.framework:Container2" />
+      <pre id="flash.events:EventDispatcher" />
+      <pre id="mf.framework:IContainer" />
+      <dep id="mf.framework:ModelProvider" />
+      <dep id="flash.errors:IllegalOperationError" />
+      <dep id="mf.framework:IModelProvider" />
+      <dep id="AS3" />
+      <dep id="mf.framework:FrameworkFactory" />
+      <dep id="mf.framework:AbstractController" />
+      <dep id="mf.framework:IManagedLifecycle" />
+      <dep id="mf.framework:IMessageBroker" />
+      <dep id="mf.framework:Message" />
+    </script>
+    <script name="_38db56db56dad0cc2d40b1de3971abd64f326029014f6a1bdecbd1c78bc28ceb_flash_display_Sprite.as" mod="1316656104967" size="1147" optimizedsize="511">
+      <def id="_38db56db56dad0cc2d40b1de3971abd64f326029014f6a1bdecbd1c78bc28ceb_flash_display_Sprite" />
+      <pre id="flash.display:Sprite" />
+      <dep id="flash.system:Security" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IUninitialize.as" mod="1306118093000" size="571" optimizedsize="170">
+      <def id="mf.framework:IUninitialize" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/MessageMacroCommand.as" mod="1306118093000" size="855" optimizedsize="356">
+      <def id="mf.framework:MessageMacroCommand" />
+      <pre id="mf.framework:AsyncCommand" />
+      <pre id="mf.framework:ISender" />
+      <dep id="AS3" />
+      <dep id="mf.framework:IMessageBroker" />
+      <dep id="mf.framework:Message" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/Command.as" mod="1306118093000" size="889" optimizedsize="364">
+      <def id="mf.framework:Command" />
+      <pre id="mf.framework:ICommand" />
+      <pre id="Object" />
+      <dep id="AS3" />
+      <dep id="mf.framework:CommandContext" />
+      <dep id="Error" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/ContainerDecorator.as" mod="1308631810000" size="3661" optimizedsize="1390">
+      <def id="mf.framework:ContainerDecorator" />
+      <pre id="mf.framework:Container2" />
+      <dep id="AS3" />
+      <dep id="mf.framework:AbstractController" />
+      <dep id="mf.framework:IMessageBroker" />
+      <dep id="mf.framework:Message" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/LoggingReceiver.as" mod="1306118093000" size="1008" optimizedsize="415">
+      <def id="mf.framework:LoggingReceiver" />
+      <pre id="mf.framework:Receiver" />
+      <dep id="mx.collections:ArrayCollection" />
+      <dep id="AS3" />
+      <dep id="mf.framework:Message" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/messaging/AbstractMessageFactory.as" mod="1306118093000" size="689" optimizedsize="223">
+      <def id="mf.framework.messaging:AbstractMessageFactory" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IReceiver.as" mod="1306118093000" size="550" optimizedsize="169">
+      <def id="mf.framework:IReceiver" />
+      <pre id="Object" />
+      <dep id="AS3" />
+      <dep id="mf.framework:Message" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/messaging/ExternalMessageAdapter.as" mod="1306118093000" size="2194" optimizedsize="1128">
+      <def id="mf.framework.messaging:ExternalMessageAdapter" />
+      <pre id="mf.framework:IManagedLifecycle" />
+      <pre id="mf.framework:IMessenger" />
+      <pre id="Object" />
+      <dep id="mx.logging.errors:InvalidFilterError" />
+      <dep id="mf.framework.messaging:IMessageFilter" />
+      <dep id="AS3" />
+      <dep id="mf.framework.messaging:InternalMessageAdapter" />
+      <dep id="mf.framework:IMessageBroker" />
+      <dep id="mf.framework:Message" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/FrameworkFactory.as" mod="1306118093000" size="1281" optimizedsize="605">
+      <def id="mf.framework:FrameworkFactory" />
+      <pre id="Object" />
+      <dep id="mx.rpc:AsyncResponder" />
+      <dep id="mf.framework:AsyncCommand" />
+      <dep id="mf.framework:MessageBroker" />
+      <dep id="mf.framework:Command" />
+      <dep id="AS3" />
+      <dep id="mf.framework:AsyncCommandContext" />
+      <dep id="mx.core:ClassFactory" />
+      <dep id="mf.framework:CommandContext" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/ViewContainerDecorator.as" mod="1306118093000" size="1907" optimizedsize="850">
+      <def id="mf.framework:ViewContainerDecorator" />
+      <pre id="mf.framework:ContainerDecorator" />
+      <dep id="mf.framework:ModelProvider" />
+      <dep id="mf.framework:IModelProvider" />
+      <dep id="AS3" />
+      <dep id="flash.display:DisplayObjectContainer" />
+      <dep id="flash.display:DisplayObject" />
+      <dep id="mf.framework:Container2" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/UserMessage.as" mod="1306118093000" size="602" optimizedsize="195">
+      <def id="mf.framework:UserMessage" />
+      <pre id="mf.framework:Message" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/AsyncCommand.as" mod="1306118093000" size="559" optimizedsize="183">
+      <def id="mf.framework:AsyncCommand" />
+      <pre id="mf.framework:Command" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/messaging/MessageFilterFactory.as" mod="1306118093000" size="1132" optimizedsize="425">
+      <def id="mf.framework.messaging:MessageFilterFactory" />
+      <pre id="Object" />
+      <dep id="mf.framework.messaging:ExcludeMessageFilter" />
+      <dep id="mf.framework.messaging:IMessageFilter" />
+      <dep id="AS3" />
+      <dep id="mf.framework.messaging:IncludeMessageFilter" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/MessageLogBroker.as" mod="1306118093000" size="1167" optimizedsize="496">
+      <def id="mf.framework:MessageLogBroker" />
+      <pre id="mf.framework:MessageBroker" />
+      <pre id="mf.framework:IMessageBroker" />
+      <dep id="mx.collections:ArrayCollection" />
+      <dep id="AS3" />
+      <dep id="mf.framework:Message" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/AbstractCommandController.as" mod="1306118093000" size="1867" optimizedsize="939">
+      <def id="mf.framework:AbstractCommandController" />
+      <pre id="mf.framework:AbstractController" />
+      <dep id="mf.framework:AsyncCommand" />
+      <dep id="mf.framework:IModelProvider" />
+      <dep id="mf.framework:Command" />
+      <dep id="AS3" />
+      <dep id="mf.framework:MessageMacroCommand" />
+      <dep id="mf.framework:IMessageBroker" />
+      <dep id="mf.framework:AsyncCommandContext" />
+      <dep id="mf.framework:Message" />
+      <dep id="mf.framework:CommandContext" />
+      <dep id="mf.utils:ClassUtil" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/messaging/ExcludeMessageFilter.as" mod="1306118093000" size="1014" optimizedsize="444">
+      <def id="mf.framework.messaging:ExcludeMessageFilter" />
+      <pre id="mf.framework.messaging:IMessageFilter" />
+      <pre id="Object" />
+      <dep id="AS3" />
+      <dep id="mf.framework:Message" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IContainer.as" mod="1306118093000" size="452" optimizedsize="140">
+      <def id="mf.framework:IContainer" />
+      <pre id="mf.framework:IManagedLifecycle" />
+      <pre id="mf.framework:IMessenger" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/messaging/InternalMessageAdapter.as" mod="1306118093000" size="2026" optimizedsize="977">
+      <def id="mf.framework.messaging:InternalMessageAdapter" />
+      <pre id="mf.framework:IManagedLifecycle" />
+      <pre id="mf.framework:IMessenger" />
+      <pre id="Object" />
+      <dep id="mx.logging.errors:InvalidFilterError" />
+      <dep id="mf.framework.messaging:IMessageFilter" />
+      <dep id="AS3" />
+      <dep id="mf.framework:IMessageBroker" />
+      <dep id="mf.framework:Message" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/SystemMessage.as" mod="1306118093000" size="614" optimizedsize="199">
+      <def id="mf.framework:SystemMessage" />
+      <pre id="mf.framework:Message" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/ViewContainer.as" mod="1306118093000" size="1798" optimizedsize="836">
+      <def id="mf.framework:ViewContainer" />
+      <pre id="mf.framework:Container2" />
+      <dep id="mf.framework:ModelProvider" />
+      <dep id="mf.framework:IModelProvider" />
+      <dep id="AS3" />
+      <dep id="flash.display:DisplayObjectContainer" />
+      <dep id="flash.display:DisplayObject" />
+      <dep id="mf.framework:IMessageBroker" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/AbstractController.as" mod="1306118093000" size="2507" optimizedsize="1131">
+      <def id="mf.framework:AbstractController" />
+      <pre id="mf.framework:IManagedLifecycle" />
+      <pre id="mf.framework:IMessenger" />
+      <pre id="Object" />
+      <dep id="mf.framework:ModelProvider" />
+      <dep id="mf.framework:IModelProvider" />
+      <dep id="AS3" />
+      <dep id="mf.framework:IMessageBroker" />
+      <dep id="mf.framework:Message" />
+      <dep id="mf.framework:Container2" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IResultResponder.as" mod="1306118093000" size="618" optimizedsize="189">
+      <def id="mf.framework:IResultResponder" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IManagedLifecycle.as" mod="1306118093000" size="484" optimizedsize="144">
+      <def id="mf.framework:IManagedLifecycle" />
+      <pre id="mf.framework:IUninitialize" />
+      <pre id="mf.framework:IInitialize" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IObserver.as" mod="1306118093000" size="764" optimizedsize="234">
+      <def id="mf.framework:IObserver" />
+      <pre id="Object" />
+      <dep id="mf.framework:IReceiver" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IInitialize.as" mod="1306118093000" size="551" optimizedsize="164">
+      <def id="mf.framework:IInitialize" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/ICommand.as" mod="1306118093000" size="521" optimizedsize="155">
+      <def id="mf.framework:ICommand" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/MessageTraceBroker.as" mod="1306118093000" size="721" optimizedsize="285">
+      <def id="mf.framework:MessageTraceBroker" />
+      <pre id="mf.framework:MessageBroker" />
+      <pre id="mf.framework:IMessageBroker" />
+      <dep id="AS3" />
+      <dep id="mf.framework:Message" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IMessenger.as" mod="1306118093000" size="441" optimizedsize="129">
+      <def id="mf.framework:IMessenger" />
+      <pre id="mf.framework:IReceiver" />
+      <pre id="mf.framework:ISender" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IModelProvider.as" mod="1306118093000" size="673" optimizedsize="184">
+      <def id="mf.framework:IModelProvider" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/CommandContext.as" mod="1306118093000" size="648" optimizedsize="226">
+      <def id="mf.framework:CommandContext" />
+      <pre id="Object" />
+      <dep id="AS3" />
+      <dep id="mf.framework:Message" />
+    </script>
+  </scripts>
+  <external-defs>
+    <ext id="AS3" />
+    <ext id="flash.display:DisplayObject" />
+    <ext id="mx.collections:ArrayCollection" />
+    <ext id="XML" />
+    <ext id="mx.core:ClassFactory" />
+    <ext id="mx.logging.errors:InvalidFilterError" />
+    <ext id="flash.utils:describeType" />
+    <ext id="mx.rpc:AsyncResponder" />
+    <ext id="flash.errors:IllegalOperationError" />
+    <ext id="Error" />
+    <ext id="flash.utils:getDefinitionByName" />
+    <ext id="flash.events:EventDispatcher" />
+    <ext id="flash.system:Security" />
+    <ext id="Object" />
+    <ext id="flash.display:DisplayObjectContainer" />
+    <ext id="flash.display:Sprite" />
+  </external-defs>
+</report>

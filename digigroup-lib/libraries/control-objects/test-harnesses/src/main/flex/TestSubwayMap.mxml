@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:comp="mindmaps.elementderivatives.subway.components.*" layout="absolute" styleName="plain" >
+	
+    <!--<comp:SubwayChart  width="100%" height="500"/>   -->
+	<mx:Script>
+		<![CDATA[
+			import mindmaps.elementderivatives.*;
+			import mindmaps.elementderivatives.subway.*;
+			//[Bindable] private var _data:Array = [{label:"task1", group:["a"]}, {label:"task2", group:["a","b"]}];
+			
+			[Bindable] private var dp:Array = [
+				//new SubwayFactory().createSubway3Stations(), 
+				//new SubwayFactory().createSubway3Lines(),
+				/* new SubwayFactory().createSubway1(), 
+				new SubwayFactory().createSubway3Stations2ts(),*/
+				//new SubwayFactory().createRandomSubway(20)  
+				//new TreeToSubwayConverter().convert(new SubwayFactory().treeForSubway3Stations()),
+				new TreeToSubwayConverter().convert(new SubwayFactory().treeForTaxSubway_dependencies())
+				//new SubwayFactory().taxSubway()
+				//, new SubwayFactory().createFromText(ProjectTexts.sampleProjectSnippet.text)
+				//new SubwayFactory().createFromText(ProjectTexts.sampleProject.text)
+			];
+			
+			private function init():void {
+			}
+		]]>
+	</mx:Script>
+	
+	<mx:VBox x="20" y="20" verticalAlign="top" width="100%">
+        <mx:Repeater id="rp" dataProvider="{dp}">
+        	<mx:Label text="Line Chart"/>
+	       		<comp:SubwayChartWithLegend subWay="{rp.currentItem}" />
+        </mx:Repeater>  
+    </mx:VBox>
+    
+</mx:Application>

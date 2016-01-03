@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TextInput xmlns:mx="http://www.adobe.com/2006/mxml" implements="mx.core.IDataRenderer"
+	 creationComplete="onCreationComplete(event)">
+	<mx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			
+			private var _data:Object;
+			private var dataChanged:Boolean = false;
+			
+			//[Bindable("propertyChange")]
+		    override public function get data():Object {
+		        return _data;
+		    }
+		    
+		    override public function set data(value:Object):void {
+		    	 _data = value;
+		    	dataChanged = true;
+		    	this.invalidateProperties(); 
+		    	//_data = value;
+		    	//this.text = String(value);
+		    	
+		        //dispatchEvent(new FlexEvent(FlexEvent.DATA_CHANGE));
+		    }
+		    
+		   override protected function commitProperties():void {
+		    	if (dataChanged) {
+		    		dataChanged = false;
+		    		this.text = String(_data);
+		    	}
+		    	
+		    	super.commitProperties();
+		    }
+		    
+		    private function onCreationComplete(event:Event):void {
+		    	this.addEventListener(FlexEvent.REMOVE, onRemove);
+		    }
+		    
+		    private function onRemove(event:FlexEvent):void {
+		    	this.removeEventListener(FlexEvent.REMOVE, onRemove);
+		    	uninitialize();
+		    }
+		    
+		    public function uninitialize():void {
+		    	trace("MultipleValueInput.uninitialize");
+		    }
+		]]>
+	</mx:Script>
+</mx:TextInput>

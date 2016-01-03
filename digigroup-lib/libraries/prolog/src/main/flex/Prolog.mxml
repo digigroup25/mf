@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" initialize="init()" xmlns:prolog="wprolog.*" 
+	 styleName="plain">
+	<prolog:WPrologEditor id="prolog" width="100%" height="100%" creationComplete="init()" />	
+	 
+	<mx:Script>
+		<![CDATA[
+			import mx.binding.utils.BindingUtils;
+			
+			[Bindable]
+			public var program:String = "member(X,[X|V1]).\nmember(X, [V1|Tail]):-member(X, Tail).";
+			
+			private function init():void {
+				prolog.queryText 	= "member(2, [1,2]).";
+				
+				BindingUtils.bindProperty(prolog, "data", this, "program");
+				BindingUtils.bindProperty(this, "program", prolog, "data");
+			}
+		]]>
+	</mx:Script> 
+</mx:Application>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:components="mindmaps.map.ui.tree.components.*">
+	<components:PrioritizedTreeMap id="map" width="100%" height="100%" initialize="init()" weightField="rank"/>
+	
+	<mx:Script>
+		<![CDATA[
+			import collections.tree.TreeRankerResult;
+			import mx.controls.Tree;
+			import collections.tree.TreeWeightRanker;
+			import factories.TreeFactory;
+			import collections.TreeCollectionEx;
+			
+			private const ranker:TreeWeightRanker = new TreeWeightRanker();
+			
+			private function init():void {
+				var tree:TreeCollectionEx;
+				tree = new TreeFactory().createParentChildHPTaskTree();
+				var rankedResult:TreeRankerResult = ranker.rank(tree);
+				map.maxWeight = rankedResult.maxRank;
+				map.dataProvider = rankedResult.rankedTree;  
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

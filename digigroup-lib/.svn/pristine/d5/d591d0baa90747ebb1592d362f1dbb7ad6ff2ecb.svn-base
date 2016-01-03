@@ -1,0 +1,1421 @@
+<graph version="1.0">
+  <node id="8">
+    <data>
+      <Task date="null" description="" done="0" name="Everything" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="195" type="child"/>
+      <relation targetNodeId="9" type="child"/>
+      <relation targetNodeId="10" type="child"/>
+      <relation targetNodeId="152" type="child"/>
+      <relation targetNodeId="165" type="child"/>
+      <relation targetNodeId="175" type="child"/>
+    </relations>
+  </node>
+  <node id="195">
+    <data>
+      <Task date="null" description="" done="0" name="Home" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="199" type="child"/>
+      <relation targetNodeId="200" type="child"/>
+      <relation targetNodeId="199" type="child"/>
+      <relation targetNodeId="200" type="child"/>
+      <relation targetNodeId="201" type="child"/>
+      <relation targetNodeId="203" type="child"/>
+      <relation targetNodeId="408" type="child"/>
+      <relation targetNodeId="207" type="child"/>
+      <relation targetNodeId="210" type="child"/>
+    </relations>
+  </node>
+  <node id="199">
+    <data>
+      <Task date="null" description="null" done="0" name="Pay bills" priority="3"/>
+    </data>
+  </node>
+  <node id="200">
+    <data>
+      <Task date="null" description="" done="0" name="Save Magdy's info" priority="2"/>
+    </data>
+  </node>
+  <node id="199">
+    <data>
+      <Task date="null" description="" done="0" name="send mom money" priority="3"/>
+    </data>
+  </node>
+  <node id="200">
+    <data>
+      <Task date="null" description="" done="0" name="send Katya money" priority="3"/>
+    </data>
+  </node>
+  <node id="201">
+    <data>
+      <Task date="null" description="" done="0" name="review ccs and pay bills" priority="2"/>
+    </data>
+  </node>
+  <node id="203">
+    <data>
+      <Task date="null" description="" done="0" name="catch custom errors on the client?" priority="0"/>
+    </data>
+  </node>
+  <node id="408">
+    <data>
+      <Task date="null" description="" done="0" name="local map management" priority="3"/>
+    </data>
+    <relations>
+      <relation targetNodeId="204" type="child"/>
+      <relation targetNodeId="208" type="child"/>
+    </relations>
+  </node>
+  <node id="204">
+    <data>
+      <Task date="null" description="" done="0" name="test functional user interface " priority="1"/>
+    </data>
+    <relations>
+      <relation targetNodeId="188" type="child"/>
+      <relation targetNodeId="753" type="child"/>
+      <relation targetNodeId="211" type="child"/>
+      <relation targetNodeId="188" type="child"/>
+      <relation targetNodeId="373" type="child"/>
+      <relation targetNodeId="1505" type="child"/>
+      <relation targetNodeId="1694" type="child"/>
+      <relation targetNodeId="427" type="child"/>
+      <relation targetNodeId="428" type="child"/>
+      <relation targetNodeId="855" type="child"/>
+      <relation targetNodeId="856" type="child"/>
+      <relation targetNodeId="211" type="child"/>
+      <relation targetNodeId="1614" type="child"/>
+      <relation targetNodeId="1447" type="child"/>
+    </relations>
+  </node>
+  <node id="188">
+    <data>
+      <Task date="null" description="null" done="0" name="Job Search" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="189" type="child"/>
+      <relation targetNodeId="190" type="child"/>
+      <relation targetNodeId="191" type="child"/>
+      <relation targetNodeId="193" type="child"/>
+      <relation targetNodeId="191" type="child"/>
+    </relations>
+  </node>
+  <node id="189">
+    <data>
+      <Task date="null" description="null" done="0" name="MindJet" priority="0"/>
+    </data>
+  </node>
+  <node id="190">
+    <data>
+      <Task date="null" description="null" done="0" name="Workday" priority="0"/>
+    </data>
+  </node>
+  <node id="191">
+    <data>
+      <Task date="null" description="null" done="0" name="Scribd" priority="0"/>
+    </data>
+  </node>
+  <node id="193">
+    <data>
+      <Task date="null" description="null" done="0" name="Fisher" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="192" type="child"/>
+      <relation targetNodeId="194" type="child"/>
+      <relation targetNodeId="194" type="child"/>
+      <relation targetNodeId="192" type="child"/>
+    </relations>
+  </node>
+  <node id="192">
+    <data>
+      <Task date="null" description="" done="0" name="Arrange Menu Items correctly" priority="4"/>
+    </data>
+  </node>
+  <node id="194">
+    <data>
+      <Task date="null" description="" done="0" name="Each item should have 'Delete' and 'New' actions" priority="4"/>
+    </data>
+    <relations>
+      <relation targetNodeId="195" type="child"/>
+      <relation targetNodeId="422" type="child"/>
+      <relation targetNodeId="424" type="child"/>
+      <relation targetNodeId="425" type="child"/>
+      <relation targetNodeId="426" type="child"/>
+      <relation targetNodeId="874" type="child"/>
+      <relation targetNodeId="875" type="child"/>
+      <relation targetNodeId="782" type="child"/>
+      <relation targetNodeId="1373" type="child"/>
+      <relation targetNodeId="393" type="child"/>
+      <relation targetNodeId="198" type="child"/>
+      <relation targetNodeId="198" type="child"/>
+      <relation targetNodeId="209" type="child"/>
+      <relation targetNodeId="800" type="child"/>
+      <relation targetNodeId="1205" type="child"/>
+    </relations>
+  </node>
+  <node id="195">
+    <data>
+      <Task date="null" description="" done="0" name="prototype" priority="0"/>
+    </data>
+  </node>
+  <node id="422">
+    <data>
+      <Task date="null" description="" done="0" name="unit test commands" priority="0"/>
+    </data>
+  </node>
+  <node id="424">
+    <data>
+      <Task date="null" description="" done="0" name="Add ResponseContext to web services and test" priority="3"/>
+    </data>
+  </node>
+  <node id="425">
+    <data>
+      <Task date="null" description="" done="0" name="deploy new web service and db" priority="2"/>
+    </data>
+  </node>
+  <node id="426">
+    <data>
+      <Task date="null" description="" done="0" name="create tests for web handling on the client" priority="2"/>
+    </data>
+  </node>
+  <node id="874">
+    <data>
+      <Task date="null" description="" done="0" name="update server side diagrams" priority="4"/>
+    </data>
+  </node>
+  <node id="875">
+    <data>
+      <Task date="null" description="now, when local serialize treeCollectionEx, maybe should convert to xml instead using MapDTO object. it also might decrease saving time and file size (now takes about 10sec)" done="0" name="provide unified storage mechanism (locally and web)" priority="3"/>
+    </data>
+  </node>
+  <node id="782">
+    <data>
+      <Task date="null" description="" done="0" name="1" priority="0"/>
+    </data>
+  </node>
+  <node id="1373">
+    <data>
+      <Task date="null" description="" done="0" name="new Task" priority="0"/>
+    </data>
+  </node>
+  <node id="393">
+    <data>
+      <Task date="null" description="" done="0" name="new Task" priority="0"/>
+    </data>
+  </node>
+  <node id="198">
+    <data>
+      <Item name="fd"/>
+    </data>
+  </node>
+  <node id="198">
+    <data>
+      <Task date="null" description="" done="0" name="When collapse children and then add a node, it should expand children" priority="3"/>
+    </data>
+  </node>
+  <node id="209">
+    <data>
+      <Task date="null" description="" done="0" name="implement and test web map management" priority="2"/>
+    </data>
+  </node>
+  <node id="800">
+    <data>
+      <Task date="null" description="" done="0" name="new Task" priority="0"/>
+    </data>
+  </node>
+  <node id="1205">
+    <data>
+      <Appointment date="null" description="" location="" name="new Appointment"/>
+    </data>
+  </node>
+  <node id="194">
+    <data>
+      <Task date="null" description="null" done="0" name="Wallop" priority="0"/>
+    </data>
+  </node>
+  <node id="192">
+    <data>
+      <Task date="null" description="" done="0" name="Find center of screen dynamically (remove hardcoded x, y)" priority="0"/>
+    </data>
+  </node>
+  <node id="191">
+    <data>
+      <Task date="null" description="" done="0" name="test datarenderers (unit test)" priority="0"/>
+    </data>
+  </node>
+  <node id="753">
+    <data>
+      <Task date="null" description="for example any item might get rating or other attribute" done="0" name="store dynamic properties w/ object" priority="0"/>
+    </data>
+  </node>
+  <node id="211">
+    <data>
+      <Task date="null" description="" done="0" name="test all actions in MindFactory and PriorityManager" priority="3"/>
+    </data>
+  </node>
+  <node id="188">
+    <data>
+      <Task date="null" description="" done="0" name="when load map, expandChildren control is not set correctly" priority="3"/>
+    </data>
+  </node>
+  <node id="373">
+    <data>
+      <Task date="null" description="" done="0" name="add dummy actions for appointment" priority="1"/>
+    </data>
+  </node>
+  <node id="1505">
+    <data>
+      <Task date="null" description="" done="0" name="MenuContextBuilder: names for Add,Sort menu items repeat those in TypeActionMap" priority="1"/>
+    </data>
+  </node>
+  <node id="1694">
+    <data>
+      <Task date="null" description="" done="0" name="Convert to, Delete Item should be under Item specific menu" priority="2"/>
+    </data>
+  </node>
+  <node id="427">
+    <data>
+      <Task date="null" description="" done="0" name="columns in floating windows cannot be resized" priority="2"/>
+    </data>
+  </node>
+  <node id="428">
+    <data>
+      <Task date="null" description="" done="0" name="when create a new item, folder should open up and highlight the item" priority="1"/>
+    </data>
+  </node>
+  <node id="855">
+    <data>
+      <Task date="null" description="" done="0" name="pop-up window in Outline mode should appear in the center of the screen (same for MindMap)" priority="1"/>
+    </data>
+  </node>
+  <node id="856">
+    <data>
+      <Task date="null" description="" done="0" name="when saving a map, should display 'waiting' cursor if it's taking long time" priority="1"/>
+    </data>
+  </node>
+  <node id="211">
+    <data>
+      <Task date="null" description="" done="0" name="web map management" priority="2"/>
+    </data>
+  </node>
+  <node id="1614">
+    <data>
+      <Task date="null" description="" done="0" name="new Task" priority="0"/>
+    </data>
+  </node>
+  <node id="1447">
+    <data>
+      <Task date="null" description="" done="0" name="new Task" priority="0"/>
+    </data>
+  </node>
+  <node id="208">
+    <data>
+      <Task date="null" description="" done="0" name="implement and test use cases for alternative flows" priority="3"/>
+    </data>
+  </node>
+  <node id="207">
+    <data>
+      <Task date="null" description="" done="0" name="update design diagrams" priority="3"/>
+    </data>
+  </node>
+  <node id="210">
+    <data>
+      <Task date="null" description="" done="0" name="integrate map management with MainApp" priority="1"/>
+    </data>
+  </node>
+  <node id="9">
+    <data>
+      <Task date="null" description="" done="0" name="Inbox" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="411" type="child"/>
+    </relations>
+  </node>
+  <node id="411">
+    <data>
+      <Task date="null" description="" done="0" name="new Task" priority="0"/>
+    </data>
+  </node>
+  <node id="10">
+    <data>
+      <Task date="null" description="" done="0" name="PriorityManager" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="161" type="child"/>
+      <relation targetNodeId="11" type="child"/>
+      <relation targetNodeId="28" type="child"/>
+      <relation targetNodeId="70" type="child"/>
+      <relation targetNodeId="72" type="child"/>
+      <relation targetNodeId="74" type="child"/>
+      <relation targetNodeId="75" type="child"/>
+      <relation targetNodeId="91" type="child"/>
+      <relation targetNodeId="96" type="child"/>
+      <relation targetNodeId="109" type="child"/>
+      <relation targetNodeId="111" type="child"/>
+      <relation targetNodeId="149" type="child"/>
+    </relations>
+  </node>
+  <node id="161">
+    <data>
+      <Task date="null" description="" done="0" name="Release Schedule" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="163" type="child"/>
+      <relation targetNodeId="164" type="child"/>
+    </relations>
+  </node>
+  <node id="163">
+    <data>
+      <Task date="Fri Aug 10 00:00:00 GMT-0400 2007" description="Online management of tasks" done="0" name="Web persistence and management" priority="0"/>
+    </data>
+  </node>
+  <node id="164">
+    <data>
+      <Task date="Fri Aug 31 00:00:00 GMT-0400 2007" description="" done="0" name="Functional prototype of mind maps" priority="0"/>
+    </data>
+  </node>
+  <node id="11">
+    <data>
+      <Task date="null" description="" done="0" name="Tasks/Bugs" priority="5"/>
+    </data>
+    <relations>
+      <relation targetNodeId="12" type="child"/>
+      <relation targetNodeId="13" type="child"/>
+      <relation targetNodeId="14" type="child"/>
+      <relation targetNodeId="15" type="child"/>
+      <relation targetNodeId="16" type="child"/>
+      <relation targetNodeId="17" type="child"/>
+      <relation targetNodeId="18" type="child"/>
+      <relation targetNodeId="19" type="child"/>
+      <relation targetNodeId="20" type="child"/>
+      <relation targetNodeId="21" type="child"/>
+      <relation targetNodeId="23" type="child"/>
+      <relation targetNodeId="395" type="child"/>
+      <relation targetNodeId="200" type="child"/>
+      <relation targetNodeId="201" type="child"/>
+      <relation targetNodeId="204" type="child"/>
+      <relation targetNodeId="406" type="child"/>
+      <relation targetNodeId="206" type="child"/>
+      <relation targetNodeId="411" type="child"/>
+      <relation targetNodeId="193" type="child"/>
+    </relations>
+  </node>
+  <node id="12">
+    <data>
+      <Task date="null" description="null" done="0" name="Expand nodes on import" priority="2"/>
+    </data>
+  </node>
+  <node id="13">
+    <data>
+      <Task date="null" description="null" done="0" name="Node icons in a tree: if a node is a leaf, it should have a different icon" priority="1"/>
+    </data>
+  </node>
+  <node id="14">
+    <data>
+      <Task date="null" description="null" done="0" name="If in prioritized view, stay there when add a task (maybe will be fixed once use popup concept)" priority="0"/>
+    </data>
+  </node>
+  <node id="15">
+    <data>
+      <Task date="null" description="null" done="0" name="Import should handle an empty or invalid list" priority="2"/>
+    </data>
+  </node>
+  <node id="16">
+    <data>
+      <Task date="null" description="null" done="0" name="Add a pop-up when enter/change the task name to empty (Prevent from entering empty tasks)" priority="1"/>
+    </data>
+  </node>
+  <node id="17">
+    <data>
+      <Task date="null" description="null" done="0" name="In 'Default' mode task renderer italicizes folders intermittenly" priority="0"/>
+    </data>
+  </node>
+  <node id="18">
+    <data>
+      <Task date="null" description="null" done="0" name="If an item in tree view is not highlighted and expanded, clicking on it should not collapse children" priority="1"/>
+    </data>
+  </node>
+  <node id="19">
+    <data>
+      <Task date="null" description="" done="0" name="Fix wrapping around issue" priority="2"/>
+    </data>
+  </node>
+  <node id="20">
+    <data>
+      <Task date="null" description="null" done="0" name="Provide filtering of 'Done' for tree control on the left" priority="1"/>
+    </data>
+  </node>
+  <node id="21">
+    <data>
+      <Task date="null" description="null" done="0" name="Make DeepCopy generic (register all included classes)" priority="2"/>
+    </data>
+  </node>
+  <node id="23">
+    <data>
+      <Task date="null" description="see&#xD;http://www.adobe.com/cfusion/communityengine/index.cfm?event=showdetails&amp;postId=2002&amp;productId=2&#xD;" done="0" name="In Priority View scrolling uneven size results in exception" priority="2"/>
+    </data>
+  </node>
+  <node id="395">
+    <data>
+      <Task date="null" description="null" done="0" name="Add ObjectHandles" priority="3"/>
+    </data>
+  </node>
+  <node id="200">
+    <data>
+      <Task date="null" description="'Remove Folder' should be applicable to all items" done="0" name="Change 'Convert to Project' to 'Convert to Folder'" priority="1"/>
+    </data>
+  </node>
+  <node id="201">
+    <data>
+      <Task date="null" description="null" done="0" name="Add 'Refresh' button in priority view" priority="0"/>
+    </data>
+  </node>
+  <node id="204">
+    <data>
+      <Task date="null" description="null" done="0" name="When select 'Sort By' and then click on a node, should show node details" priority="2"/>
+    </data>
+  </node>
+  <node id="406">
+    <data>
+      <Task date="null" description="" done="0" name="When try to sort on DataGrid on any columns - throws exception" priority="1"/>
+    </data>
+  </node>
+  <node id="206">
+    <data>
+      <Task date="null" description="" done="0" name="Add Import/Export map snippets" priority="3"/>
+    </data>
+  </node>
+  <node id="411">
+    <data>
+      <Task date="null" description="null" done="0" name="Move tests from VOFilterSorterTest to CommonUtils tests" priority="1"/>
+    </data>
+  </node>
+  <node id="193">
+    <data>
+      <Task date="null" description="" done="0" name="Menu" priority="0"/>
+    </data>
+  </node>
+  <node id="28">
+    <data>
+      <Task date="null" description="null" done="0" name="Features" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="29" type="child"/>
+      <relation targetNodeId="31" type="child"/>
+      <relation targetNodeId="32" type="child"/>
+      <relation targetNodeId="35" type="child"/>
+      <relation targetNodeId="36" type="child"/>
+      <relation targetNodeId="54" type="child"/>
+      <relation targetNodeId="56" type="child"/>
+      <relation targetNodeId="59" type="child"/>
+      <relation targetNodeId="63" type="child"/>
+      <relation targetNodeId="64" type="child"/>
+      <relation targetNodeId="69" type="child"/>
+    </relations>
+  </node>
+  <node id="29">
+    <data>
+      <Task date="null" description="null" done="0" name="Templates" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="30" type="child"/>
+    </relations>
+  </node>
+  <node id="30">
+    <data>
+      <Task date="null" description="null" done="0" name="Add Person concept (name only)" priority="0"/>
+    </data>
+  </node>
+  <node id="31">
+    <data>
+      <Task date="null" description="null" done="0" name="Share task lists on the web" priority="0"/>
+    </data>
+  </node>
+  <node id="32">
+    <data>
+      <Task date="null" description="null" done="0" name="Persistence" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="33" type="child"/>
+      <relation targetNodeId="34" type="child"/>
+    </relations>
+  </node>
+  <node id="33">
+    <data>
+      <Task date="null" description="null" done="0" name="Locally" priority="0"/>
+    </data>
+  </node>
+  <node id="34">
+    <data>
+      <Task date="null" description="null" done="0" name="Server" priority="2"/>
+    </data>
+  </node>
+  <node id="35">
+    <data>
+      <Task date="null" description="null" done="0" name="Allow simultaneous editing" priority="0"/>
+    </data>
+  </node>
+  <node id="36">
+    <data>
+      <Task date="null" description="null" done="0" name="Rich Data" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="37" type="child"/>
+      <relation targetNodeId="39" type="child"/>
+      <relation targetNodeId="42" type="child"/>
+      <relation targetNodeId="43" type="child"/>
+      <relation targetNodeId="44" type="child"/>
+      <relation targetNodeId="45" type="child"/>
+      <relation targetNodeId="46" type="child"/>
+      <relation targetNodeId="47" type="child"/>
+      <relation targetNodeId="50" type="child"/>
+      <relation targetNodeId="51" type="child"/>
+      <relation targetNodeId="52" type="child"/>
+      <relation targetNodeId="53" type="child"/>
+    </relations>
+  </node>
+  <node id="37">
+    <data>
+      <Task date="null" description="null" done="0" name="Priority concept" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="38" type="child"/>
+    </relations>
+  </node>
+  <node id="38">
+    <data>
+      <Task date="null" description="null" done="0" name="Sort by priority on the same level" priority="0"/>
+    </data>
+  </node>
+  <node id="39">
+    <data>
+      <Task date="null" description="null" done="0" name="'Done' Concept" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="40" type="child"/>
+    </relations>
+  </node>
+  <node id="40">
+    <data>
+      <Task date="null" description="null" done="0" name="Add purging/archival of 'done' items" priority="0"/>
+    </data>
+  </node>
+  <node id="42">
+    <data>
+      <Task date="null" description="null" done="0" name="Add complexity param" priority="1"/>
+    </data>
+  </node>
+  <node id="43">
+    <data>
+      <Task date="null" description="null" done="0" name="Add tags/categories" priority="1"/>
+    </data>
+  </node>
+  <node id="44">
+    <data>
+      <Task date="null" description="null" done="0" name="Add links to webpages" priority="0"/>
+    </data>
+  </node>
+  <node id="45">
+    <data>
+      <Task date="null" description="null" done="0" name="Add notes section to the node" priority="1"/>
+    </data>
+  </node>
+  <node id="46">
+    <data>
+      <Task date="null" description="null" done="0" name="Provide some statistics (e.g. number of all nodes or just leafs)" priority="0"/>
+    </data>
+  </node>
+  <node id="47">
+    <data>
+      <Task date="null" description="null" done="0" name="Add date/time concept" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="48" type="child"/>
+      <relation targetNodeId="49" type="child"/>
+    </relations>
+  </node>
+  <node id="48">
+    <data>
+      <Task date="null" description="null" done="0" name="Show tasks applicable for specific date" priority="0"/>
+    </data>
+  </node>
+  <node id="49">
+    <data>
+      <Task date="null" description="null" done="0" name="Show overdue tasks" priority="0"/>
+    </data>
+  </node>
+  <node id="50">
+    <data>
+      <Task date="null" description="null" done="0" name="Pluggable Data (or something else)" priority="1"/>
+    </data>
+  </node>
+  <node id="51">
+    <data>
+      <Task date="null" description="null" done="0" name="Separate data from controllers" priority="2"/>
+    </data>
+  </node>
+  <node id="52">
+    <data>
+      <Task date="null" description="null" done="0" name="Drawing board" priority="3"/>
+    </data>
+  </node>
+  <node id="53">
+    <data>
+      <Task date="null" description="null" done="0" name="Inactive Project" priority="0"/>
+    </data>
+  </node>
+  <node id="54">
+    <data>
+      <Task date="null" description="null" done="0" name="Easy input and navigation" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="55" type="child"/>
+    </relations>
+  </node>
+  <node id="55">
+    <data>
+      <Task date="null" description="null" done="0" name="When click on a node, allow editing + show all children" priority="2"/>
+    </data>
+  </node>
+  <node id="56">
+    <data>
+      <Task date="null" description="null" done="0" name="Searching/Filtering" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="57" type="child"/>
+      <relation targetNodeId="58" type="child"/>
+    </relations>
+  </node>
+  <node id="57">
+    <data>
+      <Task date="null" description="null" done="0" name="Search based on keywords" priority="0"/>
+    </data>
+  </node>
+  <node id="58">
+    <data>
+      <Task date="null" description="" done="0" name="Filter all levels or one level" priority="5"/>
+    </data>
+  </node>
+  <node id="59">
+    <data>
+      <Task date="null" description="null" done="0" name="Relations" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="60" type="child"/>
+      <relation targetNodeId="61" type="child"/>
+      <relation targetNodeId="62" type="child"/>
+    </relations>
+  </node>
+  <node id="60">
+    <data>
+      <Task date="null" description="null" done="0" name="Depends on" priority="0"/>
+    </data>
+  </node>
+  <node id="61">
+    <data>
+      <Task date="null" description="null" done="0" name="Parent/child of" priority="0"/>
+    </data>
+  </node>
+  <node id="62">
+    <data>
+      <Task date="null" description="null" done="0" name="Related to" priority="0"/>
+    </data>
+  </node>
+  <node id="63">
+    <data>
+      <Task date="null" description="null" done="0" name="Audit trail" priority="1"/>
+    </data>
+  </node>
+  <node id="64">
+    <data>
+      <Task date="null" description="null" done="0" name="Dynamic UI Generation" priority="4"/>
+    </data>
+    <relations>
+      <relation targetNodeId="66" type="child"/>
+      <relation targetNodeId="67" type="child"/>
+    </relations>
+  </node>
+  <node id="66">
+    <data>
+      <Task date="null" description="null" done="0" name="Date control - add view and editing mode" priority="0"/>
+    </data>
+  </node>
+  <node id="67">
+    <data>
+      <Task date="null" description="null" done="0" name="Links - parse data and if url show as a link" priority="0"/>
+    </data>
+  </node>
+  <node id="69">
+    <data>
+      <Task date="null" description="Total, Projects, Tasks, 'Done' what about if Project is done but tasks are not?" done="0" name="Statistics" priority="4"/>
+    </data>
+  </node>
+  <node id="70">
+    <data>
+      <Task date="null" description="null" done="0" name="Design" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="71" type="child"/>
+    </relations>
+  </node>
+  <node id="71">
+    <data>
+      <Task date="null" description="null" done="0" name="Add workflow diagrams" priority="0"/>
+    </data>
+  </node>
+  <node id="72">
+    <data>
+      <Task date="null" description="null" done="0" name="Testing" priority="0"/>
+    </data>
+  </node>
+  <node id="74">
+    <data>
+      <Task date="null" description="null" done="0" name="Deployment" priority="0"/>
+    </data>
+  </node>
+  <node id="75">
+    <data>
+      <Task date="null" description="null" done="0" name="Investigate" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="76" type="child"/>
+      <relation targetNodeId="78" type="child"/>
+      <relation targetNodeId="79" type="child"/>
+      <relation targetNodeId="80" type="child"/>
+      <relation targetNodeId="85" type="child"/>
+      <relation targetNodeId="86" type="child"/>
+      <relation targetNodeId="87" type="child"/>
+      <relation targetNodeId="88" type="child"/>
+      <relation targetNodeId="89" type="child"/>
+      <relation targetNodeId="90" type="child"/>
+    </relations>
+  </node>
+  <node id="76">
+    <data>
+      <Task date="null" description="null" done="0" name="Check out books on ui design by Tufte" priority="0"/>
+    </data>
+  </node>
+  <node id="78">
+    <data>
+      <Task date="null" description="null" done="0" name="Understand diff between updateList, updateDisplayList, invalidate, etc" priority="1"/>
+    </data>
+  </node>
+  <node id="79">
+    <data>
+      <Task date="null" description="null" done="0" name="Flex components for PM and MM" priority="0"/>
+    </data>
+  </node>
+  <node id="80">
+    <data>
+      <Task date="null" description="null" done="0" name="Get a book on Flex controls (in-depth)" priority="2"/>
+    </data>
+    <relations>
+      <relation targetNodeId="81" type="child"/>
+      <relation targetNodeId="82" type="child"/>
+      <relation targetNodeId="83" type="child"/>
+      <relation targetNodeId="84" type="child"/>
+    </relations>
+  </node>
+  <node id="81">
+    <data>
+      <Task date="null" description="null" done="0" name="Flex 2 Advanced: Using Data Services  " priority="0"/>
+    </data>
+  </node>
+  <node id="82">
+    <data>
+      <Task date="null" description="null" done="0" name="Professional Adobe Flex 2" priority="0"/>
+    </data>
+  </node>
+  <node id="83">
+    <data>
+      <Task date="null" description="null" done="0" name="Programming Flex 2: The comprehensive guide to creating rich media applications with Adobe Flex" priority="0"/>
+    </data>
+  </node>
+  <node id="84">
+    <data>
+      <Task date="null" description="097776222X" done="0" name="Rich Internet Applications with Adobe Flex &amp; Java (Secrets of the Masters)" priority="2"/>
+    </data>
+  </node>
+  <node id="85">
+    <data>
+      <Task date="null" description="null" done="0" name="asdoc" priority="2"/>
+    </data>
+  </node>
+  <node id="86">
+    <data>
+      <Task date="null" description="http://www.adobe.com/cfusion/exchange/index.cfm?event=extensionDetail&amp;loc=en_us&amp;extid=1183526" done="0" name="Object Handles - resizing ui components" priority="3"/>
+    </data>
+  </node>
+  <node id="87">
+    <data>
+      <Task date="null" description="http://www.riaone.com/treegrid/" done="0" name="TreeGrid control" priority="2"/>
+    </data>
+  </node>
+  <node id="88">
+    <data>
+      <Task date="null" description="" done="0" name="IViewCursor" priority="0"/>
+    </data>
+  </node>
+  <node id="89">
+    <data>
+      <Task date="null" description="http://code.google.com/p/flexlib/wiki/ComponentList" done="0" name="Try out FlowBox control" priority="3"/>
+    </data>
+  </node>
+  <node id="90">
+    <data>
+      <Task date="null" description="http://code.google.com/p/flexlib/w/list" done="2" name="FlexLib" priority="0"/>
+    </data>
+  </node>
+  <node id="91">
+    <data>
+      <Task date="null" description="null" done="0" name="Refactoring" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="92" type="child"/>
+      <relation targetNodeId="95" type="child"/>
+    </relations>
+  </node>
+  <node id="92">
+    <data>
+      <Task date="null" description="null" done="0" name="Provide unified popup handling" priority="1"/>
+    </data>
+  </node>
+  <node id="95">
+    <data>
+      <Task date="null" description="do I really need to?" done="0" name="Make XmlTreeConverter serialize complex objects (containing other objects)" priority="4"/>
+    </data>
+  </node>
+  <node id="96">
+    <data>
+      <Task date="null" description="null" done="0" name="UI Enhancements" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="98" type="child"/>
+      <relation targetNodeId="99" type="child"/>
+      <relation targetNodeId="100" type="child"/>
+      <relation targetNodeId="101" type="child"/>
+      <relation targetNodeId="102" type="child"/>
+      <relation targetNodeId="103" type="child"/>
+      <relation targetNodeId="104" type="child"/>
+      <relation targetNodeId="105" type="child"/>
+      <relation targetNodeId="106" type="child"/>
+    </relations>
+  </node>
+  <node id="98">
+    <data>
+      <Task date="null" description="null" done="0" name="Add databinding (when change in details view, update tree view)" priority="0"/>
+    </data>
+  </node>
+  <node id="99">
+    <data>
+      <Task date="null" description="null" done="0" name="Allow dragging and dropping multiple nodes" priority="0"/>
+    </data>
+  </node>
+  <node id="100">
+    <data>
+      <Task date="null" description="null" done="0" name="Add option to show/hide non-prioritized tasks (Do I need it?)" priority="1"/>
+    </data>
+  </node>
+  <node id="101">
+    <data>
+      <Task date="null" description="null" done="0" name="Add tooltip to datagrid to display path when mouse over the node" priority="0"/>
+    </data>
+  </node>
+  <node id="102">
+    <data>
+      <Task date="null" description="null" done="0" name="Make 'Add sibling' button" priority="1"/>
+    </data>
+  </node>
+  <node id="103">
+    <data>
+      <Task date="null" description="null" done="0" name="Make button icons" priority="1"/>
+    </data>
+  </node>
+  <node id="104">
+    <data>
+      <Task date="null" description="null" done="0" name="Add keyboard shortcuts (e.g. Ins to add a child, Del to delete, Enter to finish editing)" priority="0"/>
+    </data>
+  </node>
+  <node id="105">
+    <data>
+      <Task date="null" description="null" done="0" name="Do not show 'done' tasks in tree control if show 'done' is not selected" priority="0"/>
+    </data>
+  </node>
+  <node id="106">
+    <data>
+      <Task date="null" description="null" done="0" name="Add logo" priority="0"/>
+    </data>
+  </node>
+  <node id="109">
+    <data>
+      <Task date="null" description="null" done="0" name="Documentation" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="125" type="child"/>
+      <relation targetNodeId="110" type="child"/>
+    </relations>
+  </node>
+  <node id="125">
+    <data>
+      <Task date="null" description="" done="0" name="Look into asdoc" priority="0"/>
+    </data>
+  </node>
+  <node id="110">
+    <data>
+      <Task date="null" description="null" done="0" name="Add use cases" priority="7"/>
+    </data>
+  </node>
+  <node id="111">
+    <data>
+      <Task date="null" description="" done="0" name="Prototypes" priority="1"/>
+    </data>
+    <relations>
+      <relation targetNodeId="112" type="child"/>
+      <relation targetNodeId="131" type="child"/>
+    </relations>
+  </node>
+  <node id="112">
+    <data>
+      <Task date="null" description="" done="0" name="NewUIEngine Prototype" priority="4"/>
+    </data>
+    <relations>
+      <relation targetNodeId="114" type="child"/>
+      <relation targetNodeId="128" type="child"/>
+      <relation targetNodeId="129" type="child"/>
+      <relation targetNodeId="130" type="child"/>
+    </relations>
+  </node>
+  <node id="114">
+    <data>
+      <Task date="null" description="" done="0" name="Unit test ContextMenuBuilder" priority="1"/>
+    </data>
+  </node>
+  <node id="128">
+    <data>
+      <Task date="null" description="" done="0" name="Add support for hierarchical priority sort" priority="3"/>
+    </data>
+  </node>
+  <node id="129">
+    <data>
+      <Task date="null" description="null" done="0" name="Investigate HierarchicalCollectionView and related items" priority="3"/>
+    </data>
+  </node>
+  <node id="130">
+    <data>
+      <Task date="null" description="" done="0" name="Experiment with TreeGrid" priority="3"/>
+    </data>
+  </node>
+  <node id="131">
+    <data>
+      <Task date="null" description="" done="0" name="Future" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="132" type="child"/>
+      <relation targetNodeId="133" type="child"/>
+      <relation targetNodeId="134" type="child"/>
+      <relation targetNodeId="136" type="child"/>
+    </relations>
+  </node>
+  <node id="132">
+    <data>
+      <Task date="null" description="null" done="0" name="Add cg to layout nodes" priority="3"/>
+    </data>
+  </node>
+  <node id="133">
+    <data>
+      <Task date="null" description="null" done="0" name="Investigate how to add ItemRenderers to ViewDescriptors" priority="2"/>
+    </data>
+  </node>
+  <node id="134">
+    <data>
+      <Task date="null" description="null" done="0" name="DataItem" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="135" type="child"/>
+    </relations>
+  </node>
+  <node id="135">
+    <data>
+      <Task date="null" description="null" done="0" name="Make UIEngine render DataItem" priority="2"/>
+    </data>
+  </node>
+  <node id="136">
+    <data>
+      <Task date="null" description="Allows dragging and dropping diff controls" done="0" name="Add template control" priority="1"/>
+    </data>
+  </node>
+  <node id="149">
+    <data>
+      <Task date="null" description="" done="0" name="Training" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="150" type="child"/>
+      <relation targetNodeId="151" type="child"/>
+      <relation targetNodeId="1188" type="child"/>
+    </relations>
+  </node>
+  <node id="150">
+    <data>
+      <Task date="null" description="null" done="0" name="Watch Total Training Flex" priority="1"/>
+    </data>
+  </node>
+  <node id="151">
+    <data>
+      <Task date="null" description="" done="1" name="Watch Flex Builder 3.0 video on lynda.com" priority="2"/>
+    </data>
+  </node>
+  <node id="1188">
+    <data>
+      <Task date="Fri Aug 17 00:00:00 GMT-0400 2007" description="" done="0" name="Get Flex certification" priority="3"/>
+    </data>
+  </node>
+  <node id="152">
+    <data>
+      <Task date="null" description="" done="0" name="MindFactory" priority="6"/>
+    </data>
+    <relations>
+      <relation targetNodeId="153" type="child"/>
+      <relation targetNodeId="154" type="child"/>
+      <relation targetNodeId="155" type="child"/>
+      <relation targetNodeId="156" type="child"/>
+      <relation targetNodeId="1868" type="child"/>
+      <relation targetNodeId="419" type="child"/>
+    </relations>
+  </node>
+  <node id="153">
+    <data>
+      <Task date="null" description="" done="0" name="Layout management" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="1238" type="child"/>
+    </relations>
+  </node>
+  <node id="1238">
+    <data>
+      <Task date="null" description="" done="0" name="new Task" priority="0"/>
+    </data>
+  </node>
+  <node id="154">
+    <data>
+      <Task date="null" description="" done="0" name="UI Node generator based on data" priority="0"/>
+    </data>
+  </node>
+  <node id="155">
+    <data>
+      <Task date="null" description="" done="0" name="Templates" priority="0"/>
+    </data>
+  </node>
+  <node id="156">
+    <data>
+      <Task date="null" description="" done="0" name="Implement 3d engine" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="157" type="child"/>
+      <relation targetNodeId="158" type="child"/>
+      <relation targetNodeId="159" type="child"/>
+      <relation targetNodeId="160" type="child"/>
+    </relations>
+  </node>
+  <node id="157">
+    <data>
+      <Task date="null" description="null" done="0" name="Fix issue with 0 vector" priority="0"/>
+    </data>
+  </node>
+  <node id="158">
+    <data>
+      <Task date="null" description="null" done="0" name="Create basic test for camera with diff angles" priority="1"/>
+    </data>
+  </node>
+  <node id="159">
+    <data>
+      <Task date="null" description="null" done="0" name="Create different views for axis" priority="1"/>
+    </data>
+  </node>
+  <node id="160">
+    <data>
+      <Task date="null" description="null" done="0" name="Troubleshoot main view" priority="1"/>
+    </data>
+  </node>
+  <node id="1868">
+    <data>
+      <Task date="null" description="" done="0" name="map storage" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="212" type="child"/>
+      <relation targetNodeId="213" type="child"/>
+      <relation targetNodeId="214" type="child"/>
+      <relation targetNodeId="861" type="child"/>
+      <relation targetNodeId="226" type="child"/>
+    </relations>
+  </node>
+  <node id="212">
+    <data>
+      <Task date="null" description="" done="1" name="update diagrams" priority="3"/>
+    </data>
+  </node>
+  <node id="213">
+    <data>
+      <Task date="null" description="especially for store map " done="0" name="review test case scenarios" priority="1"/>
+    </data>
+  </node>
+  <node id="214">
+    <data>
+      <Task date="null" description="" done="0" name="think about configuration management (document)" priority="2"/>
+    </data>
+    <relations>
+      <relation targetNodeId="216" type="child"/>
+      <relation targetNodeId="215" type="child"/>
+      <relation targetNodeId="215" type="child"/>
+    </relations>
+  </node>
+  <node id="216">
+    <data>
+      <Item name="web map storage"/>
+    </data>
+    <relations>
+      <relation targetNodeId="217" type="child"/>
+      <relation targetNodeId="218" type="child"/>
+      <relation targetNodeId="219" type="child"/>
+    </relations>
+  </node>
+  <node id="217">
+    <data>
+      <Item name="mapService (local web)"/>
+    </data>
+  </node>
+  <node id="218">
+    <data>
+      <Item name="mapService (global web)"/>
+    </data>
+  </node>
+  <node id="219">
+    <data>
+      <Item name="testMapService (local web)"/>
+    </data>
+  </node>
+  <node id="215">
+    <data>
+      <Item name="local map storage"/>
+    </data>
+    <relations>
+      <relation targetNodeId="220" type="child"/>
+      <relation targetNodeId="221" type="child"/>
+    </relations>
+  </node>
+  <node id="220">
+    <data>
+      <Item name="_maps catalog"/>
+    </data>
+  </node>
+  <node id="221">
+    <data>
+      <Item name="_testMaps catalog"/>
+    </data>
+  </node>
+  <node id="215">
+    <data>
+      <Task date="null" description="" done="1" name="investigate the problem with cg getWebService" priority="0"/>
+    </data>
+  </node>
+  <node id="861">
+    <data>
+      <Task date="null" description="" done="0" name="add Login and admin concept" priority="1"/>
+    </data>
+  </node>
+  <node id="226">
+    <data>
+      <Task date="null" description="" done="0" name="move Alerting to ViewHelper class" priority="2"/>
+    </data>
+  </node>
+  <node id="419">
+    <data>
+      <Task date="null" description="" done="0" name="Tasks/Bugs" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="420" type="child"/>
+      <relation targetNodeId="633" type="child"/>
+      <relation targetNodeId="844" type="child"/>
+      <relation targetNodeId="423" type="child"/>
+    </relations>
+  </node>
+  <node id="420">
+    <data>
+      <Task date="null" description="" done="0" name="defer creation of node components until visible" priority="0"/>
+    </data>
+  </node>
+  <node id="633">
+    <data>
+      <Task date="null" description="" done="0" name="display map name" priority="0"/>
+    </data>
+  </node>
+  <node id="844">
+    <data>
+      <Task date="null" description="" done="0" name="when reload map, floating windows point to objects in memory and not newly loaded items" priority="0"/>
+    </data>
+  </node>
+  <node id="423">
+    <data>
+      <Task date="null" description="MindMap should be first" done="0" name="make List to be open by default " priority="1"/>
+    </data>
+  </node>
+  <node id="165">
+    <data>
+      <Task date="null" description="null" done="0" name="Philips" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="166" type="child"/>
+      <relation targetNodeId="167" type="child"/>
+      <relation targetNodeId="168" type="child"/>
+      <relation targetNodeId="169" type="child"/>
+      <relation targetNodeId="170" type="child"/>
+      <relation targetNodeId="171" type="child"/>
+    </relations>
+  </node>
+  <node id="166">
+    <data>
+      <Task date="null" description="" done="0" name="Get a plug-in for testing for VS2005" priority="1"/>
+    </data>
+    <relations>
+      <relation targetNodeId="1030" type="child"/>
+    </relations>
+  </node>
+  <node id="1030">
+    <data>
+      <Task date="null" description="" done="0" name="new Task" priority="0"/>
+    </data>
+  </node>
+  <node id="167">
+    <data>
+      <Task date="null" description="null" done="0" name="Define unit testing strategy for the Database" priority="2"/>
+    </data>
+  </node>
+  <node id="168">
+    <data>
+      <Task date="null" description="null" done="0" name="Add assigning entity to profiles section to Profile Design doc" priority="1"/>
+    </data>
+  </node>
+  <node id="169">
+    <data>
+      <Task date="null" description="null" done="0" name="Refactor creating factory/default profiles" priority="1"/>
+    </data>
+  </node>
+  <node id="170">
+    <data>
+      <Task date="null" description="null" done="1" name="Refactor profiles in db" priority="4"/>
+    </data>
+  </node>
+  <node id="171">
+    <data>
+      <Task date="null" description="" done="0" name="Investigate" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="172" type="child"/>
+    </relations>
+  </node>
+  <node id="172">
+    <data>
+      <Task date="null" description="" done="0" name="Books" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="173" type="child"/>
+      <relation targetNodeId="174" type="child"/>
+    </relations>
+  </node>
+  <node id="173">
+    <data>
+      <Task date="null" description="http://www.amazon.com/Inside-Microsoft-SQL-Server-2005/dp/0735623139/ref=pd_sim_b_1/104-9185396-4255101?ie=UTF8&amp;qid=1184695696&amp;sr=11-1" done="0" name="Inside Microsoft SQL Server 2005: T-SQL Querying" priority="3"/>
+    </data>
+  </node>
+  <node id="174">
+    <data>
+      <Task date="null" description="http://www.amazon.com/Inside-Microsoft-SQL-Server-2005/dp/0735621055/ref=sr_11_1/104-9185396-4255101?ie=UTF8&amp;qid=1184695696&amp;sr=11-1" done="0" name="Inside Microsoft (r) SQL Server (tm) 2005: The Storage Engine" priority="2"/>
+    </data>
+  </node>
+  <node id="175">
+    <data>
+      <Task date="null" description="null" done="0" name="Personal" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="176" type="child"/>
+    </relations>
+  </node>
+  <node id="176">
+    <data>
+      <Task date="null" description="null" done="0" name="Chia" priority="3"/>
+    </data>
+    <relations>
+      <relation targetNodeId="177" type="child"/>
+      <relation targetNodeId="181" type="child"/>
+      <relation targetNodeId="182" type="child"/>
+      <relation targetNodeId="183" type="child"/>
+      <relation targetNodeId="185" type="child"/>
+    </relations>
+  </node>
+  <node id="177">
+    <data>
+      <Task date="null" description="null" done="0" name="Wedding" priority="1"/>
+    </data>
+    <relations>
+      <relation targetNodeId="178" type="child"/>
+      <relation targetNodeId="179" type="child"/>
+      <relation targetNodeId="180" type="child"/>
+    </relations>
+  </node>
+  <node id="178">
+    <data>
+      <Task date="null" description="null" done="0" name="Date" priority="0"/>
+    </data>
+  </node>
+  <node id="179">
+    <data>
+      <Task date="null" description="null" done="0" name="Location" priority="0"/>
+    </data>
+  </node>
+  <node id="180">
+    <data>
+      <Task date="null" description="null" done="0" name="Guests" priority="0"/>
+    </data>
+  </node>
+  <node id="181">
+    <data>
+      <Task date="null" description="null" done="0" name="Marriage Certificate" priority="2"/>
+    </data>
+  </node>
+  <node id="182">
+    <data>
+      <Task date="null" description="null" done="0" name="Moving to Boston" priority="0"/>
+    </data>
+  </node>
+  <node id="183">
+    <data>
+      <Task date="null" description="null" done="0" name="Preps" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="184" type="child"/>
+    </relations>
+  </node>
+  <node id="184">
+    <data>
+      <Task date="null" description="null" done="1" name="Engagement ring" priority="3"/>
+    </data>
+  </node>
+  <node id="185">
+    <data>
+      <Task date="null" description="null" done="0" name="Immigration" priority="0"/>
+    </data>
+    <relations>
+      <relation targetNodeId="186" type="child"/>
+      <relation targetNodeId="187" type="child"/>
+    </relations>
+  </node>
+  <node id="186">
+    <data>
+      <Task date="null" description="null" done="0" name="Research immigration thru marriage" priority="3"/>
+    </data>
+  </node>
+  <node id="187">
+    <data>
+      <Task date="null" description="null" done="0" name="Research legal procedures about the wedding" priority="0"/>
+    </data>
+  </node>
+</graph>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<groupId>com.digigroup</groupId>
+	<artifactId>digigroup-pom</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<packaging>pom</packaging>
+	<name>DigiGroup POM</name>
+	<modelVersion>4.0.0</modelVersion>
+
+	<scm>
+		<connection>scm:svn:http://labs.digigroupinc.com/svn/digigroup/digigroup-lib/trunk</connection>
+	</scm>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>Nexus Repo</name>
+            <url>http://labs.digigroupinc.com:8080/nexus/content/repositories/releases/</url>
+        </repository>
+        
+        <snapshotRepository>
+            <uniqueVersion>true</uniqueVersion>
+            <id>nexus</id>
+            <name>Nexus Repo Snapshot</name>
+            <url>http://labs.digigroupinc.com:8080/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+	<modules>
+		<module>root-pom</module>
+		<module>libraries</module>
+		<module>mind-factory</module>
+	</modules>
+</project>

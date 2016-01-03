@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.digigroup.digigrouplib</groupId>
+		<artifactId>dglib-pom</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.digigroup.digigrouplib.testing</groupId>
+	<artifactId>testing</artifactId>
+	<packaging>swc</packaging>
+
+	<name>Testing Utils</name>
+
+	<!--
+	 	Uncomment when tests added for the classes in this module.  If tests aren't skipped, FlexUnit dies because it
+	    can't find any tests.
+	-->
+	<properties>
+		<maven.test.skip>true</maven.test.skip>
+	</properties>
+
+</project>

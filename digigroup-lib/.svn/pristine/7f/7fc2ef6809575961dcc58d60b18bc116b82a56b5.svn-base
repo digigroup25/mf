@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:MXTreeItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+					  xmlns:mx="library://ns.adobe.com/flex/mx"
+					  xmlns:s="library://ns.adobe.com/flex/spark"
+					  >
+
+	<s:states>
+		<s:State name="normal" />
+		<s:State name="hovered" />
+		<s:State name="selected" />
+	</s:states>
+	<s:HGroup left="0"
+			  right="0"
+			  top="0"
+			  bottom="0"
+			  verticalAlign="middle"
+			  >
+		<s:Rect id="indentationSpacer"
+				width="{treeListData.indent}"
+				percentHeight="100"
+				alpha="0"
+				>
+			<s:fill>
+				<s:SolidColor color="0xFFFFFF" />
+			</s:fill>
+		</s:Rect>
+		<s:Group id="disclosureGroup">
+			<s:BitmapImage source="{treeListData.disclosureIcon}"
+						   visible="{treeListData.hasChildren}"
+						   />
+		</s:Group>
+		<s:Group>
+			<s:BitmapImage source="{treeListData.icon}" />
+
+			<!-- checkmark -->
+			<!--- The checkmark in the box for this skin. To create a custom check mark, create a custom skin class. -->
+			<s:Path id="check"
+					left="2"
+					top="4"
+					data="M 9.2 0.1 L 4.05 6.55 L 3.15 5.0 L 0.05 5.0 L 4.6 9.7 L 12.05 0.1 L 9.2 0.1"
+					includeInLayout="{data.vo.hasOwnProperty('done') &amp;&amp; data.vo.done==1}"
+					visible="{data.vo.hasOwnProperty('done') &amp;&amp; data.vo.done==1}"
+					>
+				<s:fill>
+					<!---
+					@private
+					The solid color fill for the CheckBox's checkmark. The default alpha is .9, and the default fill color is 0x000000.
+					-->
+					<s:SolidColor id="checkMarkFill"
+								  color="0"
+								  alpha="0.5"
+								  />
+				</s:fill>
+			</s:Path>
+
+			<!--<s:CheckBox includeInLayout="{data.vo.hasOwnProperty('done') &amp;&amp; data.vo.done==1}"
+						selected="true"
+						visible="{data.vo.hasOwnProperty('done') &amp;&amp; data.vo.done==1}"
+						/>-->
+			<s:Label horizontalCenter="0"
+					 verticalCenter="2"
+					 includeInLayout="{data.vo.hasOwnProperty('priority') &amp;&amp; data.vo.priority>0}"
+					 text="{(data.vo.hasOwnProperty('priority') &amp;&amp; data.vo.priority>0) ? data.vo.priority : ''}"
+					 visible="{data.vo.hasOwnProperty('priority') &amp;&amp; data.vo.priority>0}"
+					 />
+		</s:Group>
+
+		<s:Label id="labelField"
+				 paddingBottom="4"
+				 paddingTop="4"
+				 text="{treeListData.label}"
+				 />
+	</s:HGroup>
+</s:MXTreeItemRenderer>
+
+<!--<?xml version="1.0" encoding="utf-8"?>
+<mx:TreeItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+					 xmlns:mx="library://ns.adobe.com/flex/mx"
+					 >
+	<mx:Label text="{data.vo.name + data.vo.hasOwnProperty('priority') ? data.vo.priority : ''}" />
+
+</mx:TreeItemRenderer>-->

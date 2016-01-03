@@ -1,0 +1,438 @@
+<asdoc>
+
+<interfaceRec name='IActionDescriptor' fullname='actions:IActionDescriptor' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/action-mvc/src/main/flex/actions/IActionDescriptor.as' namespace='actions' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='label' fullname='actions:IActionDescriptor/actions:IActionDescriptor:label/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='label' fullname='actions:IActionDescriptor/actions:IActionDescriptor:label/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<classRec name='LogicType' fullname='actions:LogicType' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/action-mvc/src/main/flex/actions/LogicType.as' namespace='actions' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<field name='AND' fullname='actions:LogicType/AND' type='String' isStatic='true' isConst='true' defaultValue='and' >
+</field>
+<field name='OR' fullname='actions:LogicType/OR' type='String' isStatic='true' isConst='true' defaultValue='or' >
+</field>
+<classRec name='ActionType' fullname='actions:ActionType' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/action-mvc/src/main/flex/actions/ActionType.as' namespace='actions' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<field name='PARALLEL' fullname='actions:ActionType/PARALLEL' type='String' isStatic='true' isConst='true' defaultValue='parallel' >
+</field>
+<field name='SEQUENTIAL' fullname='actions:ActionType/SEQUENTIAL' type='String' isStatic='true' isConst='true' defaultValue='sequential' >
+</field>
+<classRec name='ActionStatus' fullname='actions:ActionStatus' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/action-mvc/src/main/flex/actions/ActionStatus.as' namespace='actions' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<field name='COMPLETED' fullname='actions:ActionStatus/COMPLETED' type='String' isStatic='true' isConst='true' defaultValue='completed' >
+</field>
+<field name='COMPLETING' fullname='actions:ActionStatus/COMPLETING' type='String' isStatic='true' isConst='true' defaultValue='completing' >
+</field>
+<field name='FAILED' fullname='actions:ActionStatus/FAILED' type='String' isStatic='true' isConst='true' defaultValue='failed' >
+</field>
+<field name='FAILING' fullname='actions:ActionStatus/FAILING' type='String' isStatic='true' isConst='true' defaultValue='failing' >
+</field>
+<field name='NOT_STARTED' fullname='actions:ActionStatus/NOT_STARTED' type='String' isStatic='true' isConst='true' defaultValue='not_started' >
+</field>
+<classRec name='Assert' fullname='actions:Assert' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/action-mvc/src/main/flex/actions/Assert.as' namespace='actions' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='isTrue' fullname='actions:Assert/isTrue' isStatic='true' isFinal='false' isOverride='false'  param_names='value;message' param_types='Boolean;String' param_defaults='undefined;null' result_type='void'>
+</method>
+<classRec name='ActionError' fullname='actions:ActionError' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/action-mvc/src/main/flex/actions/ActionError.as' namespace='actions' access='public' baseclass='Error' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ActionError' fullname='actions:ActionError/ActionError' isStatic='false' isFinal='false' isOverride='false'  param_names='message' param_types='String' param_defaults='undefined' result_type='*'>
+</method>
+<classRec name='ActionData' fullname='actions:ActionData' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/action-mvc/src/main/flex/actions/ActionData.as' namespace='actions' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ActionData' fullname='actions:ActionData/ActionData' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='null' result_type='*'>
+</method>
+<method name='clone' fullname='actions:ActionData/clone' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<method name='toString' fullname='actions:ActionData/toString' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<field name='canExecuteNextActionWhileCurrentIsCompleting' fullname='actions:ActionData/canExecuteNextActionWhileCurrentIsCompleting' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='keepExecutingOrActions' fullname='actions:ActionData/keepExecutingOrActions' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='logicType' fullname='actions:ActionData/logicType' type='String' isStatic='false' isConst='false' defaultValue='and' >
+</field>
+<field name='name' fullname='actions:ActionData/name' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='type' fullname='actions:ActionData/type' type='String' isStatic='false' isConst='false' defaultValue='sequential' >
+</field>
+<classRec name='ActionEvent' fullname='actions:ActionEvent' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/action-mvc/src/main/flex/actions/ActionEvent.as' namespace='actions' access='public' baseclass='flash.events:Event' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ActionEvent' fullname='actions:ActionEvent/ActionEvent' isStatic='false' isFinal='false' isOverride='false'  param_names='type;targetAction;status' param_types='String;actions:AbstractAction;String' param_defaults='undefined;undefined;null' result_type='*'>
+</method>
+<method name='clone' fullname='actions:ActionEvent/clone' isStatic='false' isFinal='false' isOverride='true'  result_type='flash.events:Event'>
+</method>
+<method name='toString' fullname='actions:ActionEvent/toString' isStatic='false' isFinal='false' isOverride='true'  result_type='String'>
+</method>
+<method name='status' fullname='actions:ActionEvent/status/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='targetAction' fullname='actions:ActionEvent/targetAction/get' isStatic='false' isFinal='false' isOverride='false'  result_type='actions:AbstractAction'>
+</method>
+<field name='STATUS_CHANGE' fullname='actions:ActionEvent/STATUS_CHANGE' type='String' isStatic='true' isConst='true' defaultValue='statusChange' >
+</field>
+<field name='UNABLE_TO_EXECUTE' fullname='actions:ActionEvent/UNABLE_TO_EXECUTE' type='String' isStatic='true' isConst='true' defaultValue='unableToExecute' >
+</field>
+<field name='_status' fullname='actions:ActionEvent/private:_status' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='_targetAction' fullname='actions:ActionEvent/private:_targetAction' type='actions:AbstractAction' isStatic='false' isConst='false' >
+</field>
+<classRec name='ActionFactory' fullname='actions:ActionFactory' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/action-mvc/src/main/flex/actions/ActionFactory.as' namespace='actions' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='createAction' fullname='actions:ActionFactory/createAction' isStatic='false' isFinal='false' isOverride='false'  param_names='name;type;logicType;repeatCount;userFacing' param_types='String;String;String;uint;Boolean' param_defaults='undefined;undefined;undefined;undefined;undefined' result_type='actions:AbstractAction'>
+</method>
+<method name='createWithChildren' fullname='actions:ActionFactory/private:createWithChildren' isStatic='false' isFinal='false' isOverride='false'  param_names='name;children' param_types='String;Array' param_defaults='undefined;undefined' result_type='actions:AbstractAction'>
+</method>
+<method name='parallelAND' fullname='actions:ActionFactory/parallelAND' isStatic='false' isFinal='false' isOverride='false'  param_names='name;children' param_types='String;Array' param_defaults='undefined;null' result_type='actions:AbstractAction'>
+</method>
+<method name='parallelOR' fullname='actions:ActionFactory/parallelOR' isStatic='false' isFinal='false' isOverride='false'  param_names='name;children' param_types='String;Array' param_defaults='undefined;null' result_type='actions:AbstractAction'>
+</method>
+<method name='sequentialAND' fullname='actions:ActionFactory/sequentialAND' isStatic='false' isFinal='false' isOverride='false'  param_names='name;children' param_types='String;Array' param_defaults='undefined;null' result_type='actions:AbstractAction'>
+</method>
+<method name='sequentialOR' fullname='actions:ActionFactory/sequentialOR' isStatic='false' isFinal='false' isOverride='false'  param_names='name;children' param_types='String;Array' param_defaults='undefined;null' result_type='actions:AbstractAction'>
+</method>
+<classRec name='AbstractAction' fullname='actions:AbstractAction' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/action-mvc/src/main/flex/actions/AbstractAction.as' namespace='actions' access='public' baseclass='collections.tree:DoubleLinkedTree' interfaces='actions:IActionDescriptor;mf.framework:IManagedLifecycle' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 Allows for both sequential and parallel execution of actions and AND/OR logic for determining success 
+	 of a composite action.  If sequential, every child action is processed 
+	 one after another (upon completed status). Then the body of the action is executed.  If parallel, 
+	 all child actions are executed and once all of them have been completed, the action body is executed.
+	 By default actions are sequential.
+	 
+	 ]]></description>
+</classRec>
+<method name='AbstractAction' fullname='actions:AbstractAction/AbstractAction' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='null' result_type='*'>
+</method>
+<method name='_getAvailableActions' fullname='actions:AbstractAction/private:_getAvailableActions' isStatic='false' isFinal='false' isOverride='false'  param_names='type;value' param_types='String;Object' param_defaults='undefined;undefined' result_type='Array'>
+</method>
+<method name='addActionListeners' fullname='actions:AbstractAction/protected:addActionListeners' isStatic='false' isFinal='false' isOverride='false'  param_names='action' param_types='actions:AbstractAction' param_defaults='undefined' result_type='void'>
+</method>
+<method name='allChildActionsHaveStatus' fullname='actions:AbstractAction/private:allChildActionsHaveStatus' isStatic='false' isFinal='false' isOverride='false'  param_names='status' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='allChildrenFailed' fullname='actions:AbstractAction/protected:allChildrenFailed' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='canExecuteBody' fullname='actions:AbstractAction/protected:canExecuteBody' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='canExecuteChildren' fullname='actions:AbstractAction/protected:canExecuteChildren' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='checkPreconditions' fullname='actions:AbstractAction/private:checkPreconditions' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='copy' fullname='actions:AbstractAction/copy' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<method name='doExecuteFail' fullname='actions:AbstractAction/protected:doExecuteFail' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='doExecute' fullname='actions:AbstractAction/protected:doExecute' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='encounteredFailure' fullname='actions:AbstractAction/private:encounteredFailure' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='executeActions' fullname='actions:AbstractAction/protected:executeActions' isStatic='false' isFinal='false' isOverride='false'  param_names='actions' param_types='Array' param_defaults='undefined' result_type='void'>
+</method>
+<method name='executeBody' fullname='actions:AbstractAction/protected:executeBody' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='executeChildren' fullname='actions:AbstractAction/protected:executeChildren' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
+<method name='execute' fullname='actions:AbstractAction/execute' isStatic='false' isFinal='true' isOverride='false'  result_type='void'>
+</method>
+<method name='fail' fullname='actions:AbstractAction/fail' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='forceComplete' fullname='actions:AbstractAction/forceComplete' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='forceFailed' fullname='actions:AbstractAction/forceFailed' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='getAccessibleChildren' fullname='actions:AbstractAction/getAccessibleChildren' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.collections:ArrayCollection'>
+</method>
+<method name='getActionsToExecute' fullname='actions:AbstractAction/protected:getActionsToExecute' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='getAvailableActionsByName' fullname='actions:AbstractAction/getAvailableActionsByName' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='undefined' result_type='Array'>
+</method>
+<method name='getAvailableActions' fullname='actions:AbstractAction/getAvailableActions' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='Class' param_defaults='null' result_type='Array'>
+<description><![CDATA[
+		 available actions are those with status NOT_STARTED and whose
+		 ascendants have status NOT_STARTED, COMPLETING or COMPLETED. 
+		 available actions do not contain descendants of available actions.
+		 available actions are determined by using breadth-first search
+		 ]]></description>
+</method>
+<method name='getChildActionsWithStatus' fullname='actions:AbstractAction/getChildActionsWithStatus' isStatic='false' isFinal='false' isOverride='false'  param_names='status' param_types='String' param_defaults='undefined' result_type='Array'>
+</method>
+<method name='getChildExecutableActions' fullname='actions:AbstractAction/getChildExecutableActions' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='getDescendantActionsWithStatus' fullname='actions:AbstractAction/getDescendantActionsWithStatus' isStatic='false' isFinal='false' isOverride='false'  param_names='status;type' param_types='String;Class' param_defaults='undefined;null' result_type='Array'>
+</method>
+<method name='handleActionAvailability' fullname='actions:AbstractAction/protected:handleActionAvailability' isStatic='false' isFinal='false' isOverride='false'  param_names='it;res' param_types='collections.tree:AbstractTreeIterator;Array' param_defaults='undefined;undefined' result_type='Boolean'>
+</method>
+<method name='initialize' fullname='actions:AbstractAction/initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='isLegalStatusTransition' fullname='actions:AbstractAction/private:isLegalStatusTransition' isStatic='false' isFinal='false' isOverride='false'  param_names='newStatus' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='onChildActionCompleted' fullname='actions:AbstractAction/protected:onChildActionCompleted' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='actions:ActionEvent' param_defaults='undefined' result_type='void'>
+</method>
+<method name='onChildActionCompleting' fullname='actions:AbstractAction/protected:onChildActionCompleting' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='actions:ActionEvent' param_defaults='undefined' result_type='void'>
+</method>
+<method name='onChildActionFailed' fullname='actions:AbstractAction/protected:onChildActionFailed' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='actions:ActionEvent' param_defaults='undefined' result_type='void'>
+</method>
+<method name='onChildActionFailing' fullname='actions:AbstractAction/protected:onChildActionFailing' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='actions:ActionEvent' param_defaults='undefined' result_type='void'>
+</method>
+<method name='processChildStatusChange' fullname='actions:AbstractAction/protected:processChildStatusChange' isStatic='false' isFinal='false' isOverride='false'  param_names='childStatus;event' param_types='String;actions:ActionEvent' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='propagateEventUp' fullname='actions:AbstractAction/private:propagateEventUp' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='actions:ActionEvent' param_defaults='undefined' result_type='void'>
+</method>
+<method name='propagateUpAndDetermineStatus' fullname='actions:AbstractAction/protected:propagateUpAndDetermineStatus' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='actions:ActionEvent' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeActionListeners' fullname='actions:AbstractAction/protected:removeActionListeners' isStatic='false' isFinal='false' isOverride='false'  param_names='action' param_types='actions:AbstractAction' param_defaults='undefined' result_type='void'>
+</method>
+<method name='setCompleted' fullname='actions:AbstractAction/actions:setCompleted' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='setCompleting' fullname='actions:AbstractAction/actions:setCompleting' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='setFailed' fullname='actions:AbstractAction/actions:setFailed' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='setFailing' fullname='actions:AbstractAction/actions:setFailing' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='throwIllegalStatusTransition' fullname='actions:AbstractAction/private:throwIllegalStatusTransition' isStatic='false' isFinal='false' isOverride='false'  param_names='currentStatus;newStatus' param_types='String;String' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='toString' fullname='actions:AbstractAction/toString' isStatic='false' isFinal='false' isOverride='true'  result_type='String'>
+</method>
+<method name='traceStatus' fullname='actions:AbstractAction/private:traceStatus' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='tryExecutingChildren' fullname='actions:AbstractAction/protected:tryExecutingChildren' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='uninitialize' fullname='actions:AbstractAction/uninitialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='canExecuteNextActionWhileCurrentIsCompleting' fullname='actions:AbstractAction/canExecuteNextActionWhileCurrentIsCompleting/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='initialized' fullname='actions:AbstractAction/initialized/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='keepExecutingOrActions' fullname='actions:AbstractAction/keepExecutingOrActions/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='label' fullname='actions:AbstractAction/label/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='logicType' fullname='actions:AbstractAction/logicType/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='name' fullname='actions:AbstractAction/name/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='showTrace' fullname='actions:AbstractAction/showTrace/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='status' fullname='actions:AbstractAction/status/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='actions:AbstractAction/status/get' event='statusChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='type' fullname='actions:AbstractAction/type/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='canExecuteNextActionWhileCurrentIsCompleting' fullname='actions:AbstractAction/canExecuteNextActionWhileCurrentIsCompleting/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Boolean' param_defaults='undefined' result_type='void'>
+</method>
+<method name='keepExecutingOrActions' fullname='actions:AbstractAction/keepExecutingOrActions/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Boolean' param_defaults='undefined' result_type='void'>
+</method>
+<method name='label' fullname='actions:AbstractAction/label/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='logicType' fullname='actions:AbstractAction/logicType/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='name' fullname='actions:AbstractAction/name/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='preconditions' fullname='actions:AbstractAction/preconditions/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Array' param_defaults='undefined' result_type='void'>
+</method>
+<method name='showTrace' fullname='actions:AbstractAction/showTrace/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Boolean' param_defaults='undefined' result_type='void'>
+</method>
+<method name='status' fullname='actions:AbstractAction/status/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='type' fullname='actions:AbstractAction/type/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<field name='GET_BY_NAME' fullname='actions:AbstractAction/private:GET_BY_NAME' type='String' isStatic='true' isConst='true' defaultValue='getByName' >
+</field>
+<field name='GET_BY_TYPE' fullname='actions:AbstractAction/private:GET_BY_TYPE' type='String' isStatic='true' isConst='true' defaultValue='getByType' >
+</field>
+<field name='_initialized' fullname='actions:AbstractAction/protected:_initialized' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='_preconditions' fullname='actions:AbstractAction/private:_preconditions' type='Array' isStatic='false' isConst='false' >
+</field>
+<field name='_showTrace' fullname='actions:AbstractAction/private:_showTrace' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='_status' fullname='actions:AbstractAction/private:_status' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='actionData' fullname='actions:AbstractAction/actions:actionData' type='actions:ActionData' isStatic='false' isConst='false' >
+</field>
+<field name='ci' fullname='actions:AbstractAction/private:ci' type='commonutils:ClassInspector' isStatic='false' isConst='true' defaultValue='unknown' >
+</field>
+<field name='doExecuteFunction' fullname='actions:AbstractAction/doExecuteFunction' type='Function' isStatic='false' isConst='false' defaultValue='null' >
+</field>
+<classRec name='AbstractIOAction' fullname='actions:AbstractIOAction' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/action-mvc/src/main/flex/actions/AbstractIOAction.as' namespace='actions' access='public' baseclass='actions:AbstractAction' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='AbstractIOAction' fullname='actions:AbstractIOAction/AbstractIOAction' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='null' result_type='*'>
+</method>
+<method name='addChild' fullname='actions:AbstractIOAction/addChild' isStatic='false' isFinal='false' isOverride='true'  param_names='child' param_types='*' param_defaults='undefined' result_type='void'>
+</method>
+<method name='copyInputToOutput' fullname='actions:AbstractIOAction/protected:copyInputToOutput' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='copyMapContentAndAliases' fullname='actions:AbstractIOAction/protected:copyMapContentAndAliases' isStatic='false' isFinal='false' isOverride='false'  param_names='sourceMap;targetMap' param_types='collections:AliasHashMap;collections:AliasHashMap' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='copyOutputFromChild' fullname='actions:AbstractIOAction/private:copyOutputFromChild' isStatic='false' isFinal='false' isOverride='false'  param_names='childAction' param_types='actions:AbstractIOAction' param_defaults='undefined' result_type='void'>
+</method>
+<method name='copyOutput' fullname='actions:AbstractIOAction/private:copyOutput' isStatic='false' isFinal='false' isOverride='false'  param_names='source;target' param_types='actions:AbstractIOAction;actions:AbstractIOAction' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='copy' fullname='actions:AbstractIOAction/copy' isStatic='false' isFinal='false' isOverride='true'  result_type='Object'>
+</method>
+<method name='executeActions' fullname='actions:AbstractIOAction/protected:executeActions' isStatic='false' isFinal='false' isOverride='true'  param_names='actions' param_types='Array' param_defaults='undefined' result_type='void'>
+</method>
+<method name='executeBody' fullname='actions:AbstractIOAction/protected:executeBody' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+</method>
+<method name='getInputForKey' fullname='actions:AbstractIOAction/getInputForKey' isStatic='false' isFinal='false' isOverride='false'  param_names='key' param_types='String' param_defaults='undefined' result_type='Object'>
+</method>
+<method name='getInputWithOutput' fullname='actions:AbstractIOAction/private:getInputWithOutput' isStatic='false' isFinal='false' isOverride='false'  result_type='collections:AliasHashMap'>
+</method>
+<method name='getOutputFromChild' fullname='actions:AbstractIOAction/private:getOutputFromChild' isStatic='false' isFinal='false' isOverride='false'  param_names='action' param_types='actions:AbstractAction' param_defaults='undefined' result_type='void'>
+</method>
+<method name='hasInputForKey' fullname='actions:AbstractIOAction/hasInputForKey' isStatic='false' isFinal='false' isOverride='false'  param_names='key' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='hasInput' fullname='actions:AbstractIOAction/hasInput' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='hasOutput' fullname='actions:AbstractIOAction/hasOutput' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='numOfKeys' fullname='actions:AbstractIOAction/private:numOfKeys' isStatic='false' isFinal='false' isOverride='false'  param_names='map' param_types='Object' param_defaults='undefined' result_type='uint'>
+</method>
+<method name='onChildActionCompleted' fullname='actions:AbstractIOAction/protected:onChildActionCompleted' isStatic='false' isFinal='false' isOverride='true'  param_names='event' param_types='actions:ActionEvent' param_defaults='undefined' result_type='void'>
+</method>
+<method name='setInputOnChild' fullname='actions:AbstractIOAction/protected:setInputOnChild' isStatic='false' isFinal='false' isOverride='false'  param_names='action' param_types='actions:AbstractAction' param_defaults='undefined' result_type='void'>
+</method>
+<method name='input' fullname='actions:AbstractIOAction/input/get' isStatic='false' isFinal='false' isOverride='false'  result_type='collections:AliasHashMap'>
+</method>
+<method name='input' fullname='actions:AbstractIOAction/input/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='collections:AliasHashMap' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_input' fullname='actions:AbstractIOAction/private:_input' type='collections:AliasHashMap' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='output' fullname='actions:AbstractIOAction/output' type='collections:AliasHashMap' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='AbstractRepeatableAction' fullname='actions:AbstractRepeatableAction' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/action-mvc/src/main/flex/actions/AbstractRepeatableAction.as' namespace='actions' access='public' baseclass='actions:AbstractIOAction' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='AbstractRepeatableAction' fullname='actions:AbstractRepeatableAction/AbstractRepeatableAction' isStatic='false' isFinal='false' isOverride='false'  param_names='name;repeat' param_types='String;int' param_defaults='null;1' result_type='*'>
+</method>
+<method name='canReplicate' fullname='actions:AbstractRepeatableAction/private:canReplicate' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='copyOriginalAction' fullname='actions:AbstractRepeatableAction/actions:copyOriginalAction' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='copy' fullname='actions:AbstractRepeatableAction/copy' isStatic='false' isFinal='false' isOverride='true'  result_type='Object'>
+</method>
+<method name='getNumberedName' fullname='actions:AbstractRepeatableAction/private:getNumberedName' isStatic='false' isFinal='false' isOverride='false'  param_names='action' param_types='actions:AbstractAction' param_defaults='undefined' result_type='String'>
+</method>
+<method name='handleActionAvailability' fullname='actions:AbstractRepeatableAction/protected:handleActionAvailability' isStatic='false' isFinal='false' isOverride='true'  param_names='it;res' param_types='collections.tree:AbstractTreeIterator;Array' param_defaults='undefined;undefined' result_type='Boolean'>
+</method>
+<method name='initialize' fullname='actions:AbstractRepeatableAction/initialize' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+</method>
+<method name='onChildActionCompleting' fullname='actions:AbstractRepeatableAction/protected:onChildActionCompleting' isStatic='false' isFinal='false' isOverride='true'  param_names='event' param_types='actions:ActionEvent' param_defaults='undefined' result_type='void'>
+</method>
+<method name='onChildActionFailing' fullname='actions:AbstractRepeatableAction/protected:onChildActionFailing' isStatic='false' isFinal='false' isOverride='true'  param_names='event' param_types='actions:ActionEvent' param_defaults='undefined' result_type='void'>
+</method>
+<method name='replicateAsChildAndSetup' fullname='actions:AbstractRepeatableAction/private:replicateAsChildAndSetup' isStatic='false' isFinal='false' isOverride='false'  result_type='actions:AbstractRepeatableAction'>
+</method>
+<method name='setRepeatCount' fullname='actions:AbstractRepeatableAction/actions:setRepeatCount' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='int' param_defaults='undefined' result_type='void'>
+</method>
+<method name='tryReplicate' fullname='actions:AbstractRepeatableAction/private:tryReplicate' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='numReplicatedChildren' fullname='actions:AbstractRepeatableAction/protected:numReplicatedChildren/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
+<method name='repeatCount' fullname='actions:AbstractRepeatableAction/repeatCount/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
+<method name='input' fullname='actions:AbstractRepeatableAction/input/set' isStatic='false' isFinal='false' isOverride='true'  param_names='value' param_types='collections:AliasHashMap' param_defaults='undefined' result_type='void'>
+</method>
+<method name='repeatCount' fullname='actions:AbstractRepeatableAction/repeatCount/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='int' param_defaults='undefined' result_type='void'>
+</method>
+<field name='INFINITE_REPEATS' fullname='actions:AbstractRepeatableAction/INFINITE_REPEATS' type='int' isStatic='true' isConst='true' defaultValue='2.147483647E9' >
+</field>
+<field name='REPEAT_COUNT_FOR_SINGLE_ACTION' fullname='actions:AbstractRepeatableAction/private:REPEAT_COUNT_FOR_SINGLE_ACTION' type='int' isStatic='true' isConst='true' defaultValue='1' >
+</field>
+<field name='_repeatCount' fullname='actions:AbstractRepeatableAction/private:_repeatCount' type='int' isStatic='false' isConst='false' >
+</field>
+<field name='isCopy' fullname='actions:AbstractRepeatableAction/isCopy' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='originalAction' fullname='actions:AbstractRepeatableAction/private:originalAction' type='actions:AbstractRepeatableAction' isStatic='false' isConst='false' >
+</field>
+<classRec name='AbstractUserAction' fullname='actions:AbstractUserAction' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/action-mvc/src/main/flex/actions/AbstractUserAction.as' namespace='actions' access='public' baseclass='actions:AbstractRepeatableAction' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 User actions usually require user's input or provide user output.
+	 Some user actions require that a user invokes them directly,
+	 while others can be a part of composite action.
+	 ]]></description>
+</classRec>
+<method name='AbstractUserAction' fullname='actions:AbstractUserAction/AbstractUserAction' isStatic='false' isFinal='false' isOverride='false'  param_names='name;repeatCount' param_types='String;int' param_defaults='null;1' result_type='*'>
+</method>
+<method name='canExecuteBody' fullname='actions:AbstractUserAction/protected:canExecuteBody' isStatic='false' isFinal='false' isOverride='true'  result_type='Boolean'>
+</method>
+<method name='copy' fullname='actions:AbstractUserAction/copy' isStatic='false' isFinal='false' isOverride='true'  result_type='Object'>
+<description><![CDATA[
+		 available actions are those with status NOT_STARTED and whose
+		 ascendants have status NOT_STARTED or COMPLETED. 
+		 available actions do not contain descendants of available actions.
+		 available actions are determined by using breadth-first search
+		 ]]></description>
+</method>
+<method name='executeBody' fullname='actions:AbstractUserAction/protected:executeBody' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+</method>
+<method name='userExecute' fullname='actions:AbstractUserAction/userExecute' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<field name='initiatedFromUserExecute' fullname='actions:AbstractUserAction/actions:initiatedFromUserExecute' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='userInvocationOnly' fullname='actions:AbstractUserAction/userInvocationOnly' type='Boolean' isStatic='false' isConst='false' defaultValue='true' >
+</field>
+<classRec name='InteractiveMenu' fullname='components:InteractiveMenu' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/action-mvc/src/main/flex/components/InteractiveMenu.as' namespace='components' access='public' baseclass='mx.controls:Menu' isFinal='false' isDynamic='false' >
+<metadata>
+	<DefaultProperty owner='components:InteractiveMenu' name='dataProvider' >
+	</DefaultProperty>
+</metadata>
+</classRec>
+<method name='InteractiveMenu' fullname='components:InteractiveMenu/InteractiveMenu' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='commitProperties' fullname='components:InteractiveMenu/protected:commitProperties' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+</method>
+<method name='measure' fullname='components:InteractiveMenu/protected:measure' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+</method>
+<method name='menuHandler' fullname='components:InteractiveMenu/private:menuHandler' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='mx.events:MenuEvent' param_defaults='undefined' result_type='void'>
+</method>
+<method name='onMenuHide' fullname='components:InteractiveMenu/private:onMenuHide' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='mx.events:FlexEvent' param_defaults='undefined' result_type='void'>
+</method>
+<method name='onTimer' fullname='components:InteractiveMenu/private:onTimer' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:TimerEvent' param_defaults='undefined' result_type='void'>
+</method>
+<method name='pause' fullname='components:InteractiveMenu/pause' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='restart' fullname='components:InteractiveMenu/private:restart' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='showMenu' fullname='components:InteractiveMenu/private:showMenu' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='startTimer' fullname='components:InteractiveMenu/private:startTimer' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='start' fullname='components:InteractiveMenu/start' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='stop' fullname='components:InteractiveMenu/stop' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='wrapChildrenInData' fullname='components:InteractiveMenu/private:wrapChildrenInData' isStatic='false' isFinal='false' isOverride='false'  param_names='children' param_types='mx.collections:ArrayCollection' param_defaults='undefined' result_type='mx.collections:ArrayCollection'>
+</method>
+<method name='ignoreHierarchy' fullname='components:InteractiveMenu/ignoreHierarchy/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='lastCursorPosition' fullname='components:InteractiveMenu/lastCursorPosition/get' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.geom:Point'>
+</method>
+<method name='dataProvider' fullname='components:InteractiveMenu/dataProvider/set' isStatic='false' isFinal='false' isOverride='true'  param_names='value' param_types='Object' param_defaults='undefined' result_type='void'>
+</method>
+<method name='ignoreHierarchy' fullname='components:InteractiveMenu/ignoreHierarchy/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Boolean' param_defaults='undefined' result_type='void'>
+</method>
+<method name='labelField' fullname='components:InteractiveMenu/labelField/set' isStatic='false' isFinal='false' isOverride='true'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_dataProvider' fullname='components:InteractiveMenu/private:_dataProvider' type='Object' isStatic='false' isConst='false' >
+</field>
+<field name='_ignoreHierarchy' fullname='components:InteractiveMenu/private:_ignoreHierarchy' type='Boolean' isStatic='false' isConst='false' defaultValue='true' >
+</field>
+<field name='_lastCursorPosition' fullname='components:InteractiveMenu/private:_lastCursorPosition' type='flash.geom:Point' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='dataProviderChanged' fullname='components:InteractiveMenu/private:dataProviderChanged' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='delay' fullname='components:InteractiveMenu/delay' type='int' isStatic='false' isConst='false' defaultValue='2000' >
+</field>
+<field name='itemClicked' fullname='components:InteractiveMenu/private:itemClicked' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='labelFieldChanged' fullname='components:InteractiveMenu/private:labelFieldChanged' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='showMenuCondition' fullname='components:InteractiveMenu/showMenuCondition' type='Function' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='stopped' fullname='components:InteractiveMenu/private:stopped' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='timer' fullname='components:InteractiveMenu/private:timer' type='flash.utils:Timer' isStatic='false' isConst='false' >
+</field>
+</asdoc>

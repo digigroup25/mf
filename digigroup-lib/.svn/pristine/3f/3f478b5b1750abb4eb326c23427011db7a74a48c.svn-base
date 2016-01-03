@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+		 >
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.digigroup.digigrouplib.control-objects</groupId>
+		<artifactId>control-objects-pom</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>control-objects</artifactId>
+	<packaging>swc</packaging>
+
+	<name>Control Objects Core</name>
+
+	<build>
+		<plugins>
+			<!-- TODO: 2011/05/22 KTD: This whole plugin section can be removed once the situation with the test classes below is resolved.  The root POM takes care of the rest.  If the exclusions are valid, then this section needs to stay. -->
+			<plugin>
+				<groupId>org.sonatype.flexmojos</groupId>
+				<artifactId>flexmojos-maven-plugin</artifactId>
+				<version>${org.sonatype.flexmojos.maven.plugin.version}</version>
+				<extensions>true</extensions>
+
+				<executions>
+					<execution>
+						<id>default-test-compile</id>
+						<phase>test-compile</phase>
+						<goals>
+							<goal>test-compile</goal>
+						</goals>
+						<configuration>
+							<excludeTestFiles>
+								<excludeTestFile>**/Test*.as</excludeTestFile>
+								<excludeTestFile>**/Test*.mxml</excludeTestFile>
+
+								<!-- TODO: 2011/05/22 KTD: Excluding these because they don't look like tests, even though they're named like tests. -->
+								<excludeTestFile>**/ActionContainerDecoratorTest.as</excludeTestFile>
+								<excludeTestFile>**/ApplicationContainerTest.mxml</excludeTestFile>
+								<excludeTestFile>**/ApplicationContainer2Test.mxml</excludeTestFile>
+								<excludeTestFile>**/CloseableWindowShadeTest.mxml</excludeTestFile>
+								<excludeTestFile>**/CreateElementActionsTest.as</excludeTestFile>
+								<excludeTestFile>**/EditableTreeTest.mxml</excludeTestFile>
+								<excludeTestFile>**/EditMapTest.mxml</excludeTestFile>
+								<excludeTestFile>**/ElementEditorsTest.mxml</excludeTestFile>
+								<excludeTestFile>**/ExpandingMenuTest.mxml</excludeTestFile>
+								<excludeTestFile>**/FloatingStackWindowTest.mxml</excludeTestFile>
+								<excludeTestFile>**/FocusTest.mxml</excludeTestFile>
+								<excludeTestFile>**/MindMapTreeContainerTest.mxml</excludeTestFile>
+								<excludeTestFile>**/MindMapTreeEditorTest.mxml</excludeTestFile>
+								<excludeTestFile>**/ResizableWindowShadeStackTest.mxml</excludeTestFile>
+								<excludeTestFile>**/ResizableWindowShadeTest.mxml</excludeTestFile>
+								<excludeTestFile>**/SelectAndActOnElementTest.as</excludeTestFile>
+								<excludeTestFile>**/TreeMenuContainerTest.mxml</excludeTestFile>
+								<excludeTestFile>**/UserActionCollectorTest.as</excludeTestFile>
+								<excludeTestFile>**/UserTriggeredActionTest.as</excludeTestFile>-->
+								<excludeTestFile>**/VOCollectionFilterTest.as</excludeTestFile>
+								<excludeTestFile>**/WindowShadeStackTest.mxml</excludeTestFile>
+								<excludeTestFile>**/WindowShadeTest.mxml</excludeTestFile>
+							</excludeTestFiles>
+						</configuration>
+					</execution>
+
+					<!--
+						We want to publish the test jars of this module for other modules to use in their tests so we
+						include this execution.  Pretty sad we have to do this - it's something that Flexmojos should
+						do automatically like the Java plugin does.  Flexmojos is somewhat behind its Java counterpart
+						in terms of usability and transparency so we can't define this any higher than this level.
+						(Flexmojos chokes if this is present and there are no test classes, a bug that was fixed in
+						the Java world some time ago.)
+					-->
+					<execution>
+						<id>test-swc</id>
+						<phase>test-compile</phase>
+						<goals>
+							<goal>test-swc</goal>
+						</goals>
+					</execution>
+				</executions>
+
+
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<!--
+		<dependency>
+			<groupId>com.digigroup.digigrouplib.ui-engine</groupId>
+			<artifactId>ui-engine</artifactId>
+			<version>${project.version}</version>
+			<type>swc</type>
+		</dependency>
+
+		<dependency>
+			<groupId>com.digigroup.digigrouplib.prolog-engine</groupId>
+			<artifactId>prolog-engine</artifactId>
+			<version>${project.version}</version>
+			<type>swc</type>
+		</dependency>
+		-->
+
+		<dependency>
+			<groupId>com.digigroup.external</groupId>
+			<artifactId>object-handles</artifactId>
+			<version>${com.digigroup.external.objecthandles.version}</version>
+			<type>swc</type>
+		</dependency>
+
+		<dependency>
+			<groupId>com.digigroup.external</groupId>
+			<artifactId>tree-map</artifactId>
+			<version>${com.digigroup.external.treemap.version}</version>
+			<type>swc</type>
+		</dependency>
+
+		<dependency>
+			<groupId>com.digigroup.digigrouplib.pluggable-objects</groupId>
+			<artifactId>pluggable-objects</artifactId>
+			<version>${project.version}</version>
+			<type>swc</type>
+		</dependency>
+
+		<dependency>
+			<groupId>org.degrafa</groupId>
+			<artifactId>degrafa</artifactId>
+			<type>swc</type>
+		</dependency>
+
+		<dependency>
+			<groupId>flexlib</groupId>
+			<artifactId>flexlib-flex3</artifactId>
+			<type>swc</type>
+		</dependency>
+
+		<dependency>
+			<groupId>com.digigroup.digigrouplib.action-mvc</groupId>
+			<artifactId>action-mvc</artifactId>
+			<version>${project.version}</version>
+			<type>swc</type>
+		</dependency>
+
+
+		<!--
+			 Yucky inclusion form for Flex test dependencies.  Java lets us do the classifier and type in one go but
+			 we have to specify both here.
+		-->
+		<dependency>
+			<groupId>com.digigroup.digigrouplib.action-mvc</groupId>
+			<artifactId>action-mvc</artifactId>
+			<version>${project.version}</version>
+			<classifier>tests</classifier>
+			<type>swc</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.digigroup.external</groupId>
+			<artifactId>flexspy</artifactId>
+			<type>swc</type>
+		</dependency>
+
+
+	</dependencies>
+
+</project>

@@ -1,0 +1,529 @@
+<asdoc>
+
+<classRec name='Appointment' fullname='vos:Appointment' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/pluggable-objects/src/main/flex/vos/Appointment.as' namespace='vos' access='public' baseclass='Object' interfaces='collections:IPluggableObject;flash.events:IEventDispatcher' isFinal='false' isDynamic='true' >
+</classRec>
+<method name='addEventListener' fullname='vos:Appointment/addEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture;priority;weakRef' param_types='String;Function;Boolean;int;Boolean' param_defaults='undefined;undefined;false;0;false' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='dispatchEvent' fullname='vos:Appointment/dispatchEvent' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='hasEventListener' fullname='vos:Appointment/hasEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='removeEventListener' fullname='vos:Appointment/removeEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture' param_types='String;Function;Boolean' param_defaults='undefined;undefined;false' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='toLongString' fullname='vos:Appointment/toLongString' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='toString' fullname='vos:Appointment/toString' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='willTrigger' fullname='vos:Appointment/willTrigger' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='date' fullname='vos:Appointment/date/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Date'>
+<metadata>
+	<Bindable owner='vos:Appointment/date/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='description' fullname='vos:Appointment/description/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='vos:Appointment/description/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='location' fullname='vos:Appointment/location/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='vos:Appointment/location/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='name' fullname='vos:Appointment/name/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='vos:Appointment/name/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='date' fullname='vos:Appointment/date/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Date' param_defaults='undefined' result_type='void'>
+</method>
+<method name='description' fullname='vos:Appointment/description/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='location' fullname='vos:Appointment/location/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='name' fullname='vos:Appointment/name/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_bindingEventDispatcher' fullname='vos:Appointment/private:_bindingEventDispatcher' type='flash.events:EventDispatcher' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='Item' fullname='vos:Item' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/pluggable-objects/src/main/flex/vos/Item.as' namespace='vos' access='public' baseclass='Object' interfaces='collections:IPluggableObject;flash.events:IEventDispatcher' isFinal='false' isDynamic='true' >
+</classRec>
+<method name='addEventListener' fullname='vos:Item/addEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture;priority;weakRef' param_types='String;Function;Boolean;int;Boolean' param_defaults='undefined;undefined;false;0;false' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='dispatchEvent' fullname='vos:Item/dispatchEvent' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='hasEventListener' fullname='vos:Item/hasEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='removeEventListener' fullname='vos:Item/removeEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture' param_types='String;Function;Boolean' param_defaults='undefined;undefined;false' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='toLongString' fullname='vos:Item/toLongString' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='toString' fullname='vos:Item/toString' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='willTrigger' fullname='vos:Item/willTrigger' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='name' fullname='vos:Item/name/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='vos:Item/name/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='name' fullname='vos:Item/name/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_bindingEventDispatcher' fullname='vos:Item/private:_bindingEventDispatcher' type='flash.events:EventDispatcher' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='Program' fullname='vos:Program' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/pluggable-objects/src/main/flex/vos/Program.as' namespace='vos' access='public' baseclass='Object' interfaces='collections:IPluggableObject;flash.events:IEventDispatcher' isFinal='false' isDynamic='true' >
+</classRec>
+<method name='addEventListener' fullname='vos:Program/addEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture;priority;weakRef' param_types='String;Function;Boolean;int;Boolean' param_defaults='undefined;undefined;false;0;false' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='dispatchEvent' fullname='vos:Program/dispatchEvent' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='hasEventListener' fullname='vos:Program/hasEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='removeEventListener' fullname='vos:Program/removeEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture' param_types='String;Function;Boolean' param_defaults='undefined;undefined;false' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='toLongString' fullname='vos:Program/toLongString' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='toString' fullname='vos:Program/toString' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='willTrigger' fullname='vos:Program/willTrigger' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='name' fullname='vos:Program/name/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='vos:Program/name/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='text' fullname='vos:Program/text/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='vos:Program/text/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='name' fullname='vos:Program/name/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='text' fullname='vos:Program/text/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_bindingEventDispatcher' fullname='vos:Program/private:_bindingEventDispatcher' type='flash.events:EventDispatcher' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='Note' fullname='vos:Note' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/pluggable-objects/src/main/flex/vos/Note.as' namespace='vos' access='public' baseclass='Object' interfaces='collections:IPluggableObject;flash.events:IEventDispatcher' isFinal='false' isDynamic='true' >
+</classRec>
+<method name='addEventListener' fullname='vos:Note/addEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture;priority;weakRef' param_types='String;Function;Boolean;int;Boolean' param_defaults='undefined;undefined;false;0;false' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='dispatchEvent' fullname='vos:Note/dispatchEvent' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='hasEventListener' fullname='vos:Note/hasEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='removeEventListener' fullname='vos:Note/removeEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture' param_types='String;Function;Boolean' param_defaults='undefined;undefined;false' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='toLongString' fullname='vos:Note/toLongString' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='toString' fullname='vos:Note/toString' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='willTrigger' fullname='vos:Note/willTrigger' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='description' fullname='vos:Note/description/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='vos:Note/description/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='name' fullname='vos:Note/name/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='vos:Note/name/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='description' fullname='vos:Note/description/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='name' fullname='vos:Note/name/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_bindingEventDispatcher' fullname='vos:Note/private:_bindingEventDispatcher' type='flash.events:EventDispatcher' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='Contact' fullname='vos:Contact' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/pluggable-objects/src/main/flex/vos/Contact.as' namespace='vos' access='public' baseclass='Object' interfaces='collections:IPluggableObject;flash.events:IEventDispatcher' isFinal='false' isDynamic='true' >
+</classRec>
+<method name='addEventListener' fullname='vos:Contact/addEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture;priority;weakRef' param_types='String;Function;Boolean;int;Boolean' param_defaults='undefined;undefined;false;0;false' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='dispatchEvent' fullname='vos:Contact/dispatchEvent' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='hasEventListener' fullname='vos:Contact/hasEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='removeEventListener' fullname='vos:Contact/removeEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture' param_types='String;Function;Boolean' param_defaults='undefined;undefined;false' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='toLongString' fullname='vos:Contact/toLongString' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='toString' fullname='vos:Contact/toString' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='willTrigger' fullname='vos:Contact/willTrigger' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='company' fullname='vos:Contact/company/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='vos:Contact/company/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='email' fullname='vos:Contact/email/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='vos:Contact/email/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='name' fullname='vos:Contact/name/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='vos:Contact/name/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='phone' fullname='vos:Contact/phone/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='vos:Contact/phone/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='company' fullname='vos:Contact/company/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='email' fullname='vos:Contact/email/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='name' fullname='vos:Contact/name/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='phone' fullname='vos:Contact/phone/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_bindingEventDispatcher' fullname='vos:Contact/private:_bindingEventDispatcher' type='flash.events:EventDispatcher' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='Task' fullname='vos:Task' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/pluggable-objects/src/main/flex/vos/Task.as' namespace='vos' access='public' baseclass='Object' interfaces='collections:IPluggableObject;flash.events:IEventDispatcher' isFinal='false' isDynamic='true' >
+</classRec>
+<method name='addEventListener' fullname='vos:Task/addEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture;priority;weakRef' param_types='String;Function;Boolean;int;Boolean' param_defaults='undefined;undefined;false;0;false' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='dispatchEvent' fullname='vos:Task/dispatchEvent' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='hasEventListener' fullname='vos:Task/hasEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='removeEventListener' fullname='vos:Task/removeEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture' param_types='String;Function;Boolean' param_defaults='undefined;undefined;false' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='setActualHours' fullname='vos:Task/setActualHours' isStatic='false' isFinal='false' isOverride='false'  param_names='actualHours' param_types='Number' param_defaults='undefined' result_type='vos:Task'>
+</method>
+<method name='setAssignedTo' fullname='vos:Task/setAssignedTo' isStatic='false' isFinal='false' isOverride='false'  param_names='assignedTo' param_types='String' param_defaults='undefined' result_type='vos:Task'>
+</method>
+<method name='setCommitted' fullname='vos:Task/setCommitted' isStatic='false' isFinal='false' isOverride='false'  param_names='committed' param_types='Boolean' param_defaults='undefined' result_type='vos:Task'>
+</method>
+<method name='setComplexity' fullname='vos:Task/setComplexity' isStatic='false' isFinal='false' isOverride='false'  param_names='complexity' param_types='int' param_defaults='undefined' result_type='vos:Task'>
+</method>
+<method name='setDate' fullname='vos:Task/setDate' isStatic='false' isFinal='false' isOverride='false'  param_names='date' param_types='Date' param_defaults='undefined' result_type='vos:Task'>
+</method>
+<method name='setDescription' fullname='vos:Task/setDescription' isStatic='false' isFinal='false' isOverride='false'  param_names='description' param_types='String' param_defaults='undefined' result_type='vos:Task'>
+</method>
+<method name='setDone' fullname='vos:Task/setDone' isStatic='false' isFinal='false' isOverride='false'  param_names='done' param_types='int' param_defaults='undefined' result_type='vos:Task'>
+</method>
+<method name='setEstimatedHours' fullname='vos:Task/setEstimatedHours' isStatic='false' isFinal='false' isOverride='false'  param_names='estimatedHours' param_types='Number' param_defaults='undefined' result_type='vos:Task'>
+</method>
+<method name='setName' fullname='vos:Task/setName' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='undefined' result_type='vos:Task'>
+</method>
+<method name='setPriority' fullname='vos:Task/setPriority' isStatic='false' isFinal='false' isOverride='false'  param_names='priority' param_types='int' param_defaults='undefined' result_type='vos:Task'>
+</method>
+<method name='setReviewed' fullname='vos:Task/setReviewed' isStatic='false' isFinal='false' isOverride='false'  param_names='reviewed' param_types='Boolean' param_defaults='undefined' result_type='vos:Task'>
+</method>
+<method name='toLongString' fullname='vos:Task/toLongString' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='toString' fullname='vos:Task/toString' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='willTrigger' fullname='vos:Task/willTrigger' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='actualHours' fullname='vos:Task/actualHours/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Number'>
+<metadata>
+	<Bindable owner='vos:Task/actualHours/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='assignedTo' fullname='vos:Task/assignedTo/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='vos:Task/assignedTo/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='committed' fullname='vos:Task/committed/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+<metadata>
+	<Bindable owner='vos:Task/committed/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='complexity' fullname='vos:Task/complexity/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+<metadata>
+	<Bindable owner='vos:Task/complexity/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='date' fullname='vos:Task/date/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Date'>
+<metadata>
+	<Bindable owner='vos:Task/date/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='description' fullname='vos:Task/description/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='vos:Task/description/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='done' fullname='vos:Task/done/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+<metadata>
+	<Bindable owner='vos:Task/done/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='estimatedHours' fullname='vos:Task/estimatedHours/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Number'>
+<metadata>
+	<Bindable owner='vos:Task/estimatedHours/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='name' fullname='vos:Task/name/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='vos:Task/name/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='priority' fullname='vos:Task/priority/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+<metadata>
+	<Bindable owner='vos:Task/priority/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='reviewed' fullname='vos:Task/reviewed/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+<metadata>
+	<Bindable owner='vos:Task/reviewed/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='actualHours' fullname='vos:Task/actualHours/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Number' param_defaults='undefined' result_type='void'>
+</method>
+<method name='assignedTo' fullname='vos:Task/assignedTo/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='committed' fullname='vos:Task/committed/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Boolean' param_defaults='undefined' result_type='void'>
+</method>
+<method name='complexity' fullname='vos:Task/complexity/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='int' param_defaults='undefined' result_type='void'>
+</method>
+<method name='date' fullname='vos:Task/date/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Date' param_defaults='undefined' result_type='void'>
+</method>
+<method name='description' fullname='vos:Task/description/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='done' fullname='vos:Task/done/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='int' param_defaults='undefined' result_type='void'>
+</method>
+<method name='estimatedHours' fullname='vos:Task/estimatedHours/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Number' param_defaults='undefined' result_type='void'>
+</method>
+<method name='name' fullname='vos:Task/name/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='priority' fullname='vos:Task/priority/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='int' param_defaults='undefined' result_type='void'>
+</method>
+<method name='reviewed' fullname='vos:Task/reviewed/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Boolean' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_bindingEventDispatcher' fullname='vos:Task/private:_bindingEventDispatcher' type='flash.events:EventDispatcher' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='POFactory' fullname='factories:POFactory' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/pluggable-objects/src/main/flex/factories/POFactory.as' namespace='factories' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='createBinaryTree' fullname='factories:POFactory/createBinaryTree' isStatic='true' isFinal='false' isOverride='false'  result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createTasks1' fullname='factories:POFactory/createTasks1' isStatic='true' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<classRec name='TreeFactory' fullname='factories:TreeFactory' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/pluggable-objects/src/main/flex/factories/TreeFactory.as' namespace='factories' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='addNChildren' fullname='factories:TreeFactory/private:addNChildren' isStatic='false' isFinal='false' isOverride='false'  param_names='parent;n;name' param_types='collections:TreeCollectionEx;int;Boolean' param_defaults='undefined;undefined;false' result_type='void'>
+</method>
+<method name='create1NodeCollection_Appointment' fullname='factories:TreeFactory/create1NodeCollection_Appointment' isStatic='false' isFinal='false' isOverride='false'  result_type='collections:TreeCollectionEx'>
+</method>
+<method name='create1NodeCollection' fullname='factories:TreeFactory/create1NodeCollection' isStatic='false' isFinal='false' isOverride='false'  result_type='collections:TreeCollectionEx'>
+</method>
+<method name='create1Node' fullname='factories:TreeFactory/create1Node' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='Boolean' param_defaults='false' result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createAllElements' fullname='factories:TreeFactory/createAllElements' isStatic='false' isFinal='false' isOverride='false'  result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createBinaryFullTree_3Levels' fullname='factories:TreeFactory/createBinaryFullTree_3Levels' isStatic='false' isFinal='false' isOverride='false'  result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createFullTree_3Levels' fullname='factories:TreeFactory/createFullTree_3Levels' isStatic='false' isFinal='false' isOverride='false'  param_names='num1;num2' param_types='int;int' param_defaults='undefined;undefined' result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createFullTree' fullname='factories:TreeFactory/createFullTree' isStatic='false' isFinal='false' isOverride='false'  param_names='numNodesInBranch;depth;res' param_types='int;int;collections:TreeCollectionEx' param_defaults='undefined;undefined;null' result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createNode' fullname='factories:TreeFactory/createNode' isStatic='true' isFinal='false' isOverride='false'  param_names='voType' param_types='Class' param_defaults='undefined' result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createParentChildCollectionIncludingProgram' fullname='factories:TreeFactory/createParentChildCollectionIncludingProgram' isStatic='false' isFinal='false' isOverride='false'  result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createParentChildCollection' fullname='factories:TreeFactory/createParentChildCollection' isStatic='false' isFinal='false' isOverride='false'  result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createParentChildHPTaskTree' fullname='factories:TreeFactory/createParentChildHPTaskTree' isStatic='false' isFinal='false' isOverride='false'  result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createParentNChildren' fullname='factories:TreeFactory/createParentNChildren' isStatic='false' isFinal='false' isOverride='false'  param_names='n;name' param_types='int;Boolean' param_defaults='undefined;false' result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createPriorityTaskTree2WithRanks' fullname='factories:TreeFactory/createPriorityTaskTree2WithRanks' isStatic='false' isFinal='false' isOverride='false'  result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createPriorityTaskTree2' fullname='factories:TreeFactory/createPriorityTaskTree2' isStatic='false' isFinal='false' isOverride='false'  result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createPriorityTaskTree' fullname='factories:TreeFactory/createPriorityTaskTree' isStatic='false' isFinal='false' isOverride='false'  result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createRandomTaskTree' fullname='factories:TreeFactory/createRandomTaskTree' isStatic='false' isFinal='false' isOverride='false'  param_names='numNodes;useNodeIndexAsLabel' param_types='int;Boolean' param_defaults='undefined;true' result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createRandomTree' fullname='factories:TreeFactory/createRandomTree' isStatic='false' isFinal='false' isOverride='false'  param_names='numNodes' param_types='int' param_defaults='undefined' result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createRandomVoTree' fullname='factories:TreeFactory/createRandomVoTree' isStatic='false' isFinal='false' isOverride='false'  param_names='numNodes;types;useNodeIndexAsLabel' param_types='int;Array;Boolean' param_defaults='undefined;undefined;false' result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createSimpleCollection' fullname='factories:TreeFactory/createSimpleCollection' isStatic='false' isFinal='false' isOverride='false'  result_type='collections:TreeCollectionEx'>
+<description><![CDATA[ Everything
+
+  		 		Project1
+
+  		 			Task1
+
+  		 			Appointment1
+
+  		 		Project2
+
+  		  Preorder traversal: Everything, Project1, Task1, Appointment1, Project2
+
+  		 ]]></description>
+</method>
+<method name='createSimplePrologProgram' fullname='factories:TreeFactory/createSimplePrologProgram' isStatic='false' isFinal='false' isOverride='false'  result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createTaskAppointment' fullname='factories:TreeFactory/createTaskAppointment' isStatic='false' isFinal='false' isOverride='false'  result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createTaskTree2' fullname='factories:TreeFactory/createTaskTree2' isStatic='false' isFinal='false' isOverride='false'  result_type='collections:TreeCollectionEx'>
+</method>
+<method name='createTree1' fullname='factories:TreeFactory/createTree1' isStatic='false' isFinal='false' isOverride='false'  result_type='collections:TreeCollectionEx'>
+<description><![CDATA[
+
+		 
+
+		 ]]></description>
+<return><![CDATA[
+
+		 
+
+		     2 - 3
+
+		   /
+
+		 1       5
+
+		   \   /
+
+		     4
+
+		       \
+
+		         6
+
+		 ]]></return>
+</method>
+<method name='createTree2' fullname='factories:TreeFactory/createTree2' isStatic='false' isFinal='false' isOverride='false'  result_type='collections:TreeCollectionEx'>
+<description><![CDATA[      2 
+
+		      /    4
+
+		    /    /
+
+		  1 -- 3
+
+		    \     \
+
+		      \    5  
+
+		       6
+
+		    
+
+		 ]]></description>
+</method>
+<method name='createVo' fullname='factories:TreeFactory/createVo' isStatic='true' isFinal='false' isOverride='false'  param_names='voType;index' param_types='Class;int' param_defaults='undefined;0' result_type='*'>
+</method>
+</asdoc>

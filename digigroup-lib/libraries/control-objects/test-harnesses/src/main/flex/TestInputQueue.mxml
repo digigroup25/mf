@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" creationComplete="init()">
+	<mx:Script>
+		<![CDATA[
+		import components.InputTextLineWindow;
+
+			import mx.containers.VBox;
+			import mx.core.UIComponent;
+			import mx.controls.Button;
+			import components.SelfLabelingTextInput;
+			import mx.containers.HBox;
+			import components.FloatingWindow;
+			
+			/*private function init():void {
+				var iq:FloatingWindow = new FloatingWindow();
+				this.addChild(iq);
+				iq.height = 80;
+				iq.title = "Input Queue";
+				var container:UIComponent = new HBox();
+				container.percentWidth = 100;
+				var inputText:SelfLabelingTextInput = new SelfLabelingTextInput();
+				inputText.label = "Enter info";
+				inputText.percentWidth = 100;
+				container.addChild(inputText);
+				var b:Button = new Button();
+				b.label = "Add";
+				container.addChild(b);
+				iq.dataContainer.addChild(container);
+			}*/
+			
+			private function init():void {
+				var iq:InputTextLineWindow = new InputTextLineWindow();
+				this.addChild(iq);
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

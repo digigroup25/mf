@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<actionScriptProperties analytics="false" mainApplicationPath="ui-engine.as" projectUUID="c6cba1e9-41f8-4265-a783-299a766dbc70" version="6">
+  <compiler additionalCompilerArguments="-locale en_US" autoRSLOrdering="true" copyDependentFiles="false" fteInMXComponents="false" generateAccessible="false" htmlExpressInstall="true" htmlGenerate="false" htmlHistoryManagement="false" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin" sourceFolderPath="src/main/flex" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
+    <compilerSourcePath>
+      <compilerSourcePathEntry kind="1" linkType="1" path="src/main/flex"/>
+      <compilerSourcePathEntry kind="1" linkType="1" path="src/test/flex"/>
+      <compilerSourcePathEntry kind="1" linkType="1" path="${SRC}/libraries/action-mvc/src/test/flex"/>
+    </compilerSourcePath>
+    <libraryPath defaultLinkType="0">
+      <libraryPathEntry kind="4" path="">
+        <excludedEntries>
+          <libraryPathEntry kind="3" linkType="1" path="${PROJECT_FRAMEWORKS}/libs/flex.swc" useDefaultLinkType="false"/>
+        </excludedEntries>
+      </libraryPathEntry>
+      <libraryPathEntry kind="3" linkType="1" path="/action-mvc/bin/action-mvc.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="/vmvc-lib/bin/vmvc-lib.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="/common-utils/bin/common-utils.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="/pluggable-objects/bin/pluggable-objects.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="${DG_REPO}/external/object-handles/1.0.0.PRIVATE/object-handles-1.0.0.PRIVATE.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="${DG_REPO}/external/tree-map/1.0.0.PRIVATE/tree-map-1.0.0.PRIVATE.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="/Users/vlad/.m2/repository/com/adobe/flexunit/flexunit/4.0-rc-1/flexunit-4.0-rc-1.swc" useDefaultLinkType="false"/>
+    </libraryPath>
+    <sourceAttachmentPath/>
+  </compiler>
+  <applications>
+    <application path="ui-engine.as"/>
+  </applications>
+  <modules/>
+  <buildCSSFiles/>
+</actionScriptProperties>

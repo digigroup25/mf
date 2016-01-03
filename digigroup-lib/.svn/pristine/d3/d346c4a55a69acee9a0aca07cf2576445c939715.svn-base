@@ -1,0 +1,34 @@
+package mindmaps2.elements.iteration {
+	import assertions.Require;
+
+	import collections.IIterator;
+	import collections.TreeCollectionEx;
+	import collections.tree.TreeLeafIterator;
+
+	import mx.collections.ArrayCollection;
+
+	import vos.Task;
+
+	public class PerformanceMetricCalculator {
+		public function PerformanceMetricCalculator() {
+		}
+
+		public function calculatePerformanceMetric(taskNodes:Array):PerformanceMetric {
+			var result:PerformanceMetric = new PerformanceMetric();
+
+			for each (var taskNode:TreeCollectionEx in taskNodes) {
+				var task:Task = Task(taskNode.vo);
+				if (task.committed && task.done == 1)
+					result.actualCommittedPoints++;
+				if (task.committed) {
+					result.expectedCommittedPoints++;
+					result.expectedCommittedHours += task.estimatedHours;
+				}
+				if (!task.committed && task.done == 1)
+					result.actualUncommittedPoints++;
+				result.actualHours += task.actualHours;
+			}
+			return result;
+		}
+	}
+}

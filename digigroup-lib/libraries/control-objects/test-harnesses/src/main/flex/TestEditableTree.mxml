@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml">
+<mx:VBox>
+	<mx:HBox>
+		<mx:Button label="select" click="select()"/>
+		<mx:Button label="edit" click="edit()"/>
+	</mx:HBox>
+	
+	<mx:Tree id="tree1" labelField="@label" showRoot="true" width="160" 
+   	itemRenderer="customRenderers.CustomLabel" itemEditor="mx.controls.TextInput" 
+   	creationComplete="init()" editable="true" itemClick='trace("itemClick")' itemEditBegin='onItemEditBegin(event);'
+   	 itemEditEnd='trace("itemEditEnd")'>
+      <mx:XMLListCollection id="MailBox">
+         <mx:XMLList>
+            <folder label="Mail">
+               <folder label="INBOX"/>
+               <folder label="Personal Folder">
+                  <Pfolder label="Business" />
+                  <Pfolder label="Demo" /> 
+                     <Pfolder label="Personal" isBranch="true" /> 
+                     <Pfolder label="Saved Mail" /> 
+                  </folder>
+                  <folder label="Sent" />
+                  <folder label="Trash" />
+            </folder>
+         </mx:XMLList>
+      </mx:XMLListCollection>
+   </mx:Tree>
+</mx:VBox>
+   
+   <mx:Script>
+   	<![CDATA[
+   		import mx.controls.Alert;
+   		import mx.events.ListEvent;
+   		import vos.Item;
+   		import mx.events.ItemClickEvent;
+   		import mx.controls.TextInput;
+   		
+   		private var prevItem:Object;
+   		
+   		private function init():void {
+   			//tree1.addEventListener(KeyboardEvent.KEY_UP, onKeyPressed);
+   			//tree1.addEventListener(ListEvent.ITEM_EDIT_BEGINNING, onItemClick, false, 0);
+   			tree1.addEventListener(ListEvent.ITEM_CLICK, onItemClick);
+   			//tree1.addEventListener(ListEvent.ITEM_EDIT_END, onItemEditEnd);
+   			//tree1.addEventListener(FocusEvent.FOCUS_OUT, onFocusOut);
+   		}
+   		
+   		private function onItemClick(event:ListEvent):void {
+   			var curItem:Object = tree1.selectedItem;
+   			//prevItem = curItem;
+   			//tree1.destroyItemEditor();
+   			
+   			
+   			/* tree1.editedItemPosition = {rowIndex:0, columnIndex:0};
+   			tree1.createItemEditor(0, 0);
+   			tree1.itemEditorInstance.addEventListener(KeyboardEvent.KEY_DOWN, onKeyUp, false, 10);
+   			TextInput(tree1.itemEditorInstance).setFocus(); */
+   			//set position, used during endEdit
+   			//tree1.editedItemPosition = {rowIndex:tree1.selectedIndex, columnIndex:0};
+   			//tree1.invalidateProperties();
+   			
+   			/*
+   			if (prevItem==curItem) {
+   				prevItem = null;
+   				//tree1.dispatchEvent(new ListEvent(ListEvent.ITEM_EDIT_BEGIN, false, false, 0, tree1.selectedIndex));
+   				
+   				//Alert.show("Editing");
+   				//tree1.editable = true;
+   			}
+   			else{ 
+   				prevItem = curItem; //tree1.editable = false;
+   				event.preventDefault();
+   			}
+   			*/
+   		}
+   		
+   		private function onKeyUp(e:KeyboardEvent):void {
+   			if (e.keyCode==Keyboard.ENTER) {
+   				trace("destroyItemEditor");
+   				tree1.destroyItemEditor();
+   			}
+   		}
+   		
+   		
+   		
+   		/* private function onFocusOut(e:FocusEvent):void {
+   			e.preventDefault();
+   		} */
+   		
+   		private function onItemEditBegin(e:ListEvent):void {
+   			var curItem:Object = tree1.selectedItem;
+   			if (prevItem)
+   				trace("onItemEditBegin", prevItem.label, curItem.label);
+   			if (prevItem!=curItem) {
+   				e.preventDefault();
+   				trace("e.preventDefault");
+   			}
+   			prevItem = curItem;
+   		}
+   		
+   		private function onItemEditEnd(e:ListEvent):void {
+   			//tree1.destroyItemEditor();
+   			//e.preventDefault();
+   			trace("e.preventDefault");
+   		}
+   		
+   		/* private function onKeyPressed(e:KeyboardEvent):void {
+   			trace(e.charCode);
+   		}
+   		 */
+   		private function select():void {
+   			tree1.selectedIndex = 2;
+   		}
+   		
+   		private function edit():void{
+   			tree1.dispatchEvent(new ListEvent(ListEvent.ITEM_EDIT_BEGINNING, false, false, 0, 3));
+   		}
+   	]]>
+   </mx:Script>
+</mx:Application>
+

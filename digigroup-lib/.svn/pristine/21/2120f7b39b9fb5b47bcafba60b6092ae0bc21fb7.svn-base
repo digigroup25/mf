@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:code="http://code.google.com/p/flexlib/"
+		 xmlns:mx="http://www.adobe.com/2006/mxml"
+		 backgroundColor="0xffffff"
+		 implements="components.IWindowShadeStack"
+		 >
+
+	<mx:Script>
+		<![CDATA[
+			import com.roguedevelopment.objecthandles.ObjectHandles;
+
+			import flexlib.containers.WindowShade;
+
+			import mx.core.EventPriority;
+			import mx.core.UIComponent;
+			import mx.events.CloseEvent;
+
+			private var childToShadeMap:Dictionary = new Dictionary(true);
+
+			private var shade:UIComponent;
+
+			private var wrapper:UIComponent;
+
+			override public function addChild(child:DisplayObject):DisplayObject {
+				var window:UIComponent = UIComponent(child);
+				var res:DisplayObject = super.addChild(window);
+				window.percentWidth = window.percentHeight = 100;
+				window.addEventListener(CloseEvent.CLOSE, onClose, false, EventPriority.DEFAULT_HANDLER);
+				return res;
+			}
+
+			public function addWindowShade(child:DisplayObject, closeable:Boolean, resizable:Boolean):DisplayObject {
+				shade = (closeable) ? new CloseableWindowShade() : new BasicWindowShade();
+				shade.styleName = "windowShade";
+				wrapper = shade;
+				if (resizable) {
+					wrapper = ObjectHandlesFactory.create(true);
+					wrapper.addChild(shade);
+				}
+				this.addChild(wrapper);
+
+				IWindowShade(shade).addContent(child);
+
+				childToShadeMap[child] = wrapper;
+				return shade;
+			}
+
+			public function removeWindowShade(child:DisplayObject):void {
+				var shade:DisplayObject = childToShadeMap[child];
+				if (shade != null) {
+					this.removeChild(shade);
+					delete childToShadeMap[child];
+				}
+			}
+
+			private function onClose(event:CloseEvent):void {
+				if (event.isDefaultPrevented())
+					return;
+				event.preventDefault();
+				var window:DisplayObject = DisplayObject(event.currentTarget);
+				this.removeChild(window);
+			}
+		]]>
+	</mx:Script>
+</mx:VBox>

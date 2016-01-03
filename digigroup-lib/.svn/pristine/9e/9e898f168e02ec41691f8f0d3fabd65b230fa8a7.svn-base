@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SuperTabNavigator xmlns="flexlib.containers.*" xmlns:mx="http://www.adobe.com/2006/mxml" 
+	width="100%" height="100%" scrollSpeed="25" 
+	horizontalGap="0" creationComplete="init()" >
+	<mx:Script>
+		<![CDATA[
+			import mx.events.StateChangeEvent;
+			import flexlib.controls.tabBarClasses.SuperTab;
+			private function init():void {
+				this.startScrollingEvent = MouseEvent.MOUSE_DOWN;
+				this.stopScrollingEvent = MouseEvent.MOUSE_UP;
+				this.closePolicy = SuperTab.CLOSE_ROLLOVER;
+			}
+			
+			public function get children():Object {
+				return this.tabChildren;
+			}
+			/* private function onStateChange(e:Event):void {
+				trace(e.type, e.target);
+			} */
+			
+		]]>
+	</mx:Script>
+</SuperTabNavigator>

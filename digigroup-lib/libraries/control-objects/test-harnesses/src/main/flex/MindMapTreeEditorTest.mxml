@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application 
+	xmlns:ui="mindmaps2.map.ui.*" 
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+	>
+	
+	<s:VGroup width="100%">
+		
+		<s:HGroup width="100%">
+			<s:Label id="selectedItemText"/>
+			<s:Button label="select 1st child" click="select1B()"/>
+			<s:Button label="select 1st grandchild" click="select2C()"/>
+			<s:Button label="add child" click="addChildElement()" enabled="{editor.selectedItem!=null}"/>
+			<s:Button label="remove child" click="removeChildElement()" enabled="{editor.selectedItem!=null}"/>
+		</s:HGroup>
+		<ui:MindMapTreeEditor id="editor" width="100%" height="100%" creationComplete="initData()"/>	
+	</s:VGroup>
+	
+	<fx:Script>
+		<![CDATA[
+			import collections.TreeCollectionEx;
+			
+			import factories.TreeFactory;
+			
+			import mindmaps.map.MapModel2;
+			import mindmaps.map.MapModel2Factory;
+			
+			import mindmaps2.elements.ElementFactory;
+			import mindmaps2.map.ui.MindMapTreeEditorEvent;
+			
+			import mx.events.FlexEvent;
+			import mx.events.ListEvent;
+			private var map:MapModel2;
+			
+			private function initData():void {
+				//map = new MapModel2Factory().createMapFrom(new TreeFactory().createAllElements());
+				map = new MapModel2Factory().createMapFrom(new TreeFactory().createPriorityTaskTree2());//createRandomTaskTree(20));
+				editor.dataProvider = map;
+				editor.addEventListener(MindMapTreeEditorEvent.SELECTED_ELEMENT_CHANGED, onSelectedItemChange);
+			}
+			
+			private function onSelectedItemChange(event:MindMapTreeEditorEvent):void {
+				selectedItemText.text = editor.selectedItem.toString();
+			}
+			
+			private function select1B():void {
+				editor.selectedItem = map.nodes.children[0];
+			}
+			
+			private function select2C():void {
+				editor.selectedItem = map.nodes.children[0].children[0];
+			}
+			
+			private function addChildElement():void {
+				var child:TreeCollectionEx = new ElementFactory().createTask("abc");
+				TreeCollectionEx(editor.selectedItem).addChild(child);
+				editor.selectedItem = child;
+				//editableTree.editedItemPosition = {rowIndex:editableTree.selectedIndex , columnIndex:0};
+			}
+			
+			private function removeChildElement():void {
+				var child:TreeCollectionEx = TreeCollectionEx(editor.selectedItem);
+				var parent:TreeCollectionEx = TreeCollectionEx(child.findParent(map.nodes));
+				if (parent==null)
+					return;
+				parent.removeChild(child);
+				var selectedItem:Object = parent.numChildren>0 ? parent.children[0] : parent;
+				editor.selectedItem = selectedItem;
+			}
+		]]>
+	</fx:Script>
+	
+	
+</s:Application>

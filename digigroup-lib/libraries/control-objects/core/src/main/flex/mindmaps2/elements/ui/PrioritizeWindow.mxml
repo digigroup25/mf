@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<components:FloatingWindow xmlns:components="components.*"
+						   xmlns:components1="mindmaps.map.ui.tree.components.*"
+						   xmlns:mx="http://www.adobe.com/2006/mxml"
+						   xmlns:ns="library://ns.adobe.com/flex/mx"
+						   xmlns:s="library://ns.adobe.com/flex/spark"
+						   >
+	<components:windowContent>
+		<components1:TaskTreeList id="taskTreeList"
+								  width="100%"
+								  height="100%"
+								  tree="{tree}"
+								  />
+	</components:windowContent>
+
+	<mx:Script>
+		<![CDATA[
+			import collections.TreeCollectionEx;
+
+			import mf.framework.Message;
+
+			[Bindable]
+			public var tree:TreeCollectionEx;
+
+			public function set fieldName(value:String):void {
+				taskTreeList.fieldName = value;
+			}
+
+			override protected function refreshClick():void {
+				this.dispatchEvent(new Event("refresh"));
+			}
+		]]>
+	</mx:Script>
+</components:FloatingWindow>

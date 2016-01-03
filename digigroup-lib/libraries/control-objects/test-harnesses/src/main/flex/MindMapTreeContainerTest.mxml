@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" creationComplete="init()">
+	<mx:VBox>
+		<mx:Button label="Add menu" click="addMenu()"/>
+		<mx:Button click="runFlexSpy()" label="FlexSpy"/>
+	</mx:VBox>
+	
+	<mx:Script>
+		<![CDATA[
+			import com.flexspy.FlexSpy;
+			import components.ExpandingMenu;
+			import mindmaps.map.MapModel2;
+			import mindmaps.map.MapModel2Factory;
+			import factories.TreeFactory;
+			import collections.TreeCollectionEx;
+			import mf.framework.*;
+			import mindmaps2.map.MindMapTreeContainer;
+			
+			private var c:MindMapTreeContainer;
+			
+			private function init():void {
+				// TODO: 2011/05/21: KTD: Commented this out because of compilation error.  Argument mismatch in constructor call of MindMapTreeContainer.
+//				var mb:MessageBroker = new MessageTraceBroker();
+//				var map:MapModel2 = new MapModel2Factory().createMapFrom(new TreeFactory().createPriorityTaskTree());
+//				c = new MindMapTreeContainer(mb, map, this);
+//				c.initialize();
+			}
+			
+			private function addMenu():void {
+				// TODO: 2011/05/21: KTD: Commented this out.  See above.
+//				var view:DisplayObjectContainer = DisplayObjectContainer(c.view);
+//				var menu:ExpandingMenu = new ExpandingMenu();
+//				var menuData:Array = [{label:"Menu Item"}, {label:"Menu Item2"}];
+//				menu.dataProvider = menuData;
+//				view.addChild(menu);
+//				var x:Number = /* view.x + */ view.width - menu.width;
+//				var y:Number = /* view.y */ - menu.height;
+//				trace(view.x, view.width, menu.width, x, y);
+//				//menu.move(x,y);
+//				menu.y = y;
+			}
+			
+			private function runFlexSpy():void {
+				// TODO: 2011/05/21: KTD: Commented this out.  See above.
+//				FlexSpy.show(this);
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

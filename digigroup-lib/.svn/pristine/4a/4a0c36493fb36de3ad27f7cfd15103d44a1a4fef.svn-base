@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:containers="mindmaps.map.ui.tree.containers.*"
+				xmlns:mx="http://www.adobe.com/2006/mxml"
+				layout="absolute"
+				styleName="plain"
+				creationComplete="init()"
+				>
+	<mx:VBox width="100%"
+			 height="100%"
+			 >
+		<mx:Button label="init"
+				   click="init()"
+				   />
+		<mx:Button label="uninit"
+				   click="uninit()"
+				   />
+		<containers:Main id="main"
+						 width="100%"
+						 height="100%"
+						 />
+		<!--<mx:VBox id="treeViewContainer" width="100%" height="100%"/>-->
+	</mx:VBox>
+
+
+	<mx:Script>
+		<![CDATA[
+			import mindmaps2.actions.RootAction;
+			import actions.AbstractAction;
+			import mindmaps.map.TestMapContextFactory;
+			import mindmaps.TestTreeFactory;
+			import mindmaps.elementderivatives.ProjectTexts;
+			import mindmaps.elementderivatives.ProjectParser;
+			import mindmaps.elementderivatives.subway.SubwayFactory;
+			import mindmaps.map.MapContextFactory;
+			import mindmaps.map.MapContext;
+			import mindmaps.map.ui.tree.messages.TreeTabMessageFactory;
+			import mindmaps.map.ui.tree.MainContainer;
+			import mindmaps.map.MapModel2;
+			import mx.controls.Tree;
+			import services.MapPersistorMock;
+			import mf.framework.*;
+			import factories.*;
+			import collections.TreeCollectionEx;
+			import vos.*;
+
+			private static const NUMBER_OF_MAPS:int = 1;
+
+			private var mainContainer:MainContainer;
+
+			private var messages:TreeTabMessageFactory;
+
+			private var rootAction:AbstractAction;
+
+			private function init():void {
+				var maps:Array = new Array();
+				var map:MapModel2;
+				var nodes:TreeCollectionEx;
+
+				for (var i:int = 0; i < NUMBER_OF_MAPS; i++) {
+					//nodes = new TreeFactory().createRandomVoTree(500, [Task/* , Appointment, Note */]);
+					//nodes = new TreeFactory().createRandomTaskTree(500);
+					//nodes = new SubwayFactory().treeForTaxSubway();
+					nodes = new TreeFactory().createTaskAppointment();
+					//nodes = new TreeFactory().createPriorityTaskTree();
+					//nodes = new TestTreeFactory().tasksFromSampleProject();
+					//nodes = new TestTreeFactory().tasksFromSampleProjectSnippet();
+
+					map = new MapModel2(nodes, "Map " + i);
+					maps.push(map);
+				}
+				var mb:IMessageBroker = new MessageBroker(); /*Trace*/
+				messages = new TreeTabMessageFactory(mb);
+
+				var mapContext:MapContext = new TestMapContextFactory().createRootAction();
+				rootAction = new RootAction();
+				mainContainer = new MainContainer(main, mapContext, mb, rootAction);
+				mainContainer.initialize();
+
+			}
+
+			private function uninit():void {
+				mainContainer.uninitialize();
+				mainContainer = null;
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

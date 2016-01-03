@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:treemap="com.flextoolbox.controls.*" layout="absolute">
+	<treemap:TreeMap id="treeMap" width="100%" height="100%" labelField="@label" 
+		weightField="@data" colorFunction="{itemToColor}" initialize="init()"/>
+	<mx:XMLList id="treeData">
+        <node label="Mail Box">
+            <node label="Inbox">
+                <node label="Marketing"/>
+                <node label="Product Management"/>
+                <node label="Personal"/>
+            </node>
+            <node label="Outbox">
+                <node label="Professional"/>
+                <node label="Personal"/>
+            </node>
+            <node label="Spam"/>
+            <node label="Sent"/>
+        </node>  
+       </mx:XMLList>
+       
+        <mx:XMLListCollection id="MailBox">
+		    <mx:XMLList>
+		            <node label="Mail">
+		                    <node label="Inbox" data="10">
+		                           <node label="Clients" 	data="7"/>
+		                           <node label="Suppliers" data="3"/>
+		                           <!-- <node label="Personal Folder">
+		                                    <node label="Open Source Projects" data="18"/>  
+		                                    <node label="Fan Mail" data="8" />
+		                            </node>-->
+		                            <!--
+		                            <node label="Mailing Lists">
+		                                    <node label="flexcoders" data="15"/>
+		                                    <node label="flexcomponents" data="20"/>
+		                            </node>
+		                            <node label="Unsorted" data="20"/>-->
+		                    </node>
+		    
+		                    <node label="Sent" data="80"/>
+		                    <node label="Trash" data="50"/>
+		            </node>
+		    </mx:XMLList>
+		</mx:XMLListCollection>  
+    
+	<mx:Script>
+		<![CDATA[
+			import factories.TreeFactory;
+			import collections.TreeCollectionEx;
+			private function init():void {
+				var tree:TreeCollectionEx = new TreeFactory().createFullTree(5, 4);//.createParentChildHPTaskTree();
+				treeMap.dataProvider = MailBox;
+			}
+			
+			private function itemToColor(item:XML):uint
+			{
+				var changeValue:Number = parseFloat(item.@data.toString());
+				var percent:Number = Math.abs(changeValue)/50;
+				
+				if(changeValue >= 0)
+				{
+					return this.blendColors(0x009900, 0x000000, percent);
+				}
+				return this.blendColors(0x990000, 0x000000, percent);
+			}
+			
+			/**
+		 * @private
+		 * Determines the blended color between two separate colors using a
+		 * range from 0 to 1 where a value of 0 returns 100% of the first color
+		 * and a value of 1 return 100% of the second color.
+		 */
+		private function blendColors(color1:uint, color2:uint, percent:Number = 0.5):uint
+		{
+			var remaining:Number = 1 - percent;
+			
+			var red1:uint = (color1 >> 16) & 0xff;
+			var green1:uint = (color1 >> 8) & 0xff;
+			var blue1:uint = color1 & 0xff;
+			
+			var red2:uint = (color2 >> 16) & 0xff;
+			var green2:uint = (color2 >> 8) & 0xff;
+			var blue2:uint = color2 & 0xff;
+			 
+			color1 = ((red1 * percent) << 16) + ((green1 * percent) << 8) + blue1 * percent;
+			color2 = ((red2 * remaining) << 16) + ((green2 * remaining) << 8) + blue2 * remaining;
+
+			return color1 + color2;
+		}
+		]]>
+	</mx:Script>
+</mx:Application>

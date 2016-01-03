@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ns1:FloatingWindow
+	xmlns:ns1="components.*" xmlns:mx="http://www.adobe.com/2006/mxml"
+	initialize="onInit()" >
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.*;
+			
+			[Embed(source="/assets/textIcon.png")]
+            [Bindable]
+            public var iconImage:Class;
+
+			private function onInit():void
+			{
+				var textControl:Button = new Button();
+				textControl.width = 19;
+				textControl.height = 21;
+				textControl.addEventListener(MouseEvent.CLICK, onTextExportClick, false, 0, true);
+				textControl.setStyle("icon", iconImage);
+				this.buttons.addChild(textControl);
+			}
+			
+			private function onTextExportClick(event:MouseEvent):void
+			{
+				/* var dg:DataGrid = ViewHelper.getDataGrid(this.dataContainer);
+				var newE:ExportToTextEvent = new ExportToTextEvent();
+				newE.vo = dg;
+				newE.dispatch(); */
+				
+				//Alert.show("Exported text: " + text);
+				//var window:TextInteractiveComponent = new TextComponentFactory().create(model.
+			}
+		]]>
+	</mx:Script>
+</ns1:FloatingWindow>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" styleName="plain">
+	<mx:Tree id="tree" x="0" y="0"></mx:Tree>
+	
+	<mx:Script>
+		<![CDATA[
+			import vos.*;
+			import mx.collections.HierarchicalCollectionView;
+			import factories.*;
+			
+			private function init():void
+			{
+				var model:Object = new TreeFactory().createPriorityTaskTree();
+				var treeSource:HierarchicalCollectionView = new HierarchicalCollectionView(/*model*/null, null);
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:components="components.*" 
+		styleName="plain" creationComplete="onCreationComplete(event)">
+	<mx:VBox>
+		<mx:Button click="runFlexSpy()" label="FlexSpy"/>
+		<mx:VBox id="vbox">
+			<components:ResizableWindowShadeStack id="stack" minHeight="350" minWidth="200" resize="onStackResize()"/>
+			<components:ResizableWindowShadeStack id="stack2"/>
+			<components:ResizableWindowShadeStack id="stack3"/>
+		</mx:VBox>
+		
+	</mx:VBox>
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.DataGrid;
+			import mindmaps.map.MapModel2;
+			import mindmaps.map.MapModel2Factory;
+			import com.flexspy.FlexSpy;
+			import mindmaps2.map.ui.MindMapTreeEditor;
+			import mx.controls.Button;
+			import factories.TreeFactory;
+			import collections.TreeCollectionEx;
+			import mx.controls.Tree;
+			import mx.events.FlexEvent;
+			
+			private function onCreationComplete(event:FlexEvent):void {
+				var editor:MindMapTreeEditor = new MindMapTreeEditor();
+				// TODO: 2011/05/15 KTD: Added resizeable=false parameter to fix compilation error.  50% chance of getting it right.
+				stack.addWindowShade(editor, false, false);
+				var map:MapModel2 = new MapModel2Factory().createMapFrom(new TreeFactory().createRandomTree(20), "test");
+				editor.dataProvider = map;
+				
+				var dataGrid:DataGrid = new DataGrid();
+				dataGrid.dataProvider = [{label:"a"}, {label:"b"}];
+				// TODO: 2011/05/15 KTD: Added resizeable=false parameter to fix compilation error.  50% chance of getting it right.
+				stack2.addWindowShade(dataGrid, false, false);
+				
+				var dataGrid2:DataGrid = new DataGrid();
+				dataGrid2.dataProvider = [{label:"a"}, {label:"b"}];
+				// TODO: 2011/05/15 KTD: Added resizeable=false parameter to fix compilation error.  50% chance of getting it right.
+				stack3.addWindowShade(dataGrid, false, false);
+			}
+			
+			private function runFlexSpy():void {
+				FlexSpy.show(this);
+			}
+			
+			private function onStackResize():void {
+				trace("onStackResize");
+				stack.invalidateSize();
+				stack.invalidateDisplayList();
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:components="components.*" layout="absolute">
+	<mx:VBox>
+		<mx:HBox creationComplete="onMenuChange()">
+			<mx:RadioButtonGroup id="menus" />
+            <mx:RadioButton id="menu1" groupName="menus" selected="true" label="Menu1"/>
+            <mx:RadioButton id="menu2" groupName="menus" label="Menu2"/>
+		</mx:HBox>
+		 
+		
+			
+	</mx:VBox>
+	<mx:Canvas x="200" y="100">
+		<components:ExpandingMenu id="menu" menuShow="onMenuShow(event)"/>	
+	</mx:Canvas>
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.events.MenuEvent;
+			import mx.events.FlexEvent;
+		
+			private const menu1Data:Array = [{label:'M1'},{label:'M2'}];
+			private const menu2Data:Array = [{label:'M3'}];
+			
+			
+			private function onMenuShow(event:MenuEvent):void {
+				onMenuChange();
+			}
+			
+			private function onMenuChange():void {
+				switch (menus.selection) {
+					case menu1:
+						menu.dataProvider = menu1Data;
+						break;
+					case menu2:
+						menu.dataProvider = menu2Data;
+						break;
+				}
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

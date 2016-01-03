@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute">
+	<mx:AdvancedDataGrid id="adg" initialize="init()">
+		 <mx:columns>
+                <mx:AdvancedDataGridColumn labelFunction="getName" headerText="name"/>
+                <mx:AdvancedDataGridColumn labelFunction="getPriority" headerText="priority"/>
+              
+            </mx:columns>
+	</mx:AdvancedDataGrid>
+	<mx:Script>
+		<![CDATA[
+			import testclasses.TreeHierarchicalData;
+			import mx.collections.HierarchicalData;
+			import mx.collections.ICollectionView;
+			import vos.*;
+			import factories.*;
+			
+			private function init():void
+			{
+				var data:HierarchicalData = new HierarchicalData(new TreeFactory().createTaskTree2());
+				data.childrenField = "children";
+				adg.dataProvider = data;//Factory.createTasks1();
+				//ICollectionView
+			}
+			
+			private function getName(item:Object, column:AdvancedDataGridColumn):String {
+				return item.vo.name;
+			}
+			
+			private function getPriority(item:Object, column:AdvancedDataGridColumn):String {
+				return item.vo.priority;
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

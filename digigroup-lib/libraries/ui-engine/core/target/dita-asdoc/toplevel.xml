@@ -1,0 +1,402 @@
+<asdoc>
+
+<classRec name='ViewDataFilter' fullname='uiengine.datarenderer:ViewDataFilter' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/ViewDataFilter.as' namespace='uiengine.datarenderer' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='addDataSequence' fullname='uiengine.datarenderer:ViewDataFilter/addDataSequence' isStatic='false' isFinal='false' isOverride='false'  param_names='properties' param_types='restParam' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+
+		 Allows to specify the order of data attribute appearance
+
+		 e.g. "name", "priority", "done"
+
+		 ]]></description>
+<param><![CDATA[properties
+
+		 
+
+		 ]]></param>
+</method>
+<method name='addIgnoreData' fullname='uiengine.datarenderer:ViewDataFilter/addIgnoreData' isStatic='false' isFinal='false' isOverride='false'  param_names='properties' param_types='restParam' param_defaults='undefined' result_type='void'>
+</method>
+<method name='addShowOnlyData' fullname='uiengine.datarenderer:ViewDataFilter/addShowOnlyData' isStatic='false' isFinal='false' isOverride='false'  param_names='propName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+
+		 Allows to specify data attributes to be shown
+
+		 e.g. show only "name" and "priority"
+
+		 ]]></description>
+<param><![CDATA[propName
+
+		 
+
+		 ]]></param>
+</method>
+<method name='filter' fullname='uiengine.datarenderer:ViewDataFilter/filter' isStatic='false' isFinal='false' isOverride='false'  param_names='attrs' param_types='Array' param_defaults='undefined' result_type='Array'>
+</method>
+<method name='getNamePropertyValue' fullname='uiengine.datarenderer:ViewDataFilter/private:getNamePropertyValue' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='String'>
+</method>
+<method name='objectHasProperty' fullname='uiengine.datarenderer:ViewDataFilter/private:objectHasProperty' isStatic='false' isFinal='false' isOverride='false'  param_names='item;propName' param_types='*;String' param_defaults='undefined;undefined' result_type='Boolean'>
+</method>
+<method name='orderData' fullname='uiengine.datarenderer:ViewDataFilter/orderData' isStatic='false' isFinal='false' isOverride='false'  param_names='attrs' param_types='Array' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeIgnoredData' fullname='uiengine.datarenderer:ViewDataFilter/private:removeIgnoredData' isStatic='false' isFinal='false' isOverride='false'  param_names='attrs' param_types='Array' param_defaults='undefined' result_type='void'>
+</method>
+<method name='showData' fullname='uiengine.datarenderer:ViewDataFilter/private:showData' isStatic='false' isFinal='false' isOverride='false'  param_names='attrs' param_types='Array' param_defaults='undefined' result_type='Array'>
+</method>
+<field name='dataSequence' fullname='uiengine.datarenderer:ViewDataFilter/dataSequence' type='Array' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='ignoreData' fullname='uiengine.datarenderer:ViewDataFilter/ignoreData' type='Array' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='showOnlyData' fullname='uiengine.datarenderer:ViewDataFilter/showOnlyData' type='Array' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='ControlMapItem' fullname='uiengine.datarenderer:ControlMapItem' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/ControlMapItem.as' namespace='uiengine.datarenderer' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ControlMapItem' fullname='uiengine.datarenderer:ControlMapItem/ControlMapItem' isStatic='false' isFinal='false' isOverride='false'  param_names='type;control;controlValue;useObjectHandles;isCustomRenderer;dataProperty' param_types='String;Class;String;Boolean;Boolean;String' param_defaults='undefined;undefined;null;true;false;null' result_type='*'>
+</method>
+<method name='dataProperty' fullname='uiengine.datarenderer:ControlMapItem/dataProperty/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='isCustomRenderer' fullname='uiengine.datarenderer:ControlMapItem/isCustomRenderer/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<field name='_dataProperty' fullname='uiengine.datarenderer:ControlMapItem/private:_dataProperty' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='_isCustomRenderer' fullname='uiengine.datarenderer:ControlMapItem/private:_isCustomRenderer' type='Boolean' isStatic='false' isConst='false' >
+</field>
+<field name='controlValue' fullname='uiengine.datarenderer:ControlMapItem/controlValue' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='control' fullname='uiengine.datarenderer:ControlMapItem/control' type='Class' isStatic='false' isConst='false' >
+</field>
+<field name='type' fullname='uiengine.datarenderer:ControlMapItem/type' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='useObjectHandles' fullname='uiengine.datarenderer:ControlMapItem/useObjectHandles' type='Boolean' isStatic='false' isConst='false' >
+</field>
+<classRec name='DataRendererContext' fullname='uiengine.datarenderer:DataRendererContext' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/DataRendererContext.as' namespace='uiengine.datarenderer' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='DataRendererContext' fullname='uiengine.datarenderer:DataRendererContext/DataRendererContext' isStatic='false' isFinal='false' isOverride='false'  param_names='vo;container;viewDataFilter;showLabels;useObjectHandles;controlName;changeHandler' param_types='*;*;uiengine.datarenderer:ViewDataFilter;Boolean;Boolean;String;Function' param_defaults='undefined;null;null;true;false;null;null' result_type='*'>
+</method>
+<field name='changeHandler' fullname='uiengine.datarenderer:DataRendererContext/changeHandler' type='Function' isStatic='false' isConst='false' >
+</field>
+<field name='container' fullname='uiengine.datarenderer:DataRendererContext/container' type='' isStatic='false' isConst='false' >
+</field>
+<field name='controlName' fullname='uiengine.datarenderer:DataRendererContext/controlName' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='defaultEventHandling' fullname='uiengine.datarenderer:DataRendererContext/defaultEventHandling' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='showLabels' fullname='uiengine.datarenderer:DataRendererContext/showLabels' type='Boolean' isStatic='false' isConst='false' >
+</field>
+<field name='useObjectHandles' fullname='uiengine.datarenderer:DataRendererContext/useObjectHandles' type='Boolean' isStatic='false' isConst='false' >
+</field>
+<field name='viewDataFilter' fullname='uiengine.datarenderer:DataRendererContext/viewDataFilter' type='uiengine.datarenderer:ViewDataFilter' isStatic='false' isConst='false' >
+</field>
+<field name='vo' fullname='uiengine.datarenderer:DataRendererContext/vo' type='' isStatic='false' isConst='false' >
+</field>
+<field name='watchers' fullname='uiengine.datarenderer:DataRendererContext/watchers' type='Array' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='ViewKeywordControlMapItem' fullname='uiengine.datarenderer:ViewKeywordControlMapItem' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/ViewKeywordControlMapItem.as' namespace='uiengine.datarenderer' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ViewKeywordControlMapItem' fullname='uiengine.datarenderer:ViewKeywordControlMapItem/ViewKeywordControlMapItem' isStatic='false' isFinal='false' isOverride='false'  param_names='propertyKeyword;control' param_types='String;Class' param_defaults='undefined;undefined' result_type='*'>
+</method>
+<field name='control' fullname='uiengine.datarenderer:ViewKeywordControlMapItem/control' type='Class' isStatic='false' isConst='false' >
+</field>
+<field name='propertyKeyword' fullname='uiengine.datarenderer:ViewKeywordControlMapItem/propertyKeyword' type='String' isStatic='false' isConst='false' >
+</field>
+<classRec name='ViewKeywordControlMap' fullname='uiengine.datarenderer:ViewKeywordControlMap' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/ViewKeywordControlMap.as' namespace='uiengine.datarenderer' access='public' baseclass='collections:Bag' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='addControl' fullname='uiengine.datarenderer:ViewKeywordControlMap/addControl' isStatic='false' isFinal='false' isOverride='false'  param_names='propertyKeyword;control' param_types='String;Class' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='getControl' fullname='uiengine.datarenderer:ViewKeywordControlMap/getControl' isStatic='false' isFinal='false' isOverride='false'  param_names='propertyKeyword' param_types='String' param_defaults='undefined' result_type='Class'>
+</method>
+<method name='getInstance' fullname='uiengine.datarenderer:ViewKeywordControlMap/getInstance' isStatic='true' isFinal='false' isOverride='false'  result_type='uiengine.datarenderer:ViewKeywordControlMap'>
+</method>
+<classRec name='IocDataRendererFactory' fullname='uiengine.datarenderer:IocDataRendererFactory' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/IocDataRendererFactory.as' namespace='uiengine.datarenderer' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='IocDataRendererFactory' fullname='uiengine.datarenderer:IocDataRendererFactory/IocDataRendererFactory' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='createClassInspector' fullname='uiengine.datarenderer:IocDataRendererFactory/createClassInspector' isStatic='true' isFinal='false' isOverride='false'  result_type='commonutils:ClassInspector'>
+</method>
+<method name='createDataRendererHelper' fullname='uiengine.datarenderer:IocDataRendererFactory/createDataRendererHelper' isStatic='true' isFinal='false' isOverride='false'  param_names='controlMap' param_types='uiengine.datarenderer:DefaultControlMap' param_defaults='undefined' result_type='uiengine.datarenderer:DataRendererHelper'>
+</method>
+<classRec name='DataRenderer' fullname='uiengine.datarenderer:DataRenderer' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/DataRenderer.as' namespace='uiengine.datarenderer' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='getRenderer' fullname='uiengine.datarenderer:DataRenderer/private:getRenderer' isStatic='true' isFinal='false' isOverride='false'  param_names='context' param_types='uiengine.datarenderer:DataRendererContext' param_defaults='undefined' result_type='uiengine.datarenderer:AbstractDataRenderer'>
+</method>
+<method name='renderContainer' fullname='uiengine.datarenderer:DataRenderer/renderContainer' isStatic='true' isFinal='false' isOverride='false'  param_names='context' param_types='uiengine.datarenderer:DataRendererContext' param_defaults='undefined' result_type='uiengine.datarenderer:Render'>
+</method>
+<method name='render' fullname='uiengine.datarenderer:DataRenderer/render' isStatic='true' isFinal='false' isOverride='false'  param_names='context' param_types='uiengine.datarenderer:DataRendererContext' param_defaults='undefined' result_type='flash.display:DisplayObject'>
+</method>
+<classRec name='Render' fullname='uiengine.datarenderer:Render' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/Render.as' namespace='uiengine.datarenderer' access='public' baseclass='Object' interfaces='mf.framework:IManagedLifecycle' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='Render' fullname='uiengine.datarenderer:Render/Render' isStatic='false' isFinal='false' isOverride='false'  param_names='view;model;parent;watchers' param_types='Object;Object;flash.display:DisplayObjectContainer;Array' param_defaults='undefined;undefined;undefined;undefined' result_type='*'>
+</method>
+<method name='initialize' fullname='uiengine.datarenderer:Render/initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='uninitialize' fullname='uiengine.datarenderer:Render/uninitialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<field name='model' fullname='uiengine.datarenderer:Render/model' type='Object' isStatic='false' isConst='false' >
+</field>
+<field name='parent' fullname='uiengine.datarenderer:Render/parent' type='flash.display:DisplayObjectContainer' isStatic='false' isConst='false' >
+</field>
+<field name='view' fullname='uiengine.datarenderer:Render/view' type='Object' isStatic='false' isConst='false' >
+</field>
+<field name='watchers' fullname='uiengine.datarenderer:Render/watchers' type='Array' isStatic='false' isConst='false' >
+</field>
+<classRec name='ControlMap' fullname='uiengine.datarenderer:ControlMap' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/ControlMap.as' namespace='uiengine.datarenderer' access='public' baseclass='collections:Bag' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='add' fullname='uiengine.datarenderer:ControlMap/add' isStatic='false' isFinal='false' isOverride='true'  param_names='item' param_types='*' param_defaults='undefined' result_type='void'>
+</method>
+<method name='allowsObjectHandles' fullname='uiengine.datarenderer:ControlMap/allowsObjectHandles' isStatic='false' isFinal='false' isOverride='false'  param_names='control' param_types='Class' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='getControlMapItemByType' fullname='uiengine.datarenderer:ControlMap/getControlMapItemByType' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='uiengine.datarenderer:ControlMapItem'>
+</method>
+<method name='getControlValueByControlClass' fullname='uiengine.datarenderer:ControlMap/getControlValueByControlClass' isStatic='false' isFinal='false' isOverride='false'  param_names='controlClass' param_types='Class' param_defaults='undefined' result_type='String'>
+</method>
+<method name='getControlValue' fullname='uiengine.datarenderer:ControlMap/getControlValue' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Object'>
+</method>
+<method name='getControl' fullname='uiengine.datarenderer:ControlMap/getControl' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Class'>
+</method>
+<method name='getType' fullname='uiengine.datarenderer:ControlMap/getType' isStatic='false' isFinal='false' isOverride='false'  param_names='control' param_types='Class' param_defaults='undefined' result_type='String'>
+</method>
+<classRec name='DefaultControlMap' fullname='uiengine.datarenderer:DefaultControlMap' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/DefaultControlMap.as' namespace='uiengine.datarenderer' access='public' baseclass='uiengine.datarenderer:ControlMap' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='DefaultControlMap' fullname='uiengine.datarenderer:DefaultControlMap/DefaultControlMap' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='getInstance' fullname='uiengine.datarenderer:DefaultControlMap/getInstance' isStatic='true' isFinal='false' isOverride='false'  result_type='uiengine.datarenderer:DefaultControlMap'>
+</method>
+<classRec name='AbstractDataRenderer' fullname='uiengine.datarenderer:AbstractDataRenderer' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/AbstractDataRenderer.as' namespace='uiengine.datarenderer' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='addEventHandling' fullname='uiengine.datarenderer:AbstractDataRenderer/protected:addEventHandling' isStatic='false' isFinal='false' isOverride='false'  param_names='context;container' param_types='uiengine.datarenderer:DataRendererContext;mx.core:UIComponent' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='assignContainer' fullname='uiengine.datarenderer:AbstractDataRenderer/protected:assignContainer' isStatic='false' isFinal='false' isOverride='false'  param_names='context' param_types='uiengine.datarenderer:DataRendererContext' param_defaults='undefined' result_type='mx.core:UIComponent'>
+</method>
+<method name='assignDataToControl' fullname='uiengine.datarenderer:AbstractDataRenderer/protected:assignDataToControl' isStatic='false' isFinal='false' isOverride='false'  param_names='context;container;properties' param_types='uiengine.datarenderer:DataRendererContext;mx.core:UIComponent;Array' param_defaults='undefined;undefined;undefined' result_type='void'>
+</method>
+<method name='getAllProperties' fullname='uiengine.datarenderer:AbstractDataRenderer/protected:getAllProperties' isStatic='false' isFinal='false' isOverride='false'  param_names='context;container' param_types='uiengine.datarenderer:DataRendererContext;mx.core:UIComponent' param_defaults='undefined;undefined' result_type='Array'>
+</method>
+<method name='populateContainer' fullname='uiengine.datarenderer:AbstractDataRenderer/private:populateContainer' isStatic='false' isFinal='false' isOverride='false'  param_names='context;container' param_types='uiengine.datarenderer:DataRendererContext;mx.core:UIComponent' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='render' fullname='uiengine.datarenderer:AbstractDataRenderer/render' isStatic='false' isFinal='false' isOverride='false'  param_names='context' param_types='uiengine.datarenderer:DataRendererContext' param_defaults='undefined' result_type='flash.display:DisplayObject'>
+<description><![CDATA[
+
+		algorithm:
+
+		 
+
+		 	build container (or use parentControl if provided as a container)
+
+		  foreach attribute in the model
+
+		 		build control
+
+		 		bind model's value to control's value
+
+		  
+
+		]]></description>
+</method>
+<method name='setContainer' fullname='uiengine.datarenderer:AbstractDataRenderer/private:setContainer' isStatic='false' isFinal='false' isOverride='false'  param_names='context' param_types='uiengine.datarenderer:DataRendererContext' param_defaults='undefined' result_type='mx.core:UIComponent'>
+</method>
+<field name='defaultMap' fullname='uiengine.datarenderer:AbstractDataRenderer/private:defaultMap' type='uiengine.datarenderer:DefaultControlMap' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='ObjectRenderer' fullname='uiengine.datarenderer:ObjectRenderer' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/ObjectRenderer.as' namespace='uiengine.datarenderer' access='public' baseclass='uiengine.datarenderer:AbstractDataRenderer' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='assignContainer' fullname='uiengine.datarenderer:ObjectRenderer/protected:assignContainer' isStatic='false' isFinal='false' isOverride='true'  param_names='context' param_types='uiengine.datarenderer:DataRendererContext' param_defaults='undefined' result_type='mx.core:UIComponent'>
+</method>
+<method name='assignDataToControl' fullname='uiengine.datarenderer:ObjectRenderer/protected:assignDataToControl' isStatic='false' isFinal='false' isOverride='true'  param_names='context;container;properties' param_types='uiengine.datarenderer:DataRendererContext;mx.core:UIComponent;Array' param_defaults='undefined;undefined;undefined' result_type='void'>
+</method>
+<method name='getAllProperties' fullname='uiengine.datarenderer:ObjectRenderer/protected:getAllProperties' isStatic='false' isFinal='false' isOverride='true'  param_names='context;container' param_types='uiengine.datarenderer:DataRendererContext;mx.core:UIComponent' param_defaults='undefined;undefined' result_type='Array'>
+</method>
+<field name='ci' fullname='uiengine.datarenderer:ObjectRenderer/private:ci' type='commonutils:ClassInspector' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='defaultMap' fullname='uiengine.datarenderer:ObjectRenderer/private:defaultMap' type='uiengine.datarenderer:DefaultControlMap' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='helper' fullname='uiengine.datarenderer:ObjectRenderer/private:helper' type='uiengine.datarenderer:DataRendererHelper' isStatic='false' isConst='false' >
+</field>
+<classRec name='EmptyRenderer' fullname='uiengine.datarenderer:EmptyRenderer' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/EmptyRenderer.as' namespace='uiengine.datarenderer' access='public' baseclass='uiengine.datarenderer:AbstractDataRenderer' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='assignContainer' fullname='uiengine.datarenderer:EmptyRenderer/protected:assignContainer' isStatic='false' isFinal='false' isOverride='true'  param_names='context' param_types='uiengine.datarenderer:DataRendererContext' param_defaults='undefined' result_type='mx.core:UIComponent'>
+</method>
+<method name='assignDataToControl' fullname='uiengine.datarenderer:EmptyRenderer/protected:assignDataToControl' isStatic='false' isFinal='false' isOverride='true'  param_names='context;container;properties' param_types='uiengine.datarenderer:DataRendererContext;mx.core:UIComponent;Array' param_defaults='undefined;undefined;undefined' result_type='void'>
+</method>
+<method name='getAllProperties' fullname='uiengine.datarenderer:EmptyRenderer/protected:getAllProperties' isStatic='false' isFinal='false' isOverride='true'  param_names='context;container' param_types='uiengine.datarenderer:DataRendererContext;mx.core:UIComponent' param_defaults='undefined;undefined' result_type='Array'>
+</method>
+<field name='voInspector' fullname='uiengine.datarenderer:EmptyRenderer/private:voInspector' type='reflection:VOInspector' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='CollectionRenderer' fullname='uiengine.datarenderer:CollectionRenderer' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/CollectionRenderer.as' namespace='uiengine.datarenderer' access='public' baseclass='uiengine.datarenderer:AbstractDataRenderer' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='addEventHandling' fullname='uiengine.datarenderer:CollectionRenderer/protected:addEventHandling' isStatic='false' isFinal='false' isOverride='true'  param_names='context;container' param_types='uiengine.datarenderer:DataRendererContext;mx.core:UIComponent' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='assignContainer' fullname='uiengine.datarenderer:CollectionRenderer/protected:assignContainer' isStatic='false' isFinal='false' isOverride='true'  param_names='context' param_types='uiengine.datarenderer:DataRendererContext' param_defaults='undefined' result_type='mx.core:UIComponent'>
+</method>
+<method name='assignDataToControl' fullname='uiengine.datarenderer:CollectionRenderer/protected:assignDataToControl' isStatic='false' isFinal='false' isOverride='true'  param_names='context;container;properties' param_types='uiengine.datarenderer:DataRendererContext;mx.core:UIComponent;Array' param_defaults='undefined;undefined;undefined' result_type='void'>
+</method>
+<method name='autoSizeColumns' fullname='uiengine.datarenderer:CollectionRenderer/protected:autoSizeColumns' isStatic='false' isFinal='false' isOverride='false'  param_names='context;control;attrs' param_types='uiengine.datarenderer:DataRendererContext;mx.controls:DataGrid;Array' param_defaults='undefined;undefined;undefined' result_type='void'>
+</method>
+<method name='getAllProperties' fullname='uiengine.datarenderer:CollectionRenderer/protected:getAllProperties' isStatic='false' isFinal='false' isOverride='true'  param_names='context;container' param_types='uiengine.datarenderer:DataRendererContext;mx.core:UIComponent' param_defaults='undefined;undefined' result_type='Array'>
+</method>
+<method name='labelFunction' fullname='uiengine.datarenderer:CollectionRenderer/private:labelFunction' isStatic='false' isFinal='false' isOverride='false'  param_names='item;column' param_types='Object;mx.controls.dataGridClasses:DataGridColumn' param_defaults='undefined;undefined' result_type='String'>
+</method>
+<field name='uiControlUtil' fullname='uiengine.datarenderer:CollectionRenderer/private:uiControlUtil' type='commonutils:UIControlUtil' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='voInspector' fullname='uiengine.datarenderer:CollectionRenderer/private:voInspector' type='reflection:VOInspector' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='DataRendererHelper' fullname='uiengine.datarenderer:DataRendererHelper' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/DataRendererHelper.as' namespace='uiengine.datarenderer' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='DataRendererHelper' fullname='uiengine.datarenderer:DataRendererHelper/DataRendererHelper' isStatic='false' isFinal='false' isOverride='false'  param_names='controlMap' param_types='uiengine.datarenderer:DefaultControlMap' param_defaults='undefined' result_type='*'>
+</method>
+<method name='createControl' fullname='uiengine.datarenderer:DataRendererHelper/createControl' isStatic='false' isFinal='false' isOverride='false'  param_names='attr' param_types='commonutils:Attribute' param_defaults='undefined' result_type='mx.core:UIComponent'>
+</method>
+<method name='wrapObjectHandles' fullname='uiengine.datarenderer:DataRendererHelper/wrapObjectHandles' isStatic='false' isFinal='false' isOverride='false'  param_names='control' param_types='mx.core:UIComponent' param_defaults='undefined' result_type='mx.core:UIComponent'>
+</method>
+<field name='ci' fullname='uiengine.datarenderer:DataRendererHelper/private:ci' type='commonutils:ClassInspector' isStatic='false' isConst='false' >
+</field>
+<field name='defaultMap' fullname='uiengine.datarenderer:DataRendererHelper/private:defaultMap' type='uiengine.datarenderer:DefaultControlMap' isStatic='false' isConst='false' >
+</field>
+<classRec name='ObjectHandlesFactory' fullname='uiengine.datarenderer:ObjectHandlesFactory' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/ObjectHandlesFactory.as' namespace='uiengine.datarenderer' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='create' fullname='uiengine.datarenderer:ObjectHandlesFactory/create' isStatic='true' isFinal='false' isOverride='false'  param_names='hasBorder' param_types='Boolean' param_defaults='false' result_type='com.roguedevelopment.objecthandles:ObjectHandles'>
+</method>
+<classRec name='ViewDataFilterMapItem' fullname='uiengine:ViewDataFilterMapItem' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/ViewDataFilterMapItem.as' namespace='uiengine' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ViewDataFilterMapItem' fullname='uiengine:ViewDataFilterMapItem/ViewDataFilterMapItem' isStatic='false' isFinal='false' isOverride='false'  param_names='model;property;vo;viewDataFilter' param_types='*;String;*;uiengine.datarenderer:ViewDataFilter' param_defaults='undefined;undefined;undefined;undefined' result_type='*'>
+</method>
+<field name='model' fullname='uiengine:ViewDataFilterMapItem/model' type='' isStatic='false' isConst='false' >
+</field>
+<field name='property' fullname='uiengine:ViewDataFilterMapItem/property' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='viewDataFilter' fullname='uiengine:ViewDataFilterMapItem/viewDataFilter' type='uiengine.datarenderer:ViewDataFilter' isStatic='false' isConst='false' >
+</field>
+<field name='voType' fullname='uiengine:ViewDataFilterMapItem/voType' type='' isStatic='false' isConst='false' >
+</field>
+<classRec name='MenuDescriptor' fullname='uiengine:MenuDescriptor' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/MenuDescriptor.as' namespace='uiengine' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='MenuDescriptor' fullname='uiengine:MenuDescriptor/MenuDescriptor' isStatic='false' isFinal='false' isOverride='false'  param_names='actionLabel;menuGeneratorClass;menuLabel;menuGeneratorParams' param_types='String;Class;String;Object' param_defaults='undefined;null;null;null' result_type='*'>
+</method>
+<field name='actionLabel' fullname='uiengine:MenuDescriptor/actionLabel' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='menuGeneratorClass' fullname='uiengine:MenuDescriptor/menuGeneratorClass' type='Class' isStatic='false' isConst='false' >
+</field>
+<field name='menuGeneratorParams' fullname='uiengine:MenuDescriptor/menuGeneratorParams' type='Object' isStatic='false' isConst='false' >
+</field>
+<field name='menuLabel' fullname='uiengine:MenuDescriptor/menuLabel' type='String' isStatic='false' isConst='false' >
+</field>
+<classRec name='ActionDescriptor2' fullname='uiengine:ActionDescriptor2' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/ActionDescriptor2.as' namespace='uiengine' access='public' baseclass='Object' interfaces='actions:IActionDescriptor' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ActionDescriptor2' fullname='uiengine:ActionDescriptor2/ActionDescriptor2' isStatic='false' isFinal='false' isOverride='false'  param_names='label;voType;messageType' param_types='String;Class;String' param_defaults='undefined;undefined;undefined' result_type='*'>
+</method>
+<method name='label' fullname='uiengine:ActionDescriptor2/label/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='label' fullname='uiengine:ActionDescriptor2/label/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_label' fullname='uiengine:ActionDescriptor2/private:_label' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='messageType' fullname='uiengine:ActionDescriptor2/messageType' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='voType' fullname='uiengine:ActionDescriptor2/voType' type='Class' isStatic='false' isConst='false' >
+</field>
+<classRec name='ViewDataFilterMap' fullname='uiengine:ViewDataFilterMap' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/ViewDataFilterMap.as' namespace='uiengine' access='public' baseclass='collections:Bag' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='getInstance' fullname='uiengine:ViewDataFilterMap/getInstance' isStatic='true' isFinal='false' isOverride='false'  result_type='uiengine:ViewDataFilterMap'>
+</method>
+<method name='getViewDataFilterByVO' fullname='uiengine:ViewDataFilterMap/getViewDataFilterByVO' isStatic='false' isFinal='false' isOverride='false'  param_names='vo;treatAsObject' param_types='*;Boolean' param_defaults='undefined;false' result_type='uiengine.datarenderer:ViewDataFilter'>
+</method>
+<method name='getViewDataFilter' fullname='uiengine:ViewDataFilterMap/getViewDataFilter' isStatic='false' isFinal='false' isOverride='false'  param_names='model;property;treatAsObject' param_types='*;String;Boolean' param_defaults='undefined;undefined;undefined' result_type='uiengine.datarenderer:ViewDataFilter'>
+</method>
+<field name='ci' fullname='uiengine:ViewDataFilterMap/private:ci' type='commonutils:ClassInspector' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='mi' fullname='uiengine:ViewDataFilterMap/private:mi' type='reflection:ModelInspector' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='MenuAssemblerContext' fullname='uiengine:MenuAssemblerContext' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/MenuAssemblerContext.as' namespace='uiengine' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='MenuAssemblerContext' fullname='uiengine:MenuAssemblerContext/MenuAssemblerContext' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='addAlias' fullname='uiengine:MenuAssemblerContext/addAlias' isStatic='false' isFinal='false' isOverride='false'  param_names='descriptor' param_types='Object' param_defaults='undefined' result_type='void'>
+</method>
+<method name='addMenuDescriptor' fullname='uiengine:MenuAssemblerContext/addMenuDescriptor' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='uiengine:MenuDescriptor' param_defaults='undefined' result_type='void'>
+</method>
+<field name='menuAliases' fullname='uiengine:MenuAssemblerContext/menuAliases' type='mx.collections:ArrayCollection' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='menuRepo' fullname='uiengine:MenuAssemblerContext/menuRepo' type='mx.collections:ArrayCollection' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='ActionRepository' fullname='uiengine:ActionRepository' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/ActionRepository.as' namespace='uiengine' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ActionRepository' fullname='uiengine:ActionRepository/ActionRepository' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='add' fullname='uiengine:ActionRepository/add' isStatic='false' isFinal='false' isOverride='false'  param_names='action' param_types='actions:IActionDescriptor' param_defaults='undefined' result_type='void'>
+</method>
+<method name='filterActions' fullname='uiengine:ActionRepository/private:filterActions' isStatic='false' isFinal='false' isOverride='false'  param_names='element;index;arr' param_types='*;int;Array' param_defaults='undefined;undefined;undefined' result_type='Boolean'>
+</method>
+<method name='getActionsByVOType' fullname='uiengine:ActionRepository/private:getActionsByVOType' isStatic='false' isFinal='false' isOverride='false'  param_names='element;index;arr' param_types='*;int;Array' param_defaults='undefined;undefined;undefined' result_type='Boolean'>
+</method>
+<method name='getByVOType' fullname='uiengine:ActionRepository/getByVOType' isStatic='false' isFinal='false' isOverride='false'  param_names='voType' param_types='Class' param_defaults='undefined' result_type='Array'>
+</method>
+<method name='getNonVoActions' fullname='uiengine:ActionRepository/getNonVoActions' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='isA' fullname='uiengine:ActionRepository/private:isA' isStatic='false' isFinal='false' isOverride='false'  param_names='type1;type2' param_types='Class;Class' param_defaults='undefined;undefined' result_type='Boolean'>
+</method>
+<field name='_actions' fullname='uiengine:ActionRepository/private:_actions' type='Array' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='ci' fullname='uiengine:ActionRepository/private:ci' type='commonutils:ClassInspector' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='voType' fullname='uiengine:ActionRepository/private:voType' type='Class' isStatic='false' isConst='false' >
+</field>
+<interfaceRec name='IMenuGenerator' fullname='uiengine:IMenuGenerator' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/IMenuGenerator.as' namespace='uiengine' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='generate' fullname='uiengine:IMenuGenerator/uiengine:IMenuGenerator:generate' isStatic='false' isFinal='false' isOverride='false'  param_names='parent' param_types='uiengine:MessageableUserAction' param_defaults='undefined' result_type='void'>
+</method>
+<classRec name='MenuAssembler' fullname='uiengine:MenuAssembler' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/MenuAssembler.as' namespace='uiengine' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='MenuAssembler' fullname='uiengine:MenuAssembler/MenuAssembler' isStatic='false' isFinal='false' isOverride='false'  param_names='mb;context' param_types='mf.framework:IMessageBroker;uiengine:MenuAssemblerContext' param_defaults='undefined;undefined' result_type='*'>
+</method>
+<method name='addNonVoActions' fullname='uiengine:MenuAssembler/private:addNonVoActions' isStatic='false' isFinal='false' isOverride='false'  param_names='allActions;root' param_types='uiengine:ActionRepository;uiengine:MessageableUserAction' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='addVoActions' fullname='uiengine:MenuAssembler/private:addVoActions' isStatic='false' isFinal='false' isOverride='false'  param_names='allActions;vo;root' param_types='uiengine:ActionRepository;*;uiengine:MessageableUserAction' param_defaults='undefined;undefined;undefined' result_type='void'>
+</method>
+<method name='assemble' fullname='uiengine:MenuAssembler/assemble' isStatic='false' isFinal='false' isOverride='false'  param_names='allActions;vo;includeVoActions;includeNonVoActions' param_types='uiengine:ActionRepository;*;Boolean;Boolean' param_defaults='undefined;undefined;true;true' result_type='uiengine:MessageableUserAction'>
+</method>
+<method name='getAlias' fullname='uiengine:MenuAssembler/private:getAlias' isStatic='false' isFinal='false' isOverride='false'  param_names='vo' param_types='*' param_defaults='undefined' result_type='String'>
+</method>
+<method name='getMenuDescriptor' fullname='uiengine:MenuAssembler/private:getMenuDescriptor' isStatic='false' isFinal='false' isOverride='false'  param_names='actionLabel' param_types='String' param_defaults='undefined' result_type='uiengine:MenuDescriptor'>
+</method>
+<method name='getMenuLabel' fullname='uiengine:MenuAssembler/private:getMenuLabel' isStatic='false' isFinal='false' isOverride='false'  param_names='action;vo' param_types='uiengine:ActionDescriptor2;*' param_defaults='undefined;undefined' result_type='String'>
+</method>
+<method name='getMenuNode' fullname='uiengine:MenuAssembler/private:getMenuNode' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='undefined' result_type='uiengine:MessageableUserAction'>
+</method>
+<field name='ci' fullname='uiengine:MenuAssembler/private:ci' type='commonutils:ClassInspector' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='context' fullname='uiengine:MenuAssembler/private:context' type='uiengine:MenuAssemblerContext' isStatic='false' isConst='false' >
+</field>
+<field name='mb' fullname='uiengine:MenuAssembler/private:mb' type='mf.framework:IMessageBroker' isStatic='false' isConst='false' >
+</field>
+<field name='menuLookup' fullname='uiengine:MenuAssembler/private:menuLookup' type='Object' isStatic='false' isConst='false' >
+</field>
+<classRec name='MessageableUserAction' fullname='uiengine:MessageableUserAction' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/MessageableUserAction.as' namespace='uiengine' access='public' baseclass='actions:AbstractUserAction' interfaces='mf.framework:IManagedLifecycle' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='MessageableUserAction' fullname='uiengine:MessageableUserAction/MessageableUserAction' isStatic='false' isFinal='false' isOverride='false'  param_names='mb;label;message;menuGenerator' param_types='mf.framework:IMessageBroker;String;mf.framework:Message;uiengine:IMenuGenerator' param_defaults='undefined;undefined;null;null' result_type='*'>
+</method>
+<method name='doExecute' fullname='uiengine:MessageableUserAction/protected:doExecute' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+</method>
+<method name='initialize' fullname='uiengine:MessageableUserAction/initialize' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+</method>
+<method name='uninitialize' fullname='uiengine:MessageableUserAction/uninitialize' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+</method>
+<field name='mb' fullname='uiengine:MessageableUserAction/mb' type='mf.framework:IMessageBroker' isStatic='false' isConst='false' >
+</field>
+<field name='menuGenerator' fullname='uiengine:MessageableUserAction/menuGenerator' type='uiengine:IMenuGenerator' isStatic='false' isConst='false' >
+</field>
+<field name='message' fullname='uiengine:MessageableUserAction/message' type='mf.framework:Message' isStatic='false' isConst='false' >
+</field>
+<classRec name='ModelInspector' fullname='reflection:ModelInspector' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/reflection/ModelInspector.as' namespace='reflection' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='getModelVO' fullname='reflection:ModelInspector/getModelVO' isStatic='false' isFinal='false' isOverride='false'  param_names='model;property;treatAsObject' param_types='*;String;Boolean' param_defaults='undefined;undefined;false' result_type='*'>
+</method>
+<method name='getVOType' fullname='reflection:ModelInspector/getVOType' isStatic='false' isFinal='false' isOverride='false'  param_names='model;property' param_types='*;String' param_defaults='undefined;undefined' result_type='Class'>
+</method>
+<method name='getVO' fullname='reflection:ModelInspector/getVO' isStatic='false' isFinal='false' isOverride='false'  param_names='vo;treatAsObject' param_types='*;Boolean' param_defaults='undefined;undefined' result_type='*'>
+</method>
+<classRec name='VOInspector' fullname='reflection:VOInspector' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/reflection/VOInspector.as' namespace='reflection' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='isCollection' fullname='reflection:VOInspector/isCollection' isStatic='false' isFinal='false' isOverride='false'  param_names='vo' param_types='*' param_defaults='undefined' result_type='Boolean'>
+</method>
+<field name='ci' fullname='reflection:VOInspector/private:ci' type='commonutils:ClassInspector' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+</asdoc>

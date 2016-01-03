@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<components:FloatingWindow xmlns:components="components.*"
+						   xmlns:mx="http://www.adobe.com/2006/mxml"
+						   xmlns:ns="library://ns.adobe.com/flex/mx"
+						   xmlns:s="library://ns.adobe.com/flex/spark"
+						   height="100"
+						   >
+	<components:windowContent>
+		<!--<mx:FormItem label="Points">
+			<mx:Label id="points"
+					  text="{StringUtil.substitute('{0}/{1}+{2}', iterationStatus.actualCommittedPoints,
+					  iterationStatus.expectedCommittedPoints, iterationStatus.actualUncommittedPoints)}"
+					  />
+		</mx:FormItem>
+		<mx:FormItem label="Time">
+			<mx:Label id="time"
+					  text="{StringUtil.substitute('{0}/{1}',
+					  timeSpanFormatter.format(TimeSpan.fromHours(iterationStatus.actualHours)),
+					  timeSpanFormatter.format(TimeSpan.fromHours(iterationStatus.expectedCommittedHours)))}"
+					  />
+		</mx:FormItem>-->
+
+		<mx:DataGrid dataProvider="{metric.toArray()}">
+			<mx:columns>
+				<mx:DataGridColumn dataField="name"
+								   headerText="Name"
+								   />
+				<mx:DataGridColumn labelFunction="getPoints"
+								   headerText="Points"
+								   />
+				<mx:DataGridColumn labelFunction="getTime"
+								   headerText="Time"
+								   />
+			</mx:columns>
+		</mx:DataGrid>
+	</components:windowContent>
+
+	<mx:Script>
+		<![CDATA[
+			import collections.TreeCollectionEx;
+
+			import commonutils.TimeSpan;
+			import commonutils.TimeSpanFormatter;
+
+			import mf.framework.Message;
+
+			import mindmaps2.elements.task.queries.TaskGroupPerformanceMetric;
+			import mindmaps2.elements.task.queries.TaskPerformanceMetric;
+
+			import mx.utils.StringUtil;
+
+			private static const timeSpanFormatter:TimeSpanFormatter = new TimeSpanFormatter();
+
+			[Bindable]
+			public var metric:TaskGroupPerformanceMetric;
+
+			override protected function refreshClick():void {
+				this.dispatchEvent(new Event("refresh"));
+			}
+
+			private function getPoints(data:Object, column:DataGridColumn):String {
+				var metric:TaskPerformanceMetric = TaskPerformanceMetric(data.metric);
+				return StringUtil.substitute(
+					/* metric.actualUncommittedPoints > 0 ?  */'{0}/{1}+{2}/{3}' /*  : '{0}/{1}' */,
+					metric.actualCommittedPoints,
+					metric.expectedCommittedPoints,
+					metric.actualUncommittedPoints,
+					metric.expectedUncommittedPoints
+					);
+			}
+
+			private function getTime(data:Object, column:DataGridColumn):String {
+				var metric:TaskPerformanceMetric = TaskPerformanceMetric(data.metric);
+				return StringUtil.substitute('{0}/{1}+{2}/{3}',
+					timeSpanFormatter.format(TimeSpan.fromHours(metric.actualCommittedHours)),
+					timeSpanFormatter.format(TimeSpan.fromHours(metric.expectedCommittedHours)),
+					timeSpanFormatter.format(TimeSpan.fromHours(metric.actualUncommittedHours)),
+					timeSpanFormatter.format(TimeSpan.fromHours(metric.expectedUncommittedHours))
+					);
+			}
+		]]>
+	</mx:Script>
+</components:FloatingWindow>

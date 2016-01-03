@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Box xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:Degrafa="http://www.degrafa.com/2007" creationComplete="onCreationComplete(event)">
+	<Degrafa:Surface>
+		<Degrafa:GeometryGroup>
+			<Degrafa:Circle         
+		        radius="{radius}" >  
+		        <!--<Degrafa:stroke>
+		        	<Degrafa:SolidStroke color="{stationColor}" weight="3"/>
+		        </Degrafa:stroke> -->   
+		        <Degrafa:fill>
+		            <Degrafa:SolidFill                 
+		                color="{stationColor}"/>         
+		        </Degrafa:fill>  
+		        
+		        <Degrafa:Circle   
+		        	radius="{radius/2}">
+			        <Degrafa:fill>             
+			            <Degrafa:SolidFill                 
+			                color="{getColor(visited)}"/>         
+			        </Degrafa:fill> 
+			    </Degrafa:Circle>   
+		    </Degrafa:Circle> 
+			
+		    
+	    </Degrafa:GeometryGroup>	
+	</Degrafa:Surface>
+	<mx:Script>
+		<![CDATA[
+			import mx.core.IToolTip;
+			import mx.managers.ToolTipManager;
+			import mx.controls.Label;
+			[Bindable]
+			public var radius:Number = 10;
+			
+			[Bindable]
+			public var visited:Boolean = false;
+			
+			[Bindable] public var showLabel:Boolean = true;
+			//public var label:String;
+			
+			[Bindable] public var stationColor:uint = stationColorOut;
+			private static const stationColorOver:uint = 0x00ff00;
+			private static const stationColorOut:uint = 0xff0000;
+			
+			private static const overAlpha:Number = 0.6;
+			private static const outAlpha:Number = 1.0;
+			
+			private var _toolTip:IToolTip;// = new Label();
+			private var addedTooltip:Boolean = false;
+			
+			private function getColor(visited:Boolean):uint {
+				return visited ? stationColor : 0xffffff;
+			}
+			
+			private function onCreationComplete(event:Event):void {
+				this.alpha = outAlpha;
+				
+				this.addEventListener(MouseEvent.ROLL_OVER, onMouseOver, false, 0, true);
+				this.addEventListener(MouseEvent.ROLL_OUT, onMouseOut, false, 0, true);
+			}
+			
+			private function onMouseOver(event:MouseEvent):void {
+				trace("onRollOver", event.toString());
+				//stationColor = stationColorOver;
+				this.alpha = overAlpha;
+				var offset:Point = this.localToGlobal(new Point(0, 0));
+				_toolTip = ToolTipManager.createToolTip(label, offset.x, offset.y);
+				/* if (!addedTooltip) {
+					this.addChild(tooltip);
+					addedTooltip = true;
+				} */
+			}
+			
+			private function onMouseOut(event:MouseEvent):void {
+				trace("onRollOut", event.toString());
+				//stationColor = stationColorOut;
+				this.alpha = outAlpha;
+				ToolTipManager.destroyToolTip(_toolTip);
+				/* if (addedTooltip) {
+					this.removeChild(tooltip);
+					addedTooltip = false;
+				}	 */
+			}
+		]]>
+	</mx:Script>
+</mx:Box>
+
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+		 >
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.digigroup.digigrouplib</groupId>
+		<artifactId>dglib-pom</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.digigroup.digigrouplib.common-utils</groupId>
+	<artifactId>common-utils</artifactId>
+	<packaging>swc</packaging>
+
+	<name>Common Utils</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.digigroup.external</groupId>
+			<artifactId>corelib</artifactId>
+			<type>swc</type>
+		</dependency>
+
+		<dependency>
+			<groupId>com.digigroup.digigrouplib.testing</groupId>
+			<artifactId>testing</artifactId>
+			<version>${project.version}</version>
+			<type>swc</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>monster.debugger</groupId>
+			<artifactId>MonsterDebugger</artifactId>
+			<type>swc</type>
+		</dependency>
+	</dependencies>
+
+</project>

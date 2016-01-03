@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<components:FloatingWindow xmlns:components="components.*"
+						   xmlns:mx="http://www.adobe.com/2006/mxml"
+						   xmlns:ns="library://ns.adobe.com/flex/mx"
+						   xmlns:s="library://ns.adobe.com/flex/spark"
+						   xmlns:statistics="mindmaps.statistics.*"
+						   >
+	<components:windowContent>
+		<mx:FormItem label="Number of nodes:">
+			<mx:Label text="{statistics.numberOfNodes}" />
+		</mx:FormItem>
+	</components:windowContent>
+
+	<mx:Script>
+		<![CDATA[
+			import mindmaps.statistics.Statistics;
+
+			[Bindable]
+			public var statistics:Statistics;
+		]]>
+	</mx:Script>
+</components:FloatingWindow>

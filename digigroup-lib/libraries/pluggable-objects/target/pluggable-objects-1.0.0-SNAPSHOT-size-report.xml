@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <swf size="26338" compressedSize="10782">
+
+    <!-- Header data (SWF attributes, product info, markers, etc.) -->
+    <headerData totalSize="416">
+      <data type="metaData" size="297"/>
+      <data type="enableDebugger" size="33"/>
+      <data type="productInfo" size="28"/>
+      <data type="swfHeader" size="21"/>
+      <data type="debugID" size="18"/>
+      <data type="fileAttributes" size="6"/>
+      <data type="scriptLimits" size="6"/>
+      <data type="backgroundColor" size="5"/>
+      <data type="endMarker" size="2"/>
+    </headerData>
+
+    <!-- Cumulative frame size summary. -->
+    <frames totalSize="25922">
+      <frame size="25922" frame="1"/>
+    </frames>
+
+    <!-- Actionscript code and constant data. -->
+    <actionScript totalSize="25823">
+      <abc name="factories/TreeFactory" size="8285" frame="1"/>
+      <abc name="vos/Task" size="4623" frame="1"/>
+      <abc name="vos/Appointment" size="2421" frame="1"/>
+      <abc name="vos/Contact" size="2296" frame="1"/>
+      <abc name="vos/Program" size="1891" frame="1"/>
+      <abc name="vos/Note" size="1865" frame="1"/>
+      <abc name="vos/Item" size="1599" frame="1"/>
+      <abc name="factories/POFactory" size="1599" frame="1"/>
+      <abc name="_393befbe59558abe4265c36aa04eceb2cc2fe030ff30c1bd95df9ef5cb2e217a_flash_display_Sprite" size="1244" frame="1"/>
+    </actionScript>
+
+    <!-- Additional frame tags (symbolClass, exportAssets, showFrame, etc). -->
+    <frameData totalSize="99">
+      <tag type="symbolClass" size="97" frame="1"/>
+      <tag type="showFrame" size="2" frame="1"/>
+    </frameData>
+  </swf>
+</report>

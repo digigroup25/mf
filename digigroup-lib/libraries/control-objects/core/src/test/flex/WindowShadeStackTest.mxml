@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application 
+	xmlns:components="components.*"
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	xmlns:mx="library://ns.adobe.com/flex/mx"
+	layout="absolute"> 
+<!--	xmlns:mx="http://www.adobe.com/2006/mxml" -->
+	<mx:VBox width="100%">
+		<mx:HBox>
+			<mx:Button label="add to stack" click="addElement_()"/>
+			<mx:Button label="remove from stack" click="removeFromStack()"/>
+		</mx:HBox>
+		<components:WindowShadeStack id="stack" creationComplete="initStack()"/>
+	</mx:VBox>
+	
+	<!--<fx:Style source="/assets/global.css"/>
+-->	
+		<fx:Script>
+			<![CDATA[
+				import collections.TreeCollectionEx;
+				
+				import flexlib.containers.WindowShade;
+				
+				import mindmaps2.elements.ElementFactory;
+				import mindmaps2.elements.ui.*;
+				
+				import mx.core.UIComponent;
+				
+				import vos.*;
+				
+				private static const editorTypes:Array = [TaskEditor, NoteEditor, ContactEditor];
+				private static const elementEditorFactory:ElementEditorFactory = new ElementEditorFactory();
+				private var elements:Dictionary = new Dictionary();
+				private var elementTypes:Array = [Note, Task, Contact];
+				private const elementFactory:ElementFactory = new ElementFactory();
+				
+				
+				private function initStack():void {
+					for (var i:int=0; i<3; i++) {
+						addElement_();	
+					}
+				}
+				
+				private function addElement_():void {
+					var element:TreeCollectionEx = elementFactory.createOfType(getRandomElementType());
+					var elementEditor:UIComponent = elementEditorFactory.createEditorFor(element.vo);
+					elementEditor.percentHeight = elementEditor.percentWidth = 100;
+					
+					var elementEditorWrapper:DisplayObject = stack.addChild(elementEditor);
+					elements[elementEditorWrapper] = element;
+				}
+				
+				private function getRandomElementType():Class {
+					var r:Number = Math.floor(Math.random()*elementTypes.length);
+					return elementTypes[r];
+				}
+				
+				private function getRandomEditor():Class {
+					var r:Number = Math.floor(Math.random()*editorTypes.length);
+					return editorTypes[r];
+				}
+				
+				private function addToStack():void {
+					var editorType:Class = getRandomEditor();
+					var window:WindowShade = WindowShade(stack.addChild(new editorType));
+					window.label = (stack.numChildren+1).toString();
+				}
+				
+				private function removeFromStack():void {
+					if (stack.numChildren==0) return;
+					var childToRemoveIndex:int = stack.numChildren-1;
+					var childToRemove:UIComponent = UIComponent(stack.getChildAt(childToRemoveIndex));
+					delete elements[childToRemove];
+					stack.removeChild(childToRemove);
+				}
+			]]>
+		</fx:Script>
+</mx:Application>

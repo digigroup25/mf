@@ -1,0 +1,145 @@
+package mindmaps2.storage.services {
+    import collections.TreeCollectionEx;
+
+    import commonutils.AsyncServer;
+
+    import converters.XmlCollectionConverter;
+
+    import flash.events.TimerEvent;
+    import flash.utils.Timer;
+
+    import logging.LogUtil;
+
+    import mindmaps.map.MapModel2;
+
+    import mindmaps2.storage.PersistentMap;
+
+    import mx.collections.ArrayCollection;
+    import mx.logging.ILogger;
+    import mx.rpc.AsyncToken;
+
+    public class LocalMapRepository implements IMapRepository {
+        private static const asyncServer:AsyncServer = new AsyncServer(100);
+
+        private static const logger:ILogger = LogUtil.getLogger(LocalMapRepository);
+
+        public function LocalMapRepository(voTypes:Array) {
+            mapPersistor = ServiceLocator.getInstance().createMapPersistor(null, voTypes);
+        }
+
+        protected var mapPersistor:MapPersistor;
+
+        public function initialize():void {
+        }
+
+        public function uninitialize():void {
+        }
+
+        public function setPersistor(persistor:MapPersistor):void {
+            this.mapPersistor = persistor;
+        }
+
+        public function getMaps():AsyncToken {
+            logger.debug("getMaps");
+            return asyncServer.executeDelayedResponse(_getMaps, {});
+        }
+
+        public function getMap(name:String, mapId:String):AsyncToken {
+            logger.debug("getMap");
+            return asyncServer.executeDelayedResponse(_getMap, { name: name, mapId: mapId });
+        }
+
+        public function addMap(mapModel:MapModel2, token:Object):AsyncToken {
+            logger.debug("addMap");
+            return asyncServer.executeDelayedResponse(_addOrSaveMap, { mapModel: mapModel, add: true, token: token });
+        }
+
+        public function saveMap(mapModel:MapModel2, token:Object):AsyncToken {
+            return asyncServer.executeDelayedResponse(_addOrSaveMap, { mapModel: mapModel, add: false, token: token });
+        }
+
+        public function deleteMap(name:String, callback:Function):void {
+            mapPersistor.remove(name);
+            callback();
+        }
+
+        public function renameMap(mapModel:MapModel2, newName:String, token:Object):AsyncToken {
+            return asyncServer.executeDelayedResponse(_renameMap, { mapModel: mapModel, newName: newName, token: token });
+        }
+
+        public function deleteAllMaps(callback:Function):void {
+            mapPersistor.removeAll();
+            callback();
+        }
+
+        private function _getMap(inputData:Object):Object {
+            var map:PersistentMap = mapPersistor.load(inputData.name);
+            var nodes:TreeCollectionEx = new XmlCollectionConverter().fromXml(XML(map.mapData),
+                new TreeCollectionEx());
+            return new MapModel2(nodes, map.name);
+        }
+
+        private function _getMaps(inputData:Object):Object {
+            var persistentMaps:ArrayCollection = mapPersistor.loadMaps();
+            var mapModels:ArrayCollection  = new ArrayCollection();
+            for each (var persistentMap:PersistentMap in persistentMaps) {
+                var mapModel:MapModel2 = new MapModel2(null, persistentMap.name, persistentMap.lastModified);
+                mapModels.addItem(mapModel);
+            }
+
+            var result:Object = { result: true, maps: mapModels };
+            return result;
+        }
+
+        private function contains(mapModel:MapModel2):Boolean {
+            return mapPersistor.contains(mapModel.name);
+        }
+
+
+
+        private function _addOrSaveMap(inputData:Object):Object {
+            logger.debug("_addOrSaveMap");
+            var mapModel:MapModel2 = MapModel2(inputData.mapModel);
+            var map:PersistentMap = new PersistentMap();
+            var startTime:Date = new Date();
+            map.fromMapModel(mapModel);
+            logger.debug("{0} ms to convert to xml", new Date().time - startTime.time);
+
+            var result:Object = { result: true, mapModel: inputData.mapModel, token: inputData.token };
+            var shouldExist:Boolean = !inputData.add;
+            var mapExistsResult:Object = checkNameExists(result, mapModel.name, shouldExist);
+            if (result.result) {
+                startTime = new Date();
+                mapPersistor.save(map);
+                logger.debug("{0} ms to convert to save", new Date().time - startTime.time);
+            }
+            return result;
+        }
+
+        private function checkNameExists(result:Object, mapName:String, shouldExist:Boolean):Object {
+            if (mapPersistor.contains(mapName) && !shouldExist) {
+                result.result = false;
+                result.error = "A map with the same name already exists in the repository";
+            } else if (shouldExist && !mapPersistor.contains(mapName)) {
+                result.result = false;
+                result.error = "A map with this name does not exist in the repository";
+            }
+            return result;
+        }
+
+        private function _renameMap(inputData:Object):Object {
+            var mapModel:MapModel2 = MapModel2(inputData.mapModel);
+            var newName:String = inputData.newName as String;
+            var result:Object = { result: true, mapModel: inputData.mapModel, token: inputData.token };
+            result = checkNameExists(result, newName, false); //there should not an existing map which has the same name as newName
+            if (result.result == false)
+                return result;
+
+            var map:PersistentMap = new PersistentMap();
+            map.fromMapModel(mapModel);
+            mapPersistor.rename(map, newName);
+            mapModel.name = newName; //assign new name to map
+            return result;
+        }
+    }
+}

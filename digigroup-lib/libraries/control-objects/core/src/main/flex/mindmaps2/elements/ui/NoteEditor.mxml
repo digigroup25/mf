@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:ElementEditorTemplate xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:ui="mindmaps2.elements.ui.*">
+	<ui:editorContent>
+		<mx:FormItem label="description">
+			<mx:TextArea id="description" width="250" height="200"/>
+		</mx:FormItem>
+	</ui:editorContent>
+		<mx:Script>
+			<![CDATA[
+				import vos.*;
+				
+				protected override function setDataProvider(value:Object):void {
+					if (!(value is Note))
+						throw new ArgumentError("dataProvider value has to be of type Note");
+					super.setDataProvider(value);
+				}
+				
+				protected override function bind():void {
+					bindBidirectionally(_dataProvider, "description", description, "text");
+				}
+			]]>
+		</mx:Script>
+</ui:ElementEditorTemplate>

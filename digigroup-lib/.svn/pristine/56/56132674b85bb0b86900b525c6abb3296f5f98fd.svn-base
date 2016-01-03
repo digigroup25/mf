@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ui="mindmaps2.map.ui.*">
+	<mx:VBox>
+		<mx:HBox>
+			<mx:Text text="{editableTree.selectedItem.toString()}"/>
+			<mx:Button label="select 1B" click="select1B()"/>
+			<mx:Button label="select 2C" click="select2C()"/>
+			<mx:Button label="add child" click="addChildElement()" enabled="{editableTree.selectedItem!=null}"/>
+			<mx:Button label="remove child" click="removeChildElement()" enabled="{editableTree.selectedItem!=null}"/>
+		</mx:HBox>
+		
+		<ui:EditableTree id="editableTree" creationComplete="init()" width="300"/>		
+	</mx:VBox>
+	
+	<mx:Script>
+		<![CDATA[
+			import mindmaps2.elements.ElementFactory;
+			import collections.TreeCollectionEx;
+			import factories.TreeFactory;
+			
+			private var tree:TreeCollectionEx;
+			
+			private function init():void {
+				tree = new TreeFactory().createPriorityTaskTree2();
+				editableTree.dataProvider = tree;
+			}
+			
+			private function select1B():void {
+				editableTree.selectedItem = tree.children[1];
+			}
+			
+			private function select2C():void {
+				editableTree.selectedItem = tree.children[1].children[0];
+			}
+			
+			private function addChildElement():void {
+				var child:TreeCollectionEx = new ElementFactory().createTask("abc");
+				TreeCollectionEx(editableTree.selectedItem).addChild(child);
+				editableTree.selectedItem = child;
+				//editableTree.editedItemPosition = {rowIndex:editableTree.selectedIndex , columnIndex:0};
+			}
+			
+			private function removeChildElement():void {
+				var child:TreeCollectionEx = TreeCollectionEx(editableTree.selectedItem);
+				var parent:TreeCollectionEx = TreeCollectionEx(child.findParent(tree));
+				if (parent==null)
+					return;
+				parent.removeChild(child);
+				var selectedItem:Object = parent.numChildren>0 ? parent.children[0] : parent;
+				editableTree.selectedItem = selectedItem;
+			}
+		]]>
+	</mx:Script>
+</mx:Application> 

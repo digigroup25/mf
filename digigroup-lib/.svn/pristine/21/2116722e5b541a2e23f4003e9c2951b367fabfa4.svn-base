@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Legend xmlns:mx="http://www.adobe.com/2006/mxml">
+	<mx:Script>
+		<![CDATA[
+			import mindmaps.elementderivatives.subway.LineColors;
+			import mindmaps.elementderivatives.subway.Line;
+			import mx.charts.series.LineSeries;
+			import mindmaps.elementderivatives.subway.Subway;
+			
+			private var _subWay:Subway;
+			private var subwayChanged:Boolean = false;
+			
+			public function get subWay():Subway {
+				return _subWay;
+			}
+			
+			public function set subWay(value:Subway):void {
+				_subWay = value;
+				subwayChanged = true;
+				this.invalidateProperties();
+			}
+			
+			
+			protected override function commitProperties():void {
+				if (subwayChanged) {
+					subwayChanged = false;
+					
+					var legendItems:Array = new Array();
+					for (var i:int=0; i<this.subWay.numberOfLines; i++) {
+						var line:Line = this.subWay.lines[i];
+						var legendItem:Object = new Object();
+						legendItem.label = line.name;
+						legendItem.marker = null;
+						legendItem.fill = LineColors.defaultColors[i];
+						legendItems.push(legendItem);
+					}
+					
+					this.dataProvider = legendItems;
+				}
+				super.commitProperties();
+			}
+		]]>
+	</mx:Script>
+</mx:Legend>

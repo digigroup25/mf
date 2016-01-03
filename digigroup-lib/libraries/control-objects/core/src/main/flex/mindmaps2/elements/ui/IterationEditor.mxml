@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:ElementEditorTemplate xmlns:mx="http://www.adobe.com/2006/mxml"
+						  xmlns:ui="mindmaps2.elements.ui.*"
+						  >
+	<ui:editorContent>
+
+		<mx:FormItem label="start">
+			<mx:DateField id="start" />
+		</mx:FormItem>
+
+		<mx:FormItem label="end">
+			<mx:DateField id="end" />
+		</mx:FormItem>
+
+
+	</ui:editorContent>
+
+	<mx:Script>
+		<![CDATA[
+			import vos.*;
+
+			override protected function setDataProvider(value:Object):void {
+				if (!(value is Iteration))
+					throw new ArgumentError("dataProvider value has to be of type Iteration");
+				super.setDataProvider(value);
+			}
+
+			override protected function bind():void {
+				bindBidirectionally(_dataProvider, "start", start, "selectedDate");
+				bindBidirectionally(_dataProvider, "end", end, "selectedDate");
+			}
+		]]>
+	</mx:Script>
+</ui:ElementEditorTemplate>

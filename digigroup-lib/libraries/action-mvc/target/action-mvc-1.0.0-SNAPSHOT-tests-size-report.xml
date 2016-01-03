@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <swf size="125968" compressedSize="50034">
+
+    <!-- Header data (SWF attributes, product info, markers, etc.) -->
+    <headerData totalSize="409">
+      <data type="metaData" size="290"/>
+      <data type="enableDebugger" size="33"/>
+      <data type="productInfo" size="28"/>
+      <data type="swfHeader" size="21"/>
+      <data type="debugID" size="18"/>
+      <data type="fileAttributes" size="6"/>
+      <data type="scriptLimits" size="6"/>
+      <data type="backgroundColor" size="5"/>
+      <data type="endMarker" size="2"/>
+    </headerData>
+
+    <!-- Cumulative frame size summary. -->
+    <frames totalSize="125559">
+      <frame size="125559" frame="1"/>
+    </frames>
+
+    <!-- Actionscript code and constant data. -->
+    <actionScript totalSize="125460">
+      <abc name="actions/AbstractAction" size="12868" frame="1"/>
+      <abc name="actions/AbstractActionTest" size="11592" frame="1"/>
+      <abc name="actions/TestActionFactory" size="9895" frame="1"/>
+      <abc name="actions/AbstractRepeatableActionTest" size="7050" frame="1"/>
+      <abc name="actions/AbstractIOActionTest" size="6202" frame="1"/>
+      <abc name="components/InputDataBox" size="4685" frame="1"/>
+      <abc name="actions/AbstractIOAction" size="4431" frame="1"/>
+      <abc name="actions/AbstractUserActionTest" size="4028" frame="1"/>
+      <abc name="actions/ActionChecker" size="3898" frame="1"/>
+      <abc name="actions/AbstractRepeatableAction" size="3859" frame="1"/>
+      <abc name="actions/ActionTestCase" size="2313" frame="1"/>
+      <abc name="actions/RegisterFirstNameAction" size="2204" frame="1"/>
+      <abc name="actions/ActionParser" size="2105" frame="1"/>
+      <abc name="actions/RegisterPreferencesAction" size="1964" frame="1"/>
+      <abc name="actions/RegisterLastNameAction" size="1945" frame="1"/>
+      <abc name="actions/AsyncActionExecutor" size="1853" frame="1"/>
+      <abc name="actions/ActionFactory" size="1817" frame="1"/>
+      <abc name="actions/VariableSuccessSyncRepeatableAction" size="1675" frame="1"/>
+      <abc name="actions/AbstractUserAction" size="1642" frame="1"/>
+      <abc name="actions/VariableSuccessSyncRepeatableActionTest" size="1584" frame="1"/>
+      <abc name="actions/VariableSuccessSyncAction" size="1496" frame="1"/>
+      <abc name="actions/VariableSuccessSyncActionTest" size="1442" frame="1"/>
+      <abc name="actions/SuccessAsyncRepeatableAction" size="1416" frame="1"/>
+      <abc name="actions/FailAsyncAction" size="1383" frame="1"/>
+      <abc name="testClasses/ChildBCIOAction" size="1301" frame="1"/>
+      <abc name="testClasses/ChildABIOAction" size="1288" frame="1"/>
+      <abc name="actions/AbstractUserTestAction" size="1267" frame="1"/>
+      <abc name="testClasses/DynamicMenuAction" size="1262" frame="1"/>
+      <abc name="actions/ActionEvent" size="1257" frame="1"/>
+      <abc name="_d21c7d8387a21cf2cbf691c300e103010724e77cd204c96d05980ac6f8605e6d_flash_display_Sprite" size="1244" frame="1"/>
+      <abc name="actions/SuccessAsyncAction" size="1241" frame="1"/>
+      <abc name="actions/SuccessAsyncCompositeRepeatableAction" size="1227" frame="1"/>
+      <abc name="testClasses/RootAction" size="1225" frame="1"/>
+      <abc name="actions/FailAsyncCompositeRepeatableAction" size="1225" frame="1"/>
+      <abc name="actions/SuccessUserSyncAction" size="1131" frame="1"/>
+      <abc name="actions/SuccessSyncRepeatableAction" size="1095" frame="1"/>
+      <abc name="actions/FailSyncAction" size="1092" frame="1"/>
+      <abc name="testClasses/CreateSoftwareProjectAction" size="1088" frame="1"/>
+      <abc name="actions/SuccessAlertAction" size="1081" frame="1"/>
+      <abc name="actions/ActionData" size="1064" frame="1"/>
+      <abc name="actions/ActionParserResult" size="1036" frame="1"/>
+      <abc name="_components_InputDataBoxWatcherSetupUtil" size="1018" frame="1"/>
+      <abc name="actions/RegisterAction" size="991" frame="1"/>
+      <abc name="actions/SuccessSyncAction" size="991" frame="1"/>
+      <abc name="testClasses/CreateTaskAction" size="985" frame="1"/>
+      <abc name="testClasses/CreateProject" size="965" frame="1"/>
+      <abc name="testClasses/NoOpAction" size="867" frame="1"/>
+      <abc name="events/SubmitEvent" size="808" frame="1"/>
+      <abc name="actions/ActionStatus" size="777" frame="1"/>
+      <abc name="components/ComponentFactory" size="742" frame="1"/>
+      <abc name="testClasses/ProjectActionNames" size="705" frame="1"/>
+      <abc name="actions/IActionDescriptor" size="701" frame="1"/>
+      <abc name="actions/Assert" size="659" frame="1"/>
+      <abc name="actions/ActionType" size="611" frame="1"/>
+      <abc name="actions/ActionError" size="591" frame="1"/>
+      <abc name="actions/LogicType" size="578" frame="1"/>
+    </actionScript>
+
+    <!-- Additional frame tags (symbolClass, exportAssets, showFrame, etc). -->
+    <frameData totalSize="99">
+      <tag type="symbolClass" size="97" frame="1"/>
+      <tag type="showFrame" size="2" frame="1"/>
+    </frameData>
+  </swf>
+</report>

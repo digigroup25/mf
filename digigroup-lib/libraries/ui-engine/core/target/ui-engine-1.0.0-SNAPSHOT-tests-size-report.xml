@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <swf size="56375" compressedSize="21417">
+
+    <!-- Header data (SWF attributes, product info, markers, etc.) -->
+    <headerData totalSize="413">
+      <data type="metaData" size="294"/>
+      <data type="enableDebugger" size="33"/>
+      <data type="productInfo" size="28"/>
+      <data type="swfHeader" size="21"/>
+      <data type="debugID" size="18"/>
+      <data type="fileAttributes" size="6"/>
+      <data type="scriptLimits" size="6"/>
+      <data type="backgroundColor" size="5"/>
+      <data type="endMarker" size="2"/>
+    </headerData>
+
+    <!-- Cumulative frame size summary. -->
+    <frames totalSize="55962">
+      <frame size="55962" frame="1"/>
+    </frames>
+
+    <!-- Actionscript code and constant data. -->
+    <actionScript totalSize="55863">
+      <abc name="uiengine/MenuAssembler" size="3347" frame="1"/>
+      <abc name="uiengine/datarenderer/CollectionRenderer" size="3125" frame="1"/>
+      <abc name="uiengine/datarenderer/ViewDataFilter" size="2731" frame="1"/>
+      <abc name="uiengine/datarenderer/AbstractDataRenderer" size="2583" frame="1"/>
+      <abc name="testclasses/TaskNoDate" size="2495" frame="1"/>
+      <abc name="uiengine/datarenderer/ObjectRenderer" size="2447" frame="1"/>
+      <abc name="uiengine/datarenderer/ControlMap" size="2160" frame="1"/>
+      <abc name="UIEngineTest" size="2071" frame="1"/>
+      <abc name="uiengine/ActionRepository" size="1761" frame="1"/>
+      <abc name="uiengine/datarenderer/DataRendererHelper" size="1751" frame="1"/>
+      <abc name="uiengine/MessageableUserAction" size="1715" frame="1"/>
+      <abc name="uiengine/MenuAssemblerTest" size="1615" frame="1"/>
+      <abc name="uiengine/datarenderer/DataRenderer" size="1540" frame="1"/>
+      <abc name="testclasses/Model" size="1481" frame="1"/>
+      <abc name="uiengine/datarenderer/Render" size="1424" frame="1"/>
+      <abc name="uiengine/datarenderer/EmptyRenderer" size="1329" frame="1"/>
+      <abc name="uiengine/datarenderer/ViewKeywordControlMap" size="1304" frame="1"/>
+      <abc name="uiengine/DataRendererHelperTest" size="1247" frame="1"/>
+      <abc name="_9dcd1a3c43756e079087eccff64a14819890a5a07c2ebe241966b0ed771829d2_flash_display_Sprite" size="1244" frame="1"/>
+      <abc name="uiengine/ActionRepositoryTest" size="1217" frame="1"/>
+      <abc name="uiengine/datarenderer/ControlMapItem" size="1206" frame="1"/>
+      <abc name="reflection/ModelInspector" size="1186" frame="1"/>
+      <abc name="uiengine/datarenderer/DataRendererContext" size="1169" frame="1"/>
+      <abc name="uiengine/datarenderer/IocDataRendererFactory" size="1145" frame="1"/>
+      <abc name="uiengine/datarenderer/DefaultControlMap" size="1054" frame="1"/>
+      <abc name="uiengine/DataRendererTest" size="1050" frame="1"/>
+      <abc name="uiengine/datarenderer/ObjectHandlesFactory" size="1050" frame="1"/>
+      <abc name="uiengine/MenuAssemblerContext" size="1031" frame="1"/>
+      <abc name="uiengine/ActionDescriptor2" size="975" frame="1"/>
+      <abc name="reflection/VOInspector" size="872" frame="1"/>
+      <abc name="uiengine/datarenderer/ViewKeywordControlMapItem" size="849" frame="1"/>
+      <abc name="uiengine/MenuDescriptor" size="803" frame="1"/>
+      <abc name="testclasses/ClassAControl" size="761" frame="1"/>
+      <abc name="testclasses/Abc" size="661" frame="1"/>
+      <abc name="testclasses/OneFieldClass" size="643" frame="1"/>
+      <abc name="testclasses/ClassA" size="640" frame="1"/>
+      <abc name="uiengine/IMenuGenerator" size="631" frame="1"/>
+      <abc name="testclasses/ClassB" size="559" frame="1"/>
+      <abc name="testclasses/ClassC" size="545" frame="1"/>
+      <abc name="testclasses/IClassB" size="446" frame="1"/>
+    </actionScript>
+
+    <!-- Additional frame tags (symbolClass, exportAssets, showFrame, etc). -->
+    <frameData totalSize="99">
+      <tag type="symbolClass" size="97" frame="1"/>
+      <tag type="showFrame" size="2" frame="1"/>
+    </frameData>
+  </swf>
+</report>

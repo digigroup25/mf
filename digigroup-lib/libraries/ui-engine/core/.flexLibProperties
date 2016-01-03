@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="false" version="3">
+  <includeClasses>
+    <classEntry path="reflection.ModelInspector"/>
+    <classEntry path="reflection.VOInspector"/>
+    <classEntry path="uiengine.ActionDescriptor2"/>
+    <classEntry path="uiengine.ActionRepository"/>
+    <classEntry path="uiengine.IMenuGenerator"/>
+    <classEntry path="uiengine.MenuAssembler"/>
+    <classEntry path="uiengine.MenuAssemblerContext"/>
+    <classEntry path="uiengine.MenuDescriptor"/>
+    <classEntry path="uiengine.MessageableUserAction"/>
+    <classEntry path="uiengine.ViewDataFilterMap"/>
+    <classEntry path="uiengine.ViewDataFilterMapItem"/>
+    <classEntry path="uiengine.datarenderer.AbstractDataRenderer"/>
+    <classEntry path="uiengine.datarenderer.CollectionRenderer"/>
+    <classEntry path="uiengine.datarenderer.ControlMap"/>
+    <classEntry path="uiengine.datarenderer.ControlMapItem"/>
+    <classEntry path="uiengine.datarenderer.DataRenderer"/>
+    <classEntry path="uiengine.datarenderer.DataRendererContext"/>
+    <classEntry path="uiengine.datarenderer.DataRendererHelper"/>
+    <classEntry path="uiengine.datarenderer.DefaultControlMap"/>
+    <classEntry path="uiengine.datarenderer.EmptyRenderer"/>
+    <classEntry path="uiengine.datarenderer.IocDataRendererFactory"/>
+    <classEntry path="uiengine.datarenderer.ObjectHandlesFactory"/>
+    <classEntry path="uiengine.datarenderer.ObjectRenderer"/>
+    <classEntry path="uiengine.datarenderer.Render"/>
+    <classEntry path="uiengine.datarenderer.ViewDataFilter"/>
+    <classEntry path="uiengine.datarenderer.ViewKeywordControlMap"/>
+    <classEntry path="uiengine.datarenderer.ViewKeywordControlMapItem"/>
+    <classEntry path="UIEngineTest"/>
+    <classEntry path="testclasses.Abc"/>
+    <classEntry path="testclasses.ClassA"/>
+    <classEntry path="testclasses.ClassAControl"/>
+    <classEntry path="testclasses.ClassB"/>
+    <classEntry path="testclasses.ClassC"/>
+    <classEntry path="testclasses.IClassB"/>
+    <classEntry path="testclasses.Model"/>
+    <classEntry path="testclasses.OneFieldClass"/>
+    <classEntry path="testclasses.TaskNoDate"/>
+    <classEntry path="uiengine.ActionRepositoryTest"/>
+    <classEntry path="uiengine.DataRendererHelperTest"/>
+    <classEntry path="uiengine.DataRendererTest"/>
+    <classEntry path="uiengine.MenuAssemblerTest"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

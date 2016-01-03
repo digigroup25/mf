@@ -1,0 +1,84 @@
+package mindmaps.importexport
+{
+	import collections.TreeCollectionEx;
+	
+	import mx.utils.ObjectUtil;
+	import mx.utils.StringUtil;
+
+	public class TreeAsserter
+	{
+		public function TreeAsserter()
+		{
+		}
+		
+		/**
+		 * Compares whether objectTree is a proper subset of tree 
+		 * @param tree - a tree to be compared against 
+		 * @param objectTree - test object that represents a tree
+		 * @return result object {result:true/false, details:{expectedValue:String, actualValue:String, message:String}}
+		 * 
+		 */		
+		public function isSubset(tree:TreeCollectionEx, objectTree:Object):Object {
+			return recursiveCompare(tree, objectTree);
+		}
+		
+		private function recursiveCompare(tree:Object, objectTree:Object):Object {
+			if (tree==null && objectTree==null) 
+				return {result:true};
+			if (tree==null && objectTree!=null) 
+				return fail('not null', 'null');
+			if (tree!=null && objectTree==null)
+				return fail('not null', 'null');
+			
+			var result:Object;
+			
+			for (var key:String in objectTree) {
+				if (!tree.hasOwnProperty(key)) {
+					return fail(StringUtil.substitute('property {0} exists', key), StringUtil.substitute('property {0} does not exist', key));
+				}
+				
+				if (ObjectUtil.isSimple(objectTree[key])) {
+					if (objectTree[key] is Array) {
+						if (tree[key]==null || !(tree[key].hasOwnProperty("length"))) {
+							return fail('non-empty array for property '+key, 'empty array for property '+key);
+						}
+						for (var i:uint=0; i<objectTree[key].length; i++) {
+							if (tree[key].length<=i) {
+								return fail('have an item at index '+i, 'no item at index '+i);
+							}
+							result = recursiveCompare(tree[key][i], objectTree[key][i]);
+							if (result.result==false)
+								return result;
+						}
+					}
+					else 
+					{
+						if (tree[key]!=objectTree[key]) {
+							return fail(
+								StringUtil.substitute('property {0} with value {1}', key, objectTree[key]), 
+								StringUtil.substitute('property {0} with value {1}', key, tree[key]));
+						}
+					}
+						
+				} else { //complex
+					result = recursiveCompare(tree[key], objectTree[key]);
+					if (result.result==false)
+						return result;
+				}
+			}
+			return {result:true};
+		}
+		
+		private function getDetails(expectedValue:String, actualValue:String):Object {
+			return {
+				expectedValue:expectedValue,
+				actualValue:actualValue,
+				message:StringUtil.substitute("tree: expected='{0}', actual='{1}'", expectedValue, actualValue)
+			};
+		}
+		
+		private function fail(expectedValue:String, actualValue:String):Object {
+			return {result:false, details:getDetails(expectedValue, actualValue)};
+		}
+	}
+}

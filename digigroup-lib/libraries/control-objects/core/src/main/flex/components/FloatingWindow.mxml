@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<oh:ObjectHandles xmlns:mx="http://www.adobe.com/2006/mxml"
+				  xmlns:ns="library://ns.adobe.com/flex/mx"
+				  xmlns:oh="com.roguedevelopment.objecthandles.*"
+				  xmlns:s="library://ns.adobe.com/flex/spark"
+				  width="300"
+				  height="200"
+				  creationComplete="addWindowContent()"
+				  initialize="initMe()"
+				  allowKeyboardManipulation="false"
+				  allowRotate="false"
+				  mouseChildren="true"
+				  mouseCursors="{null}"
+				  >
+	<mx:TitleWindow id="window"
+					width="100%"
+					height="100%"
+					verticalGap="0"
+					borderAlpha="1"
+					close="onClose()"
+					showCloseButton="true"
+					>
+		<!--id="titleControl" -->
+		<mx:HBox id="buttonsContainer">
+			<mx:Button id="refreshControl"
+					   x="10"
+					   y="12"
+					   width="20"
+					   height="20"
+					   icon="@Embed('/assets/refreshIcon.gif')"
+					   includeInLayout="{message!=null}"
+					   toolTip="Refresh"
+					   click="refreshClick()"
+					   visible="{message!=null}"
+					   />
+		</mx:HBox>
+
+		<mx:VBox id="dataContainer"
+				 width="100%"
+				 height="100%"
+				 />
+		<mx:Script>
+			<![CDATA[
+				import mx.core.UIComponent;
+				import mf.framework.Message;
+				import mf.framework.IMessageBroker;
+				import mf.framework.ICommand;
+				import mx.controls.Alert;
+				import mx.managers.*;
+				import mx.collections.*;
+				import mx.binding.utils.BindingUtils;
+
+				import collections.*;
+
+				[ArrayElementType("mx.core.UIComponent")]
+				public var windowContent:Array;
+
+				[Bindable]
+				public var message:Message;
+
+				private var _container:DisplayObjectContainer;
+
+				private var mb:IMessageBroker;
+
+				private var _title:String = "";
+
+				private var titleChanged:Boolean = false;
+
+				public function get buttons():DisplayObjectContainer {
+					return buttonsContainer;
+				}
+
+				public function get title():String {
+					return window.title;
+				}
+
+				public function set title(value:String):void {
+					_title = value;
+					titleChanged = true;
+					this.invalidateDisplayList();
+				}
+
+				public function get container():DisplayObjectContainer {
+					return _container;
+				}
+
+				public function set container(value:DisplayObjectContainer):void {
+					_container = value;
+				}
+
+				public function set showRefreshControl(value:Boolean):void {
+					refreshControl.visible = refreshControl.includeInLayout = value;
+				}
+
+				public function initializeThis(message:Message, mb:IMessageBroker, vo:* = null):void {
+					this.message = message;
+					this.mb = mb;
+				}
+
+				override protected function updateDisplayList(unscaledWidth:Number, unscaledHeight:Number):void {
+					if (titleChanged) {
+						titleChanged = false;
+						this.window.title = _title;
+					}
+
+					super.updateDisplayList(unscaledWidth, unscaledHeight);
+				}
+
+				protected function refreshClick():void {
+					var newMessage:Message = new Message(message.name, this, message.body);
+					newMessage.body.originalSender = this;
+					this.mb.send(newMessage);
+				}
+
+
+				private function addWindowContent():void {
+					if (windowContent != null) {
+						for each (var component:UIComponent in windowContent) {
+							this.dataContainer.addChild(component);
+						}
+					}
+				}
+
+				private function initMe():void {
+					_container = dataContainer;
+				}
+
+				private function onClose():void {
+					this.dispatchEvent(new Event(Event.CLOSE));
+				}
+			]]>
+		</mx:Script>
+
+	</mx:TitleWindow>
+</oh:ObjectHandles>

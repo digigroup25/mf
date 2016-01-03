@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="" >
+<testsuite  name="Default Test Suite" project="control-objects">
+<testsuite name="mindmaps.importexport:MapTextExporterTest" type="testcaseclass"/>
+<testsuite name="mindmaps.importexport:TokenizerTest" type="testcaseclass"/>
+<testsuite name="mindmaps.importexport.task:NameTextualMatcherTest" type="testcaseclass"/>
+<testsuite name="mindmaps.importexport.task:PriorityTextualMatcherTest" type="testcaseclass"/>
+<testsuite name="mindmaps.importexport.task:TaskMatcherTest" type="testcaseclass"/>
+</testsuite>
+</testrun>

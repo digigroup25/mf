@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="assertions.Require"/>
+    <classEntry path="collections.AliasHashMap"/>
+    <classEntry path="collections.ArrayCollectionEx"/>
+    <classEntry path="collections.ArrayCollectionIterator"/>
+    <classEntry path="collections.ArrayCollectionViewer"/>
+    <classEntry path="collections.ArrayCollectionViewerContext"/>
+    <classEntry path="collections.Bag"/>
+    <classEntry path="collections.CollectionConverter"/>
+    <classEntry path="collections.CollectionConverterContext"/>
+    <classEntry path="collections.HashMap"/>
+    <classEntry path="collections.ICollection"/>
+    <classEntry path="collections.IHashMap"/>
+    <classEntry path="collections.IIterable"/>
+    <classEntry path="collections.IIterator"/>
+    <classEntry path="collections.IName"/>
+    <classEntry path="collections.IPluggableObject"/>
+    <classEntry path="collections.Set"/>
+    <classEntry path="collections.Singleton"/>
+    <classEntry path="collections.TreeCollectionEx"/>
+    <classEntry path="collections.tree.AbstractTreeIterator"/>
+    <classEntry path="collections.tree.BreadthFirstTreeIterator"/>
+    <classEntry path="collections.tree.DoubleLinkedTree"/>
+    <classEntry path="collections.tree.ITreeData"/>
+    <classEntry path="collections.tree.ITreeIterator"/>
+    <classEntry path="collections.tree.ITreeRanker"/>
+    <classEntry path="collections.tree.ITreeSorter"/>
+    <classEntry path="collections.tree.InOrderTreeIterator"/>
+    <classEntry path="collections.tree.SubtreeIterator"/>
+    <classEntry path="collections.tree.TreeChildrenChangedEvent"/>
+    <classEntry path="collections.tree.TreeCollectionExCloner"/>
+    <classEntry path="collections.tree.TreeComposite"/>
+    <classEntry path="collections.tree.TreeIterator"/>
+    <classEntry path="collections.tree.TreeIteratorItem"/>
+    <classEntry path="collections.tree.TreeLeafIterator"/>
+    <classEntry path="collections.tree.TreeRankerResult"/>
+    <classEntry path="collections.tree.TreeTypeIterator"/>
+    <classEntry path="collections.tree.TreeWeightRanker"/>
+    <classEntry path="collections.tree.TreeWeightSorter"/>
+    <classEntry path="commonutils.ArrayUtil"/>
+    <classEntry path="commonutils.AsyncServer"/>
+    <classEntry path="commonutils.Attribute"/>
+    <classEntry path="commonutils.Base64"/>
+    <classEntry path="commonutils.CharCode"/>
+    <classEntry path="commonutils.ClassInspector"/>
+    <classEntry path="commonutils.CompilationDate"/>
+    <classEntry path="commonutils.DeepCopy"/>
+    <classEntry path="commonutils.ExecutionTimer"/>
+    <classEntry path="commonutils.Hasher"/>
+    <classEntry path="commonutils.ICloneable"/>
+    <classEntry path="commonutils.LeadingZeros"/>
+    <classEntry path="commonutils.MinutePrecisionTimeSpan"/>
+    <classEntry path="commonutils.NumberUtil"/>
+    <classEntry path="commonutils.ObjectHelper"/>
+    <classEntry path="commonutils.StringBuffer"/>
+    <classEntry path="commonutils.StringUtil"/>
+    <classEntry path="commonutils.TimeSpan"/>
+    <classEntry path="commonutils.TimeSpanFormatter"/>
+    <classEntry path="commonutils.UIControlUtil"/>
+    <classEntry path="converters.IXmlConverter"/>
+    <classEntry path="converters.XmlCollectionConverter"/>
+    <classEntry path="converters.XmlCollectionConverterFactory"/>
+    <classEntry path="converters.XmlCollectionConverter_1_0"/>
+    <classEntry path="converters.XmlCollectionConverter_1_1"/>
+    <classEntry path="converters.XmlCollectionInspector"/>
+    <classEntry path="logging.LogUtil"/>
+    <classEntry path="persistence.IPersistor"/>
+    <classEntry path="persistence.ObjectPersistor"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

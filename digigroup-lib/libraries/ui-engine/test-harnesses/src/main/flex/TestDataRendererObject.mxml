@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical" 
+	 initialize="init()"	styleName="plain">
+	 <mx:Grid>
+            <mx:GridRow>
+                <mx:GridItem>
+                	<mx:VBox>
+                		<mx:Label text="Object: handles for text only"/>
+						<mx:VBox id="objectBox" height="100%" width="100%"/>
+                	</mx:VBox>
+                    
+                </mx:GridItem>
+                <mx:GridItem>
+                	<mx:VBox>
+                		<mx:Label text="Object: handles for text only, dynamic property"/>
+						<mx:VBox id="objectDynPropBox" height="100%" width="100%"/>
+                	</mx:VBox>
+                </mx:GridItem>
+                <mx:GridItem>
+                	<mx:VBox>
+                		<mx:Label text="Object: no handles "/>
+						<mx:VBox id="objectBoxNoHandles" height="100%" width="100%"/>
+                	</mx:VBox>
+                </mx:GridItem>
+                <mx:GridItem>
+                	<mx:VBox>
+                		<mx:Label text="Object: no ViewDataFilter "/>
+						<mx:VBox id="objectBoxNoViewDataFilter" height="100%" width="100%"/>
+						<mx:Button label="Copy to model" click="copyAbcToModel(event);"/>
+                	</mx:VBox>
+                </mx:GridItem>
+            </mx:GridRow>
+		</mx:Grid>
+	 <!--
+	 <mx:HBox width="100%"  >
+	 	<mx:VBox width="50%" >
+		 	<mx:Label text="ArrayCollection with TreeCollectionEx"/>
+			<mx:VBox id="arrayCollectionExBox" height="100%"/>
+		</mx:VBox>
+	</mx:HBox>
+	<mx:HBox>
+		<mx:VBox width="50%" >
+		 	<mx:Label text="Empty ArrayCollection (null)"/>
+			<mx:VBox id="nullArrayCollectionExBox" height="100%"/>
+		</mx:VBox>
+		<mx:VBox width="50%" >
+		 	<mx:Label text="Empty ArrayCollection (numElements=0)"/>
+			<mx:VBox id="zeroArrayCollectionExBox" height="100%"/>
+		</mx:VBox>
+	</mx:HBox>
+	-->
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			//import initializers.ViewKeywordControlMapInitializer;
+			import vos.Task;
+			import mx.collections.ArrayCollection;
+			
+			import uiengine.datarenderer.*;
+			import collections.*;
+			import factories.*;
+			import testclasses.*;
+			
+			private var abc:Abc;
+			private function init():void
+			{
+				//new ViewKeywordControlMapInitializer();
+				
+				var a:Task = new Task();
+				a.name = "taskName";
+				var context:DataRendererContext = new DataRendererContext(a);
+				objectBox.addChild(DataRenderer.render(context));
+				
+				var b:Task = new Task();
+				b.name = "taskName";
+				//b.link = new WebLink("www.abc.com");
+				context = new DataRendererContext(b, objectDynPropBox);
+				/*treeCollectionBox.addChild(*/DataRenderer.render(context);
+				
+				var c:Task = new Task();
+				c.name = "taskName";
+				context = new DataRendererContext(c, objectBoxNoHandles);
+				context.useObjectHandles = false;
+				/*objectBox.addChild(*/DataRenderer.render(context);
+				
+				abc = new Abc("a", 1, new Date());
+				context = new DataRendererContext(abc, objectBoxNoViewDataFilter);
+				DataRenderer.render(context);
+				
+				/*
+				var tree:TreeCollectionEx = new TreeFactory().createPriorityTaskTree();
+				var res:ArrayCollection = CollectionConverter.toArrayPreOrder(tree, true);
+				context = new DataRendererContext(res);
+				arrayCollectionExBox.addChild(DataRenderer.render(context));
+				
+				res = null;//new ArrayCollection();
+				context = new DataRendererContext(res);
+				nullArrayCollectionExBox.addChild(DataRenderer.render(context));
+				
+				res = new ArrayCollection();
+				context = new DataRendererContext(res);
+				zeroArrayCollectionExBox.addChild(DataRenderer.render(context));
+				*/
+			}
+			
+			private function copyAbcToModel(e:MouseEvent):void{
+				//DataRenderer.updateModel(objectBoxNoViewDataFilter, abc);
+				Alert.show(abc.name + abc.val + abc.date);
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

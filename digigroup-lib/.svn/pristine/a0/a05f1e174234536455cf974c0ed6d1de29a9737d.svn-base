@@ -1,0 +1,83 @@
+package mindmaps2.elements.iteration {
+	import assertions.Require;
+
+	import collections.IIterator;
+	import collections.TreeCollectionEx;
+	import collections.tree.TreeLeafIterator;
+
+	import mindmaps.importexport.WordTokenizer;
+
+	import vos.Task;
+
+	public class GroupPerformanceMetricCalculator {
+
+		private static const wordTokenizer:WordTokenizer = new WordTokenizer();
+
+		private static const performanceMetricCalculator:PerformanceMetricCalculator = new PerformanceMetricCalculator();
+
+		public function GroupPerformanceMetricCalculator() {
+		}
+
+		public function calculateGroupPerformance(iterationNode:TreeCollectionEx):GroupPerformanceMetric {
+			Require.notNull(iterationNode, "iterationNode");
+
+			var result:GroupPerformanceMetric = new GroupPerformanceMetric();
+
+			var leafTaskNodes:Array = getLeafTaskNodes(iterationNode);
+
+			var nameTasksMap:Object = getMapNameToTasks(leafTaskNodes);
+
+			var namePerformanceMetricMap:Object = getNamePerformanceMetricMap(nameTasksMap);
+
+			populateGroupPerformanceMetric(result, namePerformanceMetricMap);
+			return result;
+		}
+
+		private function populateGroupPerformanceMetric(metric:GroupPerformanceMetric, map:Object):void {
+			for (var name:String in map) {
+				metric.addPerformanceMetric(name, map[name]);
+			}
+		}
+
+		private function getMapNameToTasks(tasks:Array):Object {
+			var result:Object = {};
+
+			for each (var taskNode:TreeCollectionEx in tasks) {
+				var task:Task = Task(taskNode.vo);
+				var names:Array = wordTokenizer.getWords(task.assignedTo);
+				if (names.length == 0) {
+					names = [ "Unassigned" ];
+				}
+				for each (var name:String in names) {
+					if (result[name] == undefined)
+						result[name] = [];
+					result[name].push(taskNode);
+				}
+			}
+
+			return result;
+		}
+
+		private function getNamePerformanceMetricMap(nameTasksMap:Object):Object {
+			var result:Object = {};
+
+			for (var name:String in nameTasksMap) {
+				result[name] = performanceMetricCalculator.calculatePerformanceMetric(nameTasksMap[name]);
+			}
+
+			return result;
+		}
+
+		private function getLeafTaskNodes(node:TreeCollectionEx):Array {
+			var it:IIterator = new TreeLeafIterator(node);
+			var leafTaskNodes:Array = [];
+			while (it.hasNext()) {
+				var leafNode:TreeCollectionEx = TreeCollectionEx(it.next());
+				if (leafNode.vo is Task) {
+					leafTaskNodes.push(leafNode);
+				}
+			}
+			return leafTaskNodes;
+		}
+	}
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+				layout="absolute"
+				creationComplete="init()"
+				>
+	<mx:VBox width="100%"
+			 height="100%"
+			 >
+		<!--<mx:Button label="init" click="addDropListener()"/>-->
+		<mx:Box id="box"
+				width="100%"
+				height="100%"
+				/>
+	</mx:VBox>
+
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.Tree;
+			import mx.events.DragEvent;
+			import vos.Task;
+			import mf.framework.MessageTraceBroker;
+			import mindmaps.map.MapModel2Factory;
+			import mindmaps.map.ui.TreeContainer2Factory;
+			import mf.framework.Container2;
+			import mindmaps.map.MapModel2;
+			import mf.framework.IMessageBroker;
+			import factories.TreeFactory;
+
+			private var mb:IMessageBroker;
+
+			private var map:MapModel2;
+
+			private var c:Container2;
+
+			private var treeView:Tree;
+
+			private function init():void {
+				mb = new MessageTraceBroker();
+
+				map = new MapModel2Factory().createEmptyMap("");
+				//map.nodes = new TreeFactory().createParentChildHPTaskTree();
+				map.nodes = new TreeFactory().createRandomVoTree(40, [ Task ], true);
+
+				//commented out to compile since createWithHistory is removed
+				//c = TreeContainer2Factory.createWithHistory(mb, map, box, mapFilters, null);
+				c.initialize();
+
+				this.callLater(addDropListener);
+			}
+
+			private function addDropListener():void {
+				// TODO: 2011/06/19 KTD: Commented out to get module to compile.  This needs to be looked at.  Looks like it was written against the old control objects module.
+//				var nodeController:NodeInteractionController = NodeInteractionController(c.getChildByName("view").controllers[0]);
+//				treeView = nodeController.treeView;
+//				treeView.addEventListener(DragEvent.DRAG_DROP, onDragDrop, false, 100);
+			}
+
+			private function onDragDrop(event:DragEvent):void {
+
+				event.preventDefault();
+				treeView.hideDropFeedback(event);
+
+				var items:Array = event.dragSource.dataForFormat("items") as Array;
+				var dropIndex:int = treeView.calculateDropIndex(event);
+				trace("drop index: ", dropIndex);
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

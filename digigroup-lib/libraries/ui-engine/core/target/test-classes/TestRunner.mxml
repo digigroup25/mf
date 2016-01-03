@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--can't use velocity, got:
+java.io.InvalidClassException: org.apache.velocity.runtime.parser.node.ASTprocess; class invalid for deserialization-->
+<unitestingsupport:TestApplication 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	xmlns:unitestingsupport="org.sonatype.flexmojos.unitestingsupport.*"
+	layout="absolute"
+	initialize="init()" 
+	port="53323" 
+	controlPort="53322" 
+	>
+
+
+
+	<mx:Script>
+		<![CDATA[
+
+import uiengine.ActionRepositoryTest; ActionRepositoryTest;
+import uiengine.DataRendererHelperTest; DataRendererHelperTest;
+import uiengine.DataRendererTest; DataRendererTest;
+import uiengine.MenuAssemblerTest; MenuAssemblerTest;
+import UIEngineTest; UIEngineTest;
+
+
+			private function init():void {
+addTest( ActionRepositoryTest);
+addTest( DataRendererHelperTest);
+addTest( DataRendererTest);
+addTest( MenuAssemblerTest);
+addTest( UIEngineTest);
+
+			}
+		]]>
+	</mx:Script>
+
+</unitestingsupport:TestApplication>

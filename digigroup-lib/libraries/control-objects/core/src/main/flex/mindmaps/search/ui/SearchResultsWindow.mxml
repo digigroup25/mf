@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<components:FloatingWindow xmlns:components="components.*"
+						   xmlns:components1="mindmaps.map.ui.tree.components.*"
+						   xmlns:mx="http://www.adobe.com/2006/mxml"
+						   xmlns:ns="library://ns.adobe.com/flex/mx"
+						   xmlns:s="library://ns.adobe.com/flex/spark"
+						   >
+	<mx:Script>
+		<![CDATA[
+			import collections.TreeCollectionEx;
+
+			import mx.events.ListEvent;
+
+			[Bindable]
+			public var dataProvider:Object;
+
+			private function datagridChangeHandler(event:ListEvent):void {
+				this.dispatchEvent(new SearchResultEvent(SearchResultEvent.SELECT,
+					TreeCollectionEx(event.itemRenderer.data)));
+			}
+
+			private function nameLabelFunction(item:Object, column:DataGridColumn):String {
+				if (item.hasOwnProperty("vo") && item.vo.hasOwnProperty("name")) {
+					return item.vo.name;
+				}
+				return "";
+			}
+		]]>
+	</mx:Script>
+
+	<components:windowContent>
+		<mx:DataGrid width="100%"
+					 dataProvider="{dataProvider}"
+					 change="datagridChangeHandler(event)"
+					 >
+
+			<mx:columns>
+				<mx:DataGridColumn labelFunction="nameLabelFunction"
+								   headerText="match"
+								   />
+			</mx:columns>
+		</mx:DataGrid>
+	</components:windowContent>
+</components:FloatingWindow>

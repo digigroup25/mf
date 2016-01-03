@@ -1,0 +1,21 @@
+package mindmaps2.elements.task.queries
+{
+	import collections.TreeCollectionEx;
+	import collections.tree.*;
+	
+	import mindmaps2.elements.task.operations.TaskService;
+	
+	public class SortTasks implements ITreeSorter
+	{
+		private const sorter:ITreeSorter = new TreeWeightSorter();
+		
+		//returns a clone of ranked tree where done tasks (including composite)
+		//are not included
+		public function sort(root:TreeCollectionEx, weightPropertyName:String):TreeCollectionEx {
+			var sortedTree:TreeCollectionEx = sorter.sort(root, weightPropertyName);
+			//remove done
+			new TaskService().removeDone(sortedTree);
+			return sortedTree;
+		}
+	}
+}

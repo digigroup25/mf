@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.digigroup.digigrouplib.ui-engine</groupId>
+		<artifactId>ui-engine-pom</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>ui-engine</artifactId>
+	<packaging>swc</packaging>
+
+	<name>UI Engine Core</name>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.sonatype.flexmojos</groupId>
+				<artifactId>flexmojos-maven-plugin</artifactId>
+				<extensions>true</extensions>
+				<executions>
+					<!--
+					    We want to publish the test jars of this module for other modules to use in their tests so we
+					    include this execution.  Pretty sad we have to do this - it's something that Flexmojos should
+					    do automatically like the Java plugin does.  Flexmojos is somewhat behind its Java counterpart
+					    in terms of usability and transparency so we can't define this any higher than this level.
+					    (Flexmojos chokes if this is present and there are no test classes, a bug that was fixed in
+					    the Java world some time ago.)
+					-->
+					<execution>
+						<id>test-swc</id>
+						<phase>test-compile</phase>
+						<goals>
+							<goal>test-swc</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.digigroup.digigrouplib.action-mvc</groupId>
+			<artifactId>action-mvc</artifactId>
+			<version>${project.version}</version>
+			<type>swc</type>
+		</dependency>
+
+		<!--
+		    Yucky inclusion form for Flex test dependencies.  Java lets us do the classifier and type in one go but
+		    we have to specify both here.
+		-->
+		<dependency>
+			<groupId>com.digigroup.digigrouplib.action-mvc</groupId>
+			<artifactId>action-mvc</artifactId>
+			<version>${project.version}</version>
+			<classifier>tests</classifier>
+			<type>swc</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.digigroup.external</groupId>
+			<artifactId>object-handles</artifactId>
+			<version>${com.digigroup.external.objecthandles.version}</version>
+			<type>swc</type>
+		</dependency>
+
+		<dependency>
+			<groupId>com.digigroup.external</groupId>
+			<artifactId>tree-map</artifactId>
+			<version>${com.digigroup.external.treemap.version}</version>
+			<type>swc</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.digigroup.digigrouplib.pluggable-objects</groupId>
+			<artifactId>pluggable-objects</artifactId>
+			<version>${project.version}</version>
+			<type>swc</type>
+		</dependency>
+	</dependencies>
+
+</project>

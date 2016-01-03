@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:containers="mindmaps.map.ui.tree.containers.*"
+			   xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   preinitialize="onInitialize(event)"
+			   applicationComplete="onApplicationComplete(event)"
+			   >
+	<mx:VBox width="100%"
+			 height="100%"
+			 >
+		<mx:HBox>
+			<mx:Button label="FlexSpy"
+					   click="runFlexSpy()"
+					   />
+			<mx:Button label="Debug"
+					   click="debug()"
+					   />
+		</mx:HBox>
+
+		<containers:Main id="treeApp"
+						 width="100%"
+						 height="100%"
+						 />
+	</mx:VBox>
+
+	<fx:Style source="/assets/global.css" />
+
+	<fx:Script>
+		<![CDATA[
+			import actions.*;
+
+			import com.flexspy.FlexSpy;
+
+			import commonutils.CompilationDate;
+
+			import mf.framework.Container2;
+			import mf.framework.MessageBroker;
+			import mf.framework.MessageLogBroker;
+
+			import mindmaps.map.MapContext;
+			import mindmaps.map.MapContextFactory;
+
+			import mindmaps2.ApplicationContainer2;
+			import mindmaps2.ApplicationContainerContext;
+			import mindmaps2.actions.ActionReplacer;
+			import mindmaps2.actions.RootAction;
+			import mindmaps2.actions.map.SelectMap;
+			import mindmaps2.actions.map.SelectMapFake;
+			import mindmaps2.storage.services.MapRepositoryFactory;
+			import mindmaps2.storage.services.TestMapRepository;
+
+			import mx.events.FlexEvent;
+			import mx.utils.StringUtil;
+
+			private var container:Container2;
+
+			private var actionReplacer:ActionReplacer = new ActionReplacer();
+
+			private var rootAction:AbstractAction;
+
+			private var compilationDate:CompilationDate; // = new CompilationDate();
+
+			private function onInitialize(event:FlexEvent):void {
+				compilationDate = new CompilationDate();
+
+			}
+
+
+			private function getCompiledOn():String {
+				var res:String = StringUtil.substitute("Build Type: developer (built on {0}, {1} {2}, {3} at {4}:{5}:{6} {7})",
+					compilationDate.dayName, compilationDate.monthName, compilationDate.dayNumber, compilationDate.year,
+					compilationDate.hour, compilationDate.minute, compilationDate.seconds, compilationDate.ampm);
+				return res;
+			}
+
+
+			private function onApplicationComplete(event:FlexEvent):void {
+				this.callLater(initializeContainer);
+
+			}
+
+
+			private function initializeContainer():void {
+				var mb:MessageBroker = new MessageLogBroker();
+				MapRepositoryFactory.localRepoClass = TestMapRepository;
+				//AppSettings.interactiveMenuController = InteractiveMenuUserActionSimulator;
+
+				rootAction = new RootAction();
+				//rootAction.addChild(new RegisterAction("Register"));
+
+				actionReplacer.add(SelectMap, SelectMapFake);
+				//actionReplacer.replace(rootAction);
+				var mapContext:MapContext = new MapContextFactory().createDefault();
+				var applicationContainerContext:ApplicationContainerContext = new ApplicationContainerContext();
+				applicationContainerContext.compiledOn = getCompiledOn();
+				container = new ApplicationContainer2(mb, treeApp, mapContext, rootAction, applicationContainerContext); //, centralArea, rootAction);
+
+				container.initialize();
+			}
+
+
+			private function runFlexSpy():void {
+				FlexSpy.show(this);
+			}
+
+
+			private function debug():void {
+
+			}
+		]]>
+	</fx:Script>
+</s:Application>

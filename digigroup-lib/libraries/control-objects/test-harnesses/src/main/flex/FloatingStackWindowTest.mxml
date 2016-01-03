@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:components="components.*">
+	<mx:VBox>
+		<mx:Button label="add window" click="addWindow()"/>
+		<components:FloatingStackWindow id="stack"/>
+		
+		
+	</mx:VBox>
+	
+	<mx:Script>
+		<![CDATA[
+			import mindmaps2.elements.ui.TaskEditor;
+			private function addWindow():void {
+				stack.dataContainer.addChild(new TaskEditor());
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml">
+<mx:VBox>
+	
+	
+	<mx:Tree id="tree1" labelField="@label" showRoot="true" width="160" 
+   	itemRenderer="customRenderers.CustomLabel" itemEditor="mx.controls.TextInput" 
+   	creationComplete="init()" editable="true">
+      <mx:XMLListCollection id="MailBox">
+         <mx:XMLList>
+            <folder label="Mail">
+               <folder label="INBOX"/>
+               <folder label="Personal Folder">
+                  <Pfolder label="Business" />
+                  <Pfolder label="Demo" /> 
+                     <Pfolder label="Personal" isBranch="true" /> 
+                     <Pfolder label="Saved Mail" /> 
+                  </folder>
+                  <folder label="Sent" />
+                  <folder label="Trash" />
+            </folder>
+         </mx:XMLList>
+      </mx:XMLListCollection>
+   </mx:Tree>
+</mx:VBox>
+   
+   <mx:Script>
+   	<![CDATA[
+   		import mx.controls.Alert;
+   		import mx.events.ListEvent;
+   		import vos.Item;
+   		import mx.events.ItemClickEvent;
+   		import mx.controls.TextInput;
+   		
+   		private var prevItem:Object;
+   		
+   		private function init():void {
+   			var t:Transform = new Transform(tree1);
+   			t.matrix = new Matrix(-1, 0, 0, 1);
+   			//tree1.transform = 
+   			
+   		}
+   	]]>
+   </mx:Script>
+</mx:Application>
+

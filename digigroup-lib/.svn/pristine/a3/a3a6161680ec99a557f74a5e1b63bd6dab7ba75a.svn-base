@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:ElementEditorTemplate xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:ui="mindmaps2.elements.ui.*">
+	<ui:editorContent>
+		<mx:FormItem label="company">
+			<mx:TextInput id="company"/>
+		</mx:FormItem>
+		<mx:FormItem label="phone">
+			<mx:TextInput id="phone"/>
+		</mx:FormItem>
+		<mx:FormItem label="email">
+			<mx:TextInput id="email"/>
+		</mx:FormItem>
+	</ui:editorContent>
+		<mx:Script>
+			<![CDATA[
+				import vos.*;
+				
+				protected override function setDataProvider(value:Object):void {
+					if (!(value is Contact))
+						throw new ArgumentError("dataProvider value has to be of type Contact");
+					super.setDataProvider(value);
+				}
+				
+				protected override function bind():void {
+					bindBidirectionally(_dataProvider, "company", company, "text");
+					bindBidirectionally(_dataProvider, "phone", phone, "text");
+					bindBidirectionally(_dataProvider, "email", email, "text");
+				}
+			]]>
+		</mx:Script>
+</ui:ElementEditorTemplate>

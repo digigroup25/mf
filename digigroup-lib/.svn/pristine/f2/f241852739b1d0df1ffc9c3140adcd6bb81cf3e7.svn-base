@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Button xmlns:mx="http://www.adobe.com/2006/mxml" skin="@Embed('/assets/expandIcon.gif')"
+	width="16" height="16" maxWidth="16" maxHeight="16" mouseOver="showMenu()" 
+	creationComplete="onCreationComplete(event)">
+	
+	<mx:Metadata>
+		[Event(name="menuShow", type="mx.events.MenuEvent")]
+		[Event(name="itemClick", type="mx.events.MenuEvent")]
+	</mx:Metadata>
+	<mx:Script>
+		<![CDATA[
+			import mx.events.MenuEvent;
+			import mx.events.FlexEvent;
+			import mx.controls.Menu;
+			
+			private var menu:Menu = new Menu();
+			//private var menuData:Array = [{label:"MenuItem1"}, {label:"MenuItem2"}];
+			
+			private var dataProviderChanged:Boolean = false;
+			private var _dataProvider:Object;
+			
+			private static const MENU_POSITION_OFFSET:uint = 10;
+			
+			private function onCreationComplete(event:FlexEvent):void {
+				menu.labelField = "label";
+				menu.addEventListener(MenuEvent.ITEM_CLICK, onMenuClick);
+			}
+			
+			private function showMenu():void {
+				trace("ExpandingMenu.showMenu");
+				this.dispatchEvent(new MenuEvent(MenuEvent.MENU_SHOW, true));
+				
+				Menu.popUpMenu(menu, this, dataProvider);
+				
+                var leftTopCorner:Point = this.localToGlobal(new Point(this.x, this.y));  
+                
+                menu.show(
+                	 leftTopCorner.x +  MENU_POSITION_OFFSET, 
+                	 leftTopCorner.y +  MENU_POSITION_OFFSET);
+			}
+			
+			public function get dataProvider():Object {
+				return this._dataProvider;
+			}
+			
+			public function set dataProvider(value:Object):void {
+				_dataProvider = value;
+				this.dataProviderChanged = true;
+				this.invalidateProperties();
+				/*this.invalidateSize(); */
+			}
+			
+			
+			override protected function commitProperties():void {
+				super.commitProperties();
+				
+				if (dataProviderChanged) {
+					dataProviderChanged = false;
+					
+					if (menu!=null) {
+						menu.dataProvider = getMenuList();
+					}
+				}
+			}
+			
+			private function getMenuList():Array {
+				return _dataProvider as Array;
+			}
+			
+			private function onMenuClick(event:MenuEvent):void {
+				var item:Object = event.item;
+				this.dispatchEvent(new MenuEvent(MenuEvent.ITEM_CLICK, true, false, null,
+					menu, item));
+			}
+		]]>
+	</mx:Script>
+	
+</mx:Button>

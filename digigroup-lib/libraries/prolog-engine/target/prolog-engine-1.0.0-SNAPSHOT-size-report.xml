@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <swf size="34203" compressedSize="16717">
+
+    <!-- Header data (SWF attributes, product info, markers, etc.) -->
+    <headerData totalSize="412">
+      <data type="metaData" size="293"/>
+      <data type="enableDebugger" size="33"/>
+      <data type="productInfo" size="28"/>
+      <data type="swfHeader" size="21"/>
+      <data type="debugID" size="18"/>
+      <data type="fileAttributes" size="6"/>
+      <data type="scriptLimits" size="6"/>
+      <data type="backgroundColor" size="5"/>
+      <data type="endMarker" size="2"/>
+    </headerData>
+
+    <!-- Cumulative frame size summary. -->
+    <frames totalSize="33791">
+      <frame size="33791" frame="1"/>
+    </frames>
+
+    <!-- Actionscript code and constant data. -->
+    <actionScript totalSize="33692">
+      <abc name="wprolog/WPrologEditor" size="8654" frame="1"/>
+      <abc name="wprolog/Term" size="4658" frame="1"/>
+      <abc name="wprolog/Engine" size="3888" frame="1"/>
+      <abc name="wprolog/ParseString" size="3549" frame="1"/>
+      <abc name="wprolog/WPrologOutput" size="1933" frame="1"/>
+      <abc name="wprolog/TermList" size="1830" frame="1"/>
+      <abc name="wprolog/Character" size="1385" frame="1"/>
+      <abc name="_4240ea5c500f03765a307958bcaf07b52a4c08fc9bd64be1374555de60de8490_flash_display_Sprite" size="1244" frame="1"/>
+      <abc name="wprolog/IO" size="1129" frame="1"/>
+      <abc name="_wprolog_WPrologEditorWatcherSetupUtil" size="1019" frame="1"/>
+      <abc name="wprolog/TermFactory" size="836" frame="1"/>
+      <abc name="wprolog/Hashtable" size="810" frame="1"/>
+      <abc name="wprolog/TermListFactory" size="782" frame="1"/>
+      <abc name="wprolog/ChoicePoint" size="780" frame="1"/>
+      <abc name="wprolog/Stack" size="656" frame="1"/>
+      <abc name="wprolog/OnceMark" size="539" frame="1"/>
+    </actionScript>
+
+    <!-- Additional frame tags (symbolClass, exportAssets, showFrame, etc). -->
+    <frameData totalSize="99">
+      <tag type="symbolClass" size="97" frame="1"/>
+      <tag type="showFrame" size="2" frame="1"/>
+    </frameData>
+  </swf>
+</report>

@@ -1,0 +1,17 @@
+<asdoc>
+
+<classRec name='ArrayComparer' fullname='ArrayComparer' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/testing/src/main/flex/ArrayComparer.as' namespace='' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='addCompareMessage' fullname='ArrayComparer/addCompareMessage' isStatic='true' isFinal='false' isOverride='false'  param_names='exp;act' param_types='Array;Array' param_defaults='undefined;undefined' result_type='String'>
+</method>
+<method name='compare' fullname='ArrayComparer/compare' isStatic='true' isFinal='false' isOverride='false'  param_names='exp;act' param_types='Array;Array' param_defaults='undefined;undefined' result_type='ArrayComparerResult'>
+</method>
+<classRec name='ArrayComparerResult' fullname='ArrayComparerResult' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/testing/src/main/flex/ArrayComparerResult.as' namespace='' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ArrayComparerResult' fullname='ArrayComparerResult/ArrayComparerResult' isStatic='false' isFinal='false' isOverride='false'  param_names='result;message' param_types='Boolean;String' param_defaults='undefined;undefined' result_type='*'>
+</method>
+<field name='message' fullname='ArrayComparerResult/message' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='result' fullname='ArrayComparerResult/result' type='Boolean' isStatic='false' isConst='false' >
+</field>
+</asdoc>

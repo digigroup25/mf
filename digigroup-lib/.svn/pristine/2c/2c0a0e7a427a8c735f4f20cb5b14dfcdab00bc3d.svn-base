@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<groupId>com.digigroup.root</groupId>
+	<artifactId>root-pom</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<packaging>pom</packaging>
+	<name>DigiGroup Maven Root POM</name>
+	<modelVersion>4.0.0</modelVersion>
+
+	<!--
+	   <scm>
+		   <connection>scm:svn:https://your svn URL here</connection>
+	   </scm>
+	   -->
+
+
+	<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>Nexus Repo</name>
+			<url>http://labs.digigroupinc.com:8080/nexus/content/repositories/releases/</url>
+		</repository>
+
+		<snapshotRepository>
+			<uniqueVersion>true</uniqueVersion>
+			<id>nexus</id>
+			<name>Nexus Repo Snapshot</name>
+			<url>http://labs.digigroupinc.com:8080/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<profiles>
+		<profile>
+			<id>osx</id>
+			<activation>
+				<os>
+					<family>mac</family>
+					<name>mac os x</name>
+				</os>
+			</activation>
+
+			<properties>
+				<flex.flashPlayer.command>/Applications/Flash Player Debugger.app/Contents/MacOS/Flash Player Debugger</flex.flashPlayer.command>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>linux</id>
+			<activation>
+				<os>
+					<family>unix</family>
+					<name>ubuntu</name>
+				</os>
+			</activation>
+
+			<properties>
+				<!-- Fully-qualified path of flash player here. -->
+			</properties>
+		</profile>
+	</profiles>
+
+	<properties>
+		<!-- Component versions -->
+		<com.adobe.flex.framework.version>4.5.0.17689</com.adobe.flex.framework.version>
+		<!--<com.adobe.flexunit.version>4.0-rc-1</com.adobe.flexunit.version>-->
+        <com.adobe.flexunit.version>4.1</com.adobe.flexunit.version>
+        <!--<org.flexunit.version>4.1</org.flexunit.version>-->
+		<org.sonatype.flexmojos.maven.plugin.version>4.0-SNAPSHOT</org.sonatype.flexmojos.maven.plugin.version>
+		<com.digigroup.external.corelib.version>1.0.0.PRIVATE</com.digigroup.external.corelib.version>
+		<com.digigroup.external.objecthandles.version>1.0.0.PRIVATE</com.digigroup.external.objecthandles.version>
+		<com.digigroup.external.treemap.version>1.0.0.PRIVATE</com.digigroup.external.treemap.version>
+		<com.digigroup.external.flexspy.version>1.0.0.PRIVATE</com.digigroup.external.flexspy.version>
+		<com.digigroup.external.flexcapacitor.version>1.0.0.PRIVATE</com.digigroup.external.flexcapacitor.version>
+		<org.degrafa.degrafa.version>3.1.beta</org.degrafa.degrafa.version>
+		<flexlib.flexlib-flex3.version>2.4</flexlib.flexlib-flex3.version>
+		<com.hamcrest.hamcrest-as3-flex.version>1.1.3</com.hamcrest.hamcrest-as3-flex.version>
+		<monster.debugger.MonsterDebugger.version>3.1</monster.debugger.MonsterDebugger.version>
+
+		<!-- Build properties -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.hamcrest</groupId>
+				<artifactId>hamcrest-as3-flex</artifactId>
+				<version>${com.hamcrest.hamcrest-as3-flex.version}</version>
+				<type>swc</type>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>flexlib</groupId>
+				<artifactId>flexlib-flex3</artifactId>
+				<type>swc</type>
+				<version>${flexlib.flexlib-flex3.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.degrafa</groupId>
+				<artifactId>degrafa</artifactId>
+				<version>${org.degrafa.degrafa.version}</version>
+				<type>swc</type>
+			</dependency>
+
+			<dependency>
+				<groupId>com.adobe.flex.framework</groupId>
+				<artifactId>flex-framework</artifactId>
+				<version>${com.adobe.flex.framework.version}</version>
+				<type>pom</type>
+			</dependency>
+
+			<dependency>
+				<groupId>com.adobe.flexunit</groupId>
+				<artifactId>flexunit</artifactId>
+				<version>${com.adobe.flexunit.version}</version>
+				<type>swc</type>
+				<scope>test</scope>
+			</dependency>
+           
+			<dependency>
+				<groupId>com.digigroup.external</groupId>
+				<artifactId>flexspy</artifactId>
+				<version>${com.digigroup.external.flexspy.version}</version>
+				<type>swc</type>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>com.digigroup.external</groupId>
+				<artifactId>corelib</artifactId>
+				<type>swc</type>
+				<version>${com.digigroup.external.corelib.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.digigroup.external</groupId>
+				<artifactId>flexcapacitor</artifactId>
+				<version>${com.digigroup.external.flexcapacitor.version}</version>
+				<type>swc</type>
+			</dependency>
+			
+            <dependency>
+                <groupId>monster.debugger</groupId>
+                <artifactId>MonsterDebugger</artifactId>
+                <version>${monster.debugger.MonsterDebugger.version}</version>
+                <type>swc</type>
+            </dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.sonatype.flexmojos</groupId>
+					<artifactId>flexmojos-maven-plugin</artifactId>
+					<version>${org.sonatype.flexmojos.maven.plugin.version}</version>
+					<extensions>true</extensions>
+
+					<executions>
+						<execution>
+							<id>default-test-compile</id>
+							<phase>test-compile</phase>
+							<goals>
+								<goal>test-compile</goal>
+							</goals>
+							<configuration>
+								<excludeTestFiles>
+									<excludeTestFile>**/Test*.as</excludeTestFile>
+									<excludeTestFile>**/Test*.mxml</excludeTestFile>
+								</excludeTestFiles>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

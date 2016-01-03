@@ -1,0 +1,50 @@
+package mindmaps2.elements.task.operations {
+	import collections.*;
+	import collections.tree.BreadthFirstTreeIterator;
+	import collections.tree.ITreeIterator;
+	import collections.tree.TreeLeafIterator;
+
+	import mindmaps2.elements.node.operations.NodeService;
+
+	import vos.Task;
+
+	public class TaskService {
+		/** Removes tasks that have marked done and return the count of
+		 *  removed tasks.
+		 */
+		private static const nodeService:NodeService = new NodeService();
+
+		public function removeDone(root:TreeCollectionEx):uint {
+			var isMatchFunction:Function = function(node:TreeCollectionEx):Boolean {
+				return (node.vo is Task && node.vo.done == 1);
+			}
+			return nodeService.remove(root, isMatchFunction);
+		}
+
+		public function keepDoneTasksOnly(root:TreeCollectionEx):void {
+			var isMatchFunction:Function = function(node:TreeCollectionEx):Boolean {
+				return !((node.vo is Task) && (node.vo.done == 1) || (node.numChildren > 0));
+			}
+			nodeService.remove(root, isMatchFunction, true);
+		}
+
+		public function removeNonTaskLeafs(root:TreeCollectionEx):void {
+			var it:IIterator = new TreeLeafIterator(root);
+			while (it.hasNext()) {
+				var node:TreeCollectionEx = TreeCollectionEx(it.next());
+				if (!(node.vo is Task)) {
+					deleteLeafNodeRecursively(node, root);
+				}
+			}
+		}
+
+		private function deleteLeafNodeRecursively(node:TreeCollectionEx, root:TreeCollectionEx):void {
+			var parent:TreeCollectionEx = TreeCollectionEx(node.findParent(root));
+			if (parent != null) {
+				parent.removeChild(node);
+				if (parent.numChildren == 0 /*remove itself*/)
+					deleteLeafNodeRecursively(parent, root);
+			}
+		}
+	}
+}

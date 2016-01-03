@@ -1,0 +1,599 @@
+<asdoc>
+
+<classRec name='Message' fullname='mf.framework:Message' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/Message.as' namespace='mf.framework' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='Message' fullname='mf.framework:Message/Message' isStatic='false' isFinal='false' isOverride='false'  param_names='name;sender;body' param_types='String;Object;Object' param_defaults='undefined;undefined;null' result_type='*'>
+</method>
+<method name='clone' fullname='mf.framework:Message/clone' isStatic='false' isFinal='false' isOverride='false'  result_type='mf.framework:Message'>
+</method>
+<method name='destroy' fullname='mf.framework:Message/destroy' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='isActive' fullname='mf.framework:Message/isActive' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='isDestroyed' fullname='mf.framework:Message/isDestroyed' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='toString' fullname='mf.framework:Message/toString' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<field name='active' fullname='mf.framework:Message/private:active' type='uint' isStatic='true' isConst='true' defaultValue='unknown' >
+</field>
+<field name='body' fullname='mf.framework:Message/body' type='Object' isStatic='false' isConst='false' >
+</field>
+<field name='destroyed' fullname='mf.framework:Message/private:destroyed' type='uint' isStatic='true' isConst='true' defaultValue='unknown' >
+</field>
+<field name='isForwarded' fullname='mf.framework:Message/isForwarded' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='name' fullname='mf.framework:Message/name' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='sender' fullname='mf.framework:Message/sender' type='Object' isStatic='false' isConst='false' >
+</field>
+<field name='status' fullname='mf.framework:Message/private:status' type='uint' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='suspended' fullname='mf.framework:Message/private:suspended' type='uint' isStatic='true' isConst='true' defaultValue='unknown' >
+</field>
+<interfaceRec name='ISender' fullname='mf.framework:ISender' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/ISender.as' namespace='mf.framework' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='send' fullname='mf.framework:ISender/mf.framework:ISender:send' isStatic='false' isFinal='false' isOverride='false'  param_names='message;itself' param_types='mf.framework:Message;Boolean' param_defaults='undefined;false' result_type='void'>
+</method>
+<interfaceRec name='IUninitialize' fullname='mf.framework:IUninitialize' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IUninitialize.as' namespace='mf.framework' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='uninitialize' fullname='mf.framework:IUninitialize/mf.framework:IUninitialize:uninitialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<interfaceRec name='IReceiver' fullname='mf.framework:IReceiver' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IReceiver.as' namespace='mf.framework' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='receive' fullname='mf.framework:IReceiver/mf.framework:IReceiver:receive' isStatic='false' isFinal='false' isOverride='false'  param_names='message' param_types='mf.framework:Message' param_defaults='undefined' result_type='void'>
+</method>
+<interfaceRec name='IResultResponder' fullname='mf.framework:IResultResponder' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IResultResponder.as' namespace='mf.framework' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='onResult' fullname='mf.framework:IResultResponder/mf.framework:IResultResponder:onResult' isStatic='false' isFinal='false' isOverride='false'  param_names='name;result' param_types='String;Object' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<interfaceRec name='IObserver' fullname='mf.framework:IObserver' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IObserver.as' namespace='mf.framework' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='hasSubscriber' fullname='mf.framework:IObserver/mf.framework:IObserver:hasSubscriber' isStatic='false' isFinal='false' isOverride='false'  param_names='subscriber' param_types='mf.framework:IReceiver' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='subscribe' fullname='mf.framework:IObserver/mf.framework:IObserver:subscribe' isStatic='false' isFinal='false' isOverride='false'  param_names='subscriber' param_types='mf.framework:IReceiver' param_defaults='undefined' result_type='void'>
+</method>
+<method name='unsubscribe' fullname='mf.framework:IObserver/mf.framework:IObserver:unsubscribe' isStatic='false' isFinal='false' isOverride='false'  param_names='subscriber' param_types='mf.framework:IReceiver' param_defaults='undefined' result_type='void'>
+</method>
+<interfaceRec name='IInitialize' fullname='mf.framework:IInitialize' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IInitialize.as' namespace='mf.framework' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='initialize' fullname='mf.framework:IInitialize/mf.framework:IInitialize:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<interfaceRec name='ICommand' fullname='mf.framework:ICommand' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/ICommand.as' namespace='mf.framework' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='execute' fullname='mf.framework:ICommand/mf.framework:ICommand:execute' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<interfaceRec name='IModelProvider' fullname='mf.framework:IModelProvider' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IModelProvider.as' namespace='mf.framework' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='model' fullname='mf.framework:IModelProvider/mf.framework:IModelProvider:model/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<method name='model' fullname='mf.framework:IModelProvider/mf.framework:IModelProvider:model/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Object' param_defaults='undefined' result_type='void'>
+</method>
+<classRec name='CommandContext' fullname='mf.framework:CommandContext' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/CommandContext.as' namespace='mf.framework' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='CommandContext' fullname='mf.framework:CommandContext/CommandContext' isStatic='false' isFinal='false' isOverride='false'  param_names='message;model' param_types='mf.framework:Message;Object' param_defaults='undefined;null' result_type='*'>
+</method>
+<field name='message' fullname='mf.framework:CommandContext/message' type='mf.framework:Message' isStatic='false' isConst='false' >
+</field>
+<field name='model' fullname='mf.framework:CommandContext/model' type='Object' isStatic='false' isConst='false' >
+</field>
+<classRec name='Receiver' fullname='mf.framework:Receiver' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/Receiver.as' namespace='mf.framework' access='public' baseclass='Object' interfaces='mf.framework:IReceiver' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='Receiver' fullname='mf.framework:Receiver/Receiver' isStatic='false' isFinal='false' isOverride='false'  param_names='messageHandler' param_types='Function' param_defaults='undefined' result_type='*'>
+</method>
+<method name='receive' fullname='mf.framework:Receiver/receive' isStatic='false' isFinal='false' isOverride='false'  param_names='message' param_types='mf.framework:Message' param_defaults='undefined' result_type='void'>
+</method>
+<field name='messageHandler' fullname='mf.framework:Receiver/private:messageHandler' type='Function' isStatic='false' isConst='false' >
+</field>
+<classRec name='ModelProvider' fullname='mf.framework:ModelProvider' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/ModelProvider.as' namespace='mf.framework' access='public' baseclass='Object' interfaces='mf.framework:IModelProvider' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ModelProvider' fullname='mf.framework:ModelProvider/ModelProvider' isStatic='false' isFinal='false' isOverride='false'  param_names='model' param_types='Object' param_defaults='undefined' result_type='*'>
+</method>
+<method name='model' fullname='mf.framework:ModelProvider/model/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<method name='model' fullname='mf.framework:ModelProvider/model/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Object' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_model' fullname='mf.framework:ModelProvider/private:_model' type='Object' isStatic='false' isConst='false' >
+</field>
+<classRec name='Command' fullname='mf.framework:Command' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/Command.as' namespace='mf.framework' access='public' baseclass='Object' interfaces='mf.framework:ICommand' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='Command' fullname='mf.framework:Command/Command' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='execute' fullname='mf.framework:Command/execute' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='context' fullname='mf.framework:Command/context/get' isStatic='false' isFinal='false' isOverride='false'  result_type='mf.framework:CommandContext'>
+</method>
+<method name='context' fullname='mf.framework:Command/context/set' isStatic='false' isFinal='false' isOverride='false'  param_names='val' param_types='mf.framework:CommandContext' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_context' fullname='mf.framework:Command/private:_context' type='mf.framework:CommandContext' isStatic='false' isConst='false' >
+</field>
+<classRec name='UserMessage' fullname='mf.framework:UserMessage' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/UserMessage.as' namespace='mf.framework' access='public' baseclass='mf.framework:Message' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='UserMessage' fullname='mf.framework:UserMessage/UserMessage' isStatic='false' isFinal='false' isOverride='false'  param_names='name;sender;body' param_types='String;Object;Object' param_defaults='undefined;undefined;null' result_type='*'>
+</method>
+<classRec name='SystemMessage' fullname='mf.framework:SystemMessage' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/SystemMessage.as' namespace='mf.framework' access='public' baseclass='mf.framework:Message' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='SystemMessage' fullname='mf.framework:SystemMessage/SystemMessage' isStatic='false' isFinal='false' isOverride='false'  param_names='name;sender;body' param_types='String;Object;Object' param_defaults='undefined;undefined;null' result_type='*'>
+</method>
+<interfaceRec name='IManagedLifecycle' fullname='mf.framework:IManagedLifecycle' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IManagedLifecycle.as' namespace='mf.framework' access='public' baseClasses='mf.framework:IInitialize;mf.framework:IUninitialize' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<interfaceRec name='IMessenger' fullname='mf.framework:IMessenger' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IMessenger.as' namespace='mf.framework' access='public' baseClasses='mf.framework:IReceiver;mf.framework:ISender' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<classRec name='AsyncCommand' fullname='mf.framework:AsyncCommand' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/AsyncCommand.as' namespace='mf.framework' access='public' baseclass='mf.framework:Command' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='AsyncCommand' fullname='mf.framework:AsyncCommand/AsyncCommand' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<interfaceRec name='IContainer' fullname='mf.framework:IContainer' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IContainer.as' namespace='mf.framework' access='public' baseClasses='mf.framework:IManagedLifecycle;mf.framework:IMessenger' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<classRec name='AsyncCommandContext' fullname='mf.framework:AsyncCommandContext' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/AsyncCommandContext.as' namespace='mf.framework' access='public' baseclass='mf.framework:CommandContext' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='AsyncCommandContext' fullname='mf.framework:AsyncCommandContext/AsyncCommandContext' isStatic='false' isFinal='false' isOverride='false'  param_names='message;model;responder' param_types='mf.framework:Message;Object;mx.rpc:AsyncResponder' param_defaults='undefined;undefined;undefined' result_type='*'>
+</method>
+<field name='responder' fullname='mf.framework:AsyncCommandContext/responder' type='mx.rpc:AsyncResponder' isStatic='false' isConst='false' >
+</field>
+<classRec name='MessageMacroCommand' fullname='mf.framework:MessageMacroCommand' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/MessageMacroCommand.as' namespace='mf.framework' access='public' baseclass='mf.framework:AsyncCommand' interfaces='mf.framework:ISender' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='MessageMacroCommand' fullname='mf.framework:MessageMacroCommand/MessageMacroCommand' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='send' fullname='mf.framework:MessageMacroCommand/send' isStatic='false' isFinal='false' isOverride='false'  param_names='m;itself' param_types='mf.framework:Message;Boolean' param_defaults='undefined;false' result_type='void'>
+</method>
+<field name='mb' fullname='mf.framework:MessageMacroCommand/mf.framework:mb' type='mf.framework:IMessageBroker' isStatic='false' isConst='false' >
+</field>
+<classRec name='AbstractController' fullname='mf.framework:AbstractController' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/AbstractController.as' namespace='mf.framework' access='public' baseclass='Object' interfaces='mf.framework:IMessenger;mf.framework:IManagedLifecycle' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='AbstractController' fullname='mf.framework:AbstractController/AbstractController' isStatic='false' isFinal='false' isOverride='false'  param_names='modelProvider;mb;messageHandler' param_types='mf.framework:IModelProvider;mf.framework:IMessageBroker;Function' param_defaults='null;null;null' result_type='*'>
+</method>
+<method name='activate' fullname='mf.framework:AbstractController/activate' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='deactivate' fullname='mf.framework:AbstractController/deactivate' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='initialize' fullname='mf.framework:AbstractController/initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='receive' fullname='mf.framework:AbstractController/receive' isStatic='false' isFinal='false' isOverride='false'  param_names='m' param_types='mf.framework:Message' param_defaults='undefined' result_type='void'>
+</method>
+<method name='send' fullname='mf.framework:AbstractController/send' isStatic='false' isFinal='false' isOverride='false'  param_names='m;itself' param_types='mf.framework:Message;Boolean' param_defaults='undefined;false' result_type='void'>
+</method>
+<method name='setContainer' fullname='mf.framework:AbstractController/mf.framework:setContainer' isStatic='false' isFinal='false' isOverride='false'  param_names='container' param_types='mf.framework:Container2' param_defaults='undefined' result_type='void'>
+</method>
+<method name='uninitialize' fullname='mf.framework:AbstractController/uninitialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='container' fullname='mf.framework:AbstractController/container/get' isStatic='false' isFinal='false' isOverride='false'  result_type='mf.framework:Container2'>
+</method>
+<method name='initialized' fullname='mf.framework:AbstractController/initialized/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='model' fullname='mf.framework:AbstractController/model/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<method name='uninitialized' fullname='mf.framework:AbstractController/uninitialized/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='model' fullname='mf.framework:AbstractController/model/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Object' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_activated' fullname='mf.framework:AbstractController/private:_activated' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='_container' fullname='mf.framework:AbstractController/private:_container' type='mf.framework:Container2' isStatic='false' isConst='false' >
+</field>
+<field name='_initialized' fullname='mf.framework:AbstractController/private:_initialized' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='_messageHandler' fullname='mf.framework:AbstractController/protected:_messageHandler' type='Function' isStatic='false' isConst='false' >
+</field>
+<field name='_uninitialized' fullname='mf.framework:AbstractController/private:_uninitialized' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='mb' fullname='mf.framework:AbstractController/mb' type='mf.framework:IMessageBroker' isStatic='false' isConst='false' >
+</field>
+<field name='modelProvider' fullname='mf.framework:AbstractController/protected:modelProvider' type='mf.framework:IModelProvider' isStatic='false' isConst='false' >
+</field>
+<interfaceRec name='IMessageBroker' fullname='mf.framework:IMessageBroker' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/IMessageBroker.as' namespace='mf.framework' access='public' baseClasses='mf.framework:ISender;mf.framework:IObserver' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='addConnector' fullname='mf.framework:IMessageBroker/mf.framework:IMessageBroker:addConnector' isStatic='false' isFinal='false' isOverride='false'  param_names='connector' param_types='mf.framework.messaging:Connector' param_defaults='undefined' result_type='void'>
+</method>
+<method name='connect' fullname='mf.framework:IMessageBroker/mf.framework:IMessageBroker:connect' isStatic='false' isFinal='false' isOverride='false'  param_names='mb;inboundFilter;outboundFilter' param_types='mf.framework:IMessageBroker;Object;Object' param_defaults='undefined;true;true' result_type='void'>
+</method>
+<method name='disconnectAll' fullname='mf.framework:IMessageBroker/mf.framework:IMessageBroker:disconnectAll' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='disconnect' fullname='mf.framework:IMessageBroker/mf.framework:IMessageBroker:disconnect' isStatic='false' isFinal='false' isOverride='false'  param_names='mb' param_types='mf.framework:IMessageBroker' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeConnector' fullname='mf.framework:IMessageBroker/mf.framework:IMessageBroker:removeConnector' isStatic='false' isFinal='false' isOverride='false'  param_names='connector' param_types='mf.framework.messaging:Connector' param_defaults='undefined' result_type='void'>
+</method>
+<method name='connectors' fullname='mf.framework:IMessageBroker/mf.framework:IMessageBroker:connectors/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='numConnectors' fullname='mf.framework:IMessageBroker/mf.framework:IMessageBroker:numConnectors/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
+<classRec name='Container2' fullname='mf.framework:Container2' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/Container2.as' namespace='mf.framework' access='public' baseclass='flash.events:EventDispatcher' interfaces='mf.framework:IContainer' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='Container2' fullname='mf.framework:Container2/Container2' isStatic='false' isFinal='false' isOverride='false'  param_names='mb;model;controllers;messageHandler;containers' param_types='mf.framework:IMessageBroker;Object;Array;Function;Array' param_defaults='null;null;null;null;null' result_type='*'>
+</method>
+<method name='addContainer' fullname='mf.framework:Container2/addContainer' isStatic='false' isFinal='false' isOverride='false'  param_names='container' param_types='mf.framework:Container2' param_defaults='undefined' result_type='void'>
+</method>
+<method name='addController' fullname='mf.framework:Container2/addController' isStatic='false' isFinal='false' isOverride='false'  param_names='controller' param_types='mf.framework:AbstractController' param_defaults='undefined' result_type='void'>
+</method>
+<method name='doInitialize' fullname='mf.framework:Container2/protected:doInitialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='doReceive' fullname='mf.framework:Container2/protected:doReceive' isStatic='false' isFinal='false' isOverride='false'  param_names='m' param_types='mf.framework:Message' param_defaults='undefined' result_type='void'>
+</method>
+<method name='doUninitialize' fullname='mf.framework:Container2/protected:doUninitialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='getContainerByName' fullname='mf.framework:Container2/getContainerByName' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='undefined' result_type='mf.framework:Container2'>
+</method>
+<method name='getDescendantContainers' fullname='mf.framework:Container2/getDescendantContainers' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='initialize' fullname='mf.framework:Container2/initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='receive' fullname='mf.framework:Container2/receive' isStatic='false' isFinal='false' isOverride='false'  param_names='m' param_types='mf.framework:Message' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeContainer' fullname='mf.framework:Container2/removeContainer' isStatic='false' isFinal='false' isOverride='false'  param_names='container' param_types='mf.framework:Container2' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeController' fullname='mf.framework:Container2/removeController' isStatic='false' isFinal='false' isOverride='false'  param_names='controller' param_types='mf.framework:AbstractController' param_defaults='undefined' result_type='void'>
+</method>
+<method name='send' fullname='mf.framework:Container2/send' isStatic='false' isFinal='false' isOverride='false'  param_names='m;itself' param_types='mf.framework:Message;Boolean' param_defaults='undefined;false' result_type='void'>
+</method>
+<method name='setContainerByName' fullname='mf.framework:Container2/setContainerByName' isStatic='false' isFinal='false' isOverride='false'  param_names='name;container' param_types='String;mf.framework:Container2' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='toString' fullname='mf.framework:Container2/toString' isStatic='false' isFinal='false' isOverride='true'  result_type='String'>
+</method>
+<method name='uninitialize' fullname='mf.framework:Container2/uninitialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='containers' fullname='mf.framework:Container2/containers/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='controllers' fullname='mf.framework:Container2/controllers/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='initialized' fullname='mf.framework:Container2/initialized/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='mb' fullname='mf.framework:Container2/mb/get' isStatic='false' isFinal='false' isOverride='false'  result_type='mf.framework:IMessageBroker'>
+</method>
+<method name='model' fullname='mf.framework:Container2/model/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<method name='name' fullname='mf.framework:Container2/name/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='uninitialized' fullname='mf.framework:Container2/uninitialized/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='containers' fullname='mf.framework:Container2/containers/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Array' param_defaults='undefined' result_type='void'>
+</method>
+<method name='controllers' fullname='mf.framework:Container2/controllers/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Array' param_defaults='undefined' result_type='void'>
+</method>
+<method name='mb' fullname='mf.framework:Container2/mb/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='mf.framework:IMessageBroker' param_defaults='undefined' result_type='void'>
+</method>
+<method name='model' fullname='mf.framework:Container2/model/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Object' param_defaults='undefined' result_type='void'>
+</method>
+<method name='name' fullname='mf.framework:Container2/name/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_containers' fullname='mf.framework:Container2/private:_containers' type='Array' isStatic='false' isConst='false' >
+</field>
+<field name='_controllers' fullname='mf.framework:Container2/private:_controllers' type='Array' isStatic='false' isConst='false' >
+</field>
+<field name='_initialized' fullname='mf.framework:Container2/protected:_initialized' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='_mb' fullname='mf.framework:Container2/private:_mb' type='mf.framework:IMessageBroker' isStatic='false' isConst='false' >
+</field>
+<field name='_name' fullname='mf.framework:Container2/private:_name' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='_uninitialized' fullname='mf.framework:Container2/protected:_uninitialized' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='messageHandler' fullname='mf.framework:Container2/messageHandler' type='Function' isStatic='false' isConst='false' >
+</field>
+<field name='modelProvider' fullname='mf.framework:Container2/protected:modelProvider' type='mf.framework:IModelProvider' isStatic='false' isConst='false' >
+</field>
+<classRec name='FrameworkFactory' fullname='mf.framework:FrameworkFactory' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/FrameworkFactory.as' namespace='mf.framework' access='internal' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='createAsyncCommand' fullname='mf.framework:FrameworkFactory/createAsyncCommand' isStatic='true' isFinal='false' isOverride='false'  param_names='commandClass;context;responder' param_types='Class;mf.framework:CommandContext;mx.rpc:AsyncResponder' param_defaults='undefined;undefined;undefined' result_type='mf.framework:AsyncCommand'>
+</method>
+<method name='createCommand' fullname='mf.framework:FrameworkFactory/createCommand' isStatic='true' isFinal='false' isOverride='false'  param_names='commandClass;context' param_types='Class;mf.framework:CommandContext' param_defaults='undefined;undefined' result_type='mf.framework:Command'>
+</method>
+<method name='createMessageBroker' fullname='mf.framework:FrameworkFactory/createMessageBroker' isStatic='true' isFinal='false' isOverride='false'  result_type='mf.framework:MessageBroker'>
+</method>
+<field name='messageBrokerType' fullname='mf.framework:FrameworkFactory/messageBrokerType' type='Class' isStatic='true' isConst='false' defaultValue='' >
+</field>
+<classRec name='AbstractCommandController' fullname='mf.framework:AbstractCommandController' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/AbstractCommandController.as' namespace='mf.framework' access='public' baseclass='mf.framework:AbstractController' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='AbstractCommandController' fullname='mf.framework:AbstractCommandController/AbstractCommandController' isStatic='false' isFinal='false' isOverride='false'  param_names='modelProvider;mb' param_types='mf.framework:IModelProvider;mf.framework:IMessageBroker' param_defaults='undefined;undefined' result_type='*'>
+</method>
+<method name='getCommand' fullname='mf.framework:AbstractCommandController/protected:getCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='m' param_types='mf.framework:Message' param_defaults='undefined' result_type='Class'>
+</method>
+<method name='receive' fullname='mf.framework:AbstractCommandController/receive' isStatic='false' isFinal='false' isOverride='true'  param_names='m' param_types='mf.framework:Message' param_defaults='undefined' result_type='void'>
+</method>
+<method name='register' fullname='mf.framework:AbstractCommandController/protected:register' isStatic='false' isFinal='false' isOverride='false'  param_names='messageClass;commandClass' param_types='*;Class' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<field name='classUtil' fullname='mf.framework:AbstractCommandController/protected:classUtil' type='mf.utils:ClassUtil' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='messageCommandMap' fullname='mf.framework:AbstractCommandController/messageCommandMap' type='Object' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='MessageBroker' fullname='mf.framework:MessageBroker' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/MessageBroker.as' namespace='mf.framework' access='public' baseclass='Object' interfaces='mf.framework:IMessageBroker' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='MessageBroker' fullname='mf.framework:MessageBroker/MessageBroker' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='addConnector' fullname='mf.framework:MessageBroker/addConnector' isStatic='false' isFinal='false' isOverride='false'  param_names='connector' param_types='mf.framework.messaging:Connector' param_defaults='undefined' result_type='void'>
+</method>
+<method name='connect' fullname='mf.framework:MessageBroker/connect' isStatic='false' isFinal='false' isOverride='false'  param_names='mb;inboundFilter;outboundFilter' param_types='mf.framework:IMessageBroker;Object;Object' param_defaults='undefined;true;true' result_type='void'>
+</method>
+<method name='disconnectAll' fullname='mf.framework:MessageBroker/disconnectAll' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='disconnect' fullname='mf.framework:MessageBroker/disconnect' isStatic='false' isFinal='false' isOverride='false'  param_names='mb' param_types='mf.framework:IMessageBroker' param_defaults='undefined' result_type='void'>
+</method>
+<method name='getConnectorTo' fullname='mf.framework:MessageBroker/private:getConnectorTo' isStatic='false' isFinal='false' isOverride='false'  param_names='mb' param_types='mf.framework:IMessageBroker' param_defaults='undefined' result_type='mf.framework.messaging:Connector'>
+</method>
+<method name='hasSubscriber' fullname='mf.framework:MessageBroker/hasSubscriber' isStatic='false' isFinal='false' isOverride='false'  param_names='subscriber' param_types='mf.framework:IReceiver' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='removeConnector' fullname='mf.framework:MessageBroker/removeConnector' isStatic='false' isFinal='false' isOverride='false'  param_names='connector' param_types='mf.framework.messaging:Connector' param_defaults='undefined' result_type='void'>
+</method>
+<method name='send' fullname='mf.framework:MessageBroker/send' isStatic='false' isFinal='false' isOverride='false'  param_names='m;itself' param_types='mf.framework:Message;Boolean' param_defaults='undefined;false' result_type='void'>
+</method>
+<method name='subscribe' fullname='mf.framework:MessageBroker/subscribe' isStatic='false' isFinal='false' isOverride='false'  param_names='subscriber' param_types='mf.framework:IReceiver' param_defaults='undefined' result_type='void'>
+</method>
+<method name='unsubscribe' fullname='mf.framework:MessageBroker/unsubscribe' isStatic='false' isFinal='false' isOverride='false'  param_names='subscriber' param_types='mf.framework:IReceiver' param_defaults='undefined' result_type='void'>
+</method>
+<method name='connectors' fullname='mf.framework:MessageBroker/connectors/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='numConnectors' fullname='mf.framework:MessageBroker/numConnectors/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
+<field name='_connectors' fullname='mf.framework:MessageBroker/private:_connectors' type='Array' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='count' fullname='mf.framework:MessageBroker/count' type='int' isStatic='true' isConst='false' defaultValue='0' >
+</field>
+<field name='id' fullname='mf.framework:MessageBroker/protected:id' type='int' isStatic='false' isConst='false' >
+</field>
+<field name='subscribers' fullname='mf.framework:MessageBroker/subscribers' type='Array' isStatic='false' isConst='false' >
+</field>
+<classRec name='ContainerDecorator' fullname='mf.framework:ContainerDecorator' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/ContainerDecorator.as' namespace='mf.framework' access='public' baseclass='mf.framework:Container2' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ContainerDecorator' fullname='mf.framework:ContainerDecorator/ContainerDecorator' isStatic='false' isFinal='false' isOverride='false'  param_names='container' param_types='mf.framework:Container2' param_defaults='undefined' result_type='*'>
+</method>
+<method name='addContainer' fullname='mf.framework:ContainerDecorator/addContainer' isStatic='false' isFinal='false' isOverride='true'  param_names='container' param_types='mf.framework:Container2' param_defaults='undefined' result_type='void'>
+</method>
+<method name='addController' fullname='mf.framework:ContainerDecorator/addController' isStatic='false' isFinal='false' isOverride='true'  param_names='controller' param_types='mf.framework:AbstractController' param_defaults='undefined' result_type='void'>
+</method>
+<method name='doInitialize' fullname='mf.framework:ContainerDecorator/protected:doInitialize' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+</method>
+<method name='doUninitialize' fullname='mf.framework:ContainerDecorator/protected:doUninitialize' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+</method>
+<method name='getContainerByName' fullname='mf.framework:ContainerDecorator/getContainerByName' isStatic='false' isFinal='false' isOverride='true'  param_names='name' param_types='String' param_defaults='undefined' result_type='mf.framework:Container2'>
+</method>
+<method name='getDescendantContainers' fullname='mf.framework:ContainerDecorator/getDescendantContainers' isStatic='false' isFinal='false' isOverride='true'  result_type='Array'>
+</method>
+<method name='initialize' fullname='mf.framework:ContainerDecorator/initialize' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+</method>
+<method name='receive' fullname='mf.framework:ContainerDecorator/receive' isStatic='false' isFinal='false' isOverride='true'  param_names='m' param_types='mf.framework:Message' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeContainer' fullname='mf.framework:ContainerDecorator/removeContainer' isStatic='false' isFinal='false' isOverride='true'  param_names='container' param_types='mf.framework:Container2' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeController' fullname='mf.framework:ContainerDecorator/removeController' isStatic='false' isFinal='false' isOverride='true'  param_names='controller' param_types='mf.framework:AbstractController' param_defaults='undefined' result_type='void'>
+</method>
+<method name='send' fullname='mf.framework:ContainerDecorator/send' isStatic='false' isFinal='false' isOverride='true'  param_names='m;itself' param_types='mf.framework:Message;Boolean' param_defaults='undefined;false' result_type='void'>
+</method>
+<method name='setContainerByName' fullname='mf.framework:ContainerDecorator/setContainerByName' isStatic='false' isFinal='false' isOverride='true'  param_names='name;container' param_types='String;mf.framework:Container2' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='toString' fullname='mf.framework:ContainerDecorator/toString' isStatic='false' isFinal='false' isOverride='true'  result_type='String'>
+</method>
+<method name='uninitialize' fullname='mf.framework:ContainerDecorator/uninitialize' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+</method>
+<method name='containers' fullname='mf.framework:ContainerDecorator/containers/get' isStatic='false' isFinal='false' isOverride='true'  result_type='Array'>
+</method>
+<method name='controllers' fullname='mf.framework:ContainerDecorator/controllers/get' isStatic='false' isFinal='false' isOverride='true'  result_type='Array'>
+</method>
+<method name='initialized' fullname='mf.framework:ContainerDecorator/initialized/get' isStatic='false' isFinal='false' isOverride='true'  result_type='Boolean'>
+</method>
+<method name='mb' fullname='mf.framework:ContainerDecorator/mb/get' isStatic='false' isFinal='false' isOverride='true'  result_type='mf.framework:IMessageBroker'>
+</method>
+<method name='model' fullname='mf.framework:ContainerDecorator/model/get' isStatic='false' isFinal='false' isOverride='true'  result_type='Object'>
+</method>
+<method name='name' fullname='mf.framework:ContainerDecorator/name/get' isStatic='false' isFinal='false' isOverride='true'  result_type='String'>
+</method>
+<method name='uninitialized' fullname='mf.framework:ContainerDecorator/uninitialized/get' isStatic='false' isFinal='false' isOverride='true'  result_type='Boolean'>
+</method>
+<method name='containers' fullname='mf.framework:ContainerDecorator/containers/set' isStatic='false' isFinal='false' isOverride='true'  param_names='value' param_types='Array' param_defaults='undefined' result_type='void'>
+</method>
+<method name='controllers' fullname='mf.framework:ContainerDecorator/controllers/set' isStatic='false' isFinal='false' isOverride='true'  param_names='value' param_types='Array' param_defaults='undefined' result_type='void'>
+</method>
+<method name='mb' fullname='mf.framework:ContainerDecorator/mb/set' isStatic='false' isFinal='false' isOverride='true'  param_names='value' param_types='mf.framework:IMessageBroker' param_defaults='undefined' result_type='void'>
+</method>
+<method name='model' fullname='mf.framework:ContainerDecorator/model/set' isStatic='false' isFinal='false' isOverride='true'  param_names='value' param_types='Object' param_defaults='undefined' result_type='void'>
+</method>
+<method name='name' fullname='mf.framework:ContainerDecorator/name/set' isStatic='false' isFinal='false' isOverride='true'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<field name='container' fullname='mf.framework:ContainerDecorator/protected:container' type='mf.framework:Container2' isStatic='false' isConst='false' >
+</field>
+<classRec name='MessageTraceBroker' fullname='mf.framework:MessageTraceBroker' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/MessageTraceBroker.as' namespace='mf.framework' access='public' baseclass='mf.framework:MessageBroker' interfaces='mf.framework:IMessageBroker' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='send' fullname='mf.framework:MessageTraceBroker/send' isStatic='false' isFinal='false' isOverride='true'  param_names='m;itself' param_types='mf.framework:Message;Boolean' param_defaults='undefined;false' result_type='void'>
+</method>
+<classRec name='ViewContainerDecorator' fullname='mf.framework:ViewContainerDecorator' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/ViewContainerDecorator.as' namespace='mf.framework' access='public' baseclass='mf.framework:ContainerDecorator' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ViewContainerDecorator' fullname='mf.framework:ViewContainerDecorator/ViewContainerDecorator' isStatic='false' isFinal='false' isOverride='false'  param_names='container;view' param_types='mf.framework:Container2;flash.display:DisplayObject' param_defaults='undefined;undefined' result_type='*'>
+</method>
+<method name='doFocus' fullname='mf.framework:ViewContainerDecorator/protected:doFocus' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='focus' fullname='mf.framework:ViewContainerDecorator/focus' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='setChildAsLast' fullname='mf.framework:ViewContainerDecorator/setChildAsLast' isStatic='false' isFinal='false' isOverride='false'  param_names='parent;child' param_types='flash.display:DisplayObjectContainer;flash.display:DisplayObject' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='toString' fullname='mf.framework:ViewContainerDecorator/toString' isStatic='false' isFinal='false' isOverride='true'  result_type='String'>
+</method>
+<method name='view' fullname='mf.framework:ViewContainerDecorator/view/get' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.display:DisplayObject'>
+</method>
+<method name='visible' fullname='mf.framework:ViewContainerDecorator/visible/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='view' fullname='mf.framework:ViewContainerDecorator/view/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='flash.display:DisplayObject' param_defaults='undefined' result_type='void'>
+</method>
+<method name='visible' fullname='mf.framework:ViewContainerDecorator/visible/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Boolean' param_defaults='undefined' result_type='void'>
+</method>
+<field name='viewProvider' fullname='mf.framework:ViewContainerDecorator/protected:viewProvider' type='mf.framework:IModelProvider' isStatic='false' isConst='false' >
+</field>
+<classRec name='ViewContainer' fullname='mf.framework:ViewContainer' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/ViewContainer.as' namespace='mf.framework' access='public' baseclass='mf.framework:Container2' isFinal='false' isDynamic='false' >
+<metadata>
+	<Deprecated owner='mf.framework:ViewContainer' name='Deprecated' >
+	</Deprecated>
+</metadata>
+</classRec>
+<method name='ViewContainer' fullname='mf.framework:ViewContainer/ViewContainer' isStatic='false' isFinal='false' isOverride='false'  param_names='mb;model;view;controllers;messageHandler;containers' param_types='mf.framework:IMessageBroker;Object;flash.display:DisplayObject;Array;Function;Array' param_defaults='null;null;null;null;null;null' result_type='*'>
+</method>
+<method name='doFocus' fullname='mf.framework:ViewContainer/protected:doFocus' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='focus' fullname='mf.framework:ViewContainer/focus' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='setChildAsLast' fullname='mf.framework:ViewContainer/setChildAsLast' isStatic='false' isFinal='false' isOverride='false'  param_names='parent;child' param_types='flash.display:DisplayObjectContainer;flash.display:DisplayObject' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='view' fullname='mf.framework:ViewContainer/view/get' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.display:DisplayObject'>
+</method>
+<method name='visible' fullname='mf.framework:ViewContainer/visible/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='view' fullname='mf.framework:ViewContainer/view/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='flash.display:DisplayObject' param_defaults='undefined' result_type='void'>
+</method>
+<method name='visible' fullname='mf.framework:ViewContainer/visible/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Boolean' param_defaults='undefined' result_type='void'>
+</method>
+<field name='viewProvider' fullname='mf.framework:ViewContainer/protected:viewProvider' type='mf.framework:IModelProvider' isStatic='false' isConst='false' >
+</field>
+<classRec name='LoggingReceiver' fullname='mf.framework:LoggingReceiver' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/LoggingReceiver.as' namespace='mf.framework' access='public' baseclass='mf.framework:Receiver' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='LoggingReceiver' fullname='mf.framework:LoggingReceiver/LoggingReceiver' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='clear' fullname='mf.framework:LoggingReceiver/clear' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='receive' fullname='mf.framework:LoggingReceiver/receive' isStatic='false' isFinal='false' isOverride='true'  param_names='message' param_types='mf.framework:Message' param_defaults='undefined' result_type='void'>
+</method>
+<method name='numMessages' fullname='mf.framework:LoggingReceiver/numMessages/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
+<field name='loggedMessages' fullname='mf.framework:LoggingReceiver/loggedMessages' type='mx.collections:ArrayCollection' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='MessageLogBroker' fullname='mf.framework:MessageLogBroker' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/MessageLogBroker.as' namespace='mf.framework' access='public' baseclass='mf.framework:MessageBroker' interfaces='mf.framework:IMessageBroker' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='MessageLogBroker' fullname='mf.framework:MessageLogBroker/MessageLogBroker' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='clearLog' fullname='mf.framework:MessageLogBroker/clearLog' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='send' fullname='mf.framework:MessageLogBroker/send' isStatic='false' isFinal='false' isOverride='true'  param_names='m;itself' param_types='mf.framework:Message;Boolean' param_defaults='undefined;false' result_type='void'>
+</method>
+<method name='logSize' fullname='mf.framework:MessageLogBroker/logSize/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
+<method name='numMessages' fullname='mf.framework:MessageLogBroker/numMessages/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
+<field name='log' fullname='mf.framework:MessageLogBroker/log' type='mx.collections:ArrayCollection' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<interfaceRec name='IMessageFilter' fullname='mf.framework.messaging:IMessageFilter' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/messaging/IMessageFilter.as' namespace='mf.framework.messaging' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='canPass' fullname='mf.framework.messaging:IMessageFilter/mf.framework.messaging:IMessageFilter:canPass' isStatic='false' isFinal='false' isOverride='false'  param_names='m' param_types='mf.framework:Message' param_defaults='undefined' result_type='Boolean'>
+</method>
+<classRec name='AbstractMessageFactory' fullname='mf.framework.messaging:AbstractMessageFactory' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/messaging/AbstractMessageFactory.as' namespace='mf.framework.messaging' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='AbstractMessageFactory' fullname='mf.framework.messaging:AbstractMessageFactory/AbstractMessageFactory' isStatic='false' isFinal='false' isOverride='false'  param_names='sender' param_types='Object' param_defaults='undefined' result_type='*'>
+</method>
+<field name='sender' fullname='mf.framework.messaging:AbstractMessageFactory/protected:sender' type='Object' isStatic='false' isConst='false' >
+</field>
+<classRec name='MessageFilterFactory' fullname='mf.framework.messaging:MessageFilterFactory' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/messaging/MessageFilterFactory.as' namespace='mf.framework.messaging' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='excludeAll' fullname='mf.framework.messaging:MessageFilterFactory/excludeAll' isStatic='true' isFinal='false' isOverride='false'  result_type='mf.framework.messaging:IMessageFilter'>
+</method>
+<method name='excludeOnly' fullname='mf.framework.messaging:MessageFilterFactory/excludeOnly' isStatic='true' isFinal='false' isOverride='false'  param_names='messages' param_types='restParam' param_defaults='undefined' result_type='mf.framework.messaging:IMessageFilter'>
+</method>
+<method name='includeAll' fullname='mf.framework.messaging:MessageFilterFactory/includeAll' isStatic='true' isFinal='false' isOverride='false'  result_type='mf.framework.messaging:IMessageFilter'>
+</method>
+<method name='includeOnly' fullname='mf.framework.messaging:MessageFilterFactory/includeOnly' isStatic='true' isFinal='false' isOverride='false'  param_names='messages' param_types='restParam' param_defaults='undefined' result_type='mf.framework.messaging:IMessageFilter'>
+</method>
+<classRec name='IncludeMessageFilter' fullname='mf.framework.messaging:IncludeMessageFilter' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/messaging/IncludeMessageFilter.as' namespace='mf.framework.messaging' access='public' baseclass='Object' interfaces='mf.framework.messaging:IMessageFilter' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='IncludeMessageFilter' fullname='mf.framework.messaging:IncludeMessageFilter/IncludeMessageFilter' isStatic='false' isFinal='false' isOverride='false'  param_names='messages' param_types='Array' param_defaults='undefined' result_type='*'>
+</method>
+<method name='canPass' fullname='mf.framework.messaging:IncludeMessageFilter/canPass' isStatic='false' isFinal='false' isOverride='false'  param_names='message' param_types='mf.framework:Message' param_defaults='undefined' result_type='Boolean'>
+</method>
+<field name='messages' fullname='mf.framework.messaging:IncludeMessageFilter/private:messages' type='Array' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='ExcludeMessageFilter' fullname='mf.framework.messaging:ExcludeMessageFilter' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/messaging/ExcludeMessageFilter.as' namespace='mf.framework.messaging' access='internal' baseclass='Object' interfaces='mf.framework.messaging:IMessageFilter' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ExcludeMessageFilter' fullname='mf.framework.messaging:ExcludeMessageFilter/ExcludeMessageFilter' isStatic='false' isFinal='false' isOverride='false'  param_names='messages' param_types='Array' param_defaults='undefined' result_type='*'>
+</method>
+<method name='canPass' fullname='mf.framework.messaging:ExcludeMessageFilter/canPass' isStatic='false' isFinal='false' isOverride='false'  param_names='message' param_types='mf.framework:Message' param_defaults='undefined' result_type='Boolean'>
+</method>
+<field name='messages' fullname='mf.framework.messaging:ExcludeMessageFilter/private:messages' type='Array' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='Connector' fullname='mf.framework.messaging:Connector' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/messaging/Connector.as' namespace='mf.framework.messaging' access='public' baseclass='Object' interfaces='mf.framework:IManagedLifecycle' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='Connector' fullname='mf.framework.messaging:Connector/Connector' isStatic='false' isFinal='false' isOverride='false'  param_names='mbA;mbB;abFilter;baFilter' param_types='mf.framework:IMessageBroker;mf.framework:IMessageBroker;Object;Object' param_defaults='undefined;undefined;undefined;undefined' result_type='*'>
+</method>
+<method name='canForwardMessage' fullname='mf.framework.messaging:Connector/private:canForwardMessage' isStatic='false' isFinal='false' isOverride='false'  param_names='m;filter' param_types='mf.framework:Message;Object' param_defaults='undefined;undefined' result_type='Boolean'>
+</method>
+<method name='initialize' fullname='mf.framework.messaging:Connector/initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='isConnectedTo' fullname='mf.framework.messaging:Connector/isConnectedTo' isStatic='false' isFinal='false' isOverride='false'  param_names='mb' param_types='mf.framework:IMessageBroker' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='receiveFromA' fullname='mf.framework.messaging:Connector/private:receiveFromA' isStatic='false' isFinal='false' isOverride='false'  param_names='m' param_types='mf.framework:Message' param_defaults='undefined' result_type='void'>
+</method>
+<method name='receiveFromB' fullname='mf.framework.messaging:Connector/private:receiveFromB' isStatic='false' isFinal='false' isOverride='false'  param_names='m' param_types='mf.framework:Message' param_defaults='undefined' result_type='void'>
+</method>
+<method name='uninitialize' fullname='mf.framework.messaging:Connector/uninitialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<field name='aReceiver' fullname='mf.framework.messaging:Connector/private:aReceiver' type='mf.framework:IReceiver' isStatic='false' isConst='false' >
+</field>
+<field name='abFilter' fullname='mf.framework.messaging:Connector/private:abFilter' type='Object' isStatic='false' isConst='false' >
+</field>
+<field name='bReceiver' fullname='mf.framework.messaging:Connector/private:bReceiver' type='mf.framework:IReceiver' isStatic='false' isConst='false' >
+</field>
+<field name='baFilter' fullname='mf.framework.messaging:Connector/private:baFilter' type='Object' isStatic='false' isConst='false' >
+</field>
+<field name='mbA' fullname='mf.framework.messaging:Connector/private:mbA' type='mf.framework:IMessageBroker' isStatic='false' isConst='false' >
+</field>
+<field name='mbB' fullname='mf.framework.messaging:Connector/private:mbB' type='mf.framework:IMessageBroker' isStatic='false' isConst='false' >
+</field>
+<classRec name='ExternalMessageAdapter' fullname='mf.framework.messaging:ExternalMessageAdapter' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/messaging/ExternalMessageAdapter.as' namespace='mf.framework.messaging' access='public' baseclass='Object' interfaces='mf.framework:IManagedLifecycle;mf.framework:IMessenger' isFinal='false' isDynamic='false' >
+<metadata>
+	<Deprecated owner='mf.framework.messaging:ExternalMessageAdapter' name='Deprecated' >
+	</Deprecated>
+</metadata>
+</classRec>
+<method name='ExternalMessageAdapter' fullname='mf.framework.messaging:ExternalMessageAdapter/ExternalMessageAdapter' isStatic='false' isFinal='false' isOverride='false'  param_names='externalMessageBroker;internalMessageBroker;inboundFilter;outboundFilter' param_types='mf.framework:IMessageBroker;mf.framework:IMessageBroker;Object;Object' param_defaults='undefined;undefined;undefined;undefined' result_type='*'>
+</method>
+<method name='canForwardInboundMessage' fullname='mf.framework.messaging:ExternalMessageAdapter/private:canForwardInboundMessage' isStatic='false' isFinal='false' isOverride='false'  param_names='m' param_types='mf.framework:Message' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='initialize' fullname='mf.framework.messaging:ExternalMessageAdapter/initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='receive' fullname='mf.framework.messaging:ExternalMessageAdapter/receive' isStatic='false' isFinal='false' isOverride='false'  param_names='m' param_types='mf.framework:Message' param_defaults='undefined' result_type='void'>
+</method>
+<method name='send' fullname='mf.framework.messaging:ExternalMessageAdapter/send' isStatic='false' isFinal='false' isOverride='false'  param_names='m;itself' param_types='mf.framework:Message;Boolean' param_defaults='undefined;false' result_type='void'>
+</method>
+<method name='uninitialize' fullname='mf.framework.messaging:ExternalMessageAdapter/uninitialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<field name='externalMessageBroker' fullname='mf.framework.messaging:ExternalMessageAdapter/externalMessageBroker' type='mf.framework:IMessageBroker' isStatic='false' isConst='false' >
+</field>
+<field name='inboundFilter' fullname='mf.framework.messaging:ExternalMessageAdapter/inboundFilter' type='Object' isStatic='false' isConst='false' >
+</field>
+<field name='initialized' fullname='mf.framework.messaging:ExternalMessageAdapter/private:initialized' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='internalMessageBroker' fullname='mf.framework.messaging:ExternalMessageAdapter/internalMessageBroker' type='mf.framework:IMessageBroker' isStatic='false' isConst='false' >
+</field>
+<field name='internalReceiver' fullname='mf.framework.messaging:ExternalMessageAdapter/private:internalReceiver' type='mf.framework.messaging:InternalMessageAdapter' isStatic='false' isConst='false' >
+</field>
+<field name='outboundFilter' fullname='mf.framework.messaging:ExternalMessageAdapter/outboundFilter' type='Object' isStatic='false' isConst='false' >
+</field>
+<classRec name='InternalMessageAdapter' fullname='mf.framework.messaging:InternalMessageAdapter' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/framework/messaging/InternalMessageAdapter.as' namespace='mf.framework.messaging' access='internal' baseclass='Object' interfaces='mf.framework:IMessenger;mf.framework:IManagedLifecycle' isFinal='false' isDynamic='false' >
+<metadata>
+	<Deprecated owner='mf.framework.messaging:InternalMessageAdapter' name='Deprecated' >
+	</Deprecated>
+</metadata>
+</classRec>
+<method name='InternalMessageAdapter' fullname='mf.framework.messaging:InternalMessageAdapter/InternalMessageAdapter' isStatic='false' isFinal='false' isOverride='false'  param_names='externalMessageBroker;internalMessageBroker;outboundFilter' param_types='mf.framework:IMessageBroker;mf.framework:IMessageBroker;Object' param_defaults='undefined;undefined;undefined' result_type='*'>
+</method>
+<method name='canForwardOutboundMessage' fullname='mf.framework.messaging:InternalMessageAdapter/private:canForwardOutboundMessage' isStatic='false' isFinal='false' isOverride='false'  param_names='m' param_types='mf.framework:Message' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='initialize' fullname='mf.framework.messaging:InternalMessageAdapter/initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='receive' fullname='mf.framework.messaging:InternalMessageAdapter/receive' isStatic='false' isFinal='false' isOverride='false'  param_names='m' param_types='mf.framework:Message' param_defaults='undefined' result_type='void'>
+</method>
+<method name='send' fullname='mf.framework.messaging:InternalMessageAdapter/send' isStatic='false' isFinal='false' isOverride='false'  param_names='m;itself' param_types='mf.framework:Message;Boolean' param_defaults='undefined;false' result_type='void'>
+</method>
+<method name='uninitialize' fullname='mf.framework.messaging:InternalMessageAdapter/uninitialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<field name='externalInterface' fullname='mf.framework.messaging:InternalMessageAdapter/private:externalInterface' type='mf.framework:IMessageBroker' isStatic='false' isConst='false' >
+</field>
+<field name='internalInterface' fullname='mf.framework.messaging:InternalMessageAdapter/private:internalInterface' type='mf.framework:IMessageBroker' isStatic='false' isConst='false' >
+</field>
+<field name='outboundFilter' fullname='mf.framework.messaging:InternalMessageAdapter/private:outboundFilter' type='Object' isStatic='false' isConst='false' >
+</field>
+<classRec name='ClassUtil' fullname='mf.utils:ClassUtil' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/vmvc/src/main/flex/mf/utils/ClassUtil.as' namespace='mf.utils' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ClassUtil' fullname='mf.utils:ClassUtil/ClassUtil' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='createClass' fullname='mf.utils:ClassUtil/createClass' isStatic='false' isFinal='false' isOverride='false'  param_names='className' param_types='String' param_defaults='undefined' result_type='Class'>
+</method>
+<method name='extractClassName' fullname='mf.utils:ClassUtil/private:extractClassName' isStatic='false' isFinal='false' isOverride='false'  param_names='fullClassName' param_types='String' param_defaults='undefined' result_type='String'>
+</method>
+<method name='getBaseClass' fullname='mf.utils:ClassUtil/getBaseClass' isStatic='false' isFinal='false' isOverride='false'  param_names='c' param_types='Class' param_defaults='undefined' result_type='Class'>
+</method>
+<method name='getClassName' fullname='mf.utils:ClassUtil/getClassName' isStatic='false' isFinal='false' isOverride='false'  param_names='o;ignoreNs' param_types='*;Boolean' param_defaults='undefined;false' result_type='String'>
+</method>
+<method name='getClass' fullname='mf.utils:ClassUtil/getClass' isStatic='false' isFinal='false' isOverride='false'  param_names='o' param_types='*' param_defaults='undefined' result_type='Class'>
+</method>
+</asdoc>

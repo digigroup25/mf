@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:AdvancedDataGrid xmlns="*"
+					 xmlns:mx="http://www.adobe.com/2006/mxml"
+					 displayItemsExpanded="true"
+					 >
+	<mx:columns>
+		<mx:AdvancedDataGridColumn labelFunction="getName"
+								   headerText="name"
+								   />
+		<mx:AdvancedDataGridColumn width="80"
+								   labelFunction="getPriority"
+								   headerText="{fieldName}"
+								   />
+
+	</mx:columns>
+
+	<mx:Script>
+		<![CDATA[
+			import collections.TreeCollectionEx;
+
+			import mx.collections.HierarchicalData;
+
+			[Bindable]
+			public var fieldName:String;
+
+			private var _tree:TreeCollectionEx;
+
+			public function set tree(value:TreeCollectionEx):void {
+				if (_tree == value)
+					return;
+				_tree = value;
+
+				var data:HierarchicalData  = new HierarchicalData(_tree);
+				data.childrenField = "children";
+				this.dataProvider = data;
+			}
+
+			public function get tree():TreeCollectionEx {
+				return _tree;
+			}
+
+
+			private function getName(item:Object, column:AdvancedDataGridColumn):String {
+				return item.vo.name;
+			}
+
+			private function getPriority(item:Object, column:AdvancedDataGridColumn):String {
+				return item.vo.hasOwnProperty(fieldName) ? item.vo[fieldName] : "";
+			}
+		]]>
+	</mx:Script>
+</mx:AdvancedDataGrid>

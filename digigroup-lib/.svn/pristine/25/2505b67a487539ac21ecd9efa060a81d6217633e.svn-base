@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:ElementEditorTemplate xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:ui="mindmaps2.elements.ui.*" width="350">
+	<ui:editorContent>
+		<mx:FormItem label="query" width="100%">
+			<mx:TextArea id="query" width="100%" height="25"/>
+		</mx:FormItem>
+		
+		<mx:HBox>
+			<mx:Button label="Run" click="onRun()"/>
+			<mx:Button label="More" click="onMore()"/>
+			<mx:Spacer width="100%"/>
+			<mx:Button label="Help" click="onHelp()"/>
+		
+		</mx:HBox>
+		
+		<mx:Label text="Program"/>
+		<mx:TextArea id="program"  height="250" width="100%"/>
+		<mx:HBox>
+			<mx:Label text="Result"/>
+			<mx:Button label="Clear" click="onClear()"/>
+		</mx:HBox>
+			
+		<mx:TextArea id="resultsControl" height="150" width="100%" text="{WPrologOutput.result}" />
+		
+	</ui:editorContent>
+		<mx:Script>
+			<![CDATA[
+				import mx.controls.Alert;
+				import wprolog.Hashtable;
+				import wprolog.ParseString;
+				import wprolog.Engine;
+				import wprolog.WPrologOutput;
+				import wprolog.Term;
+				import vos.*;
+				
+				private var eng:Engine;
+				private const enableTracing:Boolean = false;
+			
+				protected override function setDataProvider(value:Object):void {
+					if (!(value is Program))
+						throw new ArgumentError("dataProvider value has to be of type Program");
+					if (!(value.hasOwnProperty("text")))
+		    		throw new ArgumentError("dataProvider has to contain a text property of type String");
+				    	
+					super.setDataProvider(value);
+				}
+				
+				protected override function bind():void {
+					bindBidirectionally(_dataProvider, "text", this.program, "text");
+				}
+				
+				private function onRun():void {
+					var t:Term; 
+					var s:String;
+					s = query.text;
+					
+					
+					try {
+						t = new Term(new ParseString(s, query));
+					} catch (e:Error) {
+						WPrologOutput.addResult("Can't parse query!\n");
+						eng = null;
+						t = null; // dummy
+					}
+			
+					if (t == null) return;
+					
+					try {
+						eng = new Engine(t,	ParseString.consult(program.text,
+							new Hashtable(), program));
+						eng.enableTracing = enableTracing;
+						eng.runAll();
+						
+					} catch (e:Error) { // can't parse program ...
+						WPrologOutput.addResult(e.toString()+"\n");
+						    eng = null;
+						    t = null; // dummy
+					} 
+				}
+				
+				private function onMore():void {
+					eng.more();
+				}
+				
+				private function onClear():void {
+					WPrologOutput.clear();
+				}
+				
+				private function onHelp():void {
+			    	var credits:String = "This prolog is a port from WProlog written in Java by Michael Winikoff http://waitaki.otago.ac.nz/~michael/wp/";
+			    	
+			    	var help:String = 	"The language is given by the following simple grammar:\n"+
+										"Program ::= Rule | Rule Program\n"+
+										"Query ::= Term\n"+
+										
+										"Rule ::= Term . | Term :- Terms .\n"+
+										"Terms ::= Term | Term , Terms\n"+
+										"Term ::= Number | Variable | AtomName | AtomName(Terms)\n"+
+										                "| [] | [Terms] | [Terms | Term]\n"+
+										                "| print(Term) | nl | eq(Term , Term)\n"+
+										                "| if(Term , Term , Term) | or(Term , Term ) | not(Term) | call(Term) | once(Term)\n"+
+										"Number ::= Digit | Digit Number\n"+
+										"Digit ::= 0 | ... | 9\n"+
+										"AtomName ::= LowerCase | LowerCase NameChars\n"+
+										"Variable ::= UpperCase | UpperCase NameChars\n"+
+										"NameChars ::= NameChar | NameChar NameChars\n"+
+										"NameChar ::= a | ... | z | A | ... | Z | Digit\n\n"+
+										
+										"Comments begin with a % and terminate at the end of the line or begin with /* and terminate with */. ";
+										
+					Alert.show(credits+"\n\n"+help, "", Alert.OK);
+			    }
+			]]>
+		</mx:Script>
+</ui:ElementEditorTemplate>

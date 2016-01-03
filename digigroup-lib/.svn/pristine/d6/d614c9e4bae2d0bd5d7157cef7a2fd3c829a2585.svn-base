@@ -1,0 +1,15 @@
+package mindmaps2.elements.iteration {
+
+	[Bindable]
+	public class PerformanceMetric {
+		public var actualCommittedPoints:uint = 0;
+
+		public var expectedCommittedPoints:uint = 0;
+
+		public var actualUncommittedPoints:uint = 0;
+
+		public var expectedCommittedHours:Number = 0;
+
+		public var actualHours:Number = 0;
+	}
+}

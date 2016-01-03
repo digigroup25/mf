@@ -1,0 +1,1883 @@
+<asdoc>
+
+<interfaceRec name='IXmlConverter' fullname='converters:IXmlConverter' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/converters/IXmlConverter.as' namespace='converters' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='fromXml' fullname='converters:IXmlConverter/converters:IXmlConverter:fromXml' isStatic='false' isFinal='false' isOverride='false'  param_names='xml;o' param_types='XML;*' param_defaults='undefined;undefined' result_type='*'>
+</method>
+<method name='toXml' fullname='converters:IXmlConverter/converters:IXmlConverter:toXml' isStatic='false' isFinal='false' isOverride='false'  param_names='o' param_types='*' param_defaults='undefined' result_type='XML'>
+</method>
+<classRec name='XmlCollectionInspector' fullname='converters:XmlCollectionInspector' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/converters/XmlCollectionInspector.as' namespace='converters' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='getVersion' fullname='converters:XmlCollectionInspector/getVersion' isStatic='false' isFinal='false' isOverride='false'  param_names='xml' param_types='XML' param_defaults='undefined' result_type='String'>
+</method>
+<classRec name='XmlCollectionConverter' fullname='converters:XmlCollectionConverter' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/converters/XmlCollectionConverter.as' namespace='converters' access='public' baseclass='Object' interfaces='converters:IXmlConverter' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='fromXml' fullname='converters:XmlCollectionConverter/fromXml' isStatic='false' isFinal='false' isOverride='false'  param_names='root;treeNode' param_types='XML;*' param_defaults='undefined;undefined' result_type='*'>
+</method>
+<method name='toXml' fullname='converters:XmlCollectionConverter/toXml' isStatic='false' isFinal='false' isOverride='false'  param_names='treeNode' param_types='*' param_defaults='undefined' result_type='XML'>
+</method>
+<classRec name='XmlCollectionConverterFactory' fullname='converters:XmlCollectionConverterFactory' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/converters/XmlCollectionConverterFactory.as' namespace='converters' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='createLatest' fullname='converters:XmlCollectionConverterFactory/createLatest' isStatic='true' isFinal='false' isOverride='false'  result_type='converters:IXmlConverter'>
+</method>
+<method name='create' fullname='converters:XmlCollectionConverterFactory/create' isStatic='true' isFinal='false' isOverride='false'  param_names='version' param_types='String' param_defaults='undefined' result_type='converters:IXmlConverter'>
+</method>
+<classRec name='XmlCollectionConverter_1_0' fullname='converters:XmlCollectionConverter_1_0' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/converters/XmlCollectionConverter_1_0.as' namespace='converters' access='public' baseclass='Object' interfaces='converters:IXmlConverter' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='fromXml' fullname='converters:XmlCollectionConverter_1_0/fromXml' isStatic='false' isFinal='false' isOverride='false'  param_names='root;treeNode' param_types='XML;*' param_defaults='undefined;undefined' result_type='*'>
+</method>
+<method name='toXmlString' fullname='converters:XmlCollectionConverter_1_0/toXmlString' isStatic='false' isFinal='false' isOverride='false'  param_names='treeNode' param_types='*' param_defaults='undefined' result_type='String'>
+</method>
+<method name='toXml' fullname='converters:XmlCollectionConverter_1_0/toXml' isStatic='false' isFinal='false' isOverride='false'  param_names='treeNode' param_types='*' param_defaults='undefined' result_type='XML'>
+</method>
+<method name='nameSpace' fullname='converters:XmlCollectionConverter_1_0/nameSpace/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_namespace' fullname='converters:XmlCollectionConverter_1_0/private:_namespace' type='String' isStatic='false' isConst='false' defaultValue='vos' >
+</field>
+<field name='ci' fullname='converters:XmlCollectionConverter_1_0/private:ci' type='commonutils:ClassInspector' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='XmlCollectionConverter_1_1' fullname='converters:XmlCollectionConverter_1_1' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/converters/XmlCollectionConverter_1_1.as' namespace='converters' access='public' baseclass='Object' interfaces='converters:IXmlConverter' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='decode' fullname='converters:XmlCollectionConverter_1_1/decode' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='String'>
+</method>
+<method name='encode' fullname='converters:XmlCollectionConverter_1_1/encode' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='String'>
+</method>
+<method name='fromXml' fullname='converters:XmlCollectionConverter_1_1/fromXml' isStatic='false' isFinal='false' isOverride='false'  param_names='root;treeNode' param_types='XML;*' param_defaults='undefined;undefined' result_type='*'>
+</method>
+<method name='toXmlString' fullname='converters:XmlCollectionConverter_1_1/toXmlString' isStatic='false' isFinal='false' isOverride='false'  param_names='treeNode' param_types='*' param_defaults='undefined' result_type='String'>
+</method>
+<method name='toXml' fullname='converters:XmlCollectionConverter_1_1/toXml' isStatic='false' isFinal='false' isOverride='false'  param_names='treeNode' param_types='*' param_defaults='undefined' result_type='XML'>
+</method>
+<method name='xmlToVoByDataAttributes' fullname='converters:XmlCollectionConverter_1_1/private:xmlToVoByDataAttributes' isStatic='false' isFinal='false' isOverride='false'  param_names='nodeDataXml;vo' param_types='XML;*' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='xmlToVo' fullname='converters:XmlCollectionConverter_1_1/protected:xmlToVo' isStatic='false' isFinal='false' isOverride='false'  param_names='nodeDataXml;vo' param_types='XML;*' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='nameSpace' fullname='converters:XmlCollectionConverter_1_1/nameSpace/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_namespace' fullname='converters:XmlCollectionConverter_1_1/private:_namespace' type='String' isStatic='false' isConst='false' defaultValue='vos' >
+</field>
+<field name='charsToEncode' fullname='converters:XmlCollectionConverter_1_1/private:charsToEncode' type='Array' isStatic='false' isConst='true' defaultValue='unknown' >
+</field>
+<field name='ci' fullname='converters:XmlCollectionConverter_1_1/private:ci' type='commonutils:ClassInspector' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='Bag' fullname='collections:Bag' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/Bag.as' namespace='collections' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='add' fullname='collections:Bag/add' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='void'>
+</method>
+<method name='clear' fullname='collections:Bag/clear' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='getIndex' fullname='collections:Bag/getIndex' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='int'>
+</method>
+<method name='getItemAt' fullname='collections:Bag/getItemAt' isStatic='false' isFinal='false' isOverride='false'  param_names='i' param_types='int' param_defaults='undefined' result_type='*'>
+</method>
+<method name='remove' fullname='collections:Bag/remove' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='void'>
+</method>
+<method name='get' fullname='collections:Bag/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='length' fullname='collections:Bag/length/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
+<field name='source' fullname='collections:Bag/source' type='Array' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<interfaceRec name='IHashMap' fullname='collections:IHashMap' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/IHashMap.as' namespace='collections' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+
+     Defines the default contract for lightweight HashMap 
+
+     implementations which provide an API for working with 
+
+     a managed collection of key and values
+
+     ]]></description>
+</interfaceRec>
+<method name='clear' fullname='collections:IHashMap/collections:IHashMap:clear' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+<description><![CDATA[
+
+         Resets all key / values in map to null
+
+         ]]></description>
+</method>
+<method name='containsKey' fullname='collections:IHashMap/collections:IHashMap:containsKey' isStatic='false' isFinal='false' isOverride='false'  param_names='key' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+
+         Determines if a key exists in the current map
+
+         
+
+         ]]></description>
+<param><![CDATA[the key in which to determine existance in the map
+
+         ]]></param>
+<return><![CDATA[true if the key exisits, false if not
+
+         ]]></return>
+</method>
+<method name='containsValue' fullname='collections:IHashMap/collections:IHashMap:containsValue' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='*' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+
+         Determines if a value exists in the current map
+
+         
+
+         ]]></description>
+<param><![CDATA[the value in which to determine existance in the map
+
+         ]]></param>
+<return><![CDATA[true if the value exisits, false if not
+
+         ]]></return>
+</method>
+<method name='getKey' fullname='collections:IHashMap/collections:IHashMap:getKey' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='*' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+         Returns a key value from the current Map
+
+         
+
+         ]]></description>
+<param><![CDATA[the key in which to retrieve the value of
+
+         ]]></param>
+<return><![CDATA[the value of the specified key
+
+         ]]></return>
+</method>
+<method name='getValue' fullname='collections:IHashMap/collections:IHashMap:getValue' isStatic='false' isFinal='false' isOverride='false'  param_names='key' param_types='String' param_defaults='undefined' result_type='*'>
+<description><![CDATA[
+
+         Returns a key value from the current Map
+
+         
+
+         ]]></description>
+<param><![CDATA[the key in which to retrieve the value of
+
+         ]]></param>
+<return><![CDATA[the value of the specified key
+
+         ]]></return>
+</method>
+<method name='isEmpty' fullname='collections:IHashMap/collections:IHashMap:isEmpty' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+<description><![CDATA[
+
+         Determines if the current map is empty
+
+         
+
+         ]]></description>
+<return><![CDATA[true if the current map is empty, false if not
+
+         ]]></return>
+</method>
+<method name='put' fullname='collections:IHashMap/collections:IHashMap:put' isStatic='false' isFinal='false' isOverride='false'  param_names='key;value' param_types='String;*' param_defaults='undefined;undefined' result_type='void'>
+<description><![CDATA[
+
+         Adds a key / value to the current Map
+
+         
+
+         ]]></description>
+<param><![CDATA[the key to add to the map
+
+         ]]></param>
+<param><![CDATA[the value of the specified key
+
+         ]]></param>
+</method>
+<method name='remove' fullname='collections:IHashMap/collections:IHashMap:remove' isStatic='false' isFinal='false' isOverride='false'  param_names='key' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+
+         Removes a key / value from the current Map
+
+         
+
+         ]]></description>
+<param><![CDATA[the key to remove from the map
+
+         ]]></param>
+</method>
+<method name='size' fullname='collections:IHashMap/collections:IHashMap:size/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+<description><![CDATA[
+
+         Returns the size of this map
+
+         
+
+         ]]></description>
+<return><![CDATA[the current size of the map instance
+
+         ]]></return>
+</method>
+<interfaceRec name='IName' fullname='collections:IName' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/IName.as' namespace='collections' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='name' fullname='collections:IName/collections:IName:name/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='name' fullname='collections:IName/collections:IName:name/set' isStatic='false' isFinal='false' isOverride='false'  param_names='val' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<interfaceRec name='IIterable' fullname='collections:IIterable' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/IIterable.as' namespace='collections' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='createIterator' fullname='collections:IIterable/collections:IIterable:createIterator' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='Class' param_defaults='null' result_type='collections:IIterator'>
+</method>
+<interfaceRec name='IPluggableObject' fullname='collections:IPluggableObject' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/IPluggableObject.as' namespace='collections' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<interfaceRec name='ICollection' fullname='collections:ICollection' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/ICollection.as' namespace='collections' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='addCollectionItem' fullname='collections:ICollection/collections:ICollection:addCollectionItem' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='*'>
+</method>
+<method name='removeCollectionItem' fullname='collections:ICollection/collections:ICollection:removeCollectionItem' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='void'>
+</method>
+<classRec name='ArrayCollectionViewerContext' fullname='collections:ArrayCollectionViewerContext' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/ArrayCollectionViewerContext.as' namespace='collections' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ArrayCollectionViewerContext' fullname='collections:ArrayCollectionViewerContext/ArrayCollectionViewerContext' isStatic='false' isFinal='false' isOverride='false'  param_names='sortByPropName;descending;filterClass;skipFirst' param_types='String;Boolean;Class;Boolean' param_defaults='null;false;null;false' result_type='*'>
+</method>
+<field name='descending' fullname='collections:ArrayCollectionViewerContext/descending' type='Boolean' isStatic='false' isConst='false' >
+</field>
+<field name='filterClass' fullname='collections:ArrayCollectionViewerContext/filterClass' type='Class' isStatic='false' isConst='false' >
+</field>
+<field name='skipFirst' fullname='collections:ArrayCollectionViewerContext/skipFirst' type='Boolean' isStatic='false' isConst='false' >
+</field>
+<field name='sortByPropName' fullname='collections:ArrayCollectionViewerContext/sortByPropName' type='String' isStatic='false' isConst='false' >
+</field>
+<interfaceRec name='IIterator' fullname='collections:IIterator' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/IIterator.as' namespace='collections' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='hasNext' fullname='collections:IIterator/collections:IIterator:hasNext' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='next' fullname='collections:IIterator/collections:IIterator:next' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<classRec name='HashMap' fullname='collections:HashMap' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/HashMap.as' namespace='collections' access='public' baseclass='flash.utils:Dictionary' interfaces='collections:IHashMap' isFinal='false' isDynamic='true' >
+<description><![CDATA[
+
+     IMap implementation which dynamically creates a HashSet of 
+
+     key and value pairs which provides a standard API for
+
+     working with the map
+
+     ]]></description>
+</classRec>
+<method name='HashMap' fullname='collections:HashMap/HashMap' isStatic='false' isFinal='false' isOverride='false'  param_names='useWeakReferences' param_types='Boolean' param_defaults='true' result_type='*'>
+<description><![CDATA[
+
+         Constructor
+
+         
+
+         <p>
+
+         Creates a new HashSet instance. By default, weak key 
+
+         references are used in order to ensure that objects are 
+
+         eligible for Garbage Collection when no longer being
+
+         referenced
+
+         </p>
+
+         
+
+         ]]></description>
+<param><![CDATA[specifies if weak key references should be used
+
+         ]]></param>
+</method>
+<method name='clear' fullname='collections:HashMap/clear' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+<description><![CDATA[
+
+         Resets all key / values in map to null
+
+         ]]></description>
+</method>
+<method name='containsKey' fullname='collections:HashMap/containsKey' isStatic='false' isFinal='false' isOverride='false'  param_names='key' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+
+         Determines if a key exists in the current map
+
+         
+
+         ]]></description>
+<param><![CDATA[the key in which to determine existance in the map
+
+         ]]></param>
+<return><![CDATA[true if the key exisits, false if not
+
+         ]]></return>
+</method>
+<method name='containsValue' fullname='collections:HashMap/containsValue' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='*' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+
+         Determines if a value exists in the current map
+
+         
+
+         ]]></description>
+<param><![CDATA[the value in which to determine existance in the map
+
+         ]]></param>
+<return><![CDATA[true if the value exisits, false if not
+
+         ]]></return>
+</method>
+<method name='getKey' fullname='collections:HashMap/getKey' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='*' param_defaults='undefined' result_type='String'>
+<description><![CDATA[
+
+         Returns a key value from the current Map
+
+         
+
+         ]]></description>
+<param><![CDATA[the key in which to retrieve the value of
+
+         ]]></param>
+<return><![CDATA[the value of the specified key
+
+         ]]></return>
+</method>
+<method name='getValue' fullname='collections:HashMap/getValue' isStatic='false' isFinal='false' isOverride='false'  param_names='key' param_types='String' param_defaults='undefined' result_type='*'>
+<description><![CDATA[
+
+         Returns a key value from the current Map
+
+         
+
+         ]]></description>
+<param><![CDATA[the key in which to retrieve the value of
+
+         ]]></param>
+<return><![CDATA[the value of the specified key
+
+         ]]></return>
+</method>
+<method name='isEmpty' fullname='collections:HashMap/isEmpty' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+<description><![CDATA[
+
+         Determines if the current map is empty
+
+         
+
+         ]]></description>
+<return><![CDATA[true if the current map is empty, false if not
+
+         ]]></return>
+</method>
+<method name='put' fullname='collections:HashMap/put' isStatic='false' isFinal='false' isOverride='false'  param_names='key;value' param_types='String;*' param_defaults='undefined;undefined' result_type='void'>
+<description><![CDATA[
+
+         Adds a key and value to the current 	
+
+         
+
+         ]]></description>
+<param><![CDATA[the key to add to the map
+
+         ]]></param>
+<param><![CDATA[the value of the specified key
+
+         ]]></param>
+</method>
+<method name='remove' fullname='collections:HashMap/remove' isStatic='false' isFinal='false' isOverride='false'  param_names='key' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+
+         Removes a key and value from the current Map
+
+         
+
+         ]]></description>
+<param><![CDATA[the key to remove from the map
+
+         ]]></param>
+</method>
+<method name='size' fullname='collections:HashMap/size/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+<description><![CDATA[
+
+         Returns the size of this map
+
+         
+
+         ]]></description>
+<return><![CDATA[the current size of the map instance
+
+         ]]></return>
+</method>
+<classRec name='Singleton' fullname='collections:Singleton' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/Singleton.as' namespace='collections' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='getInstance' fullname='collections:Singleton/getInstance' isStatic='true' isFinal='false' isOverride='false'  param_names='type' param_types='Class' param_defaults='undefined' result_type='*'>
+</method>
+<field name='map' fullname='collections:Singleton/private:map' type='Object' isStatic='true' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='CollectionConverterContext' fullname='collections:CollectionConverterContext' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/CollectionConverterContext.as' namespace='collections' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='CollectionConverterContext' fullname='collections:CollectionConverterContext/CollectionConverterContext' isStatic='false' isFinal='false' isOverride='false'  param_names='root;iterator;addPath' param_types='collections.tree:TreeComposite;collections:IIterator;Boolean' param_defaults='undefined;null;false' result_type='*'>
+</method>
+<field name='addPath' fullname='collections:CollectionConverterContext/addPath' type='Boolean' isStatic='false' isConst='false' >
+</field>
+<field name='iterator' fullname='collections:CollectionConverterContext/iterator' type='collections:IIterator' isStatic='false' isConst='false' >
+</field>
+<field name='root' fullname='collections:CollectionConverterContext/root' type='collections.tree:TreeComposite' isStatic='false' isConst='false' >
+</field>
+<classRec name='Set' fullname='collections:Set' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/Set.as' namespace='collections' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='Set' fullname='collections:Set/Set' isStatic='false' isFinal='false' isOverride='false'  param_names='compareByValue' param_types='Boolean' param_defaults='false' result_type='*'>
+</method>
+<method name='addAll' fullname='collections:Set/addAll' isStatic='false' isFinal='false' isOverride='false'  param_names='set' param_types='collections:Set' param_defaults='undefined' result_type='void'>
+</method>
+<method name='add' fullname='collections:Set/add' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='void'>
+</method>
+<method name='clear' fullname='collections:Set/clear' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='containsAll' fullname='collections:Set/containsAll' isStatic='false' isFinal='false' isOverride='false'  param_names='set' param_types='collections:Set' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='contains' fullname='collections:Set/contains' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='fromArray' fullname='collections:Set/fromArray' isStatic='false' isFinal='false' isOverride='false'  param_names='list' param_types='Array' param_defaults='undefined' result_type='void'>
+</method>
+<method name='indexOfCompareByValue' fullname='collections:Set/private:indexOfCompareByValue' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='int'>
+</method>
+<method name='indexOf' fullname='collections:Set/indexOf' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='int'>
+</method>
+<method name='isEmpty' fullname='collections:Set/isEmpty' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='removeAll' fullname='collections:Set/removeAll' isStatic='false' isFinal='false' isOverride='false'  param_names='set' param_types='collections:Set' param_defaults='undefined' result_type='void'>
+</method>
+<method name='remove' fullname='collections:Set/remove' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='void'>
+</method>
+<method name='retainAll' fullname='collections:Set/retainAll' isStatic='false' isFinal='false' isOverride='false'  param_names='set' param_types='collections:Set' param_defaults='undefined' result_type='void'>
+</method>
+<method name='toArray' fullname='collections:Set/toArray' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='size' fullname='collections:Set/size/get' isStatic='false' isFinal='false' isOverride='false'  result_type='uint'>
+</method>
+<field name='compareByValue' fullname='collections:Set/private:compareByValue' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='list' fullname='collections:Set/private:list' type='Array' isStatic='false' isConst='false' >
+</field>
+<classRec name='CollectionConverter' fullname='collections:CollectionConverter' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/CollectionConverter.as' namespace='collections' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='toArray' fullname='collections:CollectionConverter/toArray' isStatic='true' isFinal='false' isOverride='false'  param_names='context' param_types='collections:CollectionConverterContext' param_defaults='undefined' result_type='mx.collections:ArrayCollection'>
+</method>
+<classRec name='ArrayCollectionIterator' fullname='collections:ArrayCollectionIterator' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/ArrayCollectionIterator.as' namespace='collections' access='public' baseclass='Object' interfaces='collections:IIterator' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ArrayCollectionIterator' fullname='collections:ArrayCollectionIterator/ArrayCollectionIterator' isStatic='false' isFinal='false' isOverride='false'  param_names='col' param_types='mx.collections:ArrayCollection' param_defaults='undefined' result_type='*'>
+</method>
+<method name='hasNext' fullname='collections:ArrayCollectionIterator/hasNext' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='next' fullname='collections:ArrayCollectionIterator/next' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<field name='col' fullname='collections:ArrayCollectionIterator/private:col' type='mx.collections:ArrayCollection' isStatic='false' isConst='false' >
+</field>
+<field name='index' fullname='collections:ArrayCollectionIterator/private:index' type='int' isStatic='false' isConst='false' >
+</field>
+<classRec name='TreeCollectionEx' fullname='collections:TreeCollectionEx' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/TreeCollectionEx.as' namespace='collections' access='public' baseclass='collections.tree:TreeComposite' interfaces='collections:ICollection' isFinal='false' isDynamic='true' >
+</classRec>
+<method name='TreeCollectionEx' fullname='collections:TreeCollectionEx/TreeCollectionEx' isStatic='false' isFinal='false' isOverride='false'  param_names='vo;ignoreCounter' param_types='*;Boolean' param_defaults='null;false' result_type='*'>
+</method>
+<method name='addCollectionItem' fullname='collections:TreeCollectionEx/addCollectionItem' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='*'>
+</method>
+<method name='clone' fullname='collections:TreeCollectionEx/clone' isStatic='false' isFinal='false' isOverride='false'  param_names='includeChildren' param_types='Boolean' param_defaults='true' result_type='Object'>
+</method>
+<method name='findById' fullname='collections:TreeCollectionEx/findById' isStatic='false' isFinal='false' isOverride='false'  param_names='nodeId' param_types='int' param_defaults='undefined' result_type='collections:TreeCollectionEx'>
+</method>
+<method name='findByVO' fullname='collections:TreeCollectionEx/findByVO' isStatic='false' isFinal='false' isOverride='false'  param_names='vo' param_types='*' param_defaults='undefined' result_type='*'>
+</method>
+<method name='removeCollectionItem' fullname='collections:TreeCollectionEx/removeCollectionItem' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='void'>
+</method>
+<field name='id' fullname='collections:TreeCollectionEx/id' type='int' isStatic='false' isConst='false' >
+</field>
+<classRec name='ArrayCollectionViewer' fullname='collections:ArrayCollectionViewer' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/ArrayCollectionViewer.as' namespace='collections' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='compareFunction' fullname='collections:ArrayCollectionViewer/private:compareFunction' isStatic='false' isFinal='false' isOverride='false'  param_names='a;b;fields' param_types='*;*;Array' param_defaults='undefined;undefined;null' result_type='int'>
+</method>
+<method name='createView' fullname='collections:ArrayCollectionViewer/createView' isStatic='false' isFinal='false' isOverride='false'  param_names='collection;context' param_types='mx.collections:ArrayCollection;collections:ArrayCollectionViewerContext' param_defaults='undefined;undefined' result_type='mx.collections:ArrayCollection'>
+</method>
+<method name='filterFunction' fullname='collections:ArrayCollectionViewer/private:filterFunction' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='filter' fullname='collections:ArrayCollectionViewer/private:filter' isStatic='false' isFinal='false' isOverride='false'  param_names='collection;filterClass' param_types='mx.collections:ArrayCollection;Class' param_defaults='undefined;undefined' result_type='mx.collections:ArrayCollection'>
+<description><![CDATA[
+
+		 Returns all items that belong to a particular type
+
+		 ]]></description>
+<param><![CDATA[collection - initial collection
+
+		 ]]></param>
+<param><![CDATA[filterClass - class that is to be filtered on
+
+		 ]]></param>
+<return><![CDATA[
+
+		 
+
+		 ]]></return>
+</method>
+<field name='context' fullname='collections:ArrayCollectionViewer/private:context' type='collections:ArrayCollectionViewerContext' isStatic='false' isConst='false' >
+</field>
+<classRec name='AliasHashMap' fullname='collections:AliasHashMap' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/AliasHashMap.as' namespace='collections' access='public' baseclass='mx.utils:ObjectProxy' interfaces='commonutils:ICloneable' isFinal='false' isDynamic='true' >
+</classRec>
+<method name='AliasHashMap' fullname='collections:AliasHashMap/AliasHashMap' isStatic='false' isFinal='false' isOverride='false'  param_names='item;uid;proxyDepth' param_types='Object;String;int' param_defaults='null;null;-1' result_type='*'>
+</method>
+<method name='addAlias' fullname='collections:AliasHashMap/addAlias' isStatic='false' isFinal='false' isOverride='false'  param_names='alias;propertyName' param_types='String;String' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='clone' fullname='collections:AliasHashMap/clone' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<method name='copyFrom' fullname='collections:AliasHashMap/copyFrom' isStatic='false' isFinal='false' isOverride='false'  param_names='source' param_types='collections:AliasHashMap' param_defaults='undefined' result_type='void'>
+</method>
+<method name='getAliases' fullname='collections:AliasHashMap/getAliases' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='getPropertyNameForAlias' fullname='collections:AliasHashMap/private:getPropertyNameForAlias' isStatic='false' isFinal='false' isOverride='false'  param_names='alias' param_types='String' param_defaults='undefined' result_type='String'>
+</method>
+<method name='getProperty' fullname='collections:AliasHashMap/flash_proxy:getProperty' isStatic='false' isFinal='false' isOverride='true'  param_names='name' param_types='*' param_defaults='undefined' result_type='*'>
+</method>
+<method name='isAlias' fullname='collections:AliasHashMap/isAlias' isStatic='false' isFinal='false' isOverride='false'  param_names='alias' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='removeAlias' fullname='collections:AliasHashMap/removeAlias' isStatic='false' isFinal='false' isOverride='false'  param_names='alias' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='setProperty' fullname='collections:AliasHashMap/flash_proxy:setProperty' isStatic='false' isFinal='false' isOverride='true'  param_names='name;value' param_types='*;*' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<field name='aliasMap' fullname='collections:AliasHashMap/aliasMap' type='Object' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='ArrayCollectionEx' fullname='collections:ArrayCollectionEx' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/ArrayCollectionEx.as' namespace='collections' access='public' baseclass='mx.collections:ArrayCollection' interfaces='collections:ICollection' isFinal='false' isDynamic='false' >
+<metadata>
+	<DefaultProperty owner='collections:ArrayCollectionEx' name='source' >
+	</DefaultProperty>
+</metadata>
+</classRec>
+<method name='ArrayCollectionEx' fullname='collections:ArrayCollectionEx/ArrayCollectionEx' isStatic='false' isFinal='false' isOverride='false'  param_names='collection' param_types='Array' param_defaults='null' result_type='*'>
+</method>
+<method name='addCollectionItem' fullname='collections:ArrayCollectionEx/addCollectionItem' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='*'>
+</method>
+<method name='removeCollectionItem' fullname='collections:ArrayCollectionEx/removeCollectionItem' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='void'>
+</method>
+<classRec name='Attribute' fullname='commonutils:Attribute' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/commonutils/Attribute.as' namespace='commonutils' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='Attribute' fullname='commonutils:Attribute/Attribute' isStatic='false' isFinal='false' isOverride='false'  param_names='name;type' param_types='String;String' param_defaults='null;null' result_type='*'>
+</method>
+<field name='name' fullname='commonutils:Attribute/name' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='type' fullname='commonutils:Attribute/type' type='String' isStatic='false' isConst='false' >
+</field>
+<classRec name='ExecutionTimer' fullname='commonutils:ExecutionTimer' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/commonutils/ExecutionTimer.as' namespace='commonutils' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+
+     
+     Convenience class which provides a simple API whereby
+
+     a specific code execution duration can be measured for
+
+     calculating relative time in milliseconds
+
+     
+     <p>
+
+     Determines the number of milliseconds which have elapsed
+
+     for a specific code block, method or asynchronous
+
+     service invocation execution
+
+     </p>
+
+     
+     <p>
+
+     The following demonstrate a few common use-case examples
+
+     of the <code>Execution</code> API.
+
+     </p>
+
+     
+     <p>
+
+     The first example demonstrates how <code>Execution</code>
+
+     can be utilized for calculating the duration of a specific
+
+     for loop execution
+
+     </p>
+
+     
+     ]]></description>
+<example><![CDATA[
+     <listing version="3.0">
+
+     
+     var execution:IExecutable = Execution.createExecution();
+
+     
+     for (var i:int = 0; i < 10000; i++)
+
+     {
+
+        trace( execution.elapsedTime() );
+
+     }
+
+     
+     trace( execution.getExecutionDuration() );
+
+     
+     </listing>
+
+     
+     <p>
+
+     The next example demonstrates how <code>Execution</code>
+
+     can be utilizes for calculating the duration of an
+
+     asynchronous service invocation. The example calls
+
+     an <code>HTTPService</code> with an id of "service"
+
+     and calculates the execution time of the call.
+
+     </p>
+
+     
+     ]]></example>
+<example><![CDATA[
+     <listing version="3.0">
+
+     
+     var execution:IExecutable;
+
+     
+     service.addEventListener("invoke", monitor);
+
+     service.result = this.result;
+
+     service.send();
+
+     
+     private function monitor(evt:Event) : void
+
+     {
+
+        execution = Execution.createExecution();
+
+     }
+
+     
+     private function result(data:Object) : void
+
+     {
+
+        trace( execution.getExecutionDuration() );
+
+     }
+
+     
+     </listing>
+
+     
+     ]]></example>
+<see><![CDATA[flash.utils.getTimer
+
+     ]]></see>
+<see><![CDATA[IExecution
+
+     
+     ]]></see>
+</classRec>
+<method name='ExecutionTimer' fullname='commonutils:ExecutionTimer/ExecutionTimer' isStatic='false' isFinal='false' isOverride='false'  param_names='autoStart' param_types='Boolean' param_defaults='false' result_type='*'>
+<description><![CDATA[
+
+         
+         Creates a new instance of Execution from which a code
+
+         execution duration can be measured
+
+         
+         <p>
+
+         The following example demonstrates the most basic and
+
+         typical use of a concrete IExecutable implementation.
+
+         </p>
+
+         
+         ]]></description>
+<example><![CDATA[
+         <listing version="3.0">
+
+         
+         var execution:IExecutable = new ExecutionDuration();
+
+         execution.start();
+
+         
+         for (var i:int = 0; i < 10000; i++)
+
+         {
+
+            trace( execution.elapsedTime() );
+
+         }
+
+         
+         trace( execution.elapsedTime() );
+
+         
+         </listing>
+
+         
+         ]]></example>
+</method>
+<method name='createExecution' fullname='commonutils:ExecutionTimer/createExecution' isStatic='true' isFinal='false' isOverride='false'  result_type='commonutils:ExecutionTimer'>
+<description><![CDATA[
+
+         
+         Static factory method which defers instantiation of the
+
+         concrete <code>IExecutable</code> implementation to the
+
+         class object and sets the autoStart parameter to true by
+
+         default as is typical of most <code>Execution</code>
+
+         implementations
+
+         
+         ]]></description>
+<example><![CDATA[
+         <listing version="3.0">
+
+         
+         var execution:IExecutable = ExecutionDuration.createExecution();
+
+         
+         someMethod();
+
+         
+         trace( execution.getExecutionDuration() );
+
+         
+         </listing>
+
+         
+         ]]></example>
+<return><![CDATA[a newly created Execution object instance
+
+         
+         ]]></return>
+</method>
+<method name='getExecutionResults' fullname='commonutils:ExecutionTimer/getExecutionResults' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+<description><![CDATA[
+
+         
+         Determines the total time (in milliseconds) which
+
+         has elapsed for a specific <code>Execution</code>
+
+         
+         <p>
+
+         Calls to <code>getExecutionResults</code> finalizes
+
+         a <code>Execution</code> instance, that is, when a
+
+         call to <code>getExecutionResults</code> is made
+
+         the execution object immediately stops calculating
+
+         the <code>getElapsedTime</code>. Therefore by calling
+
+         <code>getExecutionResults</code> it is implied that
+
+         the execution instance has completed
+
+         </p>
+
+         
+         <p>
+
+         Use this operation when the code you are monitoring
+
+         has completed
+
+         </p>
+
+         
+         ]]></description>
+<example><![CDATA[
+         <listing version="3.0">
+
+         
+         var execution:IExecutable = new ExecutionDuration( true );
+
+         
+         someMethod();
+
+         
+         trace( execution.getExecutionDuration() );
+
+         
+         </listing>
+
+         
+         ]]></example>
+<return><![CDATA[the total execution time in milliseconds
+
+         
+         ]]></return>
+</method>
+<method name='reset' fullname='commonutils:ExecutionTimer/reset' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+<description><![CDATA[
+
+         
+         Resets the <code>Execution</code> instance by reassigning
+
+         a new value to the <code>executionStartTime</code> to the
+
+         current <code>getTimer()</code>
+
+         
+         <p>
+
+         This method allows a single <code>Execution</code> instance
+
+         to be resused and should be utilized as an alternative to
+
+         creating new <code>Execution</code> objects
+
+         </p>
+
+         
+         ]]></description>
+<example><![CDATA[
+         <listing version="3.0">
+
+         
+         var execution:IExecutable = new ExecutionDuration( true );
+
+         
+         someMethod();
+
+         
+         trace( execution.getExecutionDuration() );
+
+         
+         // reset the execution instance for determining the execution
+
+         // duration of another operation
+
+         execution.reset();
+
+         
+         someotherMethod();
+
+         
+         trace( execution.getExecutionDuration() );
+
+         </listing>
+
+         
+         ]]></example>
+</method>
+<method name='start' fullname='commonutils:ExecutionTimer/start' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+<description><![CDATA[
+
+         
+         Starts the current execution measurements and sets the
+
+         value of the <code>executionStartTime</code> property
+
+         to the value of the current getTimer(); Flash Player
+
+         call
+
+         
+         ]]></description>
+<example><![CDATA[
+         <listing version="3.0">
+
+         
+         var execution:IExecutable = new ExecutionDuration( true );
+
+         
+         someMethod();
+
+         
+         trace( execution.getExecutionDuration() );
+
+         
+         </listing>
+
+         
+         ]]></example>
+<return><![CDATA[an integer representing the start time
+
+         
+         ]]></return>
+</method>
+<method name='stop' fullname='commonutils:ExecutionTimer/stop' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+<description><![CDATA[
+
+         
+         Stops the current execution measurements and sets the
+
+         value of the <code>executionStopTime</code> property
+
+         to the value of the current getTimer(); Flash Player
+
+         call
+
+         
+         ]]></description>
+<example><![CDATA[
+         <listing version="3.0">
+
+         
+         var execution:IExecutable = new ExecutionDuration( true );
+
+         
+         if ( someMethod() == null )
+
+         {
+
+             execution.stop();
+
+             trace( execution.getExecutionDuration() );
+
+         }
+
+         else
+
+         {
+
+             someOtherMethod()
+
+         }
+
+         
+         trace( execution.getExecutionDuration() );
+
+         
+         </listing>
+
+         
+         ]]></example>
+<return><![CDATA[an integer representing the stop time
+
+         
+         ]]></return>
+</method>
+<method name='elapsedTime' fullname='commonutils:ExecutionTimer/elapsedTime/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+<description><![CDATA[
+
+         
+         Retrieves the total execution measurement based on the
+
+         current <code>executionStartTime</code> and the current
+
+         <code>executionStopTime</code>
+
+         
+         ]]></description>
+<example><![CDATA[
+         <listing version="3.0">
+
+         
+         var execution:IExecutable = new ExecutionDuration();
+
+         execution.start();
+
+         
+         for (var prop:String in someObject)
+
+         {
+
+            trace( prop + "=" + someObject[prop])
+
+         }
+
+         
+         trace( execution.elapsedTime() );
+
+         
+         </listing>
+
+         
+         ]]></example>
+<return><![CDATA[integer representing the total execution duration
+
+         
+         ]]></return>
+</method>
+<method name='startTime' fullname='commonutils:ExecutionTimer/startTime/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+<description><![CDATA[
+
+         
+         Retrieves the initial start time for the current
+
+         <code>Execution</code> instance
+
+         
+         ]]></description>
+<return><![CDATA[the start time in milliseconds
+
+         
+         ]]></return>
+</method>
+<method name='stopTime' fullname='commonutils:ExecutionTimer/stopTime/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+<description><![CDATA[
+
+         
+         Retrieves the initial start time for the current
+
+         <code>Execution</code> instance
+
+         
+         ]]></description>
+<return><![CDATA[the start time in milliseconds
+
+         
+         ]]></return>
+</method>
+<field name='executionStartTime' fullname='commonutils:ExecutionTimer/protected:executionStartTime' type='int' isStatic='false' isConst='false' >
+<description><![CDATA[
+
+         
+         Defines the value of an execution start time which is
+
+         used to determine the elapsed code execution duration
+
+         
+         ]]></description>
+</field>
+<field name='executionStopTime' fullname='commonutils:ExecutionTimer/protected:executionStopTime' type='int' isStatic='false' isConst='false' >
+<description><![CDATA[
+
+         
+         Defines the value of an execution stop time which is
+
+         used to determine the elapsed code execution duration
+
+         
+         ]]></description>
+</field>
+<packageRec name='commonutils.null' fullname='commonutils.null'>
+<description><![CDATA[
+
+ Class to set the leading zeros to a string or number
+
+ 
+ Usage:
+
+ LeadingZerosClass.padNumber(9,2); // traces "09"
+
+ LeadingZerosClass.padString(number,2);
+
+ Params - first parameter is the number in Number format
+
+ Params - first parameter in padString is the number in String format (convenience method)
+
+ Params - second parameter is the number of places
+
+ Returns - string. returns string because returning Number format will remove the leading zero pad
+
+]]></description>
+</packageRec>
+<classRec name='LeadingZeros' fullname='commonutils:LeadingZeros' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/commonutils/LeadingZeros.as' namespace='commonutils' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='LeadingZeros' fullname='commonutils:LeadingZeros/LeadingZeros' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='padNumber' fullname='commonutils:LeadingZeros/padNumber' isStatic='false' isFinal='false' isOverride='false'  param_names='number;places' param_types='Number;Number' param_defaults='undefined;2' result_type='String'>
+</method>
+<method name='padString' fullname='commonutils:LeadingZeros/padString' isStatic='false' isFinal='false' isOverride='false'  param_names='number;places' param_types='String;Number' param_defaults='undefined;2' result_type='String'>
+</method>
+<field name='numberLength' fullname='commonutils:LeadingZeros/private:numberLength' type='int' isStatic='false' isConst='false' defaultValue='1' >
+</field>
+<field name='numberString' fullname='commonutils:LeadingZeros/private:numberString' type='String' isStatic='false' isConst='false' defaultValue='' >
+</field>
+<field name='useLeadingZeros' fullname='commonutils:LeadingZeros/useLeadingZeros' type='Boolean' isStatic='false' isConst='false' defaultValue='true' >
+</field>
+<interfaceRec name='ICloneable' fullname='commonutils:ICloneable' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/commonutils/ICloneable.as' namespace='commonutils' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='clone' fullname='commonutils:ICloneable/commonutils:ICloneable:clone' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<classRec name='Hasher' fullname='commonutils:Hasher' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/commonutils/Hasher.as' namespace='commonutils' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='hash' fullname='commonutils:Hasher/hash' isStatic='true' isFinal='false' isOverride='false'  param_names='s' param_types='String' param_defaults='undefined' result_type='String'>
+</method>
+<classRec name='Base64' fullname='commonutils:Base64' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/commonutils/Base64.as' namespace='commonutils' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='Base64' fullname='commonutils:Base64/Base64' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='decodeToByteArray' fullname='commonutils:Base64/decodeToByteArray' isStatic='true' isFinal='false' isOverride='false'  param_names='data' param_types='String' param_defaults='undefined' result_type='flash.utils:ByteArray'>
+</method>
+<method name='decode' fullname='commonutils:Base64/decode' isStatic='true' isFinal='false' isOverride='false'  param_names='data' param_types='String' param_defaults='undefined' result_type='String'>
+</method>
+<method name='encodeByteArray' fullname='commonutils:Base64/encodeByteArray' isStatic='true' isFinal='false' isOverride='false'  param_names='data' param_types='flash.utils:ByteArray' param_defaults='undefined' result_type='String'>
+</method>
+<method name='encode' fullname='commonutils:Base64/encode' isStatic='true' isFinal='false' isOverride='false'  param_names='data' param_types='String' param_defaults='undefined' result_type='String'>
+</method>
+<field name='BASE64_CHARS' fullname='commonutils:Base64/private:BASE64_CHARS' type='String' isStatic='true' isConst='true' defaultValue='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=' >
+</field>
+<field name='version' fullname='commonutils:Base64/version' type='String' isStatic='true' isConst='true' defaultValue='1.0.0' >
+</field>
+<classRec name='DeepCopy' fullname='commonutils:DeepCopy' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/commonutils/DeepCopy.as' namespace='commonutils' access='public' baseclass='Object' isFinal='true' isDynamic='false' >
+<description><![CDATA[
+
+     All static class which defines a single static method in which 
+
+     objects can be cloned by creating a Deep Copy of a reference 
+
+     object to a new memory address
+
+     ]]></description>
+</classRec>
+<method name='clone' fullname='commonutils:DeepCopy/clone' isStatic='true' isFinal='false' isOverride='false'  param_names='obj;registerClassAliases' param_types='*;Boolean' param_defaults='undefined;true' result_type='Object'>
+<description><![CDATA[
+
+         Creates a deep copy of a specified object which is identical
+
+         to the referenced object
+
+         
+         ]]></description>
+<param><![CDATA[the reference object in which to clone
+
+         ]]></param>
+<return><![CDATA[a clone of the original reference object
+
+         ]]></return>
+</method>
+<classRec name='ObjectHelper' fullname='commonutils:ObjectHelper' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/commonutils/ObjectHelper.as' namespace='commonutils' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='compare' fullname='commonutils:ObjectHelper/compare' isStatic='true' isFinal='false' isOverride='false'  param_names='a;b' param_types='*;*' param_defaults='undefined;undefined' result_type='Boolean'>
+</method>
+<classRec name='ClassInspector' fullname='commonutils:ClassInspector' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/commonutils/ClassInspector.as' namespace='commonutils' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='createClass' fullname='commonutils:ClassInspector/createClass' isStatic='false' isFinal='false' isOverride='false'  param_names='className' param_types='String' param_defaults='undefined' result_type='Class'>
+</method>
+<method name='extractClassName' fullname='commonutils:ClassInspector/private:extractClassName' isStatic='false' isFinal='false' isOverride='false'  param_names='fullClassName' param_types='String' param_defaults='undefined' result_type='String'>
+</method>
+<method name='getBaseClass' fullname='commonutils:ClassInspector/getBaseClass' isStatic='false' isFinal='false' isOverride='false'  param_names='c' param_types='Class' param_defaults='undefined' result_type='Class'>
+</method>
+<method name='getClassAccessors' fullname='commonutils:ClassInspector/getClassAccessors' isStatic='false' isFinal='false' isOverride='false'  param_names='o' param_types='*' param_defaults='undefined' result_type='Array'>
+</method>
+<method name='getClassName' fullname='commonutils:ClassInspector/getClassName' isStatic='false' isFinal='false' isOverride='false'  param_names='o;ignoreNs' param_types='*;Boolean' param_defaults='undefined;false' result_type='String'>
+</method>
+<method name='getClassNamesRecursively' fullname='commonutils:ClassInspector/private:getClassNamesRecursively' isStatic='false' isFinal='false' isOverride='false'  param_names='o;res;traversedObjects' param_types='*;Array;flash.utils:Dictionary' param_defaults='undefined;undefined;undefined' result_type='void'>
+</method>
+<method name='getClassNames' fullname='commonutils:ClassInspector/getClassNames' isStatic='false' isFinal='false' isOverride='false'  param_names='o;res' param_types='*;Array' param_defaults='undefined;null' result_type='Array'>
+</method>
+<method name='getClassVariables' fullname='commonutils:ClassInspector/getClassVariables' isStatic='false' isFinal='false' isOverride='false'  param_names='o' param_types='*' param_defaults='undefined' result_type='Array'>
+</method>
+<method name='getClass' fullname='commonutils:ClassInspector/getClass' isStatic='false' isFinal='false' isOverride='false'  param_names='o' param_types='*' param_defaults='undefined' result_type='Class'>
+</method>
+<method name='getCollectionClassNames' fullname='commonutils:ClassInspector/getCollectionClassNames' isStatic='false' isFinal='false' isOverride='false'  param_names='o;res' param_types='*;Array' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='getDataAttributes' fullname='commonutils:ClassInspector/getDataAttributes' isStatic='false' isFinal='false' isOverride='false'  param_names='o' param_types='*' param_defaults='undefined' result_type='Array'>
+</method>
+<method name='getDynamicAttributes' fullname='commonutils:ClassInspector/getDynamicAttributes' isStatic='false' isFinal='false' isOverride='false'  param_names='o' param_types='*' param_defaults='undefined' result_type='Array'>
+</method>
+<method name='getPropertyType' fullname='commonutils:ClassInspector/getPropertyType' isStatic='false' isFinal='false' isOverride='false'  param_names='o;propName' param_types='*;String' param_defaults='undefined;undefined' result_type='String'>
+</method>
+<method name='getTypeInfo' fullname='commonutils:ClassInspector/getTypeInfo' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Class' param_defaults='undefined' result_type='XML'>
+</method>
+<method name='hasConstructorArgs' fullname='commonutils:ClassInspector/hasConstructorArgs' isStatic='false' isFinal='false' isOverride='false'  param_names='o' param_types='*' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='hasProperty' fullname='commonutils:ClassInspector/hasProperty' isStatic='false' isFinal='false' isOverride='false'  param_names='o;name' param_types='*;String' param_defaults='undefined;undefined' result_type='Boolean'>
+</method>
+<method name='implementsInterface' fullname='commonutils:ClassInspector/implementsInterface' isStatic='false' isFinal='false' isOverride='false'  param_names='o;interfaceA' param_types='Class;Class' param_defaults='undefined;undefined' result_type='Boolean'>
+</method>
+<method name='populateAttributes' fullname='commonutils:ClassInspector/private:populateAttributes' isStatic='false' isFinal='false' isOverride='false'  param_names='attrs' param_types='XMLList' param_defaults='undefined' result_type='Array'>
+</method>
+<classRec name='AsyncServer' fullname='commonutils:AsyncServer' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/commonutils/AsyncServer.as' namespace='commonutils' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='AsyncServer' fullname='commonutils:AsyncServer/AsyncServer' isStatic='false' isFinal='false' isOverride='false'  param_names='delay' param_types='uint' param_defaults='0' result_type='*'>
+</method>
+<method name='executeDelayedResponse' fullname='commonutils:AsyncServer/executeDelayedResponse' isStatic='false' isFinal='false' isOverride='false'  param_names='responseGeneratorFunction;responseGeneratorData' param_types='Function;Object' param_defaults='undefined;null' result_type='mx.rpc:AsyncToken'>
+</method>
+<method name='timerHandler' fullname='commonutils:AsyncServer/private:timerHandler' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:TimerEvent' param_defaults='undefined' result_type='void'>
+</method>
+<field name='delay' fullname='commonutils:AsyncServer/private:delay' type='uint' isStatic='false' isConst='false' defaultValue='0' >
+</field>
+<field name='responseGeneratorData' fullname='commonutils:AsyncServer/private:responseGeneratorData' type='Object' isStatic='false' isConst='false' >
+</field>
+<field name='responseGeneratorFunction' fullname='commonutils:AsyncServer/private:responseGeneratorFunction' type='Function' isStatic='false' isConst='false' >
+</field>
+<field name='timer' fullname='commonutils:AsyncServer/private:timer' type='flash.utils:Timer' isStatic='false' isConst='false' >
+</field>
+<field name='token' fullname='commonutils:AsyncServer/private:token' type='mx.rpc:AsyncToken' isStatic='false' isConst='false' >
+</field>
+<classRec name='CompilationDate' fullname='commonutils:CompilationDate' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/commonutils/CompilationDate.as' namespace='commonutils' access='public' baseclass='Object' interfaces='flash.events:IEventDispatcher' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 Direct reading of SWF file to gather the SWF Compile information
+	 	 Distributed under the new BSD License
+	 ]]></description>
+<author><![CDATA[Paul Sivtsov - ad]]></author>
+<author><![CDATA[Igor Costa
+	 ]]></author>
+<author><![CDATA[Judah Frangipane
+	 	 http://www.igorcosta.org/?p=220
+	 http://judahfrangipane.com
+	 	 Updated for use as an MXML tag and source of data binding, etc
+	 	 	 ]]></author>
+<ad.by><![CDATA[]]></ad.by>
+</classRec>
+<method name='CompilationDate' fullname='commonutils:CompilationDate/CompilationDate' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='addEventListener' fullname='commonutils:CompilationDate/addEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture;priority;weakRef' param_types='String;Function;Boolean;int;Boolean' param_defaults='undefined;undefined;false;0;false' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='applicationComplete' fullname='commonutils:CompilationDate/private:applicationComplete' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='mx.events:FlexEvent' param_defaults='undefined' result_type='void'>
+</method>
+<method name='dispatchEvent' fullname='commonutils:CompilationDate/dispatchEvent' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='findAndReadTagBody' fullname='commonutils:CompilationDate/findAndReadTagBody' isStatic='false' isFinal='false' isOverride='false'  param_names='theTagCode' param_types='uint' param_defaults='undefined' result_type='flash.utils:ByteArray'>
+</method>
+<method name='hasEventListener' fullname='commonutils:CompilationDate/hasEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='readCompilationDate' fullname='commonutils:CompilationDate/readCompilationDate' isStatic='false' isFinal='false' isOverride='false'  param_names='serialNumber' param_types='flash.utils:ByteArray' param_defaults='null' result_type='Date'>
+</method>
+<method name='readSerialNumber' fullname='commonutils:CompilationDate/readSerialNumber' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.utils:ByteArray'>
+</method>
+<method name='readTag' fullname='commonutils:CompilationDate/private:readTag' isStatic='false' isFinal='false' isOverride='false'  param_names='src;theTagCode' param_types='flash.utils:ByteArray;uint' param_defaults='undefined;undefined' result_type='Object'>
+</method>
+<method name='removeEventListener' fullname='commonutils:CompilationDate/removeEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture' param_types='String;Function;Boolean' param_defaults='undefined;undefined;false' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='willTrigger' fullname='commonutils:CompilationDate/willTrigger' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='ampmNames' fullname='commonutils:CompilationDate/ampmNames/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/ampmNames/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='ampm' fullname='commonutils:CompilationDate/ampm/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/ampm/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='cached' fullname='commonutils:CompilationDate/cached/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/cached/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='changed' fullname='commonutils:CompilationDate/changed/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/changed/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='compilationDate' fullname='commonutils:CompilationDate/compilationDate/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Date'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/compilationDate/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='dayIndex' fullname='commonutils:CompilationDate/dayIndex/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/dayIndex/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='dayName' fullname='commonutils:CompilationDate/dayName/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/dayName/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='dayNames' fullname='commonutils:CompilationDate/dayNames/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/dayNames/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='dayNumber' fullname='commonutils:CompilationDate/dayNumber/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/dayNumber/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='hourNotation' fullname='commonutils:CompilationDate/hourNotation/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/hourNotation/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='hour' fullname='commonutils:CompilationDate/hour/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/hour/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='milliseconds' fullname='commonutils:CompilationDate/milliseconds/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/milliseconds/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='minute' fullname='commonutils:CompilationDate/minute/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/minute/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='monthIndex' fullname='commonutils:CompilationDate/monthIndex/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/monthIndex/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='monthName' fullname='commonutils:CompilationDate/monthName/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/monthName/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='monthNames' fullname='commonutils:CompilationDate/monthNames/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/monthNames/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='previousCompiliationDate' fullname='commonutils:CompilationDate/previousCompiliationDate/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Date'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/previousCompiliationDate/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='reloadButton' fullname='commonutils:CompilationDate/reloadButton/get' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/reloadButton/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='seconds' fullname='commonutils:CompilationDate/seconds/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/seconds/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='serialNumber' fullname='commonutils:CompilationDate/serialNumber/get' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.utils:ByteArray'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/serialNumber/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='timeDifference' fullname='commonutils:CompilationDate/timeDifference/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Number'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/timeDifference/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='trackChanges' fullname='commonutils:CompilationDate/trackChanges/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/trackChanges/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='version' fullname='commonutils:CompilationDate/version/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/version/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='year' fullname='commonutils:CompilationDate/year/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='commonutils:CompilationDate/year/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='ampmNames' fullname='commonutils:CompilationDate/ampmNames/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Array' param_defaults='undefined' result_type='void'>
+</method>
+<method name='ampm' fullname='commonutils:CompilationDate/ampm/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='cached' fullname='commonutils:CompilationDate/cached/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Boolean' param_defaults='undefined' result_type='void'>
+</method>
+<method name='changed' fullname='commonutils:CompilationDate/changed/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Boolean' param_defaults='undefined' result_type='void'>
+</method>
+<method name='compilationDate' fullname='commonutils:CompilationDate/compilationDate/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Date' param_defaults='undefined' result_type='void'>
+</method>
+<method name='dayIndex' fullname='commonutils:CompilationDate/dayIndex/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='dayName' fullname='commonutils:CompilationDate/dayName/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='dayNames' fullname='commonutils:CompilationDate/dayNames/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Array' param_defaults='undefined' result_type='void'>
+</method>
+<method name='dayNumber' fullname='commonutils:CompilationDate/dayNumber/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='hourNotation' fullname='commonutils:CompilationDate/hourNotation/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='hour' fullname='commonutils:CompilationDate/hour/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='milliseconds' fullname='commonutils:CompilationDate/milliseconds/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='minute' fullname='commonutils:CompilationDate/minute/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='monthIndex' fullname='commonutils:CompilationDate/monthIndex/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='monthName' fullname='commonutils:CompilationDate/monthName/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='monthNames' fullname='commonutils:CompilationDate/monthNames/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Array' param_defaults='undefined' result_type='void'>
+</method>
+<method name='previousCompiliationDate' fullname='commonutils:CompilationDate/previousCompiliationDate/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Date' param_defaults='undefined' result_type='void'>
+</method>
+<method name='reloadButton' fullname='commonutils:CompilationDate/reloadButton/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='*' param_defaults='undefined' result_type='void'>
+</method>
+<method name='seconds' fullname='commonutils:CompilationDate/seconds/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='serialNumber' fullname='commonutils:CompilationDate/serialNumber/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='flash.utils:ByteArray' param_defaults='undefined' result_type='void'>
+</method>
+<method name='timeDifference' fullname='commonutils:CompilationDate/timeDifference/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Number' param_defaults='undefined' result_type='void'>
+</method>
+<method name='trackChanges' fullname='commonutils:CompilationDate/trackChanges/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Boolean' param_defaults='undefined' result_type='void'>
+</method>
+<method name='version' fullname='commonutils:CompilationDate/version/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='year' fullname='commonutils:CompilationDate/year/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_bindingEventDispatcher' fullname='commonutils:CompilationDate/private:_bindingEventDispatcher' type='flash.events:EventDispatcher' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='UIControlUtil' fullname='commonutils:UIControlUtil' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/commonutils/UIControlUtil.as' namespace='commonutils' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='addEventListener' fullname='commonutils:UIControlUtil/addEventListener' isStatic='true' isFinal='false' isOverride='false'  param_names='control;eventType;listener' param_types='mx.core:UIComponent;String;Function' param_defaults='undefined;undefined;undefined' result_type='void'>
+</method>
+<method name='bindBidirectionally' fullname='commonutils:UIControlUtil/bindBidirectionally' isStatic='true' isFinal='false' isOverride='false'  param_names='model;modelProperty;view;viewProperty' param_types='Object;String;Object;String' param_defaults='undefined;undefined;undefined;undefined' result_type='Array'>
+</method>
+<interfaceRec name='ITreeData' fullname='collections.tree:ITreeData' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/tree/ITreeData.as' namespace='collections.tree' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<classRec name='TreeChildrenChangedEvent' fullname='collections.tree:TreeChildrenChangedEvent' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/tree/TreeChildrenChangedEvent.as' namespace='collections.tree' access='public' baseclass='flash.events:Event' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='TreeChildrenChangedEvent' fullname='collections.tree:TreeChildrenChangedEvent/TreeChildrenChangedEvent' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<field name='name' fullname='collections.tree:TreeChildrenChangedEvent/name' type='String' isStatic='true' isConst='false' defaultValue='treeChildrenChanged' >
+</field>
+<interfaceRec name='ITreeIterator' fullname='collections.tree:ITreeIterator' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/tree/ITreeIterator.as' namespace='collections.tree' access='public' baseClasses='collections:IIterator' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='peek' fullname='collections.tree:ITreeIterator/collections.tree:ITreeIterator:peek' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='skip' fullname='collections.tree:ITreeIterator/collections.tree:ITreeIterator:skip' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<classRec name='TreeIteratorItem' fullname='collections.tree:TreeIteratorItem' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/tree/TreeIteratorItem.as' namespace='collections.tree' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='TreeIteratorItem' fullname='collections.tree:TreeIteratorItem/TreeIteratorItem' isStatic='false' isFinal='false' isOverride='false'  param_names='node;depth' param_types='collections.tree:TreeComposite;int' param_defaults='undefined;undefined' result_type='*'>
+</method>
+<field name='depth' fullname='collections.tree:TreeIteratorItem/depth' type='int' isStatic='false' isConst='false' >
+</field>
+<field name='node' fullname='collections.tree:TreeIteratorItem/node' type='collections.tree:TreeComposite' isStatic='false' isConst='false' >
+</field>
+<classRec name='AbstractTreeIterator' fullname='collections.tree:AbstractTreeIterator' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/tree/AbstractTreeIterator.as' namespace='collections.tree' access='public' baseclass='Object' interfaces='collections.tree:ITreeIterator' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='AbstractTreeIterator' fullname='collections.tree:AbstractTreeIterator/AbstractTreeIterator' isStatic='false' isFinal='false' isOverride='false'  param_names='root;isReverse' param_types='collections.tree:TreeComposite;Boolean' param_defaults='undefined;false' result_type='*'>
+</method>
+<method name='addChildren' fullname='collections.tree:AbstractTreeIterator/protected:addChildren' isStatic='false' isFinal='false' isOverride='false'  param_names='node' param_types='collections.tree:TreeIteratorItem' param_defaults='undefined' result_type='void'>
+</method>
+<method name='hasNext' fullname='collections.tree:AbstractTreeIterator/hasNext' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='next' fullname='collections.tree:AbstractTreeIterator/next' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<method name='peek' fullname='collections.tree:AbstractTreeIterator/peek' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='removeCurrentIteratorItem' fullname='collections.tree:AbstractTreeIterator/protected:removeCurrentIteratorItem' isStatic='false' isFinal='false' isOverride='false'  result_type='collections.tree:TreeIteratorItem'>
+</method>
+<method name='skip' fullname='collections.tree:AbstractTreeIterator/skip' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='currentIteratorItem' fullname='collections.tree:AbstractTreeIterator/currentIteratorItem/get' isStatic='false' isFinal='false' isOverride='false'  result_type='collections.tree:TreeIteratorItem'>
+</method>
+<field name='isReverse' fullname='collections.tree:AbstractTreeIterator/protected:isReverse' type='Boolean' isStatic='false' isConst='false' >
+</field>
+<field name='itemsToVisit' fullname='collections.tree:AbstractTreeIterator/protected:itemsToVisit' type='Array' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='TreeCollectionExCloner' fullname='collections.tree:TreeCollectionExCloner' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/tree/TreeCollectionExCloner.as' namespace='collections.tree' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='cloneStructure' fullname='collections.tree:TreeCollectionExCloner/cloneStructure' isStatic='false' isFinal='false' isOverride='false'  param_names='source' param_types='collections:TreeCollectionEx' param_defaults='undefined' result_type='collections:TreeCollectionEx'>
+</method>
+<method name='clone' fullname='collections.tree:TreeCollectionExCloner/clone' isStatic='false' isFinal='false' isOverride='false'  param_names='source;includeChildren;registerClassAliases' param_types='collections:TreeCollectionEx;Boolean;Boolean' param_defaults='undefined;true;true' result_type='collections:TreeCollectionEx'>
+</method>
+<classRec name='SubtreeIterator' fullname='collections.tree:SubtreeIterator' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/tree/SubtreeIterator.as' namespace='collections.tree' access='public' baseclass='Object' interfaces='collections:IIterator' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='SubtreeIterator' fullname='collections.tree:SubtreeIterator/SubtreeIterator' isStatic='false' isFinal='false' isOverride='false'  param_names='root' param_types='collections:TreeCollectionEx' param_defaults='undefined' result_type='*'>
+</method>
+<method name='hasNext' fullname='collections.tree:SubtreeIterator/hasNext' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='next' fullname='collections.tree:SubtreeIterator/next' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<field name='it' fullname='collections.tree:SubtreeIterator/private:it' type='collections:IIterator' isStatic='false' isConst='false' >
+</field>
+<classRec name='TreeRankerResult' fullname='collections.tree:TreeRankerResult' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/tree/TreeRankerResult.as' namespace='collections.tree' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='TreeRankerResult' fullname='collections.tree:TreeRankerResult/TreeRankerResult' isStatic='false' isFinal='false' isOverride='false'  param_names='rankedTree;treeHeight;maxRank;minRank' param_types='collections:TreeCollectionEx;int;int;int' param_defaults='undefined;undefined;undefined;undefined' result_type='*'>
+</method>
+<method name='maxRank' fullname='collections.tree:TreeRankerResult/maxRank/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
+<method name='minRank' fullname='collections.tree:TreeRankerResult/minRank/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
+<method name='rankedTree' fullname='collections.tree:TreeRankerResult/rankedTree/get' isStatic='false' isFinal='false' isOverride='false'  result_type='collections:TreeCollectionEx'>
+</method>
+<method name='treeHeight' fullname='collections.tree:TreeRankerResult/treeHeight/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
+<field name='_maxRank' fullname='collections.tree:TreeRankerResult/private:_maxRank' type='int' isStatic='false' isConst='false' >
+</field>
+<field name='_minRank' fullname='collections.tree:TreeRankerResult/private:_minRank' type='int' isStatic='false' isConst='false' >
+</field>
+<field name='_rankedTree' fullname='collections.tree:TreeRankerResult/private:_rankedTree' type='collections:TreeCollectionEx' isStatic='false' isConst='false' >
+</field>
+<field name='_treeHeight' fullname='collections.tree:TreeRankerResult/private:_treeHeight' type='int' isStatic='false' isConst='false' >
+</field>
+<interfaceRec name='ITreeRanker' fullname='collections.tree:ITreeRanker' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/tree/ITreeRanker.as' namespace='collections.tree' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='rank' fullname='collections.tree:ITreeRanker/collections.tree:ITreeRanker:rank' isStatic='false' isFinal='false' isOverride='false'  param_names='root' param_types='collections:TreeCollectionEx' param_defaults='undefined' result_type='collections.tree:TreeRankerResult'>
+</method>
+<classRec name='TreeWeightRanker' fullname='collections.tree:TreeWeightRanker' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/tree/TreeWeightRanker.as' namespace='collections.tree' access='public' baseclass='Object' interfaces='collections.tree:ITreeRanker' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='calculateRankWithPadding2' fullname='collections.tree:TreeWeightRanker/private:calculateRankWithPadding2' isStatic='false' isFinal='false' isOverride='false'  param_names='node;root' param_types='collections:TreeCollectionEx;collections:TreeCollectionEx' param_defaults='undefined;undefined' result_type='int'>
+</method>
+<method name='canPrioritize' fullname='collections.tree:TreeWeightRanker/private:canPrioritize' isStatic='false' isFinal='false' isOverride='false'  param_names='node' param_types='collections:TreeCollectionEx' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='getPriority' fullname='collections.tree:TreeWeightRanker/private:getPriority' isStatic='false' isFinal='false' isOverride='false'  param_names='node' param_types='collections:TreeCollectionEx' param_defaults='undefined' result_type='int'>
+</method>
+<method name='rank' fullname='collections.tree:TreeWeightRanker/rank' isStatic='false' isFinal='false' isOverride='false'  param_names='root' param_types='collections:TreeCollectionEx' param_defaults='undefined' result_type='collections.tree:TreeRankerResult'>
+</method>
+<method name='updateMinMaxRank' fullname='collections.tree:TreeWeightRanker/private:updateMinMaxRank' isStatic='false' isFinal='false' isOverride='false'  param_names='r' param_types='int' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_maxRank' fullname='collections.tree:TreeWeightRanker/private:_maxRank' type='int' isStatic='false' isConst='false' defaultValue='-2.147483648E9' >
+</field>
+<field name='_minRank' fullname='collections.tree:TreeWeightRanker/private:_minRank' type='int' isStatic='false' isConst='false' defaultValue='2.147483647E9' >
+</field>
+<field name='_treeHeight' fullname='collections.tree:TreeWeightRanker/private:_treeHeight' type='int' isStatic='false' isConst='false' >
+</field>
+<interfaceRec name='ITreeSorter' fullname='collections.tree:ITreeSorter' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/tree/ITreeSorter.as' namespace='collections.tree' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='sort' fullname='collections.tree:ITreeSorter/collections.tree:ITreeSorter:sort' isStatic='false' isFinal='false' isOverride='false'  param_names='root;weightPropertyName' param_types='collections:TreeCollectionEx;String' param_defaults='undefined;undefined' result_type='collections:TreeCollectionEx'>
+</method>
+<classRec name='BreadthFirstTreeIterator' fullname='collections.tree:BreadthFirstTreeIterator' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/tree/BreadthFirstTreeIterator.as' namespace='collections.tree' access='public' baseclass='collections.tree:AbstractTreeIterator' isFinal='false' isDynamic='false' >
+<description><![CDATA[ Breadth-first iterator
+	 ]]></description>
+</classRec>
+<method name='BreadthFirstTreeIterator' fullname='collections.tree:BreadthFirstTreeIterator/BreadthFirstTreeIterator' isStatic='false' isFinal='false' isOverride='false'  param_names='root;isReverse' param_types='collections.tree:TreeComposite;Boolean' param_defaults='undefined;false' result_type='*'>
+</method>
+<method name='addChildren' fullname='collections.tree:BreadthFirstTreeIterator/protected:addChildren' isStatic='false' isFinal='false' isOverride='true'  param_names='item' param_types='collections.tree:TreeIteratorItem' param_defaults='undefined' result_type='void'>
+</method>
+<classRec name='TreeIterator' fullname='collections.tree:TreeIterator' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/tree/TreeIterator.as' namespace='collections.tree' access='public' baseclass='collections.tree:AbstractTreeIterator' isFinal='false' isDynamic='false' >
+<description><![CDATA[ Pre-order depth-first iterator, i.e. Value-Left-Right
+
+	 ]]></description>
+</classRec>
+<method name='TreeIterator' fullname='collections.tree:TreeIterator/TreeIterator' isStatic='false' isFinal='false' isOverride='false'  param_names='root;isReverse' param_types='collections.tree:TreeComposite;Boolean' param_defaults='undefined;false' result_type='*'>
+</method>
+<method name='addChildren' fullname='collections.tree:TreeIterator/protected:addChildren' isStatic='false' isFinal='false' isOverride='true'  param_names='item' param_types='collections.tree:TreeIteratorItem' param_defaults='undefined' result_type='void'>
+</method>
+<classRec name='TreeLeafIterator' fullname='collections.tree:TreeLeafIterator' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/tree/TreeLeafIterator.as' namespace='collections.tree' access='public' baseclass='collections.tree:AbstractTreeIterator' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='TreeLeafIterator' fullname='collections.tree:TreeLeafIterator/TreeLeafIterator' isStatic='false' isFinal='false' isOverride='false'  param_names='root;isReverse' param_types='collections.tree:TreeComposite;Boolean' param_defaults='undefined;false' result_type='*'>
+</method>
+<method name='hasNext' fullname='collections.tree:TreeLeafIterator/hasNext' isStatic='false' isFinal='false' isOverride='true'  result_type='Boolean'>
+</method>
+<method name='next' fullname='collections.tree:TreeLeafIterator/next' isStatic='false' isFinal='false' isOverride='true'  result_type='Object'>
+</method>
+<classRec name='TreeWeightSorter' fullname='collections.tree:TreeWeightSorter' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/tree/TreeWeightSorter.as' namespace='collections.tree' access='public' baseclass='Object' interfaces='collections.tree:ITreeSorter' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='_sort' fullname='collections.tree:TreeWeightSorter/private:_sort' isStatic='false' isFinal='false' isOverride='false'  param_names='tree' param_types='collections:TreeCollectionEx' param_defaults='undefined' result_type='void'>
+</method>
+<method name='prioritySort' fullname='collections.tree:TreeWeightSorter/private:prioritySort' isStatic='false' isFinal='false' isOverride='false'  param_names='a;b;fields' param_types='Object;Object;Array' param_defaults='undefined;undefined;null' result_type='int'>
+</method>
+<method name='sort' fullname='collections.tree:TreeWeightSorter/sort' isStatic='false' isFinal='false' isOverride='false'  param_names='tree;weightPropertyName' param_types='collections:TreeCollectionEx;String' param_defaults='undefined;undefined' result_type='collections:TreeCollectionEx'>
+</method>
+<field name='cloner' fullname='collections.tree:TreeWeightSorter/private:cloner' type='collections.tree:TreeCollectionExCloner' isStatic='false' isConst='true' defaultValue='unknown' >
+</field>
+<field name='weightPropertyName' fullname='collections.tree:TreeWeightSorter/private:weightPropertyName' type='String' isStatic='false' isConst='false' >
+</field>
+<classRec name='TreeTypeIterator' fullname='collections.tree:TreeTypeIterator' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/tree/TreeTypeIterator.as' namespace='collections.tree' access='public' baseclass='Object' interfaces='collections.tree:ITreeIterator' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='TreeTypeIterator' fullname='collections.tree:TreeTypeIterator/TreeTypeIterator' isStatic='false' isFinal='false' isOverride='false'  param_names='root;type' param_types='collections.tree:TreeComposite;Class' param_defaults='undefined;undefined' result_type='*'>
+</method>
+<method name='hasNext' fullname='collections.tree:TreeTypeIterator/hasNext' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='next' fullname='collections.tree:TreeTypeIterator/next' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<method name='peek' fullname='collections.tree:TreeTypeIterator/peek' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='skip' fullname='collections.tree:TreeTypeIterator/skip' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<field name='ni' fullname='collections.tree:TreeTypeIterator/private:ni' type='collections.tree:TreeIterator' isStatic='false' isConst='false' >
+</field>
+<field name='nodes' fullname='collections.tree:TreeTypeIterator/private:nodes' type='mx.collections:ArrayCollection' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='type' fullname='collections.tree:TreeTypeIterator/private:type' type='Class' isStatic='false' isConst='false' >
+</field>
+<classRec name='TreeComposite' fullname='collections.tree:TreeComposite' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/tree/TreeComposite.as' namespace='collections.tree' access='public' baseclass='flash.events:EventDispatcher' interfaces='collections:IIterable;collections.tree:ITreeData' isFinal='false' isDynamic='true' >
+</classRec>
+<method name='addChildAfter' fullname='collections.tree:TreeComposite/addChildAfter' isStatic='false' isFinal='false' isOverride='false'  param_names='child;childAfter' param_types='*;*' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='addChildAt' fullname='collections.tree:TreeComposite/addChildAt' isStatic='false' isFinal='false' isOverride='false'  param_names='child;index' param_types='collections.tree:TreeComposite;int' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='addChildBefore' fullname='collections.tree:TreeComposite/addChildBefore' isStatic='false' isFinal='false' isOverride='false'  param_names='child;childBefore' param_types='*;*' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='addChild' fullname='collections.tree:TreeComposite/addChild' isStatic='false' isFinal='false' isOverride='false'  param_names='child' param_types='*' param_defaults='undefined' result_type='void'>
+</method>
+<method name='addChildren' fullname='collections.tree:TreeComposite/addChildren' isStatic='false' isFinal='false' isOverride='false'  param_names='children' param_types='Array' param_defaults='undefined' result_type='void'>
+</method>
+<method name='assignValue' fullname='collections.tree:TreeComposite/assignValue' isStatic='false' isFinal='false' isOverride='false'  param_names='propertyChain;value' param_types='Object;Object' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='containsChild' fullname='collections.tree:TreeComposite/containsChild' isStatic='false' isFinal='false' isOverride='false'  param_names='child' param_types='collections.tree:TreeComposite' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='createIterator' fullname='collections.tree:TreeComposite/createIterator' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='Class' param_defaults='null' result_type='collections:IIterator'>
+</method>
+<method name='findParent' fullname='collections.tree:TreeComposite/findParent' isStatic='false' isFinal='false' isOverride='false'  param_names='root' param_types='collections.tree:TreeComposite' param_defaults='undefined' result_type='collections.tree:TreeComposite'>
+</method>
+<method name='find' fullname='collections.tree:TreeComposite/find' isStatic='false' isFinal='false' isOverride='false'  param_names='vo;root' param_types='*;collections.tree:TreeComposite' param_defaults='undefined;undefined' result_type='collections.tree:TreeComposite'>
+</method>
+<method name='getChildAt' fullname='collections.tree:TreeComposite/getChildAt' isStatic='false' isFinal='false' isOverride='false'  param_names='index' param_types='int' param_defaults='undefined' result_type='collections.tree:TreeComposite'>
+</method>
+<method name='getChildIndex' fullname='collections.tree:TreeComposite/getChildIndex' isStatic='false' isFinal='false' isOverride='false'  param_names='node' param_types='collections.tree:TreeComposite' param_defaults='undefined' result_type='int'>
+</method>
+<method name='getChild' fullname='collections.tree:TreeComposite/getChild' isStatic='false' isFinal='false' isOverride='false'  param_names='vo' param_types='*' param_defaults='undefined' result_type='collections.tree:TreeComposite'>
+</method>
+<method name='getChildrenVOs' fullname='collections.tree:TreeComposite/getChildrenVOs' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.collections:ArrayCollection'>
+<description><![CDATA[
+
+		 
+
+		 ]]></description>
+<return><![CDATA[copy of children collection
+
+		 
+
+		 ]]></return>
+</method>
+<method name='getLastChildIndex' fullname='collections.tree:TreeComposite/getLastChildIndex' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
+<method name='getMaxDepth' fullname='collections.tree:TreeComposite/getMaxDepth' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
+<method name='getMax' fullname='collections.tree:TreeComposite/private:getMax' isStatic='false' isFinal='false' isOverride='false'  param_names='a' param_types='Array' param_defaults='undefined' result_type='int'>
+</method>
+<method name='getNumLeafs' fullname='collections.tree:TreeComposite/getNumLeafs' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
+<method name='getPath' fullname='collections.tree:TreeComposite/getPath' isStatic='false' isFinal='false' isOverride='false'  param_names='root' param_types='collections.tree:TreeComposite' param_defaults='undefined' result_type='Array'>
+</method>
+<method name='hasChild' fullname='collections.tree:TreeComposite/hasChild' isStatic='false' isFinal='false' isOverride='false'  param_names='child' param_types='collections.tree:TreeComposite' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='hasChildren' fullname='collections.tree:TreeComposite/hasChildren' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='hasDataOfType' fullname='collections.tree:TreeComposite/hasDataOfType' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='Class' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='isLeaf' fullname='collections.tree:TreeComposite/isLeaf' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='removeAllChildren' fullname='collections.tree:TreeComposite/removeAllChildren' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='removeChild' fullname='collections.tree:TreeComposite/removeChild' isStatic='false' isFinal='false' isOverride='false'  param_names='child' param_types='collections.tree:TreeComposite' param_defaults='undefined' result_type='void'>
+</method>
+<method name='remove' fullname='collections.tree:TreeComposite/remove' isStatic='false' isFinal='false' isOverride='false'  param_names='node;root' param_types='collections.tree:TreeComposite;collections.tree:TreeComposite' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='setChildAt' fullname='collections.tree:TreeComposite/setChildAt' isStatic='false' isFinal='false' isOverride='false'  param_names='child;index' param_types='collections.tree:TreeComposite;int' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='throwPropertyDoesNotExist' fullname='collections.tree:TreeComposite/private:throwPropertyDoesNotExist' isStatic='false' isFinal='false' isOverride='false'  param_names='o;propertyName' param_types='Object;String' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='toArray' fullname='collections.tree:TreeComposite/toArray' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.collections:ArrayCollection'>
+</method>
+<method name='toString' fullname='collections.tree:TreeComposite/toString' isStatic='false' isFinal='false' isOverride='true'  result_type='String'>
+</method>
+<method name='numChildren' fullname='collections.tree:TreeComposite/numChildren/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
+<method name='size' fullname='collections.tree:TreeComposite/size/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
+<field name='children' fullname='collections.tree:TreeComposite/children' type='mx.collections:ArrayCollection' isStatic='false' isConst='false' >
+</field>
+<field name='vo' fullname='collections.tree:TreeComposite/vo' type='' isStatic='false' isConst='false' >
+</field>
+<classRec name='InOrderTreeIterator' fullname='collections.tree:InOrderTreeIterator' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/tree/InOrderTreeIterator.as' namespace='collections.tree' access='public' baseclass='Object' interfaces='collections:IIterator' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='InOrderTreeIterator' fullname='collections.tree:InOrderTreeIterator/InOrderTreeIterator' isStatic='false' isFinal='false' isOverride='false'  param_names='root' param_types='collections.tree:TreeComposite' param_defaults='undefined' result_type='*'>
+</method>
+<method name='getArray' fullname='collections.tree:InOrderTreeIterator/getArray' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.collections:ArrayCollection'>
+</method>
+<method name='getLeftIndex' fullname='collections.tree:InOrderTreeIterator/getLeftIndex' isStatic='false' isFinal='false' isOverride='false'  param_names='n' param_types='int' param_defaults='undefined' result_type='int'>
+</method>
+<method name='getPath' fullname='collections.tree:InOrderTreeIterator/getPath' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='getRightIndex' fullname='collections.tree:InOrderTreeIterator/getRightIndex' isStatic='false' isFinal='false' isOverride='false'  param_names='n' param_types='int' param_defaults='undefined' result_type='int'>
+</method>
+<method name='hasNext' fullname='collections.tree:InOrderTreeIterator/hasNext' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<method name='next' fullname='collections.tree:InOrderTreeIterator/next' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<method name='traverseLeftSubTree' fullname='collections.tree:InOrderTreeIterator/traverseLeftSubTree' isStatic='false' isFinal='false' isOverride='false'  param_names='node' param_types='collections.tree:TreeComposite' param_defaults='undefined' result_type='void'>
+</method>
+<method name='traverseRightSubTree' fullname='collections.tree:InOrderTreeIterator/traverseRightSubTree' isStatic='false' isFinal='false' isOverride='false'  param_names='node' param_types='collections.tree:TreeComposite' param_defaults='undefined' result_type='void'>
+</method>
+<method name='traverse' fullname='collections.tree:InOrderTreeIterator/traverse' isStatic='false' isFinal='false' isOverride='false'  param_names='node' param_types='collections.tree:TreeComposite' param_defaults='undefined' result_type='void'>
+</method>
+<field name='itemsToVisit' fullname='collections.tree:InOrderTreeIterator/private:itemsToVisit' type='Array' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='res' fullname='collections.tree:InOrderTreeIterator/private:res' type='mx.collections:ArrayCollection' isStatic='false' isConst='false' >
+</field>
+<field name='root' fullname='collections.tree:InOrderTreeIterator/private:root' type='collections.tree:TreeComposite' isStatic='false' isConst='false' >
+</field>
+<classRec name='DoubleLinkedTree' fullname='collections.tree:DoubleLinkedTree' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/collections/tree/DoubleLinkedTree.as' namespace='collections.tree' access='public' baseclass='collections:TreeCollectionEx' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='DoubleLinkedTree' fullname='collections.tree:DoubleLinkedTree/DoubleLinkedTree' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='addChildAfter' fullname='collections.tree:DoubleLinkedTree/addChildAfter' isStatic='false' isFinal='false' isOverride='true'  param_names='child;childAfter' param_types='*;*' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='addChildAt' fullname='collections.tree:DoubleLinkedTree/addChildAt' isStatic='false' isFinal='false' isOverride='true'  param_names='child;index' param_types='collections.tree:TreeComposite;int' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='addChildBefore' fullname='collections.tree:DoubleLinkedTree/addChildBefore' isStatic='false' isFinal='false' isOverride='true'  param_names='child;childBefore' param_types='*;*' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='addChild' fullname='collections.tree:DoubleLinkedTree/addChild' isStatic='false' isFinal='false' isOverride='true'  param_names='child' param_types='*' param_defaults='undefined' result_type='void'>
+</method>
+<method name='assertNodeType' fullname='collections.tree:DoubleLinkedTree/protected:assertNodeType' isStatic='false' isFinal='false' isOverride='false'  param_names='node' param_types='Object' param_defaults='undefined' result_type='void'>
+</method>
+<method name='findParent' fullname='collections.tree:DoubleLinkedTree/findParent' isStatic='false' isFinal='false' isOverride='true'  param_names='root' param_types='collections.tree:TreeComposite' param_defaults='undefined' result_type='collections.tree:TreeComposite'>
+</method>
+<method name='removeChild' fullname='collections.tree:DoubleLinkedTree/removeChild' isStatic='false' isFinal='false' isOverride='true'  param_names='child' param_types='collections.tree:TreeComposite' param_defaults='undefined' result_type='void'>
+</method>
+<method name='remove' fullname='collections.tree:DoubleLinkedTree/remove' isStatic='false' isFinal='false' isOverride='true'  param_names='node;root' param_types='collections.tree:TreeComposite;collections.tree:TreeComposite' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='setChildAt' fullname='collections.tree:DoubleLinkedTree/setChildAt' isStatic='false' isFinal='false' isOverride='true'  param_names='child;index' param_types='collections.tree:TreeComposite;int' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='setNoParent' fullname='collections.tree:DoubleLinkedTree/protected:setNoParent' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='setParent' fullname='collections.tree:DoubleLinkedTree/protected:setParent' isStatic='false' isFinal='false' isOverride='false'  param_names='parent' param_types='collections.tree:DoubleLinkedTree' param_defaults='undefined' result_type='void'>
+</method>
+<method name='parent' fullname='collections.tree:DoubleLinkedTree/parent/get' isStatic='false' isFinal='false' isOverride='false'  result_type='collections.tree:DoubleLinkedTree'>
+</method>
+<field name='_parent' fullname='collections.tree:DoubleLinkedTree/private:_parent' type='collections.tree:DoubleLinkedTree' isStatic='false' isConst='false' defaultValue='null' >
+</field>
+<classRec name='Require' fullname='assertions:Require' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/assertions/Require.as' namespace='assertions' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 	 ]]></description>
+</classRec>
+<method name='collectionSize' fullname='assertions:Require/collectionSize' isStatic='true' isFinal='false' isOverride='false'  param_names='collection;collectionName;size' param_types='Object;String;uint' param_defaults='undefined;undefined;undefined' result_type='void'>
+</method>
+<method name='hasProperty' fullname='assertions:Require/hasProperty' isStatic='true' isFinal='false' isOverride='false'  param_names='parameter;parameterName;propertyName' param_types='Object;String;String' param_defaults='undefined;undefined;undefined' result_type='void'>
+</method>
+<method name='instanceOf' fullname='assertions:Require/instanceOf' isStatic='true' isFinal='false' isOverride='false'  param_names='parameter;targetType;parameterName' param_types='Object;Class;String' param_defaults='undefined;undefined;undefined' result_type='void'>
+<description><![CDATA[
+	     Requires that the provided parameter is an instance of the provided target type
+	     ]]></description>
+<param><![CDATA[parameter - The value whose type is to be verified
+	     ]]></param>
+<param><![CDATA[targetType - The target class that the parameter is an instance of
+	     ]]></param>
+<param><![CDATA[parameterName - The name of the parameter
+	     ]]></param>
+<throws><![CDATA[ArgumentError
+	     ]]></throws>
+</method>
+<method name='isFalse' fullname='assertions:Require/isFalse' isStatic='true' isFinal='false' isOverride='false'  param_names='value;parameterName' param_types='Boolean;String' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='isTrue' fullname='assertions:Require/isTrue' isStatic='true' isFinal='false' isOverride='false'  param_names='value;parameterName' param_types='Boolean;String' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='notEmpty' fullname='assertions:Require/notEmpty' isStatic='true' isFinal='false' isOverride='false'  param_names='collection;collectionName' param_types='Object;String' param_defaults='undefined;undefined' result_type='void'>
+<description><![CDATA[
+	     Verifies that the provided Collection is not empty, implicitly this also means that the collection cannot be null
+	     as well
+	     	     ]]></description>
+<param><![CDATA[collection - The collection to be verified
+	     ]]></param>
+<param><![CDATA[collectionName - The name of the collection
+	     ]]></param>
+<throws><![CDATA[ArgumentError - thrown when collection is empty or null
+	     ]]></throws>
+</method>
+<method name='notNull' fullname='assertions:Require/notNull' isStatic='true' isFinal='false' isOverride='false'  param_names='parameter;parameterName' param_types='Object;String' param_defaults='undefined;undefined' result_type='void'>
+<description><![CDATA[
+	     Verifies that the provided parameter is not null.
+	     	     ]]></description>
+<param><![CDATA[parameter - The parameter value to check
+	     ]]></param>
+<param><![CDATA[parameterName - The name of the parameter
+	     ]]></param>
+<throws><![CDATA[ArgumentError - thrown if parameter is NULL
+	     ]]></throws>
+</method>
+<method name='throwError' fullname='assertions:Require/private:throwError' isStatic='true' isFinal='false' isOverride='false'  param_names='errorMessage' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<field name='NEW_LINE' fullname='assertions:Require/private:NEW_LINE' type='String' isStatic='true' isConst='true' defaultValue='
+' >
+</field>
+<classRec name='LogUtil' fullname='logging:LogUtil' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/logging/LogUtil.as' namespace='logging' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='getLogger' fullname='logging:LogUtil/getLogger' isStatic='true' isFinal='false' isOverride='false'  param_names='clazz' param_types='Class' param_defaults='undefined' result_type='mx.logging:ILogger'>
+</method>
+<classRec name='DebuggerTarget' fullname='logging:DebuggerTarget' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/logging/DebuggerTarget.as' namespace='logging' access='public' baseclass='mx.logging:AbstractTarget' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='initialized' fullname='logging:DebuggerTarget/initialized' isStatic='false' isFinal='false' isOverride='true'  param_names='document;id' param_types='Object;String' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='logEvent' fullname='logging:DebuggerTarget/logEvent' isStatic='false' isFinal='false' isOverride='true'  param_names='event' param_types='mx.logging:LogEvent' param_defaults='undefined' result_type='void'>
+</method>
+<field name='SEPARATOR' fullname='logging:DebuggerTarget/SEPARATOR' type='String' isStatic='true' isConst='true' defaultValue='		' >
+</field>
+<field name='debugger' fullname='logging:DebuggerTarget/private:debugger' type='com.demonsters.debugger:MonsterDebugger' isStatic='false' isConst='false' >
+</field>
+<interfaceRec name='IPersistor' fullname='persistence:IPersistor' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/persistence/IPersistor.as' namespace='persistence' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='contains' fullname='persistence:IPersistor/persistence:IPersistor:contains' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='Object'>
+</method>
+<method name='loadCatalog' fullname='persistence:IPersistor/persistence:IPersistor:loadCatalog' isStatic='false' isFinal='false' isOverride='false'  param_names='itemType' param_types='*' param_defaults='null' result_type='mx.collections:ArrayCollection'>
+</method>
+<method name='load' fullname='persistence:IPersistor/persistence:IPersistor:load' isStatic='false' isFinal='false' isOverride='false'  param_names='name;item;types' param_types='String;*;Array' param_defaults='undefined;undefined;null' result_type='*'>
+</method>
+<method name='removeAll' fullname='persistence:IPersistor/persistence:IPersistor:removeAll' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='remove' fullname='persistence:IPersistor/persistence:IPersistor:remove' isStatic='false' isFinal='false' isOverride='false'  param_names='name;useCatalog' param_types='String;Boolean' param_defaults='undefined;true' result_type='void'>
+</method>
+<method name='rename' fullname='persistence:IPersistor/persistence:IPersistor:rename' isStatic='false' isFinal='false' isOverride='false'  param_names='item;oldName;newName' param_types='*;String;String' param_defaults='undefined;undefined;undefined' result_type='void'>
+</method>
+<method name='save' fullname='persistence:IPersistor/persistence:IPersistor:save' isStatic='false' isFinal='false' isOverride='false'  param_names='item;name;useCatalog' param_types='*;String;Boolean' param_defaults='undefined;undefined;true' result_type='void'>
+</method>
+<classRec name='ObjectPersistor' fullname='persistence:ObjectPersistor' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/common-utils/src/main/flex/persistence/ObjectPersistor.as' namespace='persistence' access='public' baseclass='Object' interfaces='persistence:IPersistor' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ObjectPersistor' fullname='persistence:ObjectPersistor/ObjectPersistor' isStatic='false' isFinal='false' isOverride='false'  param_names='catalogName;useItemName' param_types='String;Boolean' param_defaults='null;true' result_type='*'>
+</method>
+<method name='addToCatalog' fullname='persistence:ObjectPersistor/addToCatalog' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='void'>
+</method>
+<method name='clearCatalog' fullname='persistence:ObjectPersistor/clearCatalog' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='contains' fullname='persistence:ObjectPersistor/contains' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='Object'>
+</method>
+<method name='deleteItem' fullname='persistence:ObjectPersistor/private:deleteItem' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='loadCatalog' fullname='persistence:ObjectPersistor/loadCatalog' isStatic='false' isFinal='false' isOverride='false'  param_names='itemType' param_types='*' param_defaults='null' result_type='mx.collections:ArrayCollection'>
+</method>
+<method name='load' fullname='persistence:ObjectPersistor/load' isStatic='false' isFinal='false' isOverride='false'  param_names='name;item;types' param_types='String;*;Array' param_defaults='undefined;undefined;null' result_type='*'>
+</method>
+<method name='registerClassAliases' fullname='persistence:ObjectPersistor/registerClassAliases' isStatic='true' isFinal='false' isOverride='false'  param_names='item' param_types='*' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeAll' fullname='persistence:ObjectPersistor/removeAll' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='removeFromCatalog' fullname='persistence:ObjectPersistor/removeFromCatalog' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='remove' fullname='persistence:ObjectPersistor/remove' isStatic='false' isFinal='false' isOverride='false'  param_names='name;useCatalog' param_types='String;Boolean' param_defaults='undefined;true' result_type='void'>
+</method>
+<method name='rename' fullname='persistence:ObjectPersistor/rename' isStatic='false' isFinal='false' isOverride='false'  param_names='item;oldName;newName' param_types='*;String;String' param_defaults='undefined;undefined;undefined' result_type='void'>
+</method>
+<method name='replaceIllegalCharacters' fullname='persistence:ObjectPersistor/replaceIllegalCharacters' isStatic='true' isFinal='false' isOverride='false'  param_names='identifier' param_types='String' param_defaults='undefined' result_type='String'>
+</method>
+<method name='saveCatalog' fullname='persistence:ObjectPersistor/private:saveCatalog' isStatic='false' isFinal='false' isOverride='false'  param_names='result' param_types='mx.collections:ArrayCollection' param_defaults='undefined' result_type='void'>
+</method>
+<method name='save' fullname='persistence:ObjectPersistor/save' isStatic='false' isFinal='false' isOverride='false'  param_names='item;name;useCatalog' param_types='*;String;Boolean' param_defaults='undefined;undefined;true' result_type='void'>
+</method>
+<method name='write' fullname='persistence:ObjectPersistor/private:write' isStatic='false' isFinal='false' isOverride='false'  param_names='item;name' param_types='*;String' param_defaults='undefined;undefined' result_type='String'>
+</method>
+<method name='catalogName' fullname='persistence:ObjectPersistor/catalogName/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<field name='_catalogName' fullname='persistence:ObjectPersistor/private:_catalogName' type='String' isStatic='false' isConst='false' defaultValue='_catalog' >
+</field>
+<field name='ci' fullname='persistence:ObjectPersistor/private:ci' type='commonutils:ClassInspector' isStatic='true' isConst='false' defaultValue='unknown' >
+</field>
+<field name='useItemName' fullname='persistence:ObjectPersistor/private:useItemName' type='Boolean' isStatic='false' isConst='false' >
+</field>
+</asdoc>

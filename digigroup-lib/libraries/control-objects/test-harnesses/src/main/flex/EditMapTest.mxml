@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+				layout="absolute"
+				creationComplete="init()"
+				>
+	<mx:Script>
+		<![CDATA[
+			import actions.LogicType;
+			import actions.AbstractUserAction;
+			import mf.framework.Container2;
+			import actions.AbstractIOAction;
+			import mindmaps.map.MapModel2Factory;
+			import mindmaps.map.MapModel2;
+			import mindmaps2.map.MindMapTreeContainer;
+			import mx.core.Container;
+			import mf.framework.MessageBroker;
+			import mf.framework.MessageLogBroker;
+			import actions.AbstractAction;
+
+			private var rootAction:AbstractIOAction;
+
+			private var container:Container2;
+
+			private var map:MapModel2;
+
+			private function init():void {
+				// TODO: 2011/05/21: KTD: Commented this out because of compilation error.  Argument mismatch in constructor call of MindMapTreeContainer.
+//				var mb:MessageBroker = new MessageLogBroker();
+//
+//
+//				map = new MapModel2Factory().createAllElementsMap();
+//				container = new MindMapTreeContainer(mb, map, this);
+//				container.initialize();
+//
+//				var editCompositeAction:AbstractIOAction = new AbstractUserAction("Edit map", 3);
+//				editCompositeAction.logicType = LogicType.AND;
+//				editCompositeAction.canExecuteNextActionWhileCurrentIsCompleting = true;
+//				editCompositeAction.addChildren([new EditMap()]);
+//
+//				rootAction = editCompositeAction;
+//				rootAction.input.invocationContainer = container;
+//				rootAction.initialize();
+//				rootAction.execute();
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application     
+      xmlns:mx="http://www.adobe.com/2006/mxml" 
+      xmlns:Degrafa="http://www.degrafa.com/2007"     
+      layout="absolute">      
+      <Degrafa:GeometryComposition     
+	    graphicsTarget="{[ myCanvas ]}">     
+	    <Degrafa:Circle         
+	        radius="100"         
+	        centerX="120"         
+	        centerY="120" >         
+	        <Degrafa:fill>             
+	            <Degrafa:SolidFill                 
+	                color="#FFF"/>         
+	        </Degrafa:fill>     
+	    </Degrafa:Circle> 
+	</Degrafa:GeometryComposition>      
+	<mx:Canvas     
+	    id="myCanvas"/>
+</mx:Application>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute">
+	<mx:VBox width="100%" height="100%">
+		<mx:HBox>
+			<mx:Button label="init" click="init()"/>
+			<mx:Button label="uninit" click="uninit()"/>
+		</mx:HBox>
+		<mx:VBox id="container" width="100%" height="100%"/>
+	</mx:VBox>
+		
+	<mx:Script>
+		<![CDATA[
+			import flexlib.events.SuperTabEvent;
+			import flexlib.controls.tabBarClasses.SuperTab;
+			import flexlib.containers.SuperTabNavigator;
+		
+			private var nav:SuperTabNavigator;
+			
+			private function init():void {
+				nav=new SuperTabNavigator();
+				nav.percentWidth = 100;
+				nav.percentHeight = 100;
+				for (var i:int=0; i<3; i++){
+					var tab:VBox = new VBox();
+					tab.label = i.toString();
+					nav.addChild(tab);
+				}
+				container.addChild(nav);
+			}
+			
+			private function uninit():void {
+				//container.removeAllChildren();
+				//for each (var child:DisplayObject in nav) {
+				for (var i:int=0; i<3; i++)
+				{
+					var child:DisplayObject = nav.getChildAt(i);
+					//child.dispatchEvent(new SuperTabEvent(SuperTabEvent.TAB_CLOSE, i, true));
+					nav.dispatchEvent(new SuperTabEvent(SuperTabEvent.TAB_CLOSE, i, true));
+				}
+				nav.reorderTabList();
+				nav = null;
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

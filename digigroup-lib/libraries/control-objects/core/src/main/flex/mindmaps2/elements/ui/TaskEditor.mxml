@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:ElementEditorTemplate xmlns:mx="http://www.adobe.com/2006/mxml"
+						  xmlns:ui="mindmaps2.elements.ui.*"
+						  >
+	<ui:editorContent>
+		<mx:FormItem label="rating">
+			<mx:NumericStepper id="priority"
+							   maximum="100"
+							   minimum="0"
+							   />
+		</mx:FormItem>
+
+		<mx:FormItem label="value">
+			<mx:NumericStepper id="value"
+							   maximum="100"
+							   minimum="0"
+							   />
+		</mx:FormItem>
+
+		<mx:FormItem label="done">
+			<mx:CheckBox id="done" />
+		</mx:FormItem>
+		<mx:FormItem label="committed">
+			<mx:CheckBox id="committed" />
+		</mx:FormItem>
+		<mx:FormItem label="reviewed">
+			<mx:CheckBox id="reviewed" />
+		</mx:FormItem>
+
+		<mx:FormItem label="assigned to">
+			<mx:TextInput id="assignedTo" />
+		</mx:FormItem>
+		<mx:FormItem label="estimated time">
+			<mx:TextInput id="estimatedHours" />
+		</mx:FormItem>
+		<mx:FormItem label="actual time">
+			<mx:TextInput id="actualHours" />
+		</mx:FormItem>
+		<mx:FormItem label="date">
+			<mx:DateField id="date" />
+		</mx:FormItem>
+		<mx:FormItem label="description">
+			<mx:TextArea id="description"
+						 width="400"
+						 height="200"
+						 />
+		</mx:FormItem>
+	</ui:editorContent>
+
+	<mx:Script>
+		<![CDATA[
+			import commonutils.MinutePrecisionTimeSpan;
+			import commonutils.TimeSpan;
+			import commonutils.TimeSpanFormatter;
+
+			import mindmaps.importexport.Match;
+			import mindmaps.importexport.TimeSpanMatcher;
+
+			import mx.binding.utils.BindingUtils;
+			import mx.utils.StringUtil;
+
+			import vos.*;
+
+			private static const timeSpanMatcher:TimeSpanMatcher = new TimeSpanMatcher();
+
+			private static const timeSpanFormatter:TimeSpanFormatter = new TimeSpanFormatter();
+
+			override protected function setDataProvider(value:Object):void {
+				if (!(value is Task))
+					throw new ArgumentError("dataProvider value has to be of type Task");
+				super.setDataProvider(value);
+			}
+
+			override protected function bind():void {
+				bindBidirectionally(_dataProvider, "priority", priority, "value");
+				bindBidirectionally(_dataProvider, "value", value, "value");
+				bindBidirectionally(_dataProvider, "committed", committed, "selected");
+				bindBidirectionally(_dataProvider, "reviewed", reviewed, "selected");
+				bindBidirectionally(_dataProvider, "description", description, "text");
+				bindBidirectionally(_dataProvider, "assignedTo", assignedTo, "text");
+				//bindBidirectionally(_dataProvider, "estimatedHours", estimatedHours, "text");
+				//bindBidirectionally(_dataProvider, "actualHours", actualHours, "text");
+				bindBidirectionally(_dataProvider, "date", date, "selectedDate");
+
+				changeWatchers.push(BindingUtils.bindSetter(setControlDone, _dataProvider, "done"));
+				changeWatchers.push(BindingUtils.bindSetter(setDataProviderDone, done, "selected"));
+
+				changeWatchers.push(BindingUtils.bindSetter(setControlEstimatedHours, _dataProvider, "assignedTo"));
+				changeWatchers.push(BindingUtils.bindSetter(setDataProviderEstimatedHours, estimatedHours, "text"));
+
+				changeWatchers.push(BindingUtils.bindSetter(setControlActualHours, _dataProvider, "assignedTo"));
+				changeWatchers.push(BindingUtils.bindSetter(setDataProviderActualHours, actualHours, "text"));
+			}
+
+			private function setControlDone(value:int):void {
+				done.selected = value == 1;
+			}
+
+			private function setDataProviderDone(value:Boolean):void {
+				_dataProvider.done = (value) ? 1 : 0;
+			}
+
+			private function setDataProviderPriority(value:int):void {
+				_dataProvider.priority = value;
+			}
+
+			private function setControlEstimatedHours(hours:Number):void {
+				var timeSpan:TimeSpan = isNaN(dataProvider.estimatedHours) ? null : MinutePrecisionTimeSpan.fromHours(dataProvider.estimatedHours);
+				estimatedHours.text = timeSpan == null ? null : timeSpanFormatter.format(timeSpan);
+			}
+
+			private function setDataProviderEstimatedHours(value:String):void {
+				var match:Match = timeSpanMatcher.match(value);
+				_dataProvider.estimatedHours = match.score == 0 ? NaN : TimeSpan(match.value).totalMinutes / 60;
+			}
+
+			private function setControlActualHours(hours:Number):void {
+				var timeSpan:TimeSpan = isNaN(dataProvider.actualHours) ? null : MinutePrecisionTimeSpan.fromHours(dataProvider.actualHours);
+				actualHours.text = timeSpan == null ? null : timeSpanFormatter.format(timeSpan);
+			}
+
+			private function setDataProviderActualHours(value:String):void {
+				var match:Match = timeSpanMatcher.match(value);
+				_dataProvider.actualHours = match.score == 0 ? NaN : TimeSpan(match.value).totalMinutes / 60;
+			}
+		]]>
+	</mx:Script>
+</ui:ElementEditorTemplate>

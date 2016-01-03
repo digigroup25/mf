@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" implements="mx.core.IDataRenderer">
+		<mx:HBox width="100%">
+			<mx:Label text="Query"/>
+			<mx:TextArea id="query" width="100%" height="25"/>
+			
+		</mx:HBox>
+		<mx:HBox>
+			<mx:Button label="Run" click="onRun()"/>
+			<mx:Button label="More" click="onMore()"/>
+			<mx:Spacer width="100%"/>
+			<mx:Button label="Help" click="onHelp()"/>
+		
+		</mx:HBox>
+		
+		<mx:Label text="Program"/>
+		<mx:TextArea id="program"  height="400" width="100%"/>
+		<mx:HBox>
+			<mx:Label text="Result"/>
+			<mx:Button label="Clear" click="onClear()"/>
+		</mx:HBox>
+			
+		<mx:TextArea id="resultsControl" text="{WPrologOutput.result}" height="200" width="100%"/>
+		
+		
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import mx.binding.utils.BindingUtils;
+			import mx.binding.utils.ChangeWatcher;
+			import mx.events.PropertyChangeEventKind;
+			import mx.events.PropertyChangeEvent;
+			import mx.events.FlexEvent;
+			
+			private var eng:Engine;
+			private const enableTracing:Boolean = false;
+			private var _programText:String;
+			private var programTextChanged:Boolean = false;
+			private var dataChanged:Boolean = false;
+			// Internal variable for the property value.
+		    private var _data:Object;
+		    
+		    private var programWatcher:ChangeWatcher;
+		    private var programWatcher2:ChangeWatcher;
+		    
+			/* public function get programText():String {
+				return program.text;
+			}
+			
+			public function set programText(value:String):void {
+				//program.text = value;
+				if (_programText==value) return;
+				_programText = value;
+				programTextChanged = true;
+				this.invalidateProperties();
+				
+				
+				
+				dispatchEvent(new FlexEvent(FlexEvent.DATA_CHANGE));
+			} */
+			
+			public function get queryText():String {
+				return query.text;
+			}
+			
+			public function set queryText(value:String):void {
+				query.text = value;
+			}
+			
+			
+			private function onRun():void {
+				var t:Term; 
+				var s:String;
+				s = query.text;
+				
+				
+				try {
+					t = new Term(new ParseString(s, query));
+				} catch (e:Error) {
+					WPrologOutput.addResult("Can't parse query!\n");
+					eng = null;
+					t = null; // dummy
+				}
+		
+				if (t == null) return;
+				
+				try {
+					eng = new Engine(t,	ParseString.consult(program.text,
+						new Hashtable(), program));
+					eng.enableTracing = enableTracing;
+					eng.runAll();
+					
+				} catch (e:Error) { // can't parse program ...
+					WPrologOutput.addResult(e.toString()+"\n");
+					    eng = null;
+					    t = null; // dummy
+				} 
+			}
+			
+			private function onMore():void {
+				eng.more();
+			}
+			
+			private function onClear():void {
+				WPrologOutput.clear();
+			}
+		    
+		    // Make the data property bindable.
+		    [Bindable(FlexEvent.DATA_CHANGE)]
+		    [Bindable("propertyChange")]
+		    // Define the getter method.
+		    override public function get data():Object {
+		        return _data;
+		    }
+		    
+		    // Define the setter method, and dispatch an event when the property
+		    // changes to support data binding.
+		    override public function set data(value:Object):void {
+		    	if (!(value.hasOwnProperty("text")))
+		    		throw new ArgumentError("data has to contain a text property of type String");
+		        _data = value;
+		    	dataChanged = true;
+		    	this.invalidateProperties();
+		    	
+		        dispatchEvent(new FlexEvent(FlexEvent.DATA_CHANGE));
+		        
+		    }
+		    
+		    private function unbind():void {
+		    	if (programWatcher) programWatcher.unwatch();
+		    	if (programWatcher2) programWatcher2.unwatch();
+		    }
+		    
+		    private function bind():void {
+		    	programWatcher = BindingUtils.bindProperty(this.program, "text", this.data, "text");
+		    	programWatcher2 = BindingUtils.bindProperty(this.data, "text", this.program, "text");
+		    }
+		    
+		    override protected function commitProperties():void {
+		    	super.commitProperties();
+		    	
+		    	if (dataChanged) {
+		    		dataChanged = false;
+		    		
+		    		unbind();
+		    		bind();
+		    	}
+		    	
+		    	/* if (programTextChanged) {
+		    		programTextChanged = false;
+		    		
+		    		program.text = _programText;
+		    	} */
+		    }
+		    
+		    public function dispose():void {
+		    	this.unbind();
+		    }
+		    
+		    private function onHelp():void {
+		    	var credits:String = "This prolog is a port from WProlog written in Java by Michael Winikoff http://waitaki.otago.ac.nz/~michael/wp/";
+		    	
+		    	var help:String = "The language is given by the following simple grammar:\n"+
+"Program ::= Rule | Rule Program\n"+
+"Query ::= Term\n"+
+
+"Rule ::= Term . | Term :- Terms .\n"+
+"Terms ::= Term | Term , Terms\n"+
+"Term ::= Number | Variable | AtomName | AtomName(Terms)\n"+
+                "| [] | [Terms] | [Terms | Term]\n"+
+                "| print(Term) | nl | eq(Term , Term)\n"+
+                "| if(Term , Term , Term) | or(Term , Term ) | not(Term) | call(Term) | once(Term)\n"+
+"Number ::= Digit | Digit Number\n"+
+"Digit ::= 0 | ... | 9\n"+
+"AtomName ::= LowerCase | LowerCase NameChars\n"+
+"Variable ::= UpperCase | UpperCase NameChars\n"+
+"NameChars ::= NameChar | NameChar NameChars\n"+
+"NameChar ::= a | ... | z | A | ... | Z | Digit\n\n"+
+
+"Comments begin with a % and terminate at the end of the line or begin with /* and terminate with */. ";
+
+				Alert.show(credits+"\n\n"+help, "", Alert.OK);
+		    }
+				
+		]]>
+	</mx:Script>
+</mx:VBox>

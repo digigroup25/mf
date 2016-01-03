@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <swf size="103495" compressedSize="43276">
+
+    <!-- Header data (SWF attributes, product info, markers, etc.) -->
+    <headerData totalSize="411">
+      <data type="metaData" size="292"/>
+      <data type="enableDebugger" size="33"/>
+      <data type="productInfo" size="28"/>
+      <data type="swfHeader" size="21"/>
+      <data type="debugID" size="18"/>
+      <data type="fileAttributes" size="6"/>
+      <data type="scriptLimits" size="6"/>
+      <data type="backgroundColor" size="5"/>
+      <data type="endMarker" size="2"/>
+    </headerData>
+
+    <!-- Cumulative frame size summary. -->
+    <frames totalSize="103084">
+      <frame size="103084" frame="1"/>
+    </frames>
+
+    <!-- Actionscript code and constant data. -->
+    <actionScript totalSize="102985">
+      <abc name="commonutils/CompilationDate" size="11280" frame="1"/>
+      <abc name="collections/tree/TreeComposite" size="6840" frame="1"/>
+      <abc name="commonutils/ClassInspector" size="5343" frame="1"/>
+      <abc name="converters/XmlCollectionConverter_1_1" size="4620" frame="1"/>
+      <abc name="persistence/ObjectPersistor" size="4208" frame="1"/>
+      <abc name="converters/XmlCollectionConverter_1_0" size="3349" frame="1"/>
+      <abc name="collections/tree/DoubleLinkedTree" size="2851" frame="1"/>
+      <abc name="collections/AliasHashMap" size="2766" frame="1"/>
+      <abc name="collections/Set" size="2537" frame="1"/>
+      <abc name="collections/tree/InOrderTreeIterator" size="2368" frame="1"/>
+      <abc name="collections/tree/TreeWeightRanker" size="2185" frame="1"/>
+      <abc name="commonutils/Base64" size="2140" frame="1"/>
+      <abc name="assertions/Require" size="1985" frame="1"/>
+      <abc name="collections/tree/AbstractTreeIterator" size="1964" frame="1"/>
+      <abc name="collections/ArrayCollectionViewer" size="1917" frame="1"/>
+      <abc name="collections/HashMap" size="1807" frame="1"/>
+      <abc name="collections/TreeCollectionEx" size="1737" frame="1"/>
+      <abc name="collections/tree/TreeWeightSorter" size="1616" frame="1"/>
+      <abc name="commonutils/ExecutionTimer" size="1604" frame="1"/>
+      <abc name="collections/tree/TreeTypeIterator" size="1555" frame="1"/>
+      <abc name="commonutils/AsyncServer" size="1432" frame="1"/>
+      <abc name="collections/tree/BreadthFirstTreeIterator" size="1355" frame="1"/>
+      <abc name="collections/tree/TreeLeafIterator" size="1296" frame="1"/>
+      <abc name="collections/Bag" size="1287" frame="1"/>
+      <abc name="collections/IHashMap" size="1277" frame="1"/>
+      <abc name="collections/tree/TreeRankerResult" size="1265" frame="1"/>
+      <abc name="persistence/IPersistor" size="1254" frame="1"/>
+      <abc name="collections/tree/TreeIterator" size="1251" frame="1"/>
+      <abc name="_cccd554bab1998a40f56d5a42f7dd7f11c01975bd56a44def88c9f8e9b7a2a3e_flash_display_Sprite" size="1244" frame="1"/>
+      <abc name="collections/tree/TreeCollectionExCloner" size="1212" frame="1"/>
+      <abc name="logging/DebuggerTarget" size="1209" frame="1"/>
+      <abc name="converters/XmlCollectionConverterFactory" size="1142" frame="1"/>
+      <abc name="collections/CollectionConverter" size="1135" frame="1"/>
+      <abc name="collections/ArrayCollectionIterator" size="1114" frame="1"/>
+      <abc name="commonutils/LeadingZeros" size="1112" frame="1"/>
+      <abc name="collections/ArrayCollectionEx" size="1100" frame="1"/>
+      <abc name="commonutils/UIControlUtil" size="1073" frame="1"/>
+      <abc name="converters/XmlCollectionConverter" size="1055" frame="1"/>
+      <abc name="collections/tree/SubtreeIterator" size="986" frame="1"/>
+      <abc name="collections/ArrayCollectionViewerContext" size="917" frame="1"/>
+      <abc name="collections/CollectionConverterContext" size="875" frame="1"/>
+      <abc name="collections/Singleton" size="868" frame="1"/>
+      <abc name="converters/XmlCollectionInspector" size="845" frame="1"/>
+      <abc name="collections/tree/TreeChildrenChangedEvent" size="801" frame="1"/>
+      <abc name="commonutils/DeepCopy" size="800" frame="1"/>
+      <abc name="collections/tree/ITreeIterator" size="756" frame="1"/>
+      <abc name="collections/tree/TreeIteratorItem" size="749" frame="1"/>
+      <abc name="logging/LogUtil" size="742" frame="1"/>
+      <abc name="collections/ICollection" size="731" frame="1"/>
+      <abc name="converters/IXmlConverter" size="693" frame="1"/>
+      <abc name="commonutils/ObjectHelper" size="687" frame="1"/>
+      <abc name="collections/tree/ITreeSorter" size="687" frame="1"/>
+      <abc name="collections/tree/ITreeRanker" size="674" frame="1"/>
+      <abc name="collections/IIterator" size="659" frame="1"/>
+      <abc name="commonutils/Attribute" size="652" frame="1"/>
+      <abc name="commonutils/Hasher" size="620" frame="1"/>
+      <abc name="collections/IIterable" size="609" frame="1"/>
+      <abc name="collections/IName" size="607" frame="1"/>
+      <abc name="commonutils/ICloneable" size="572" frame="1"/>
+      <abc name="collections/IPluggableObject" size="491" frame="1"/>
+      <abc name="collections/tree/ITreeData" size="479" frame="1"/>
+    </actionScript>
+
+    <!-- Additional frame tags (symbolClass, exportAssets, showFrame, etc). -->
+    <frameData totalSize="99">
+      <tag type="symbolClass" size="97" frame="1"/>
+      <tag type="showFrame" size="2" frame="1"/>
+    </frameData>
+  </swf>
+</report>

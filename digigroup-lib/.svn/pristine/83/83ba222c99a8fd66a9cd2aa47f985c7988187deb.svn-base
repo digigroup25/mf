@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- wrapper/NavigateToMultipleURLS.mxml -->
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" creationComplete="openWindows(0)">
+  <mx:Script><![CDATA[
+     private var listingData:Array=[
+        "http://www.google.com", 
+        "http://www.adobe.com", 
+        "http://www.usatoday.com"
+     ];
+
+     private function openWindows(n: Number):void {
+        if (n < listingData.length) {
+           navigateToURL(new URLRequest(listingData[n]), '_blank');
+           callLater(callLater, [openWindows, [n+1]]);
+        }
+     }
+  ]]></mx:Script>   
+</mx:Application>

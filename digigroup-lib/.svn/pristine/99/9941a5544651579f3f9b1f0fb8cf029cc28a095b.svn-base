@@ -1,0 +1,27 @@
+package mindmaps2.elements.iteration {
+
+	public class GroupPerformanceMetric {
+
+		public function GroupPerformanceMetric() {
+		}
+
+		private var nameMetricMap:Object = {};
+
+		public function addPerformanceMetric(name:String, metric:PerformanceMetric):void {
+			nameMetricMap[name] = metric;
+		}
+
+		public function removePerformanceMetric(name:String):void {
+			delete nameMetricMap[name];
+		}
+
+		public function toArray():Array {
+			var res:Array = [];
+			for (var name:String in nameMetricMap) {
+				var metric:PerformanceMetric = nameMetricMap[name];
+				res.push({ name: name, metric: metric });
+			}
+			return res;
+		}
+	}
+}

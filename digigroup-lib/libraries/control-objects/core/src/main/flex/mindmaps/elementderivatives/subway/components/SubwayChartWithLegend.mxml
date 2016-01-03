@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:HBox xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:comp="mindmaps.elementderivatives.subway.components.*" 
+		width="100%" height="100%">
+	<comp:SubwayLegend subWay="{subWay}" />
+    <comp:SubwayChart  width="100%" subWay="{subWay}"/>
+    <mx:Script>
+    	<![CDATA[
+    		import mindmaps.elementderivatives.subway.Subway;
+    		
+    		[Bindable]
+    		public var subWay:Subway;
+    	]]>
+    </mx:Script>
+</mx:HBox>

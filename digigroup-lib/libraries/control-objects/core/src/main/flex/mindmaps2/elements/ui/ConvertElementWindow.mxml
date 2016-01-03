@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" 
+			   xmlns:layout="flexlib.scheduling.scheduleClasses.layout.*">
+	<fx:Declarations>
+	</fx:Declarations>
+	
+	<s:HGroup width="100%">
+		<s:DropDownList id="convertToElementsSelector" dataProvider="{_convertToElementsSelectorList}" labelField="label" prompt="Select" />
+		<s:Button label="Convert" click="onConvert(event)"/>
+	</s:HGroup>
+	
+	<fx:Script>
+		<![CDATA[
+			import commonutils.ClassInspector;
+			
+			import mx.collections.ArrayCollection;
+			private static const ci:ClassInspector = new ClassInspector();
+			
+			private var _convertToElements:ArrayCollection;
+			[Bindable]
+			private var _convertToElementsSelectorList:ArrayCollection = new ArrayCollection();
+			
+			[Bindable]
+			public function get convertToElements():ArrayCollection {
+				return _convertToElements;
+			}
+			
+			public function set convertToElements(value:ArrayCollection):void {
+				_convertToElements = value;
+				_convertToElementsSelectorList.source = createSelectorList(value).source;
+			}
+			
+			private function createSelectorList(list:ArrayCollection):ArrayCollection {
+				var result:ArrayCollection = new ArrayCollection();
+				for each (var elementType:Class in list) {
+					result.addItem({label:ci.getClassName(elementType, true), elementType:elementType});
+				}
+				return result;
+			}
+			
+			private function onConvert(event:MouseEvent):void {
+				var selectedElement:Object = convertToElementsSelector.selectedItem;
+				if (selectedElement==null) return;
+				
+				var convertToElementType:Class = Class(selectedElement.elementType);
+				this.dispatchEvent(new ConvertElementWindowEvent(convertToElementType));
+			}
+		]]>
+	</fx:Script>
+	
+</s:TitleWindow>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   minHeight="600"
+			   minWidth="955"
+			   >
+
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+
+			private static const testHarnessesToCompile:Array = [ ApplicationContainer2Test,
+				ApplicationContainerTest,
+				CloseableWindowShadeTest,
+				EditableTreeTest,
+				EditMapTest,
+				ElementEditorsTest,
+				ExpandingMenuTest,
+				FloatingStackWindowTest,
+				FocusTest,
+				MindMapTreeContainerTest,
+				MindMapTreeEditorTest,
+				ResizableWindowShadeStackTest,
+				ResizableWindowShadeTest,
+				SelfLabelingTextInputDemo,
+				TestAdvancedDataGrid,
+				TestDynamicMenu,
+				TestEditableTree,
+				TestHierarchicalCollectionView,
+				TestInputQueue,
+				TestMain,
+				TestMapStorageContainer,
+				TestPrioritizedTreeMap,
+				//TestPrologEditor,
+				TestReplay,
+				TestReversedTree,
+				TestSubwayMap,
+				TestSuperTabMemory,
+				TestTaskTreeList,
+				TestTreeComposite,
+				TestTreeDragAndDrop,
+				TestTreeMap,
+				TestTreeTab,
+				TreeMenuContainerTest,
+				WindowShadeTest ];
+
+			protected function clickMe(event:MouseEvent):void {
+				Alert.show("Hello World");
+			}
+		]]>
+	</fx:Script>
+
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Button label="Click Me"
+			  click="clickMe(event)"
+			  />
+</s:Application>

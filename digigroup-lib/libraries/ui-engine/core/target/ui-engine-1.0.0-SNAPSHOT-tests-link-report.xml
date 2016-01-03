@@ -1,0 +1,416 @@
+<report>
+  <scripts>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/test/flex/testclasses/ClassB.as" mod="1307935583000" size="530" optimizedsize="163">
+      <def id="testclasses:ClassB" />
+      <pre id="testclasses:IClassB" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/Render.as" mod="1307935583000" size="1385" optimizedsize="738">
+      <def id="uiengine.datarenderer:Render" />
+      <pre id="mf.framework:IManagedLifecycle" />
+      <pre id="Object" />
+      <dep id="mx.binding.utils:ChangeWatcher" />
+      <dep id="AS3" />
+      <dep id="flash.display:DisplayObjectContainer" />
+      <dep id="flash.display:DisplayObject" />
+      <dep id="mx.core:Container" />
+      <dep id="Error" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/DefaultControlMap.as" mod="1307935583000" size="1004" optimizedsize="465">
+      <def id="uiengine.datarenderer:DefaultControlMap" />
+      <pre id="uiengine.datarenderer:ControlMap" />
+      <dep id="mx.controls:NumericStepper" />
+      <dep id="uiengine.datarenderer:ControlMapItem" />
+      <dep id="AS3" />
+      <dep id="collections:Singleton" />
+      <dep id="mx.controls:DateField" />
+      <dep id="mx.controls:TextArea" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/CollectionRenderer.as" mod="1307935583000" size="3074" optimizedsize="1725">
+      <def id="uiengine.datarenderer:CollectionRenderer" />
+      <pre id="uiengine.datarenderer:AbstractDataRenderer" />
+      <dep id="mx.controls.dataGridClasses:DataGridColumn" />
+      <dep id="collections.tree:ITreeData" />
+      <dep id="mx.core:UIComponent" />
+      <dep id="mx.controls.dataGridClasses:DataGridItemRenderer" />
+      <dep id="commonutils:ClassInspector" />
+      <dep id="commonutils:Attribute" />
+      <dep id="mx.controls:Tree" />
+      <dep id="mx.controls:Label" />
+      <dep id="AS3" />
+      <dep id="commonutils:UIControlUtil" />
+      <dep id="uiengine.datarenderer:DataRendererContext" />
+      <dep id="mx.controls:DataGrid" />
+      <dep id="reflection:VOInspector" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/test/flex/UIEngineTest.as" mod="1307935583000" size="2048" optimizedsize="1219">
+      <def id="UIEngineTest" />
+      <pre id="Object" />
+      <dep id="uiengine.datarenderer:AbstractDataRenderer" />
+      <dep id="mx.controls:NumericStepper" />
+      <dep id="AS3" />
+      <dep id="commonutils:ClassInspector" />
+      <dep id="org.flexunit.asserts:assertEquals" />
+      <dep id="commonutils:Attribute" />
+      <dep id="collections:TreeCollectionEx" />
+      <dep id="uiengine.datarenderer:ViewDataFilter" />
+      <dep id="uiengine.datarenderer:DataRendererHelper" />
+      <dep id="mx.controls:TextArea" />
+      <dep id="uiengine.datarenderer:DefaultControlMap" />
+      <dep id="reflection:ModelInspector" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/ViewDataFilter.as" mod="1307935583000" size="2684" optimizedsize="1250">
+      <def id="uiengine.datarenderer:ViewDataFilter" />
+      <pre id="Object" />
+      <dep id="AS3" />
+      <dep id="commonutils:Attribute" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/ViewKeywordControlMap.as" mod="1307935583000" size="1250" optimizedsize="556">
+      <def id="uiengine.datarenderer:ViewKeywordControlMap" />
+      <pre id="collections:Bag" />
+      <dep id="AS3" />
+      <dep id="collections:Singleton" />
+      <dep id="uiengine.datarenderer:ViewKeywordControlMapItem" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/DataRendererHelper.as" mod="1307935583000" size="1700" optimizedsize="955">
+      <def id="uiengine.datarenderer:DataRendererHelper" />
+      <pre id="Object" />
+      <dep id="mx.core:UIComponent" />
+      <dep id="uiengine.datarenderer:ViewKeywordControlMap" />
+      <dep id="com.roguedevelopment.objecthandles:ObjectHandles" />
+      <dep id="commonutils:ClassInspector" />
+      <dep id="AS3" />
+      <dep id="commonutils:Attribute" />
+      <dep id="uiengine.datarenderer:IocDataRendererFactory" />
+      <dep id="mx.core:ClassFactory" />
+      <dep id="uiengine.datarenderer:DefaultControlMap" />
+      <dep id="uiengine.datarenderer:ObjectHandlesFactory" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/ControlMapItem.as" mod="1307935583000" size="1159" optimizedsize="462">
+      <def id="uiengine.datarenderer:ControlMapItem" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/ActionRepository.as" mod="1307935583000" size="1725" optimizedsize="772">
+      <def id="uiengine:ActionRepository" />
+      <pre id="Object" />
+      <dep id="actions:AbstractUserAction" />
+      <dep id="uiengine:ActionDescriptor2" />
+      <dep id="AS3" />
+      <dep id="commonutils:ClassInspector" />
+      <dep id="actions:IActionDescriptor" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/test/flex/uiengine/ActionRepositoryTest.as" mod="1307935582000" size="1177" optimizedsize="637">
+      <def id="uiengine:ActionRepositoryTest" />
+      <pre id="Object" />
+      <dep id="testclasses:IClassB" />
+      <dep id="uiengine:ActionRepository" />
+      <dep id="uiengine:ActionDescriptor2" />
+      <dep id="AS3" />
+      <dep id="org.flexunit.asserts:assertEquals" />
+      <dep id="testclasses:ClassC" />
+      <dep id="testclasses:ClassB" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/test/flex/uiengine/MenuAssemblerTest.as" mod="1307935582000" size="1578" optimizedsize="863">
+      <def id="uiengine:MenuAssemblerTest" />
+      <pre id="Object" />
+      <dep id="uiengine:ActionRepository" />
+      <dep id="uiengine:MenuAssemblerContext" />
+      <dep id="uiengine:ActionDescriptor2" />
+      <dep id="org.flexunit.asserts:assertTrue" />
+      <dep id="actions:AbstractUserTestAction" />
+      <dep id="org.flexunit.asserts:assertEquals" />
+      <dep id="collections:TreeCollectionEx" />
+      <dep id="uiengine:MessageableUserAction" />
+      <dep id="mf.framework:MessageLogBroker" />
+      <dep id="AS3" />
+      <dep id="vos:Task" />
+      <dep id="uiengine:MenuAssembler" />
+      <dep id="actions:AbstractAction" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/reflection/VOInspector.as" mod="1307935583000" size="839" optimizedsize="410">
+      <def id="reflection:VOInspector" />
+      <pre id="Object" />
+      <dep id="mx.collections:ArrayCollection" />
+      <dep id="collections.tree:ITreeData" />
+      <dep id="AS3" />
+      <dep id="commonutils:ClassInspector" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/IMenuGenerator.as" mod="1307935583000" size="597" optimizedsize="186">
+      <def id="uiengine:IMenuGenerator" />
+      <pre id="Object" />
+      <dep id="AS3" />
+      <dep id="uiengine:MessageableUserAction" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/ControlMap.as" mod="1307935583000" size="2117" optimizedsize="1068">
+      <def id="uiengine.datarenderer:ControlMap" />
+      <pre id="collections:Bag" />
+      <dep id="uiengine.datarenderer:ControlMapItem" />
+      <dep id="AS3" />
+      <dep id="mx.controls:TextArea" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/ObjectRenderer.as" mod="1307935583000" size="2400" optimizedsize="1476">
+      <def id="uiengine.datarenderer:ObjectRenderer" />
+      <pre id="uiengine.datarenderer:AbstractDataRenderer" />
+      <dep id="mx.containers:VBox" />
+      <dep id="mx.core:UIComponent" />
+      <dep id="uiengine.datarenderer:ControlMapItem" />
+      <dep id="commonutils:ClassInspector" />
+      <dep id="mx.binding.utils:ChangeWatcher" />
+      <dep id="commonutils:Attribute" />
+      <dep id="mx.binding.utils:BindingUtils" />
+      <dep id="uiengine.datarenderer:DataRendererHelper" />
+      <dep id="uiengine.datarenderer:DefaultControlMap" />
+      <dep id="mx.core:IDataRenderer" />
+      <dep id="mx.controls:Label" />
+      <dep id="AS3" />
+      <dep id="uiengine.datarenderer:IocDataRendererFactory" />
+      <dep id="uiengine.datarenderer:DataRendererContext" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/EmptyRenderer.as" mod="1307935583000" size="1283" optimizedsize="546">
+      <def id="uiengine.datarenderer:EmptyRenderer" />
+      <pre id="uiengine.datarenderer:AbstractDataRenderer" />
+      <dep id="mx.core:UIComponent" />
+      <dep id="mx.controls:Label" />
+      <dep id="AS3" />
+      <dep id="uiengine.datarenderer:DataRendererContext" />
+      <dep id="reflection:VOInspector" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/reflection/ModelInspector.as" mod="1307935583000" size="1150" optimizedsize="516">
+      <def id="reflection:ModelInspector" />
+      <pre id="Object" />
+      <dep id="collections:ICollection" />
+      <dep id="AS3" />
+      <dep id="commonutils:ClassInspector" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/test/flex/testclasses/Abc.as" mod="1307935583000" size="635" optimizedsize="221">
+      <def id="testclasses:Abc" />
+      <pre id="Object" />
+      <dep id="Date" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/test/flex/testclasses/IClassB.as" mod="1307935583000" size="416" optimizedsize="99">
+      <def id="testclasses:IClassB" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/ObjectHandlesFactory.as" mod="1307935583000" size="997" optimizedsize="472">
+      <def id="uiengine.datarenderer:ObjectHandlesFactory" />
+      <pre id="Object" />
+      <dep id="com.roguedevelopment.objecthandles:ObjectHandles" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/MessageableUserAction.as" mod="1307935583000" size="1674" optimizedsize="925">
+      <def id="uiengine:MessageableUserAction" />
+      <pre id="actions:AbstractUserAction" />
+      <pre id="mf.framework:IManagedLifecycle" />
+      <dep id="uiengine:IMenuGenerator" />
+      <dep id="AS3" />
+      <dep id="actions:AbstractAction" />
+      <dep id="mf.framework:IMessageBroker" />
+      <dep id="mf.framework:Message" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/test/flex/testclasses/ClassA.as" mod="1307935583000" size="611" optimizedsize="205">
+      <def id="testclasses:ClassA" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/test/flex/uiengine/DataRendererHelperTest.as" mod="1307935582000" size="1205" optimizedsize="664">
+      <def id="uiengine:DataRendererHelperTest" />
+      <pre id="Object" />
+      <dep id="mx.core:UIComponent" />
+      <dep id="uiengine.datarenderer:ViewKeywordControlMap" />
+      <dep id="testclasses:ClassAControl" />
+      <dep id="org.flexunit.asserts:assertTrue" />
+      <dep id="AS3" />
+      <dep id="commonutils:Attribute" />
+      <dep id="uiengine.datarenderer:ViewKeywordControlMapItem" />
+      <dep id="uiengine.datarenderer:DataRendererHelper" />
+      <dep id="mx.controls:TextArea" />
+      <dep id="uiengine.datarenderer:DefaultControlMap" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/MenuDescriptor.as" mod="1307935583000" size="769" optimizedsize="299">
+      <def id="uiengine:MenuDescriptor" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/DataRenderer.as" mod="1307935583000" size="1495" optimizedsize="777">
+      <def id="uiengine.datarenderer:DataRenderer" />
+      <pre id="Object" />
+      <dep id="uiengine.datarenderer:ObjectRenderer" />
+      <dep id="uiengine.datarenderer:AbstractDataRenderer" />
+      <dep id="mx.core:UIComponent" />
+      <dep id="uiengine.datarenderer:Render" />
+      <dep id="uiengine.datarenderer:CollectionRenderer" />
+      <dep id="AS3" />
+      <dep id="flash.display:DisplayObject" />
+      <dep id="uiengine.datarenderer:DataRendererContext" />
+      <dep id="uiengine.datarenderer:EmptyRenderer" />
+      <dep id="reflection:VOInspector" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/DataRendererContext.as" mod="1307935583000" size="1117" optimizedsize="500">
+      <def id="uiengine.datarenderer:DataRendererContext" />
+      <pre id="Object" />
+      <dep id="AS3" />
+      <dep id="uiengine.datarenderer:ViewDataFilter" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/test/flex/testclasses/Model.as" mod="1307935583000" size="1453" optimizedsize="776">
+      <def id="testclasses:Model" />
+      <pre id="flash.events:IEventDispatcher" />
+      <pre id="Object" />
+      <dep id="flash.events:Event" />
+      <dep id="flash.events:EventDispatcher" />
+      <dep id="AS3" />
+      <dep id="collections:TreeCollectionEx" />
+      <dep id="mx.events:PropertyChangeEvent" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/test/flex/testclasses/ClassAControl.as" mod="1307935583000" size="725" optimizedsize="359">
+      <def id="testclasses:ClassAControl" />
+      <pre id="mx.core:UIComponent" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/test/flex/uiengine/DataRendererTest.as" mod="1307935582000" size="1014" optimizedsize="534">
+      <def id="uiengine:DataRendererTest" />
+      <pre id="Object" />
+      <dep id="mx.collections:ArrayCollection" />
+      <dep id="org.flexunit.asserts:assertTrue" />
+      <dep id="AS3" />
+      <dep id="flash.display:DisplayObject" />
+      <dep id="factories:POFactory" />
+      <dep id="uiengine.datarenderer:DataRendererContext" />
+      <dep id="mx.controls:DataGrid" />
+      <dep id="uiengine.datarenderer:DataRenderer" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/test/flex/testclasses/ClassC.as" mod="1307935583000" size="516" optimizedsize="149">
+      <def id="testclasses:ClassC" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/IocDataRendererFactory.as" mod="1307935583000" size="1090" optimizedsize="432">
+      <def id="uiengine.datarenderer:IocDataRendererFactory" />
+      <pre id="Object" />
+      <dep id="AS3" />
+      <dep id="commonutils:ClassInspector" />
+      <dep id="collections:Singleton" />
+      <dep id="uiengine.datarenderer:DataRendererHelper" />
+      <dep id="uiengine.datarenderer:DefaultControlMap" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/ActionDescriptor2.as" mod="1307935583000" size="938" optimizedsize="353">
+      <def id="uiengine:ActionDescriptor2" />
+      <pre id="actions:IActionDescriptor" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/test/flex/testclasses/TaskNoDate.as" mod="1307935583000" size="2462" optimizedsize="1279">
+      <def id="testclasses:TaskNoDate" />
+      <pre id="flash.events:IEventDispatcher" />
+      <pre id="Object" />
+      <dep id="flash.events:Event" />
+      <dep id="flash.events:EventDispatcher" />
+      <dep id="AS3" />
+      <dep id="mx.events:PropertyChangeEvent" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/MenuAssembler.as" mod="1307935583000" size="3314" optimizedsize="1882">
+      <def id="uiengine:MenuAssembler" />
+      <pre id="Object" />
+      <dep id="uiengine:ActionRepository" />
+      <dep id="actions:AbstractUserAction" />
+      <dep id="uiengine:MenuAssemblerContext" />
+      <dep id="uiengine:ActionDescriptor2" />
+      <dep id="AS3" />
+      <dep id="commonutils:ClassInspector" />
+      <dep id="uiengine:MenuDescriptor" />
+      <dep id="mf.framework:IMessageBroker" />
+      <dep id="mf.framework:Message" />
+      <dep id="uiengine:MessageableUserAction" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/ViewKeywordControlMapItem.as" mod="1307935583000" size="791" optimizedsize="276">
+      <def id="uiengine.datarenderer:ViewKeywordControlMapItem" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/datarenderer/AbstractDataRenderer.as" mod="1307935583000" size="2530" optimizedsize="1266">
+      <def id="uiengine.datarenderer:AbstractDataRenderer" />
+      <pre id="Object" />
+      <dep id="mx.core:UIComponent" />
+      <dep id="mx.collections:ArrayCollection" />
+      <dep id="AS3" />
+      <dep id="flash.display:DisplayObject" />
+      <dep id="uiengine.datarenderer:DataRendererContext" />
+      <dep id="uiengine.datarenderer:DataRendererHelper" />
+      <dep id="mx.core:Container" />
+      <dep id="uiengine.datarenderer:DefaultControlMap" />
+      <dep id="Error" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/main/flex/uiengine/MenuAssemblerContext.as" mod="1307935583000" size="991" optimizedsize="389">
+      <def id="uiengine:MenuAssemblerContext" />
+      <pre id="Object" />
+      <dep id="mx.collections:ArrayCollection" />
+      <dep id="AS3" />
+      <dep id="uiengine:MenuDescriptor" />
+    </script>
+    <script name="_9dcd1a3c43756e079087eccff64a14819890a5a07c2ebe241966b0ed771829d2_flash_display_Sprite.as" mod="1315967084102" size="1147" optimizedsize="511">
+      <def id="_9dcd1a3c43756e079087eccff64a14819890a5a07c2ebe241966b0ed771829d2_flash_display_Sprite" />
+      <pre id="flash.display:Sprite" />
+      <dep id="flash.system:Security" />
+      <dep id="AS3" />
+    </script>
+    <script name="/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/ui-engine/core/src/test/flex/testclasses/OneFieldClass.as" mod="1307935583000" size="607" optimizedsize="192">
+      <def id="testclasses:OneFieldClass" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+  </scripts>
+  <external-defs>
+    <ext id="mx.controls:DataGrid" />
+    <ext id="collections:ICollection" />
+    <ext id="flash.display:DisplayObject" />
+    <ext id="mx.binding.utils:ChangeWatcher" />
+    <ext id="collections:TreeCollectionEx" />
+    <ext id="commonutils:Attribute" />
+    <ext id="mx.collections:ArrayCollection" />
+    <ext id="mx.controls:TextArea" />
+    <ext id="mf.framework:IMessageBroker" />
+    <ext id="mx.core:ClassFactory" />
+    <ext id="flash.events:Event" />
+    <ext id="actions:AbstractUserTestAction" />
+    <ext id="Date" />
+    <ext id="mf.framework:IManagedLifecycle" />
+    <ext id="mx.controls.dataGridClasses:DataGridItemRenderer" />
+    <ext id="flash.events:EventDispatcher" />
+    <ext id="flash.system:Security" />
+    <ext id="mx.controls.dataGridClasses:DataGridColumn" />
+    <ext id="org.flexunit.asserts:assertTrue" />
+    <ext id="actions:AbstractUserAction" />
+    <ext id="Object" />
+    <ext id="flash.display:DisplayObjectContainer" />
+    <ext id="collections:Singleton" />
+    <ext id="mx.controls:DateField" />
+    <ext id="mx.core:UIComponent" />
+    <ext id="org.flexunit.asserts:assertEquals" />
+    <ext id="AS3" />
+    <ext id="commonutils:UIControlUtil" />
+    <ext id="mf.framework:Message" />
+    <ext id="actions:IActionDescriptor" />
+    <ext id="mx.binding.utils:BindingUtils" />
+    <ext id="actions:AbstractAction" />
+    <ext id="flash.events:IEventDispatcher" />
+    <ext id="mx.controls:NumericStepper" />
+    <ext id="mx.containers:VBox" />
+    <ext id="commonutils:ClassInspector" />
+    <ext id="factories:POFactory" />
+    <ext id="mx.core:IDataRenderer" />
+    <ext id="mf.framework:MessageLogBroker" />
+    <ext id="mx.controls:Label" />
+    <ext id="com.roguedevelopment.objecthandles:ObjectHandles" />
+    <ext id="mx.core:Container" />
+    <ext id="mx.controls:Tree" />
+    <ext id="Error" />
+    <ext id="collections:Bag" />
+    <ext id="mx.events:PropertyChangeEvent" />
+    <ext id="collections.tree:ITreeData" />
+    <ext id="vos:Task" />
+    <ext id="flash.display:Sprite" />
+  </external-defs>
+</report>

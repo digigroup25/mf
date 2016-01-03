@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <swf size="43292" compressedSize="16950">
+
+    <!-- Header data (SWF attributes, product info, markers, etc.) -->
+    <headerData totalSize="413">
+      <data type="metaData" size="294"/>
+      <data type="enableDebugger" size="33"/>
+      <data type="productInfo" size="28"/>
+      <data type="swfHeader" size="21"/>
+      <data type="debugID" size="18"/>
+      <data type="fileAttributes" size="6"/>
+      <data type="scriptLimits" size="6"/>
+      <data type="backgroundColor" size="5"/>
+      <data type="endMarker" size="2"/>
+    </headerData>
+
+    <!-- Cumulative frame size summary. -->
+    <frames totalSize="42879">
+      <frame size="42879" frame="1"/>
+    </frames>
+
+    <!-- Actionscript code and constant data. -->
+    <actionScript totalSize="42780">
+      <abc name="uiengine/MenuAssembler" size="3342" frame="1"/>
+      <abc name="uiengine/datarenderer/CollectionRenderer" size="3124" frame="1"/>
+      <abc name="uiengine/datarenderer/ViewDataFilter" size="2730" frame="1"/>
+      <abc name="uiengine/datarenderer/AbstractDataRenderer" size="2583" frame="1"/>
+      <abc name="uiengine/datarenderer/ObjectRenderer" size="2447" frame="1"/>
+      <abc name="uiengine/datarenderer/ControlMap" size="2160" frame="1"/>
+      <abc name="uiengine/ActionRepository" size="1760" frame="1"/>
+      <abc name="uiengine/datarenderer/DataRendererHelper" size="1751" frame="1"/>
+      <abc name="uiengine/MessageableUserAction" size="1715" frame="1"/>
+      <abc name="uiengine/datarenderer/DataRenderer" size="1535" frame="1"/>
+      <abc name="uiengine/ViewDataFilterMap" size="1498" frame="1"/>
+      <abc name="uiengine/datarenderer/Render" size="1423" frame="1"/>
+      <abc name="uiengine/datarenderer/EmptyRenderer" size="1329" frame="1"/>
+      <abc name="uiengine/datarenderer/ViewKeywordControlMap" size="1304" frame="1"/>
+      <abc name="_078c15839adac500da16cab4ffa83b366fc159497e2893d31bff4cbc3256aead_flash_display_Sprite" size="1244" frame="1"/>
+      <abc name="uiengine/datarenderer/ControlMapItem" size="1206" frame="1"/>
+      <abc name="reflection/ModelInspector" size="1190" frame="1"/>
+      <abc name="uiengine/datarenderer/DataRendererContext" size="1169" frame="1"/>
+      <abc name="uiengine/datarenderer/IocDataRendererFactory" size="1145" frame="1"/>
+      <abc name="uiengine/datarenderer/DefaultControlMap" size="1054" frame="1"/>
+      <abc name="uiengine/datarenderer/ObjectHandlesFactory" size="1050" frame="1"/>
+      <abc name="uiengine/MenuAssemblerContext" size="1026" frame="1"/>
+      <abc name="uiengine/ActionDescriptor2" size="970" frame="1"/>
+      <abc name="reflection/VOInspector" size="872" frame="1"/>
+      <abc name="uiengine/ViewDataFilterMapItem" size="865" frame="1"/>
+      <abc name="uiengine/datarenderer/ViewKeywordControlMapItem" size="854" frame="1"/>
+      <abc name="uiengine/MenuDescriptor" size="803" frame="1"/>
+      <abc name="uiengine/IMenuGenerator" size="631" frame="1"/>
+    </actionScript>
+
+    <!-- Additional frame tags (symbolClass, exportAssets, showFrame, etc). -->
+    <frameData totalSize="99">
+      <tag type="symbolClass" size="97" frame="1"/>
+      <tag type="showFrame" size="2" frame="1"/>
+    </frameData>
+  </swf>
+</report>

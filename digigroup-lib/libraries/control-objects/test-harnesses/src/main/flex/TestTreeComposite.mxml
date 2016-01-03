@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" initialize="init()">
+	<mx:Tree id="tree" x="20" y="10" width="100" dragEnter="onDragEnter(event)" dragOver="onDragOver(event)" 
+		dragEnabled="true" dropEnabled="true" dragDrop="onDragDrop(event)" ></mx:Tree>
+	<mx:Script>
+		<![CDATA[
+		import collections.tree.TreeComposite;
+
+		import mx.collections.ArrayCollection;
+
+		import vos.*;
+
+		import collections.*;
+
+		import mx.controls.dataGridClasses.*;
+		import mx.events.DragEvent;
+
+		import factories.*;
+
+
+		private var rootA:TreeComposite = new TreeFactory().createPriorityTaskTree();
+
+
+		private function init():void
+		{
+
+			tree.dataProvider = rootA;
+			var a:ArrayCollection = new ArrayCollection();
+			a.addItem(rootA);
+			a.addItem(rootA.children[0]);
+			a.addItem(rootA.children[1]);
+			dataGrid.dataProvider = a;
+
+			//DataGridColumn(dataGrid.columns[0]).labelFunction(myLabelFunction);
+		}
+
+
+		private var origNode:TreeComposite;
+		private var draggedOntoNode:TreeComposite;
+
+
+		private function onDragEnter(event:DragEvent):void
+		{
+			origNode = TreeComposite(tree.selectedItem);
+		}
+
+
+		private function onDragOver(event:DragEvent):void
+		{
+			trace("onDragOver: " + event);
+			// r is the visible index in the tree
+			var dropTarget:Tree = Tree(event.currentTarget);
+			var r:int = dropTarget.calculateDropIndex(event);
+
+			var prevIndex:int = tree.selectedIndex;
+			tree.selectedIndex = r;
+			draggedOntoNode = TreeComposite(tree.selectedItem);
+			tree.selectedIndex = prevIndex;
+		}
+
+
+		private function onDragDrop(event:DragEvent):void
+		{
+			var curNode:TreeComposite = draggedOntoNode;// TreeComposite(tree.selectedItem);
+			//var i:* = event.dragSource.dataForFormat("treeItems")[0];
+			trace(curNode.vo.name);
+			var parent:TreeComposite = origNode.findParent(rootA);
+			parent.removeChild(origNode);
+			//rootA.removeChild(origNode);
+			curNode.addChild(origNode);
+			/*
+			 if (curNode.children == null)
+			 {
+			 curNode.children = new ArrayCollection();
+			 }
+			 */
+			tree.validateNow();
+		}
+
+
+		private function getPriority(item:Object, col:DataGridColumn):String
+		{
+			if (col.headerText == "Name")
+			{
+				return item.vo.name;
+			}
+			else if (col.headerText == "Description")
+			{
+				return item.vo.description;
+			}
+			else
+			{
+				return item.vo.priority;
+			}
+		}
+		]]>
+	</mx:Script>
+	<mx:DataGrid id="dataGrid" x="128" y="10">
+		<mx:columns>
+			<mx:DataGridColumn headerText="Name" labelFunction="getPriority"/>
+			<mx:DataGridColumn headerText="Description" labelFunction="getPriority"/>
+			<mx:DataGridColumn headerText="Priority" labelFunction="getPriority"/>
+		</mx:columns>
+	</mx:DataGrid>
+</mx:Application>

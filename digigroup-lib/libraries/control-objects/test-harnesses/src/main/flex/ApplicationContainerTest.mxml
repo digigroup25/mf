@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+				xmlns:ui="mindmaps2.central.ui.*"
+				layout="absolute"
+				styleName="plain"
+				creationComplete="init()"
+				>
+	<mx:VBox width="100%"
+			 height="100%"
+			 >
+		<mx:HBox>
+			<mx:Button label="FlexSpy"
+					   click="runFlexSpy()"
+					   />
+			<mx:Button label="Debug"
+					   click="debug()"
+					   />
+		</mx:HBox>
+
+		<ui:CentralArea id="centralArea"
+						width="100%"
+						height="100%"
+						/>
+	</mx:VBox>
+
+	<mx:Script>
+		<![CDATA[
+			import actions.*;
+
+			import com.flexspy.FlexSpy;
+
+			import mf.framework.Container2;
+			import mf.framework.MessageBroker;
+			import mf.framework.MessageLogBroker;
+
+			import mindmaps2.ApplicationContainer;
+			import mindmaps2.actions.ActionReplacer;
+			import mindmaps2.actions.RootAction;
+			import mindmaps2.actions.map.SelectMap;
+			import mindmaps2.actions.map.SelectMapFake;
+			import mindmaps2.storage.services.MapRepositoryFactory;
+			import mindmaps2.storage.services.TestMapRepository;
+
+			//import testClasses.RootAction;
+			private var container:Container2;
+
+			private var actionReplacer:ActionReplacer = new ActionReplacer();
+
+			private var rootAction:AbstractAction;
+
+			private function init():void {
+				var mb:MessageBroker = new MessageLogBroker();
+				MapRepositoryFactory.localRepoClass = TestMapRepository;
+				//AppSettings.interactiveMenuController = InteractiveMenuUserActionSimulator;
+
+				rootAction = new RootAction();
+				//rootAction.addChild(new RegisterAction("Register"));
+
+				actionReplacer.add(SelectMap, SelectMapFake);
+				//actionReplacer.replace(rootAction);
+
+				container = new ApplicationContainer(mb, centralArea, rootAction);
+				container.initialize();
+			}
+
+
+			private function runFlexSpy():void {
+				FlexSpy.show(this);
+			}
+
+
+			private function debug():void {
+
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

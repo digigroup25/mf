@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+				layout="absolute"
+				styleName="plain"
+				creationComplete="onCreationComplete(event)"
+				>
+	<mx:VBox id="container"
+			 width="100%"
+			 height="100%"
+			 />
+
+	<mx:Script>
+		<![CDATA[
+			import actions.AbstractAction;
+			import actions.AbstractIOAction;
+			import actions.ActionFactory;
+			import actions.ActionType;
+			import actions.LogicType;
+
+			import mf.framework.MessageBroker;
+			import mf.framework.MessageTraceBroker;
+
+			import mindmaps.map.MapContext;
+			import mindmaps.map.MapContextFactory;
+			import mindmaps.map.MapModel2;
+			import mindmaps.map.MapModel2Factory;
+			import mindmaps.map.ui.tree.TreeMenuContainer;
+
+			import mindmaps2.actions.map.CloseMap;
+			import mindmaps2.actions.map.SaveMap;
+
+			import mx.events.FlexEvent;
+
+			private var treeMenuContainer:TreeMenuContainer;
+
+			private function onCreationComplete(event:FlexEvent):void {
+				var mb:MessageBroker = new MessageTraceBroker();
+				var map:MapModel2 = new MapModel2Factory().createAllElementsMap();
+				var mapContext:MapContext = new MapContextFactory().createDefault();
+
+				var viewOrEditMap:AbstractIOAction = AbstractIOAction(new ActionFactory().createAction("viewOrEditMap", ActionType.PARALLEL,
+																									   LogicType.OR, 1, false));
+
+				//need container so that mapContainer can be set
+				treeMenuContainer = new TreeMenuContainer(mb, map, mapContext, container, "Test", viewOrEditMap);
+
+
+				viewOrEditMap.addChildren([ new SaveMap(), new CloseMap()]);
+				viewOrEditMap.input["map"] = map;
+				viewOrEditMap.input["mapContainer"] = treeMenuContainer;
+				viewOrEditMap.initialize();
+				viewOrEditMap.execute();
+
+				treeMenuContainer.initialize();
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

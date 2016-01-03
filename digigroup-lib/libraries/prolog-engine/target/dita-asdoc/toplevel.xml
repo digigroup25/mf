@@ -1,0 +1,498 @@
+<asdoc>
+
+<classRec name='Stack' fullname='wprolog:Stack' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/prolog-engine/src/main/flex/wprolog/Stack.as' namespace='wprolog' access='public' baseclass='Object' isFinal='false' isDynamic='true' >
+</classRec>
+<method name='Stack' fullname='wprolog:Stack/Stack' isStatic='false' isFinal='false' isOverride='false'  param_names='numElements' param_types='int' param_defaults='0' result_type='*'>
+</method>
+<method name='empty' fullname='wprolog:Stack/empty' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+</method>
+<classRec name='Hashtable' fullname='wprolog:Hashtable' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/prolog-engine/src/main/flex/wprolog/Hashtable.as' namespace='wprolog' access='public' baseclass='Object' isFinal='false' isDynamic='true' >
+</classRec>
+<method name='Hashtable' fullname='wprolog:Hashtable/Hashtable' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='get_' fullname='wprolog:Hashtable/get_' isStatic='false' isFinal='false' isOverride='false'  param_names='key' param_types='String' param_defaults='undefined' result_type='Object'>
+</method>
+<method name='put' fullname='wprolog:Hashtable/put' isStatic='false' isFinal='false' isOverride='false'  param_names='key;value' param_types='String;Object' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<classRec name='OnceMark' fullname='wprolog:OnceMark' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/prolog-engine/src/main/flex/wprolog/OnceMark.as' namespace='wprolog' access='public' baseclass='Object' isFinal='true' isDynamic='false' >
+<description><![CDATA[ This is only used to implement <b>once</b>. ]]></description>
+</classRec>
+<method name='OnceMark' fullname='wprolog:OnceMark/OnceMark' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<classRec name='ChoicePoint' fullname='wprolog:ChoicePoint' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/prolog-engine/src/main/flex/wprolog/ChoicePoint.as' namespace='wprolog' access='internal' baseclass='Object' isFinal='true' isDynamic='false' >
+<description><![CDATA[ This is a simple record. A choicepoint contains the continuation
+	(a goal list) and the next clause to be tried. ]]></description>
+</classRec>
+<method name='ChoicePoint' fullname='wprolog:ChoicePoint/ChoicePoint' isStatic='false' isFinal='false' isOverride='false'  param_names='cn;g' param_types='int;wprolog:TermList' param_defaults='undefined;undefined' result_type='*'>
+</method>
+<method name='toString' fullname='wprolog:ChoicePoint/toString' isStatic='false' isFinal='true' isOverride='false'  result_type='String'>
+</method>
+<field name='clausenum' fullname='wprolog:ChoicePoint/wprolog:clausenum' type='int' isStatic='false' isConst='false' >
+</field>
+<field name='goal' fullname='wprolog:ChoicePoint/wprolog:goal' type='wprolog:TermList' isStatic='false' isConst='false' >
+</field>
+<classRec name='TermFactory' fullname='wprolog:TermFactory' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/prolog-engine/src/main/flex/wprolog/TermFactory.as' namespace='wprolog' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='create' fullname='wprolog:TermFactory/create' isStatic='true' isFinal='false' isOverride='false'  param_names='functor;arity;varnum' param_types='String;int;int' param_defaults=';-1;-1' result_type='wprolog:Term'>
+<description><![CDATA[ create a term with  a given functor and arity.
+		]]></description>
+<param><![CDATA[s - the functor
+		]]></param>
+<param><![CDATA[a - the arity
+		]]></param>
+</method>
+<classRec name='TermListFactory' fullname='wprolog:TermListFactory' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/prolog-engine/src/main/flex/wprolog/TermListFactory.as' namespace='wprolog' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='create' fullname='wprolog:TermListFactory/create' isStatic='true' isFinal='false' isOverride='false'  param_names='t;n;d' param_types='wprolog:Term;wprolog:TermList;wprolog:TermList' param_defaults='undefined;undefined;null' result_type='wprolog:TermList'>
+</method>
+<classRec name='Character' fullname='wprolog:Character' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/prolog-engine/src/main/flex/wprolog/Character.as' namespace='wprolog' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='isDigit' fullname='wprolog:Character/isDigit' isStatic='true' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[ Determines if a string is digit ]]></description>
+</method>
+<method name='isLetter' fullname='wprolog:Character/isLetter' isStatic='true' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[ Determines if a string is letter ]]></description>
+</method>
+<method name='isLowerCase' fullname='wprolog:Character/isLowerCase' isStatic='true' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[ Determines if a string is lower case ]]></description>
+</method>
+<method name='isSpace' fullname='wprolog:Character/isSpace' isStatic='true' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='isUpperCase' fullname='wprolog:Character/isUpperCase' isStatic='true' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[ Determines if a string is upper case ]]></description>
+</method>
+<method name='isValidCode' fullname='wprolog:Character/private:isValidCode' isStatic='true' isFinal='false' isOverride='false'  param_names='value;minCode;maxCode' param_types='String;Number;Number' param_defaults='undefined;undefined;undefined' result_type='Boolean'>
+<description><![CDATA[ The meat of the functions which checks the values ]]></description>
+</method>
+<classRec name='IO' fullname='wprolog:IO' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/prolog-engine/src/main/flex/wprolog/IO.as' namespace='wprolog' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[ The class IO simply centralises all IO for easy modification ]]></description>
+</classRec>
+<method name='diagnostic' fullname='wprolog:IO/diagnostic' isStatic='true' isFinal='false' isOverride='false'  param_names='s' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='error' fullname='wprolog:IO/error' isStatic='true' isFinal='false' isOverride='false'  param_names='caller;mesg' param_types='String;String' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='fatalerror' fullname='wprolog:IO/fatalerror' isStatic='true' isFinal='false' isOverride='false'  param_names='caller;mesg' param_types='String;String' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='prologprint' fullname='wprolog:IO/prologprint' isStatic='true' isFinal='false' isOverride='false'  param_names='s' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='result' fullname='wprolog:IO/result' isStatic='true' isFinal='false' isOverride='false'  param_names='s' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='trace_' fullname='wprolog:IO/trace_' isStatic='true' isFinal='false' isOverride='false'  param_names='s' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<classRec name='WPrologOutput' fullname='wprolog:WPrologOutput' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/prolog-engine/src/main/flex/wprolog/WPrologOutput.as' namespace='wprolog' access='public' baseclass='Object' interfaces='flash.events:IEventDispatcher' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='addEventListener' fullname='wprolog:WPrologOutput/addEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture;priority;weakRef' param_types='String;Function;Boolean;int;Boolean' param_defaults='undefined;undefined;false;0;false' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='addResult' fullname='wprolog:WPrologOutput/addResult' isStatic='true' isFinal='false' isOverride='false'  param_names='s' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='clear' fullname='wprolog:WPrologOutput/clear' isStatic='true' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='dispatchEvent' fullname='wprolog:WPrologOutput/dispatchEvent' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='hasEventListener' fullname='wprolog:WPrologOutput/hasEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='removeEventListener' fullname='wprolog:WPrologOutput/removeEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture' param_types='String;Function;Boolean' param_defaults='undefined;undefined;false' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='willTrigger' fullname='wprolog:WPrologOutput/willTrigger' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
+</method>
+<method name='result' fullname='wprolog:WPrologOutput/result/get' isStatic='true' isFinal='false' isOverride='false'  result_type='String'>
+<metadata>
+	<Bindable owner='wprolog:WPrologOutput/result/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='staticEventDispatcher' fullname='wprolog:WPrologOutput/staticEventDispatcher/get' isStatic='true' isFinal='false' isOverride='false'  result_type='flash.events:IEventDispatcher'>
+</method>
+<method name='result' fullname='wprolog:WPrologOutput/result/set' isStatic='true' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_bindingEventDispatcher' fullname='wprolog:WPrologOutput/private:_bindingEventDispatcher' type='flash.events:EventDispatcher' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='_staticBindingEventDispatcher' fullname='wprolog:WPrologOutput/private:_staticBindingEventDispatcher' type='flash.events:EventDispatcher' isStatic='true' isConst='false' defaultValue='unknown' >
+</field>
+<classRec name='Engine' fullname='wprolog:Engine' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/prolog-engine/src/main/flex/wprolog/Engine.as' namespace='wprolog' access='public' baseclass='Object' isFinal='true' isDynamic='false' >
+<description><![CDATA[ An engine is what executes prolog queries.
+]]></description>
+<author><![CDATA[Michael Winikoff
+]]></author>
+</classRec>
+<method name='Engine' fullname='wprolog:Engine/Engine' isStatic='false' isFinal='false' isOverride='false'  param_names='g;prog' param_types='wprolog:Term;wprolog:Hashtable' param_defaults='undefined;undefined' result_type='*'>
+<description><![CDATA[ 
+
+]]></description>
+<param><![CDATA[prog An initial program - this will be extended
+]]></param>
+<param><![CDATA[g The query to be executed
+]]></param>
+</method>
+<method name='dump' fullname='wprolog:Engine/private:dump' isStatic='false' isFinal='true' isOverride='false'  param_names='clausenum' param_types='int' param_defaults='undefined' result_type='void'>
+</method>
+<method name='more' fullname='wprolog:Engine/more' isStatic='false' isFinal='true' isOverride='false'  result_type='void'>
+<description><![CDATA[ Used from the GUI when the user hits <em>more</em>. All it does is add 
+<tt>fail</tt> to the goal and lets the engine do the rest. ]]></description>
+</method>
+<method name='runAll' fullname='wprolog:Engine/runAll' isStatic='false' isFinal='true' isOverride='false'  result_type='void'>
+</method>
+<method name='run' fullname='wprolog:Engine/run' isStatic='false' isFinal='true' isOverride='false'  param_names='embed' param_types='Boolean' param_defaults='undefined' result_type='String'>
+<description><![CDATA[ run does the actual work. ]]></description>
+</method>
+<field name='call' fullname='wprolog:Engine/private:call' type='wprolog:Term' isStatic='false' isConst='false' >
+</field>
+<field name='db' fullname='wprolog:Engine/private:db' type='wprolog:Hashtable' isStatic='false' isConst='false' >
+<description><![CDATA[ We use a hashtable to store the program ]]></description>
+</field>
+<field name='enableTracing' fullname='wprolog:Engine/enableTracing' type='Boolean' isStatic='false' isConst='false' defaultValue='true' >
+<description><![CDATA[ This governs whether tracing is done ]]></description>
+</field>
+<field name='failgoal' fullname='wprolog:Engine/private:failgoal' type='wprolog:TermList' isStatic='false' isConst='false' >
+<description><![CDATA[ A bookmark to the fail predicate ]]></description>
+</field>
+<field name='goal' fullname='wprolog:Engine/private:goal' type='wprolog:TermList' isStatic='false' isConst='false' >
+</field>
+<field name='stack' fullname='wprolog:Engine/private:stack' type='wprolog:Stack' isStatic='false' isConst='false' >
+<description><![CDATA[ The stack holds choicepoints and a list of variables
+which need to be un-bound upon backtracking.
+]]></description>
+</field>
+<field name='time' fullname='wprolog:Engine/private:time' type='Number' isStatic='false' isConst='false' >
+<description><![CDATA[ Used to time how long queries take ]]></description>
+</field>
+<classRec name='TermList' fullname='wprolog:TermList' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/prolog-engine/src/main/flex/wprolog/TermList.as' namespace='wprolog' access='public' baseclass='Object' isFinal='true' isDynamic='false' >
+<description><![CDATA[ Simple a list of terms. ]]></description>
+</classRec>
+<method name='TermList' fullname='wprolog:TermList/TermList' isStatic='false' isFinal='false' isOverride='false'  param_names='ps' param_types='wprolog:ParseString' param_defaults='null' result_type='*'>
+<description><![CDATA[ Used for parsing  clauses. ]]></description>
+</method>
+<method name='resolve' fullname='wprolog:TermList/resolve' isStatic='false' isFinal='false' isOverride='false'  param_names='db' param_types='wprolog:Hashtable' param_defaults='undefined' result_type='void'>
+<description><![CDATA[ Looks up which clauses define atoms once and for all ]]></description>
+</method>
+<method name='toString' fullname='wprolog:TermList/toString' isStatic='false' isFinal='true' isOverride='false'  result_type='String'>
+</method>
+<field name='definer' fullname='wprolog:TermList/definer' type='Array' isStatic='false' isConst='false' defaultValue='null' >
+</field>
+<field name='next' fullname='wprolog:TermList/wprolog:next' type='wprolog:TermList' isStatic='false' isConst='false' >
+</field>
+<field name='numclauses' fullname='wprolog:TermList/numclauses' type='int' isStatic='false' isConst='false' defaultValue='0' >
+</field>
+<field name='term' fullname='wprolog:TermList/wprolog:term' type='wprolog:Term' isStatic='false' isConst='false' >
+</field>
+<classRec name='Term' fullname='wprolog:Term' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/prolog-engine/src/main/flex/wprolog/Term.as' namespace='wprolog' access='public' baseclass='Object' isFinal='true' isDynamic='false' >
+<description><![CDATA[ A Term is the basic data structure in Prolog. 
+There are three types of terms:
+<ol>
+<li> Values (ie. have a functor and arguments) </li>
+<li> Variables (ie. unbound) </li>
+<li>  References (bound to another variable) </li>
+</ol>
+]]></description>
+</classRec>
+<method name='Term' fullname='wprolog:Term/Term' isStatic='false' isFinal='false' isOverride='false'  param_names='ps' param_types='wprolog:ParseString' param_defaults='undefined' result_type='*'>
+<description><![CDATA[ This constructor is the simplest way to construct a term. The term is 
+given in standard notation. 
+Example <tt>Term(new ParseString("p(1,a(X,b))"))</tt>
+]]></description>
+<see><![CDATA[ParseString
+]]></see>
+</method>
+<method name='bind' fullname='wprolog:Term/bind' isStatic='false' isFinal='true' isOverride='false'  param_names='t' param_types='wprolog:Term' param_defaults='undefined' result_type='void'>
+<description><![CDATA[ Binds a variable to a term ]]></description>
+</method>
+<method name='getarg' fullname='wprolog:Term/getarg' isStatic='false' isFinal='true' isOverride='false'  param_names='pos' param_types='int' param_defaults='undefined' result_type='wprolog:Term'>
+<description><![CDATA[ Retrieves an argument of a term ]]></description>
+</method>
+<method name='getarity' fullname='wprolog:Term/getarity' isStatic='false' isFinal='true' isOverride='false'  result_type='int'>
+<description><![CDATA[ Gets the arity of a term ]]></description>
+</method>
+<method name='getfunctor' fullname='wprolog:Term/getfunctor' isStatic='false' isFinal='true' isOverride='false'  result_type='String'>
+<description><![CDATA[ Gets the functor of a term ]]></description>
+</method>
+<method name='getvar' fullname='wprolog:Term/private:getvar' isStatic='false' isFinal='false' isOverride='false'  param_names='l;index' param_types='Array;int' param_defaults='undefined;undefined' result_type='wprolog:Term'>
+</method>
+<method name='occurs1' fullname='wprolog:Term/private:occurs1' isStatic='false' isFinal='true' isOverride='false'  param_names='var_' param_types='int' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='occurs' fullname='wprolog:Term/private:occurs' isStatic='false' isFinal='true' isOverride='false'  param_names='var_' param_types='int' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[ Checks whether a variable occurs in the term ]]></description>
+</method>
+<method name='refresh' fullname='wprolog:Term/refresh' isStatic='false' isFinal='false' isOverride='false'  param_names='l' param_types='Array' param_defaults='undefined' result_type='wprolog:Term'>
+<description><![CDATA[ refresh creates new variables. If the variables allready exist in 
+its argument then they are used - this is used when parsing a clause so 
+that variables throught the clause are shared.  Includes a copy operation ]]></description>
+</method>
+<method name='setarg' fullname='wprolog:Term/setarg' isStatic='false' isFinal='true' isOverride='false'  param_names='pos;val' param_types='int;wprolog:Term' param_defaults='undefined;undefined' result_type='void'>
+<description><![CDATA[ Used to set specific arguments. A primitive way of 
+constructing terms is to create them with Term(s,f) and then 
+build up the arguments. Using the parser is much simpler ]]></description>
+</method>
+<method name='toString' fullname='wprolog:Term/toString' isStatic='false' isFinal='true' isOverride='false'  result_type='String'>
+<description><![CDATA[ Displays a term in standard notation ]]></description>
+</method>
+<method name='unbind' fullname='wprolog:Term/unbind' isStatic='false' isFinal='true' isOverride='false'  result_type='void'>
+<description><![CDATA[ Unbinds a term -- ie. resets it to a variable ]]></description>
+</method>
+<method name='unify' fullname='wprolog:Term/unify' isStatic='false' isFinal='true' isOverride='false'  param_names='t;s' param_types='wprolog:Term;wprolog:Stack' param_defaults='undefined;undefined' result_type='Boolean'>
+<description><![CDATA[ Unification is the basic primitive operation in logic programming. 
+]]></description>
+<param><![CDATA[s - the stack is used to store the addresses of variables which are 
+bound by the unification. This is needed when backtracking.
+]]></param>
+</method>
+<field name='args' fullname='wprolog:Term/wprolog:args' type='Array' isStatic='false' isConst='false' >
+</field>
+<field name='arity' fullname='wprolog:Term/wprolog:arity' type='int' isStatic='false' isConst='false' >
+</field>
+<field name='bound' fullname='wprolog:Term/wprolog:bound' type='Boolean' isStatic='false' isConst='false' >
+</field>
+<field name='deref' fullname='wprolog:Term/wprolog:deref' type='Boolean' isStatic='false' isConst='false' >
+</field>
+<field name='functor' fullname='wprolog:Term/wprolog:functor' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='internalparse' fullname='wprolog:Term/internalparse' type='Boolean' isStatic='true' isConst='false' defaultValue='false' >
+<description><![CDATA[
+
+Controls whether predicates can begin with an underscore.
+Beginning a system with an underscore makes in inaccessible 
+to the user.
+]]></description>
+</field>
+<field name='occurcheck' fullname='wprolog:Term/occurcheck' type='Boolean' isStatic='true' isConst='false' defaultValue='false' >
+<description><![CDATA[ Controls whether occurcheck is used in unification.
+Note that in version 1.0 the occurcheck was always performed
+which accounted for the lower performance.
+]]></description>
+</field>
+<field name='prettyprint' fullname='wprolog:Term/prettyprint' type='Boolean' isStatic='true' isConst='false' defaultValue='true' >
+<description><![CDATA[
+prettyprint controls printing of lists as <tt>[a,b]</tt>
+rather than <tt>cons(a,cons(b,null))</tt>
+]]></description>
+</field>
+<field name='ref' fullname='wprolog:Term/wprolog:ref' type='wprolog:Term' isStatic='false' isConst='false' >
+</field>
+<field name='varid' fullname='wprolog:Term/wprolog:varid' type='int' isStatic='false' isConst='false' >
+</field>
+<field name='varnum' fullname='wprolog:Term/wprolog:varnum' type='int' isStatic='true' isConst='false' defaultValue='1' >
+</field>
+<classRec name='ParseString' fullname='wprolog:ParseString' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/prolog-engine/src/main/flex/wprolog/ParseString.as' namespace='wprolog' access='public' baseclass='Object' isFinal='true' isDynamic='false' >
+<description><![CDATA[ Parsing library ]]></description>
+</classRec>
+<method name='ParseString' fullname='wprolog:ParseString/ParseString' isStatic='false' isFinal='false' isOverride='false'  param_names='s;tc' param_types='String;mx.controls:TextArea' param_defaults='undefined;undefined' result_type='*'>
+<description><![CDATA[ Initialise variables ]]></description>
+</method>
+<method name='advance' fullname='wprolog:ParseString/advance' isStatic='false' isFinal='true' isOverride='false'  result_type='void'>
+<description><![CDATA[ Move a character forward ]]></description>
+</method>
+<method name='consult' fullname='wprolog:ParseString/consult' isStatic='true' isFinal='false' isOverride='false'  param_names='s;db;tc' param_types='String;wprolog:Hashtable;mx.controls:TextArea' param_defaults='undefined;undefined;undefined' result_type='wprolog:Hashtable'>
+<description><![CDATA[ This takes a hashtable and extends it with the clauses in the string. 
+]]></description>
+<param><![CDATA[db - an initial program, it is augmented with the clauses parsed.
+]]></param>
+<param><![CDATA[s - a string representing a Prolog program 
+]]></param>
+</method>
+<method name='current' fullname='wprolog:ParseString/current' isStatic='false' isFinal='true' isOverride='false'  result_type='String'>
+<description><![CDATA[ Get the current character ]]></description>
+</method>
+<method name='empty' fullname='wprolog:ParseString/empty' isStatic='false' isFinal='true' isOverride='false'  result_type='Boolean'>
+<description><![CDATA[ Is the parsestring empty? ]]></description>
+</method>
+<method name='getname' fullname='wprolog:ParseString/getname' isStatic='false' isFinal='true' isOverride='false'  result_type='String'>
+<description><![CDATA[ Recognise a name (sequence of alphanumerics) ]]></description>
+</method>
+<method name='getnum' fullname='wprolog:ParseString/getnum' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<description><![CDATA[ Recognise a number ]]></description>
+</method>
+<method name='getvar' fullname='wprolog:ParseString/getvar' isStatic='false' isFinal='true' isOverride='false'  result_type='wprolog:Term'>
+<description><![CDATA[ Get the Term corresponding to a name. If the name is new, then create a 
+new variable ]]></description>
+</method>
+<method name='nextclause' fullname='wprolog:ParseString/nextclause' isStatic='false' isFinal='true' isOverride='false'  result_type='void'>
+<description><![CDATA[ This resets the variable dictionary. ]]></description>
+</method>
+<method name='parseerror' fullname='wprolog:ParseString/parseerror' isStatic='false' isFinal='true' isOverride='false'  param_names='s' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[ Handle errors in one place ]]></description>
+</method>
+<method name='resolve' fullname='wprolog:ParseString/resolve' isStatic='true' isFinal='false' isOverride='false'  param_names='db' param_types='wprolog:Hashtable' param_defaults='undefined' result_type='void'>
+</method>
+<method name='skipcomment' fullname='wprolog:ParseString/private:skipcomment' isStatic='false' isFinal='true' isOverride='false'  result_type='void'>
+</method>
+<method name='skipspace' fullname='wprolog:ParseString/skipspace' isStatic='false' isFinal='true' isOverride='false'  result_type='void'>
+<description><![CDATA[ Skip spaces. Also skips Prolog comments ]]></description>
+</method>
+<method name='toString' fullname='wprolog:ParseString/toString' isStatic='false' isFinal='true' isOverride='false'  result_type='String'>
+</method>
+<field name='posn' fullname='wprolog:ParseString/private:posn' type='int' isStatic='false' isConst='false' >
+</field>
+<field name='source' fullname='wprolog:ParseString/private:source' type='mx.controls:TextArea' isStatic='false' isConst='false' >
+<description><![CDATA[ source stores a pointer to the TextField (for the query) or the 
+TextArea (for the program) so if an error occurs in parsing we can highlight
+the correct part of GUI.
+]]></description>
+</field>
+<field name='start' fullname='wprolog:ParseString/private:start' type='int' isStatic='false' isConst='false' >
+</field>
+<field name='str' fullname='wprolog:ParseString/private:str' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='vardict' fullname='wprolog:ParseString/private:vardict' type='wprolog:Hashtable' isStatic='false' isConst='false' >
+<description><![CDATA[ The hashtable stores indeces for variables that have been encountered.
+It isn't automatically reset since we want to have variables common 
+in a clause ]]></description>
+</field>
+<field name='varnum' fullname='wprolog:ParseString/private:varnum' type='int' isStatic='false' isConst='false' >
+</field>
+<packageRec name='wprolog.null' fullname='wprolog.null'>
+<description><![CDATA[
+  Generated by mxmlc 4.0
+  Package: wprolog
+ Class:   WPrologEditor
+ Source:  /Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/prolog-engine/src/main/flex/wprolog/WPrologEditor.mxml
+ ]]></description>
+</packageRec>
+<classRec name='WPrologEditor' fullname='wprolog:WPrologEditor' sourcefile='/Users/vlad/Documents/personal/MindFactory/digigroup-lib/libraries/prolog-engine/src/main/flex/wprolog/WPrologEditor.mxml' namespace='wprolog' access='public' baseclass='mx.containers:VBox' interfaces='mx.binding:IBindingClient;mx.core:IDataRenderer' isFinal='false' isDynamic='false' >
+<description><![CDATA[]]></description>
+</classRec>
+<method name='WPrologEditor' fullname='wprolog:WPrologEditor/WPrologEditor' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+<description><![CDATA[]]></description>
+</method>
+<method name='_WPrologEditor_bindingsSetup' fullname='wprolog:WPrologEditor/private:_WPrologEditor_bindingsSetup' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='___WPrologEditor_Button1_click' fullname='wprolog:WPrologEditor/___WPrologEditor_Button1_click' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:MouseEvent' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='___WPrologEditor_Button2_click' fullname='wprolog:WPrologEditor/___WPrologEditor_Button2_click' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:MouseEvent' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='___WPrologEditor_Button3_click' fullname='wprolog:WPrologEditor/___WPrologEditor_Button3_click' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:MouseEvent' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='___WPrologEditor_Button4_click' fullname='wprolog:WPrologEditor/___WPrologEditor_Button4_click' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:MouseEvent' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='bind' fullname='wprolog:WPrologEditor/private:bind' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='commitProperties' fullname='wprolog:WPrologEditor/protected:commitProperties' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+</method>
+<method name='dispose' fullname='wprolog:WPrologEditor/dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='initialize' fullname='wprolog:WPrologEditor/initialize' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='onClear' fullname='wprolog:WPrologEditor/private:onClear' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='onHelp' fullname='wprolog:WPrologEditor/private:onHelp' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='onMore' fullname='wprolog:WPrologEditor/private:onMore' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='onRun' fullname='wprolog:WPrologEditor/private:onRun' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='unbind' fullname='wprolog:WPrologEditor/private:unbind' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='data' fullname='wprolog:WPrologEditor/data/get' isStatic='false' isFinal='false' isOverride='true'  result_type='Object'>
+<metadata>
+	<Bindable owner='wprolog:WPrologEditor/data/get' name='propertyChange' >
+	</Bindable>
+</metadata>
+<metadata>
+	<Bindable owner='wprolog:WPrologEditor/data/get' name='DATA_CHANGE' >
+	</Bindable>
+</metadata>
+</method>
+<method name='queryText' fullname='wprolog:WPrologEditor/queryText/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='data' fullname='wprolog:WPrologEditor/data/set' isStatic='false' isFinal='false' isOverride='true'  param_names='value' param_types='Object' param_defaults='undefined' result_type='void'>
+</method>
+<method name='moduleFactory' fullname='wprolog:WPrologEditor/moduleFactory/set' isStatic='false' isFinal='false' isOverride='true'  param_names='factory' param_types='mx.core:IFlexModuleFactory' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='queryText' fullname='wprolog:WPrologEditor/queryText/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='watcherSetupUtil' fullname='wprolog:WPrologEditor/watcherSetupUtil/set' isStatic='true' isFinal='false' isOverride='false'  param_names='watcherSetupUtil' param_types='mx.binding:IWatcherSetupUtil2' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<field name='_bindingsBeginWithWord' fullname='wprolog:WPrologEditor/mx_internal:_bindingsBeginWithWord' type='Object' isStatic='false' isConst='false' defaultValue='unknown' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</field>
+<field name='_bindingsByDestination' fullname='wprolog:WPrologEditor/mx_internal:_bindingsByDestination' type='Object' isStatic='false' isConst='false' defaultValue='unknown' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</field>
+<field name='_bindings' fullname='wprolog:WPrologEditor/mx_internal:_bindings' type='Array' isStatic='false' isConst='false' defaultValue='unknown' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</field>
+<field name='_data' fullname='wprolog:WPrologEditor/private:_data' type='Object' isStatic='false' isConst='false' >
+</field>
+<field name='_programText' fullname='wprolog:WPrologEditor/private:_programText' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='_watcherSetupUtil' fullname='wprolog:WPrologEditor/private:_watcherSetupUtil' type='mx.binding:IWatcherSetupUtil2' isStatic='true' isConst='false' >
+</field>
+<field name='_watchers' fullname='wprolog:WPrologEditor/mx_internal:_watchers' type='Array' isStatic='false' isConst='false' defaultValue='unknown' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</field>
+<field name='dataChanged' fullname='wprolog:WPrologEditor/private:dataChanged' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='enableTracing' fullname='wprolog:WPrologEditor/private:enableTracing' type='Boolean' isStatic='false' isConst='true' defaultValue='false' >
+</field>
+<field name='eng' fullname='wprolog:WPrologEditor/private:eng' type='wprolog:Engine' isStatic='false' isConst='false' >
+</field>
+<field name='programTextChanged' fullname='wprolog:WPrologEditor/private:programTextChanged' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='programWatcher2' fullname='wprolog:WPrologEditor/private:programWatcher2' type='mx.binding.utils:ChangeWatcher' isStatic='false' isConst='false' >
+</field>
+<field name='programWatcher' fullname='wprolog:WPrologEditor/private:programWatcher' type='mx.binding.utils:ChangeWatcher' isStatic='false' isConst='false' >
+</field>
+<field name='program' fullname='wprolog:WPrologEditor/program' type='mx.controls:TextArea' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<metadata>
+	<Bindable owner='wprolog:WPrologEditor/program' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='query' fullname='wprolog:WPrologEditor/query' type='mx.controls:TextArea' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<metadata>
+	<Bindable owner='wprolog:WPrologEditor/query' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='resultsControl' fullname='wprolog:WPrologEditor/resultsControl' type='mx.controls:TextArea' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<metadata>
+	<Bindable owner='wprolog:WPrologEditor/resultsControl' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+</asdoc>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <swf size="37471" compressedSize="17117">
+
+    <!-- Header data (SWF attributes, product info, markers, etc.) -->
+    <headerData totalSize="409">
+      <data type="metaData" size="290"/>
+      <data type="enableDebugger" size="33"/>
+      <data type="productInfo" size="28"/>
+      <data type="swfHeader" size="21"/>
+      <data type="debugID" size="18"/>
+      <data type="fileAttributes" size="6"/>
+      <data type="scriptLimits" size="6"/>
+      <data type="backgroundColor" size="5"/>
+      <data type="endMarker" size="2"/>
+    </headerData>
+
+    <!-- Cumulative frame size summary. -->
+    <frames totalSize="37062">
+      <frame size="37062" frame="1"/>
+    </frames>
+
+    <!-- Actionscript code and constant data. -->
+    <actionScript totalSize="36963">
+      <abc name="actions/AbstractAction" size="12867" frame="1"/>
+      <abc name="components/InteractiveMenu" size="4871" frame="1"/>
+      <abc name="actions/AbstractIOAction" size="4430" frame="1"/>
+      <abc name="actions/AbstractRepeatableAction" size="3859" frame="1"/>
+      <abc name="actions/ActionFactory" size="1812" frame="1"/>
+      <abc name="actions/AbstractUserAction" size="1642" frame="1"/>
+      <abc name="actions/ActionEvent" size="1257" frame="1"/>
+      <abc name="_31b59484af7618f54cefc6eb388f18bbec4e865599705efac41234b800161294_flash_display_Sprite" size="1244" frame="1"/>
+      <abc name="actions/ActionData" size="1064" frame="1"/>
+      <abc name="actions/ActionStatus" size="777" frame="1"/>
+      <abc name="actions/IActionDescriptor" size="701" frame="1"/>
+      <abc name="actions/Assert" size="659" frame="1"/>
+      <abc name="actions/ActionType" size="611" frame="1"/>
+      <abc name="actions/ActionError" size="591" frame="1"/>
+      <abc name="actions/LogicType" size="578" frame="1"/>
+    </actionScript>
+
+    <!-- Additional frame tags (symbolClass, exportAssets, showFrame, etc). -->
+    <frameData totalSize="99">
+      <tag type="symbolClass" size="97" frame="1"/>
+      <tag type="showFrame" size="2" frame="1"/>
+    </frameData>
+  </swf>
+</report>

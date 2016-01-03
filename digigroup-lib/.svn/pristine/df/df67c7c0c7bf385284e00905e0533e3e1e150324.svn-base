@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Form xmlns:mx="http://www.adobe.com/2006/mxml" initialize="init()" 
+	paddingBottom="4" paddingLeft="4" paddingRight="4" paddingTop="4">
+	<mx:Script>
+		<![CDATA[
+			import mx.events.PropertyChangeEvent;
+			import mx.core.UIComponent;
+			import mx.binding.utils.BindingUtils;
+			import mx.binding.utils.ChangeWatcher;
+			import vos.Task;
+			
+			[ArrayElementType("mx.core.UIComponent")]
+			public var editorContent:Array;
+			
+			protected var _dataProvider:Object;
+			protected var changeWatchers:Array = [];
+				
+			private function init():void {
+				if (editorContent!=null) {
+					for each (var component:UIComponent in editorContent) {
+						this.addChild(component);
+					}
+				}
+				
+				//for some reason onRemovedFromStage gets called multiple times even when
+				//the editor is shown - needs further investigation
+				//for now explicit unbind call is required by templated children
+				//to prevent memory leaks
+				//this.addEventListener(Event.REMOVED_FROM_STAGE, onRemovedFromStage);         
+            }
+            
+            /* private function onRemovedFromStage(event:Event):void {
+            	this.removeEventListener(Event.REMOVED_FROM_STAGE, onRemovedFromStage);
+            	this.unbind();
+            } */
+			
+			[Bindable]
+			public function get dataProvider():Object {
+				return _dataProvider;	
+			}
+			
+			public function set dataProvider(value:Object):void {
+				if (_dataProvider==value)
+					return;
+				setDataProvider(value);
+				unbind();
+				bind();
+			}
+			
+			protected function setDataProvider(value:Object):void {
+				var oldValue:Object = _dataProvider;
+				_dataProvider = value;
+				this.dispatchEvent(PropertyChangeEvent.createUpdateEvent(this, "dataProvider", oldValue, value));
+			}
+			
+			private function unbind():void {
+				while (changeWatchers.length>0) {
+					var changeWatcher:ChangeWatcher = changeWatchers.shift();
+					changeWatcher.unwatch();
+				}
+			}
+			
+			protected function bind():void {
+				throw new Error("Subclass must implement this method");
+			}
+			
+			protected function bindBidirectionally(source1:Object, source1Property:String, source2:Object,
+				source2Property:String):void {
+				var cw1:ChangeWatcher = BindingUtils.bindProperty(source2, source2Property, source1, source1Property);
+				var cw2:ChangeWatcher = BindingUtils.bindProperty(source1, source1Property, source2, source2Property);
+				
+				changeWatchers.push(cw1, cw2);
+			}
+		]]>
+	</mx:Script>
+</mx:Form>

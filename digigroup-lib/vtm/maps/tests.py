@@ -1,0 +1,125 @@
+"""
+This file demonstrates writing tests using the unittest module. These will pass
+when you run "manage.py test".
+
+Replace this with more appropriate tests for your application.
+"""
+
+import datetime
+
+from django.conf import settings
+from django.contrib.auth.models import User
+
+from django.test import TestCase
+
+
+import pyamf
+from pyamf.remoting.client import RemotingService
+
+from helpers.pyamf_test_client import Client
+
+
+
+
+import unittest
+
+from django.test.client import Client as DjangoClient
+
+
+class UserTest(unittest.TestCase):
+
+    def setUp(self):
+        self.client = Client(DjangoClient())
+        #url = 'http://%s:%d/gateway' % (settings.HOST_INFO[0], settings.HOST_INFO[1])
+        #self.client = RemotingService(url)
+
+    def test_create_user(self):
+
+        user_service = self.client.getService('user')
+        user = user_service.put_user('tester', 'test', 'tester1@gmail.com')
+        #import ipdb; ipdb.set_trace()
+        self.assertEqual(user.username, 'tester')
+
+    def test_login(self):
+
+        User.objects.create_user('test', 'test@example.com', 'test')
+
+        user_service = self.client.getService('user')
+        user = user_service.login_user('test', 'test')
+
+        logged_in_user = user_service.get_logged_in_user()
+
+        self.assertEqual('test', logged_in_user.username)
+
+
+class MapTest(TestCase):
+
+    def setUp(self):
+
+        User.objects.create_user(username='admin', password='password', email='test@gmail.com')
+
+        self.client = Client(DjangoClient())
+
+        self.user_service = self.client.getService('user')
+        self.user_service.put_user('test', 'test', 'test@gmail.com')
+
+        self.user_service.put_user('test1', 'test1', 'test1@gmail.com')
+        self.user_service.put_user('test2', 'test2', 'test2@gmail.com')
+
+    def test_create_map(self):
+
+        map_service = self.client.getService('map')
+
+        map_1 = map_service.put_map("test", "test map 1", datetime.datetime.now(), "test data", 1, False)
+
+        map_2 = map_service.get_map('test', map_1.id)
+
+        self.assertEqual(map_1.id, map_2.id)
+
+        self.assertNotEqual(map_2.mapData, None)
+
+
+    def test_get_maps(self):
+
+        map_service = self.client.getService('map')
+
+        map_1 = map_service.put_map("test1", "test map 1", datetime.datetime.now(), "test data 1", 1, False)
+        map_2 = map_service.put_map("test1", "test map 2", datetime.datetime.now(), "test data 2", 1, False)
+        map_2 = map_service.put_map("test1", "test map 3", datetime.datetime.now(), "test data 3", 1, False)
+
+        maps = map_service.get_maps('test1')
+
+        self.assertEqual(len(maps), 3)
+        self.assertEqual(maps[0].mapData, None)
+        self.assertEqual(maps[1].mapData, None)
+        self.assertEqual(maps[2].mapData, None)
+
+
+    def test_share_map(self):
+
+        map_service = self.client.getService('map')
+
+        user = self.user_service.login_user('test1', 'test1')
+
+        map1 = map_service.put_map("", "test map 1", datetime.datetime.now(), "test data 1", 1, False)
+
+        map_service.share_map_with(map1.id, ['test2'])
+
+        map2 = map_service.get_map('test2', map1.id)
+
+        self.assertEqual(map1.id, map2.id)
+
+        map3 = map_service.get_map('test', map1.id)
+
+        self.assertEqual(map3, None)
+
+        map_service.unshare_map_with(map1.id, ['test2'])
+
+        map4 = map_service.get_map('test2', map1.id)
+
+        self.assertEqual(map4, None)
+
+
+
+
+
